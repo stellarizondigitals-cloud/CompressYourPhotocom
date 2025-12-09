@@ -25,8 +25,6 @@ interface ImageFile {
 
 type OutputFormat = 'keep' | 'jpeg' | 'png' | 'webp';
 
-const formats = ['JPG', 'PNG', 'WebP', 'HEIC', 'GIF'];
-
 function formatFileSize(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
@@ -204,65 +202,50 @@ export function ImageCompressor() {
 
   return (
     <div className="w-full space-y-6">
-      <Card className="p-8 md:p-12">
-        <label
-          htmlFor="file-upload"
-          className={`
-            relative flex flex-col items-center justify-center
-            w-full p-12 md:p-16
-            border-2 border-dashed rounded-xl
-            cursor-pointer
-            transition-all duration-200
-            ${isDragging 
-              ? 'border-primary bg-primary/5 scale-[1.01]' 
-              : 'border-muted-foreground/30 hover:border-primary/50 hover:bg-muted/30'
-            }
-          `}
-          onDragOver={handleDragOver}
-          onDragLeave={handleDragLeave}
-          onDrop={handleDrop}
-          data-testid="dropzone-upload"
-        >
-          <input
-            id="file-upload"
-            type="file"
-            className="sr-only"
-            accept="image/*"
-            multiple
-            onChange={handleFileInput}
-            data-testid="input-file-upload"
-          />
-          
-          <div className="flex flex-col items-center gap-6 text-center">
-            <div className={`
-              flex items-center justify-center
-              w-20 h-20 rounded-full
-              bg-primary/10
-              transition-transform duration-200
-              ${isDragging ? 'scale-110' : ''}
-            `}>
-              <Upload className="w-10 h-10 text-primary" />
-            </div>
-            
-            <div className="space-y-2">
-              <p className="text-xl font-medium">
-                {t('hero.dropzone')}
-              </p>
-              <p className="text-sm text-muted-foreground">
-                {t('hero.supportedFormats')}
-              </p>
-            </div>
-
-            <div className={`flex flex-wrap items-center justify-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
-              {formats.map((format) => (
-                <Badge key={format} variant="secondary" className="text-xs">
-                  {format}
-                </Badge>
-              ))}
-            </div>
+      <label
+        htmlFor="file-upload"
+        className={`
+          relative flex flex-col items-center justify-center
+          w-full p-10 md:p-14
+          border-2 border-dashed rounded-lg
+          cursor-pointer
+          transition-all duration-200
+          ${isDragging 
+            ? 'border-primary bg-primary/5' 
+            : 'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 hover:bg-muted/20'
+          }
+        `}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        data-testid="dropzone-upload"
+      >
+        <input
+          id="file-upload"
+          type="file"
+          className="sr-only"
+          accept="image/*"
+          multiple
+          onChange={handleFileInput}
+          data-testid="input-file-upload"
+        />
+        
+        <div className="flex flex-col items-center gap-4 text-center">
+          <div className={`
+            flex items-center justify-center
+            w-16 h-16 rounded-full
+            bg-primary/10
+            transition-transform duration-200
+            ${isDragging ? 'scale-105' : ''}
+          `}>
+            <Upload className="w-8 h-8 text-primary" />
           </div>
-        </label>
-      </Card>
+          
+          <p className="text-lg font-medium">
+            {t('hero.dropzone')}
+          </p>
+        </div>
+      </label>
 
       {hasFiles && (
         <>
