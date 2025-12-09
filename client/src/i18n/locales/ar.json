@@ -1,0 +1,43 @@
+{
+  "app": {
+    "title": "CompressYourPhoto",
+    "tagline": "ضغط الصور فوريًا وبخصوصية ومجانًا"
+  },
+  "hero": {
+    "headline": "اضغط صورك",
+    "subheadline": "ضغط صور سريع وخاص ومجاني",
+    "dropzone": "أسقط الصور هنا أو انقر للرفع",
+    "supportedFormats": "يدعم JPG و PNG و WebP"
+  },
+  "features": {
+    "privacy": {
+      "title": "خصوصية 100%",
+      "description": "يتم كل الضغط في متصفحك. لن تغادر صورك جهازك أبدًا."
+    },
+    "speed": {
+      "title": "سرعة البرق",
+      "description": "اضغط الصور في ثوانٍ باستخدام تقنية المتصفح الحديثة."
+    },
+    "multilingual": {
+      "title": "متعدد اللغات",
+      "description": "متوفر بـ 8 لغات لخدمة المستخدمين حول العالم."
+    }
+  },
+  "compression": {
+    "original": "الأصلي",
+    "compressed": "مضغوط",
+    "quality": "الجودة",
+    "download": "تحميل",
+    "compressAnother": "ضغط أخرى",
+    "saved": "تم التوفير"
+  },
+  "footer": {
+    "privacy": "سياسة الخصوصية",
+    "howItWorks": "كيف يعمل",
+    "languages": "اللغات",
+    "stats": "تم ضغط أكثر من 10 مليون صورة"
+  },
+  "language": {
+    "select": "اختر اللغة"
+  }
+}

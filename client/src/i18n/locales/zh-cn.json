@@ -1,0 +1,43 @@
+{
+  "app": {
+    "title": "CompressYourPhoto",
+    "tagline": "即时、私密、免费地压缩图像"
+  },
+  "hero": {
+    "headline": "压缩您的照片",
+    "subheadline": "快速、私密、免费的图像压缩",
+    "dropzone": "将照片拖放到此处或点击上传",
+    "supportedFormats": "支持 JPG、PNG、WebP"
+  },
+  "features": {
+    "privacy": {
+      "title": "100% 私密",
+      "description": "所有压缩都在您的浏览器中进行。您的照片永远不会离开您的设备。"
+    },
+    "speed": {
+      "title": "闪电般快速",
+      "description": "使用现代浏览器技术在几秒钟内压缩图像。"
+    },
+    "multilingual": {
+      "title": "多语言",
+      "description": "提供8种语言版本，服务全球用户。"
+    }
+  },
+  "compression": {
+    "original": "原始",
+    "compressed": "已压缩",
+    "quality": "质量",
+    "download": "下载",
+    "compressAnother": "压缩另一张",
+    "saved": "已节省"
+  },
+  "footer": {
+    "privacy": "隐私政策",
+    "howItWorks": "工作原理",
+    "languages": "语言",
+    "stats": "已压缩超过1000万张照片"
+  },
+  "language": {
+    "select": "选择语言"
+  }
+}

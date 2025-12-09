@@ -1,0 +1,43 @@
+{
+  "app": {
+    "title": "CompressYourPhoto",
+    "tagline": "Compressez vos images instantanément, en privé et gratuitement"
+  },
+  "hero": {
+    "headline": "Compressez Vos Photos",
+    "subheadline": "Compression d'images rapide, privée et gratuite",
+    "dropzone": "Déposez des photos ici ou cliquez pour télécharger",
+    "supportedFormats": "Supporte JPG, PNG, WebP"
+  },
+  "features": {
+    "privacy": {
+      "title": "100% Privé",
+      "description": "Toute la compression se fait dans votre navigateur. Vos photos ne quittent jamais votre appareil."
+    },
+    "speed": {
+      "title": "Ultra Rapide",
+      "description": "Compressez des images en secondes grâce à la technologie moderne du navigateur."
+    },
+    "multilingual": {
+      "title": "Multilingue",
+      "description": "Disponible en 8 langues pour servir les utilisateurs du monde entier."
+    }
+  },
+  "compression": {
+    "original": "Original",
+    "compressed": "Compressé",
+    "quality": "Qualité",
+    "download": "Télécharger",
+    "compressAnother": "Compresser une Autre",
+    "saved": "Économisé"
+  },
+  "footer": {
+    "privacy": "Politique de Confidentialité",
+    "howItWorks": "Comment Ça Marche",
+    "languages": "Langues",
+    "stats": "Plus de 10M photos compressées"
+  },
+  "language": {
+    "select": "Sélectionner la Langue"
+  }
+}
