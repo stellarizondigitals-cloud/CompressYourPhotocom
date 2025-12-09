@@ -1,0 +1,51 @@
+In the CompressYourPhoto project, implement real client-side image compression in the UploadDropzone and create a simple compression control + results UI.
+
+1. Install dependencies:
+   - `browser-image-compression` for client-side compression.
+   - `jszip` for creating ZIPs when multiple images are compressed.
+
+2. Update UploadDropzone.tsx:
+   - Accept drag-and-drop and click-to-upload for multiple files.
+   - Accept types: image/jpeg, image/png, image/webp, image/gif, image/heic if supported by the browser.
+   - When files are selected:
+     - Store them in component state as an array with:
+       - originalFile
+       - compressedFile (initially null)
+       - status: 'pending' | 'compressing' | 'done' | 'error'
+       - originalSize, compressedSize, errorMessage (optional)
+
+3. Add a simple compression controls panel below the dropzone:
+   - Quality slider (0.1 to 1.0, default 0.8).
+   - Target max width in pixels (optional, e.g. input number, default blank meaning no resize).
+   - Output format dropdown: "Keep original", "JPG", "PNG", "WebP".
+   - A "Compress Images" button.
+
+4. Implement the compression behavior using `browser-image-compression`:
+   - On click of "Compress Images":
+     - For each selected file, run imageCompression with options:
+       - maxWidthOrHeight: use the target width if specified, otherwise no limit.
+       - initialQuality: based on the quality slider.
+       - fileType: map from the chosen output format (if "Keep original", pass undefined).
+     - Update each file's status to 'compressing', then 'done' or 'error'.
+     - Store the resulting compressed File/Blob and its size.
+
+5. Results display:
+   - Under the controls, show a list of compressed images:
+     - For each, show:
+       - Filename
+       - Original size (KB/MB) and compressed size, and % reduction.
+       - A "Download" button for that single image.
+   - If there are multiple compressed images, show a "Download All as ZIP" button that:
+       - Uses JSZip to add each compressed file.
+       - Generates a ZIP Blob and triggers a download (e.g. `compressed-photos.zip`).
+
+6. UX:
+   - Show a small progress indicator (e.g. "Compressing X of Y images...") when compression is in progress.
+   - Handle errors gracefully and show a localized error message for unsupported types or failures.
+   - All user-facing text must use i18next (`useTranslation()` and keys in locale JSON).
+
+7. Performance:
+   - Ensure compression runs fully client-side; do not add any network calls.
+   - Consider using `await` with Promise.all for compressing multiple files, but keep the UI responsive.
+
+Do not introduce any backend code, servers, or paid services. Everything must run entirely in the browser on free tiers.

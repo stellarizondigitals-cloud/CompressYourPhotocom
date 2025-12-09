@@ -1,19 +1,12 @@
-import { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Shield, Zap, Globe } from 'lucide-react';
-import { UploadDropzone } from '@/components/UploadDropzone';
+import { ImageCompressor } from '@/components/ImageCompressor';
 import { FeatureCard } from '@/components/FeatureCard';
 import { useLanguage } from '@/hooks/useLanguage';
 
 export default function Home() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
-
-  const handleFilesSelected = useCallback((files: File[]) => {
-    setSelectedFiles(files);
-    console.log('Files ready for compression:', files.map(f => f.name));
-  }, []);
 
   return (
     <div className="flex-1">
@@ -29,7 +22,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-3xl mx-auto mb-8">
-            <UploadDropzone onFilesSelected={handleFilesSelected} />
+            <ImageCompressor />
           </div>
 
           <div className={`flex flex-wrap items-center justify-center gap-2 md:gap-4 text-sm text-muted-foreground ${isRTL ? 'flex-row-reverse' : ''}`}>
