@@ -7,7 +7,10 @@
     "headline": "Comprima Suas Fotos",
     "subheadline": "Compressão de imagens rápida, privada e gratuita",
     "dropzone": "Solte fotos aqui ou clique para enviar",
-    "supportedFormats": "Suporta JPG, PNG, WebP"
+    "supportedFormats": "Suporta JPG, PNG, WebP, HEIC, GIF",
+    "clientSide": "100% no navegador",
+    "noUpload": "Sem upload necessário",
+    "privacyGuaranteed": "Privacidade garantida"
   },
   "features": {
     "privacy": {

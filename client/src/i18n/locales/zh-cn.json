@@ -7,7 +7,10 @@
     "headline": "压缩您的照片",
     "subheadline": "快速、私密、免费的图像压缩",
     "dropzone": "将照片拖放到此处或点击上传",
-    "supportedFormats": "支持 JPG、PNG、WebP"
+    "supportedFormats": "支持 JPG、PNG、WebP、HEIC、GIF",
+    "clientSide": "100% 客户端处理",
+    "noUpload": "无需上传",
+    "privacyGuaranteed": "隐私有保障"
   },
   "features": {
     "privacy": {

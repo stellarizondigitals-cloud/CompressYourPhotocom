@@ -7,7 +7,10 @@
     "headline": "Komprimieren Sie Ihre Fotos",
     "subheadline": "Schnelle, private und kostenlose Bildkomprimierung",
     "dropzone": "Fotos hier ablegen oder klicken zum Hochladen",
-    "supportedFormats": "Unterstützt JPG, PNG, WebP"
+    "supportedFormats": "Unterstützt JPG, PNG, WebP, HEIC, GIF",
+    "clientSide": "100% clientseitig",
+    "noUpload": "Kein Upload erforderlich",
+    "privacyGuaranteed": "Datenschutz garantiert"
   },
   "features": {
     "privacy": {

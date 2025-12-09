@@ -7,21 +7,21 @@ export function Footer() {
   const { isRTL } = useLanguage();
 
   return (
-    <footer className="border-t bg-muted/30">
+    <footer className="border-t bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
         <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${isRTL ? 'text-right' : ''}`}>
-          <div className="space-y-4">
+          <div className="space-y-3">
             <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
-              <Image className="h-6 w-6 text-primary" />
-              <span className="font-semibold text-lg">{t('app.title')}</span>
+              <Image className="h-5 w-5 text-primary" />
+              <span className="font-semibold">{t('app.title')}</span>
             </div>
             <p className="text-sm text-muted-foreground">
               {t('app.tagline')}
             </p>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="font-medium">Links</h4>
+          <div className="space-y-3">
+            <h4 className="font-medium text-sm">Links</h4>
             <nav className="flex flex-col gap-2">
               <a 
                 href="#" 
@@ -47,12 +47,12 @@ export function Footer() {
             </nav>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
-              <Github className="h-5 w-5" />
+              <Github className="h-4 w-4" />
               <a 
                 href="#" 
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium hover:text-foreground transition-colors"
                 data-testid="link-github"
               >
                 GitHub
@@ -64,8 +64,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} CompressYourPhoto. All rights reserved.</p>
+        <div className="mt-10 pt-6 border-t text-center text-sm text-muted-foreground">
+          <p>&copy; 2025 CompressYourPhoto. All rights reserved.</p>
         </div>
       </div>
     </footer>

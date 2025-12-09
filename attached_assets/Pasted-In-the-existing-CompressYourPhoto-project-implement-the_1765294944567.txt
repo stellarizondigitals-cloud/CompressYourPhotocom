@@ -1,0 +1,44 @@
+In the existing CompressYourPhoto project, implement the full one-page layout in `Home.tsx` and the relevant components to match this structure, using Tailwind CSS and the existing i18next setup.
+
+Design requirements (desktop-first, responsive):
+
+1. Header:
+   - Left: simple logo text "CompressYourPhoto" with a small image icon placeholder.
+   - Right: LanguageSwitcher component already created.
+   - White background, subtle bottom border.
+
+2. Hero section (centered vertically above the fold):
+   - H1: "Compress Your Photos"
+   - Subheading: "Fast, private, and free image compression"
+   - Below: a large card containing the UploadDropzone component.
+   - Under the dropzone: text "Supports JPG, PNG, WebP, HEIC, GIF".
+   - A small row of badges for formats, e.g. [JPG] [PNG] [WebP] [HEIC] [GIF].
+   - At the bottom of this hero: a line with privacy assurances:
+     - "100% client-side • No upload required • Privacy guaranteed"
+
+3. Features strip (below hero):
+   - Light grey background (#f7f7f7 style).
+   - Three FeatureCard components in a row on desktop, stacked on mobile:
+     - Card 1: Title "100% Private", body "All compression happens in your browser. Your photos never leave your device."
+     - Card 2: Title "Lightning Fast", body "Compress images in seconds using modern browser technology."
+     - Card 3: Title "Multilingual", body "Available in 8 languages to serve users worldwide."
+   - Use the existing FeatureCard.tsx for consistent styling.
+
+4. Footer:
+   - Left column: logo "CompressYourPhoto" and a short line: "Compress images instantly, privately, and for free".
+   - Middle column: "Links" with placeholders:
+     - "How It Works"
+     - "Privacy Policy"
+     - "Languages"
+   - Right column: "GitHub" with a placeholder link and a small text: "Compressed 10M+ photos" (just marketing copy for now).
+   - Bottom center: "© 2025 CompressYourPhoto. All rights reserved."
+
+5. Internationalization:
+   - All user-facing strings in Home.tsx, Header, Footer, FeatureCard, UploadDropzone, and any new text must be pulled from the existing locale JSON files via `useTranslation()`.
+   - Add the English strings into `en.json` and provide placeholder keys for the other locales (same keys, English text for now). Do not remove existing keys.
+
+6. Styling:
+   - Use Tailwind classes for spacing, typography, and responsive layout.
+   - Ensure the page looks close to a clean, minimal SaaS landing as in the provided screenshots: plenty of white space, centered hero, dashed border around the upload dropzone, subtle shadows on cards.
+
+Do not add any backend or external services. Keep everything client-side and on free tiers.

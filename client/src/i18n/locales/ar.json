@@ -7,7 +7,10 @@
     "headline": "اضغط صورك",
     "subheadline": "ضغط صور سريع وخاص ومجاني",
     "dropzone": "أسقط الصور هنا أو انقر للرفع",
-    "supportedFormats": "يدعم JPG و PNG و WebP"
+    "supportedFormats": "يدعم JPG و PNG و WebP و HEIC و GIF",
+    "clientSide": "100% من جانب العميل",
+    "noUpload": "لا حاجة للرفع",
+    "privacyGuaranteed": "الخصوصية مضمونة"
   },
   "features": {
     "privacy": {

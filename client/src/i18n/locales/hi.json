@@ -7,7 +7,10 @@
     "headline": "अपनी फ़ोटो संपीड़ित करें",
     "subheadline": "तेज़, निजी और मुफ्त छवि संपीड़न",
     "dropzone": "फ़ोटो यहां छोड़ें या अपलोड करने के लिए क्लिक करें",
-    "supportedFormats": "JPG, PNG, WebP समर्थित"
+    "supportedFormats": "JPG, PNG, WebP, HEIC, GIF समर्थित",
+    "clientSide": "100% क्लाइंट-साइड",
+    "noUpload": "कोई अपलोड आवश्यक नहीं",
+    "privacyGuaranteed": "गोपनीयता की गारंटी"
   },
   "features": {
     "privacy": {

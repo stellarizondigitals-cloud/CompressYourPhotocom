@@ -7,7 +7,10 @@
     "headline": "Compress Your Photos",
     "subheadline": "Fast, private, and free image compression",
     "dropzone": "Drop photos here or click to upload",
-    "supportedFormats": "Supports JPG, PNG, WebP"
+    "supportedFormats": "Supports JPG, PNG, WebP, HEIC, GIF",
+    "clientSide": "100% client-side",
+    "noUpload": "No upload required",
+    "privacyGuaranteed": "Privacy guaranteed"
   },
   "features": {
     "privacy": {
