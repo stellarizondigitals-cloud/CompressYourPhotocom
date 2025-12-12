@@ -1,0 +1,93 @@
+Make the footer links open their own pages (routes) instead of doing nothing. Keep everything free-tier friendly (no backend, no paid APIs, no server database).
+
+Tech constraints:
+- React + TypeScript + Vite
+- Use existing router setup (react-router-dom)
+- No new backend or paid services
+- Pages should be static content components
+
+Tasks:
+
+1) Create these new pages in `src/pages/`:
+- HowItWorks.tsx  -> route: /how-it-works
+- Languages.tsx   -> route: /languages
+- PrivacyPolicy.tsx -> route: /privacy-policy
+- Terms.tsx         -> route: /terms
+- CookiePolicy.tsx  -> route: /cookie-policy
+- Disclaimer.tsx    -> route: /disclaimer
+- Contact.tsx       -> route: /contact
+
+Each page should:
+- Use the same Header and Footer layout as the home page
+- Have an H1 title and readable typography (Tailwind)
+- Be responsive
+- Use i18next keys for headings and important text where reasonable (at minimum English; other languages can fallback if needed)
+
+2) Update routing in App.tsx so these routes render the correct pages.
+Keep the existing language routing approach intact if present.
+
+3) Update Footer links so they navigate using <Link to="...">:
+- "How It Works" -> /how-it-works
+- "Privacy Policy" -> /privacy-policy
+- Add "Terms" -> /terms
+- Add "Cookie Policy" -> /cookie-policy
+- Add "Disclaimer" -> /disclaimer
+- "Languages" -> /languages
+- Add "Contact" -> /contact
+- "GitHub" stays an external link (target=_blank, rel=noopener noreferrer) to: https://github.com/stellarizondigitals-cloud/CompressYourPhotocom
+
+4) Fill each page with complete, high-quality writing that matches the product:
+
+How It Works page content:
+- Explain that compression happens in the browser
+- Steps: Upload -> Choose settings (quality, width, format) -> Compress -> Download single/ZIP
+- Mention supported formats (JPG, PNG, WebP, HEIC, GIF)
+
+Languages page content:
+- List the 8 supported languages: English, Spanish, Portuguese, French, German, Hindi, Simplified Chinese, Arabic
+- Mention RTL support for Arabic
+- Explain language switcher and localized URLs if used
+
+Privacy Policy page content (clear & AdSense-friendly):
+- Operator: Stellarizon Digitals Ltd
+- State: images are processed client-side; not uploaded or stored
+- Analytics: may use Google Analytics 4; no image data is sent
+- Ads/affiliates: may use Google AdSense + affiliate links; third parties may set cookies
+- Cookies: essential vs analytics/ads; user controls via browser
+- Contact email: contact@stellarizondigitals.com
+- Last updated date shown at top
+
+Terms page content (simple & practical):
+- Service provided “as is”
+- User responsibility for rights to images
+- No guarantee of fitness
+- Limitation of liability
+- Changes to service/terms
+- Governing law: England and Wales (since company is in London)
+- Contact email
+
+Cookie Policy page content:
+- What cookies are
+- Categories: essential, analytics, advertising
+- How to manage cookies (browser settings)
+- Mention AdSense may use cookies for ad personalization (without making legal claims beyond that)
+
+Disclaimer page content:
+- Not professional advice
+- Compression results vary
+- No warranty; use at your own risk
+- Third-party links disclaimer
+
+Contact page content:
+- Short paragraph inviting support/feedback
+- Email: contact@stellarizondigitals.com
+- Optionally include a simple mailto link button
+- No form submission backend (keep free-tier)
+
+5) Add basic SEO per page using document title + meta description.
+If a simple SEO helper component exists, reuse it; otherwise create a minimal `Seo.tsx` component to set:
+- document.title
+- meta[name="description"]
+No external libs required.
+
+6) Ensure links now work in production on Vercel (client-side routing). If needed, confirm Vercel handles SPA routes correctly (Vite static build).

@@ -1,0 +1,59 @@
+Make the footer links open their own pages (routes) instead of doing nothing. Keep everything free-tier friendly (no backend, no paid APIs, no server database).
+
+Tech constraints:
+- React + TypeScript + Vite
+- Use existing router setup (react-router-dom)
+- No new backend or paid services
+- Pages should be static content components
+
+Tasks:
+
+1) Create these new pages in `src/pages/`:
+- HowItWorks.tsx  -> route: /how-it-works
+- Languages.tsx   -> route: /languages
+- PrivacyPolicy.tsx -> route: /privacy-policy
+- Terms.tsx         -> route: /terms
+- CookiePolicy.tsx  -> route: /cookie-policy
+- Disclaimer.tsx    -> route: /disclaimer
+- Contact.tsx       -> route: /contact
+
+Each page should:
+- Use the same Header and Footer layout as the home page
+- Have an H1 title and readable typography (Tailwind)
+- Be responsive
+- Use i18next keys for headings and important text where reasonable
+
+2) Update routing in App.tsx so these routes render the correct pages.
+
+3) Update Footer links so they navigate using <Link to="...">:
+- "How It Works" -> /how-it-works
+- "Privacy Policy" -> /privacy-policy
+- "Terms" -> /terms
+- "Cookie Policy" -> /cookie-policy
+- "Disclaimer" -> /disclaimer
+- "Languages" -> /languages
+- "Contact" -> /contact
+- "GitHub" -> external link to: https://github.com/stellarizondigitals-cloud/CompressYourPhotocom
+
+4) Fill each page with complete content:
+
+**Contact page content** (IMPORTANT - use this email):
+- H1: "Contact Us"
+- Paragraph: "Have questions about CompressYourPhoto? Need support or have feedback?"
+- Prominent email: contact@compressyourphoto.com 
+- Add a "mailto:" button: mailto:contact@compressyourphoto.com
+- No forms/backend needed
+
+**Privacy Policy** (use this email too):
+- Operator: Stellarizon Digitals Ltd
+- Contact: contact@compressyourphoto.com
+- All other sections as before (client-side processing, analytics, ads, cookies)
+
+**Terms, Cookie Policy, Disclaimer**: use contact@compressyourphoto.com as contact email
+
+**How It Works**: explain browser compression steps + formats
+**Languages**: list 8 languages + RTL for Arabic
+
+5) Add basic SEO (title + meta description) to each page.
+
+6) Ensure Vercel SPA routing works (add vercel.json if needed for refresh support).

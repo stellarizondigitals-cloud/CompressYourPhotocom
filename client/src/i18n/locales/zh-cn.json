@@ -1,11 +1,11 @@
 {
   "app": {
     "title": "CompressYourPhoto",
-    "tagline": "即时、私密、免费地压缩图像"
+    "tagline": "即时、私密、免费压缩图片"
   },
   "hero": {
     "headline": "压缩您的照片",
-    "subheadline": "快速、私密、免费的图像压缩",
+    "subheadline": "快速、私密、免费的图片压缩",
     "dropzone": "将照片拖放到此处或点击上传",
     "supportedFormats": "支持 JPG、PNG、WebP、HEIC、GIF",
     "clientSide": "100% 客户端处理",
@@ -18,17 +18,17 @@
       "description": "所有压缩都在您的浏览器中进行。您的照片永远不会离开您的设备。"
     },
     "speed": {
-      "title": "闪电般快速",
-      "description": "使用现代浏览器技术在几秒钟内压缩图像。"
+      "title": "极速处理",
+      "description": "使用现代浏览器技术，几秒钟内压缩图片。"
     },
     "multilingual": {
-      "title": "多语言",
-      "description": "提供8种语言版本，服务全球用户。"
+      "title": "多语言支持",
+      "description": "提供 8 种语言，服务全球用户。"
     }
   },
   "compression": {
     "original": "原始",
-    "compressed": "已压缩",
+    "compressed": "压缩后",
     "quality": "质量",
     "qualityLabel": "质量 ({{value}}%)",
     "maxWidth": "最大宽度 (px)",
@@ -36,10 +36,10 @@
     "outputFormat": "输出格式",
     "keepOriginal": "保持原格式",
     "compressButton": "压缩图片",
-    "compressing": "正在压缩 {{current}}/{{total}} 张图片...",
+    "compressing": "正在压缩第 {{current}} 张，共 {{total}} 张图片...",
     "download": "下载",
-    "downloadAll": "下载全部为ZIP",
-    "compressAnother": "压缩更多",
+    "downloadAll": "打包下载 ZIP",
+    "compressAnother": "继续压缩",
     "saved": "已节省",
     "results": "结果",
     "noFiles": "未选择文件",
@@ -54,9 +54,68 @@
     "privacy": "隐私政策",
     "howItWorks": "工作原理",
     "languages": "语言",
-    "stats": "已压缩超过1000万张照片"
+    "links": "链接",
+    "stats": "已压缩超过 1000 万张照片",
+    "allRightsReserved": "版权所有。"
   },
   "language": {
     "select": "选择语言"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新",
+    "noDataCollection": {
+      "title": "不收集数据",
+      "content": "我们不收集、存储或传输您的任何个人数据或图片。您的照片完全在浏览器中处理，永远不会离开您的设备。"
+    },
+    "clientSide": {
+      "title": "100% 本地处理",
+      "content": "所有图片压缩都使用 JavaScript 在您的浏览器中本地进行。我们使用完全在您设备上运行的 browser-image-compression 库。没有任何图片会被上传到任何服务器。"
+    },
+    "noServers": {
+      "title": "无服务器处理",
+      "content": "与其他图片压缩服务不同，我们没有处理您图片的服务器。这意味着您的照片始终完全私密并在您的控制之下。"
+    },
+    "cookies": {
+      "title": "Cookie 和本地存储",
+      "content": "我们仅使用本地存储来记住您的语言偏好。我们不使用跟踪 Cookie、分析或任何收集您数据的第三方服务。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "content": "如果您对我们的隐私做法有任何疑问，请通过 privacy@compressyourphoto.com 联系我们。"
+    }
+  },
+  "howItWorks": {
+    "title": "工作原理",
+    "subtitle": "只需 4 个简单步骤即可压缩您的图片 - 全部在浏览器中完成",
+    "step1": {
+      "title": "上传您的图片",
+      "content": "将照片拖放到上传区域，或点击从设备中选择文件。我们支持 JPG、PNG、WebP、HEIC 和 GIF 格式。"
+    },
+    "step2": {
+      "title": "调整设置",
+      "content": "选择压缩质量（10-100%），如果需要设置最大宽度，并选择所需的输出格式。质量越高文件越大，质量越低文件越小。"
+    },
+    "step3": {
+      "title": "压缩",
+      "content": "点击压缩按钮，观看您的图片在浏览器中即时处理。压缩使用先进算法在保持视觉质量的同时减小文件大小。"
+    },
+    "step4": {
+      "title": "下载",
+      "content": "单独下载压缩后的图片，或一次性打包成 ZIP 文件下载。您的原始文件在设备上保持不变。"
+    },
+    "whyPrivate": {
+      "title": "为什么是私密的？",
+      "content": "您的图片永远不会离开您的设备。所有压缩都使用 JavaScript 在浏览器中进行。我们没有接收您照片的服务器 - 一切都在您的电脑或手机上本地运行。"
+    },
+    "formats": {
+      "title": "支持的格式"
+    }
+  },
+  "languages": {
+    "title": "可用语言",
+    "subtitle": "CompressYourPhoto 提供 8 种语言，服务全球用户",
+    "helpTranslate": "想帮助将 CompressYourPhoto 翻译成您的语言吗？",
+    "contactUs": "联系我们"
   }
 }

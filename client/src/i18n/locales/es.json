@@ -6,9 +6,9 @@
   "hero": {
     "headline": "Comprime Tus Fotos",
     "subheadline": "Compresión de imágenes rápida, privada y gratuita",
-    "dropzone": "Suelta fotos aquí o haz clic para subir",
+    "dropzone": "Arrastra fotos aquí o haz clic para subir",
     "supportedFormats": "Soporta JPG, PNG, WebP, HEIC, GIF",
-    "clientSide": "100% del lado del cliente",
+    "clientSide": "100% en tu dispositivo",
     "noUpload": "Sin subida requerida",
     "privacyGuaranteed": "Privacidad garantizada"
   },
@@ -18,12 +18,12 @@
       "description": "Toda la compresión ocurre en tu navegador. Tus fotos nunca salen de tu dispositivo."
     },
     "speed": {
-      "title": "Súper Rápido",
-      "description": "Comprime imágenes en segundos usando tecnología moderna del navegador."
+      "title": "Ultra Rápido",
+      "description": "Comprime imágenes en segundos usando tecnología moderna de navegador."
     },
     "multilingual": {
       "title": "Multilingüe",
-      "description": "Disponible en 8 idiomas para servir a usuarios de todo el mundo."
+      "description": "Disponible en 8 idiomas para usuarios de todo el mundo."
     }
   },
   "compression": {
@@ -54,9 +54,68 @@
     "privacy": "Política de Privacidad",
     "howItWorks": "Cómo Funciona",
     "languages": "Idiomas",
-    "stats": "Más de 10M fotos comprimidas"
+    "links": "Enlaces",
+    "stats": "Más de 10M de fotos comprimidas",
+    "allRightsReserved": "Todos los derechos reservados."
   },
   "language": {
     "select": "Seleccionar Idioma"
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última Actualización",
+    "noDataCollection": {
+      "title": "Sin Recolección de Datos",
+      "content": "No recopilamos, almacenamos ni transmitimos ninguno de tus datos personales o imágenes. Tus fotos se procesan completamente dentro de tu navegador y nunca salen de tu dispositivo."
+    },
+    "clientSide": {
+      "title": "Procesamiento 100% Local",
+      "content": "Toda la compresión de imágenes ocurre localmente en tu navegador usando JavaScript. Utilizamos la biblioteca browser-image-compression que se ejecuta completamente en tu dispositivo. Ninguna imagen se sube nunca a ningún servidor."
+    },
+    "noServers": {
+      "title": "Sin Procesamiento en Servidor",
+      "content": "A diferencia de otros servicios de compresión de imágenes, no tenemos servidores que procesen tus imágenes. Esto significa que tus fotos permanecen completamente privadas y bajo tu control en todo momento."
+    },
+    "cookies": {
+      "title": "Cookies y Almacenamiento Local",
+      "content": "Solo usamos almacenamiento local para recordar tu preferencia de idioma. No usamos cookies de seguimiento, analíticas ni ningún servicio de terceros que recopile tus datos."
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "content": "Si tienes alguna pregunta sobre nuestras prácticas de privacidad, contáctanos en privacy@compressyourphoto.com."
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Comprime tus imágenes en 4 simples pasos - todo dentro de tu navegador",
+    "step1": {
+      "title": "Sube Tus Imágenes",
+      "content": "Arrastra y suelta tus fotos en el área de carga, o haz clic para seleccionar archivos de tu dispositivo. Soportamos formatos JPG, PNG, WebP, HEIC y GIF."
+    },
+    "step2": {
+      "title": "Ajusta la Configuración",
+      "content": "Elige tu calidad de compresión (10-100%), establece un ancho máximo si es necesario y selecciona el formato de salida deseado. Mayor calidad significa archivos más grandes, menor calidad significa archivos más pequeños."
+    },
+    "step3": {
+      "title": "Comprime",
+      "content": "Haz clic en el botón de comprimir y observa cómo tus imágenes se procesan instantáneamente en tu navegador. La compresión usa algoritmos avanzados para reducir el tamaño del archivo manteniendo la calidad visual."
+    },
+    "step4": {
+      "title": "Descarga",
+      "content": "Descarga tus imágenes comprimidas individualmente o todas a la vez como un archivo ZIP. Tus archivos originales permanecen intactos en tu dispositivo."
+    },
+    "whyPrivate": {
+      "title": "¿Por Qué Es Privado?",
+      "content": "Tus imágenes nunca salen de tu dispositivo. Toda la compresión ocurre en tu navegador usando JavaScript. No tenemos servidores que reciban tus fotos - todo se ejecuta localmente en tu computadora o teléfono."
+    },
+    "formats": {
+      "title": "Formatos Soportados"
+    }
+  },
+  "languages": {
+    "title": "Idiomas Disponibles",
+    "subtitle": "CompressYourPhoto está disponible en 8 idiomas para servir a usuarios de todo el mundo",
+    "helpTranslate": "¿Quieres ayudar a traducir CompressYourPhoto a tu idioma?",
+    "contactUs": "Contáctanos"
   }
 }

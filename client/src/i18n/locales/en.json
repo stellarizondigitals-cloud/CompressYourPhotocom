@@ -54,9 +54,68 @@
     "privacy": "Privacy Policy",
     "howItWorks": "How It Works",
     "languages": "Languages",
-    "stats": "Compressed 10M+ photos"
+    "links": "Links",
+    "stats": "Compressed 10M+ photos",
+    "allRightsReserved": "All rights reserved."
   },
   "language": {
     "select": "Select Language"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "noDataCollection": {
+      "title": "No Data Collection",
+      "content": "We do not collect, store, or transmit any of your personal data or images. Your photos are processed entirely within your browser and never leave your device."
+    },
+    "clientSide": {
+      "title": "100% Client-Side Processing",
+      "content": "All image compression happens locally in your browser using JavaScript. We use the browser-image-compression library which runs entirely on your device. No images are ever uploaded to any server."
+    },
+    "noServers": {
+      "title": "No Server Processing",
+      "content": "Unlike other image compression services, we don't have servers that process your images. This means your photos remain completely private and under your control at all times."
+    },
+    "cookies": {
+      "title": "Cookies & Local Storage",
+      "content": "We only use local storage to remember your language preference. We do not use tracking cookies, analytics, or any third-party services that collect your data."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have any questions about our privacy practices, please contact us at privacy@compressyourphoto.com."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Compress your images in 4 simple steps - all within your browser",
+    "step1": {
+      "title": "Upload Your Images",
+      "content": "Drag and drop your photos onto the upload area, or click to select files from your device. We support JPG, PNG, WebP, HEIC, and GIF formats."
+    },
+    "step2": {
+      "title": "Adjust Settings",
+      "content": "Choose your compression quality (10-100%), set a maximum width if needed, and select your desired output format. Higher quality means larger files, lower quality means smaller files."
+    },
+    "step3": {
+      "title": "Compress",
+      "content": "Click the compress button and watch as your images are processed instantly in your browser. The compression uses advanced algorithms to reduce file size while maintaining visual quality."
+    },
+    "step4": {
+      "title": "Download",
+      "content": "Download your compressed images individually or all at once as a ZIP file. Your original files remain untouched on your device."
+    },
+    "whyPrivate": {
+      "title": "Why Is It Private?",
+      "content": "Your images never leave your device. All compression happens in your browser using JavaScript. We don't have servers that receive your photos - everything runs locally on your computer or phone."
+    },
+    "formats": {
+      "title": "Supported Formats"
+    }
+  },
+  "languages": {
+    "title": "Available Languages",
+    "subtitle": "CompressYourPhoto is available in 8 languages to serve users worldwide",
+    "helpTranslate": "Want to help translate CompressYourPhoto into your language?",
+    "contactUs": "Contact Us"
   }
 }

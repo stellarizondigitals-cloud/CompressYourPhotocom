@@ -6,10 +6,10 @@
   "hero": {
     "headline": "Compressez Vos Photos",
     "subheadline": "Compression d'images rapide, privée et gratuite",
-    "dropzone": "Déposez des photos ici ou cliquez pour télécharger",
+    "dropzone": "Déposez vos photos ici ou cliquez pour télécharger",
     "supportedFormats": "Supporte JPG, PNG, WebP, HEIC, GIF",
     "clientSide": "100% côté client",
-    "noUpload": "Aucun téléchargement requis",
+    "noUpload": "Aucun téléversement requis",
     "privacyGuaranteed": "Confidentialité garantie"
   },
   "features": {
@@ -19,7 +19,7 @@
     },
     "speed": {
       "title": "Ultra Rapide",
-      "description": "Compressez des images en secondes grâce à la technologie moderne du navigateur."
+      "description": "Compressez des images en quelques secondes grâce à la technologie moderne du navigateur."
     },
     "multilingual": {
       "title": "Multilingue",
@@ -38,7 +38,7 @@
     "compressButton": "Compresser les Images",
     "compressing": "Compression de {{current}} sur {{total}} images...",
     "download": "Télécharger",
-    "downloadAll": "Tout Télécharger en ZIP",
+    "downloadAll": "Télécharger Tout en ZIP",
     "compressAnother": "Compresser Plus",
     "saved": "économisé",
     "results": "Résultats",
@@ -54,9 +54,68 @@
     "privacy": "Politique de Confidentialité",
     "howItWorks": "Comment Ça Marche",
     "languages": "Langues",
-    "stats": "Plus de 10M photos compressées"
+    "links": "Liens",
+    "stats": "Plus de 10M de photos compressées",
+    "allRightsReserved": "Tous droits réservés."
   },
   "language": {
     "select": "Sélectionner la Langue"
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière Mise à Jour",
+    "noDataCollection": {
+      "title": "Aucune Collecte de Données",
+      "content": "Nous ne collectons, stockons ni transmettons aucune de vos données personnelles ou images. Vos photos sont traitées entièrement dans votre navigateur et ne quittent jamais votre appareil."
+    },
+    "clientSide": {
+      "title": "Traitement 100% Local",
+      "content": "Toute la compression d'images se fait localement dans votre navigateur en utilisant JavaScript. Nous utilisons la bibliothèque browser-image-compression qui s'exécute entièrement sur votre appareil. Aucune image n'est jamais téléversée vers un serveur."
+    },
+    "noServers": {
+      "title": "Aucun Traitement Serveur",
+      "content": "Contrairement à d'autres services de compression d'images, nous n'avons pas de serveurs qui traitent vos images. Cela signifie que vos photos restent complètement privées et sous votre contrôle à tout moment."
+    },
+    "cookies": {
+      "title": "Cookies et Stockage Local",
+      "content": "Nous utilisons uniquement le stockage local pour mémoriser votre préférence de langue. Nous n'utilisons pas de cookies de suivi, d'analyses ou de services tiers qui collectent vos données."
+    },
+    "contact": {
+      "title": "Nous Contacter",
+      "content": "Si vous avez des questions sur nos pratiques de confidentialité, contactez-nous à privacy@compressyourphoto.com."
+    }
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche",
+    "subtitle": "Compressez vos images en 4 étapes simples - le tout dans votre navigateur",
+    "step1": {
+      "title": "Téléversez Vos Images",
+      "content": "Glissez-déposez vos photos dans la zone de téléversement, ou cliquez pour sélectionner des fichiers depuis votre appareil. Nous supportons les formats JPG, PNG, WebP, HEIC et GIF."
+    },
+    "step2": {
+      "title": "Ajustez les Paramètres",
+      "content": "Choisissez votre qualité de compression (10-100%), définissez une largeur maximale si nécessaire et sélectionnez le format de sortie souhaité. Une qualité plus élevée signifie des fichiers plus gros, une qualité inférieure signifie des fichiers plus petits."
+    },
+    "step3": {
+      "title": "Compressez",
+      "content": "Cliquez sur le bouton de compression et regardez vos images être traitées instantanément dans votre navigateur. La compression utilise des algorithmes avancés pour réduire la taille des fichiers tout en maintenant la qualité visuelle."
+    },
+    "step4": {
+      "title": "Téléchargez",
+      "content": "Téléchargez vos images compressées individuellement ou toutes en même temps dans un fichier ZIP. Vos fichiers originaux restent intacts sur votre appareil."
+    },
+    "whyPrivate": {
+      "title": "Pourquoi Est-Ce Privé?",
+      "content": "Vos images ne quittent jamais votre appareil. Toute la compression se fait dans votre navigateur en utilisant JavaScript. Nous n'avons pas de serveurs qui reçoivent vos photos - tout s'exécute localement sur votre ordinateur ou téléphone."
+    },
+    "formats": {
+      "title": "Formats Supportés"
+    }
+  },
+  "languages": {
+    "title": "Langues Disponibles",
+    "subtitle": "CompressYourPhoto est disponible en 8 langues pour servir les utilisateurs du monde entier",
+    "helpTranslate": "Vous voulez aider à traduire CompressYourPhoto dans votre langue?",
+    "contactUs": "Nous Contacter"
   }
 }

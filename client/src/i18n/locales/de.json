@@ -1,10 +1,10 @@
 {
   "app": {
     "title": "CompressYourPhoto",
-    "tagline": "Komprimieren Sie Bilder sofort, privat und kostenlos"
+    "tagline": "Bilder sofort, privat und kostenlos komprimieren"
   },
   "hero": {
-    "headline": "Komprimieren Sie Ihre Fotos",
+    "headline": "Komprimiere Deine Fotos",
     "subheadline": "Schnelle, private und kostenlose Bildkomprimierung",
     "dropzone": "Fotos hier ablegen oder klicken zum Hochladen",
     "supportedFormats": "Unterstützt JPG, PNG, WebP, HEIC, GIF",
@@ -38,13 +38,13 @@
     "compressButton": "Bilder Komprimieren",
     "compressing": "Komprimiere {{current}} von {{total}} Bildern...",
     "download": "Herunterladen",
-    "downloadAll": "Alle als ZIP Herunterladen",
-    "compressAnother": "Weitere Komprimieren",
+    "downloadAll": "Alles als ZIP Herunterladen",
+    "compressAnother": "Mehr Komprimieren",
     "saved": "gespart",
     "results": "Ergebnisse",
     "noFiles": "Keine Dateien ausgewählt",
     "error": "Fehler",
-    "unsupportedFormat": "Format nicht unterstützt",
+    "unsupportedFormat": "Nicht unterstütztes Format",
     "compressionFailed": "Komprimierung fehlgeschlagen",
     "pending": "Ausstehend",
     "done": "Fertig",
@@ -52,11 +52,70 @@
   },
   "footer": {
     "privacy": "Datenschutzrichtlinie",
-    "howItWorks": "So Funktioniert Es",
+    "howItWorks": "So Funktioniert's",
     "languages": "Sprachen",
-    "stats": "Über 10M Fotos komprimiert"
+    "links": "Links",
+    "stats": "Über 10M Fotos komprimiert",
+    "allRightsReserved": "Alle Rechte vorbehalten."
   },
   "language": {
     "select": "Sprache Auswählen"
+  },
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "lastUpdated": "Letzte Aktualisierung",
+    "noDataCollection": {
+      "title": "Keine Datenerfassung",
+      "content": "Wir sammeln, speichern oder übertragen keine Ihrer persönlichen Daten oder Bilder. Ihre Fotos werden vollständig in Ihrem Browser verarbeitet und verlassen niemals Ihr Gerät."
+    },
+    "clientSide": {
+      "title": "100% Lokale Verarbeitung",
+      "content": "Die gesamte Bildkomprimierung erfolgt lokal in Ihrem Browser mit JavaScript. Wir verwenden die browser-image-compression Bibliothek, die vollständig auf Ihrem Gerät läuft. Keine Bilder werden jemals auf einen Server hochgeladen."
+    },
+    "noServers": {
+      "title": "Keine Serververarbeitung",
+      "content": "Anders als andere Bildkomprimierungsdienste haben wir keine Server, die Ihre Bilder verarbeiten. Das bedeutet, dass Ihre Fotos jederzeit vollständig privat und unter Ihrer Kontrolle bleiben."
+    },
+    "cookies": {
+      "title": "Cookies und Lokaler Speicher",
+      "content": "Wir verwenden nur lokalen Speicher, um Ihre Sprachpräferenz zu speichern. Wir verwenden keine Tracking-Cookies, Analysen oder Drittanbieterdienste, die Ihre Daten sammeln."
+    },
+    "contact": {
+      "title": "Kontaktieren Sie Uns",
+      "content": "Wenn Sie Fragen zu unseren Datenschutzpraktiken haben, kontaktieren Sie uns unter privacy@compressyourphoto.com."
+    }
+  },
+  "howItWorks": {
+    "title": "So Funktioniert's",
+    "subtitle": "Komprimieren Sie Ihre Bilder in 4 einfachen Schritten - alles in Ihrem Browser",
+    "step1": {
+      "title": "Laden Sie Ihre Bilder Hoch",
+      "content": "Ziehen Sie Ihre Fotos in den Upload-Bereich oder klicken Sie, um Dateien von Ihrem Gerät auszuwählen. Wir unterstützen JPG, PNG, WebP, HEIC und GIF Formate."
+    },
+    "step2": {
+      "title": "Einstellungen Anpassen",
+      "content": "Wählen Sie Ihre Komprimierungsqualität (10-100%), legen Sie bei Bedarf eine maximale Breite fest und wählen Sie Ihr gewünschtes Ausgabeformat. Höhere Qualität bedeutet größere Dateien, niedrigere Qualität bedeutet kleinere Dateien."
+    },
+    "step3": {
+      "title": "Komprimieren",
+      "content": "Klicken Sie auf die Komprimierungsschaltfläche und beobachten Sie, wie Ihre Bilder sofort in Ihrem Browser verarbeitet werden. Die Komprimierung verwendet fortschrittliche Algorithmen, um die Dateigröße zu reduzieren und gleichzeitig die visuelle Qualität zu erhalten."
+    },
+    "step4": {
+      "title": "Herunterladen",
+      "content": "Laden Sie Ihre komprimierten Bilder einzeln oder alle auf einmal als ZIP-Datei herunter. Ihre Originaldateien bleiben auf Ihrem Gerät unverändert."
+    },
+    "whyPrivate": {
+      "title": "Warum Ist Es Privat?",
+      "content": "Ihre Bilder verlassen niemals Ihr Gerät. Die gesamte Komprimierung erfolgt in Ihrem Browser mit JavaScript. Wir haben keine Server, die Ihre Fotos empfangen - alles läuft lokal auf Ihrem Computer oder Telefon."
+    },
+    "formats": {
+      "title": "Unterstützte Formate"
+    }
+  },
+  "languages": {
+    "title": "Verfügbare Sprachen",
+    "subtitle": "CompressYourPhoto ist in 8 Sprachen verfügbar, um Benutzer weltweit zu bedienen",
+    "helpTranslate": "Möchten Sie helfen, CompressYourPhoto in Ihre Sprache zu übersetzen?",
+    "contactUs": "Kontaktieren Sie Uns"
   }
 }
