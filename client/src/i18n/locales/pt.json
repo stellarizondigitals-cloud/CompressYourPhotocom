@@ -51,10 +51,16 @@
     "clearAll": "Limpar Tudo"
   },
   "footer": {
+    "product": "Produto",
+    "legal": "Legal",
+    "connect": "Conectar",
     "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "cookiePolicy": "Política de Cookies",
+    "disclaimer": "Aviso Legal",
     "howItWorks": "Como Funciona",
     "languages": "Idiomas",
-    "links": "Links",
+    "contact": "Contato",
     "stats": "Mais de 10M de fotos comprimidas",
     "allRightsReserved": "Todos os direitos reservados."
   },
@@ -64,6 +70,10 @@
   "privacy": {
     "title": "Política de Privacidade",
     "lastUpdated": "Última Atualização",
+    "operator": {
+      "title": "Operador do Site",
+      "content": "Este site é operado por:"
+    },
     "noDataCollection": {
       "title": "Sem Coleta de Dados",
       "content": "Não coletamos, armazenamos ou transmitimos nenhum de seus dados pessoais ou imagens. Suas fotos são processadas inteiramente dentro do seu navegador e nunca saem do seu dispositivo."
@@ -82,7 +92,7 @@
     },
     "contact": {
       "title": "Contate-nos",
-      "content": "Se você tiver alguma dúvida sobre nossas práticas de privacidade, entre em contato em privacy@compressyourphoto.com."
+      "content": "Se você tiver alguma dúvida sobre nossas práticas de privacidade, entre em contato."
     }
   },
   "howItWorks": {
@@ -117,5 +127,114 @@
     "subtitle": "CompressYourPhoto está disponível em 8 idiomas para servir usuários de todo o mundo",
     "helpTranslate": "Quer ajudar a traduzir o CompressYourPhoto para o seu idioma?",
     "contactUs": "Contate-nos"
+  },
+  "terms": {
+    "title": "Termos de Serviço",
+    "lastUpdated": "Última Atualização",
+    "acceptance": {
+      "title": "Aceitação dos Termos",
+      "content": "Ao acessar e usar o CompressYourPhoto, você aceita e concorda em cumprir estes Termos de Serviço. Se você não concordar com estes termos, por favor não use nosso serviço."
+    },
+    "service": {
+      "title": "Descrição do Serviço",
+      "content": "CompressYourPhoto fornece um serviço gratuito de compressão de imagens baseado em navegador. Todo o processamento de imagens ocorre localmente no seu navegador - nenhum arquivo é enviado para qualquer servidor. O serviço é fornecido 'como está' sem quaisquer garantias."
+    },
+    "intellectual": {
+      "title": "Propriedade Intelectual",
+      "content": "Você mantém todos os direitos sobre suas imagens. Não reivindicamos nenhuma propriedade ou direitos sobre as imagens que você comprime usando nosso serviço. O nome, logotipo e design do site CompressYourPhoto são propriedade da Stellarizon Digitals Ltd."
+    },
+    "liability": {
+      "title": "Limitação de Responsabilidade",
+      "content": "CompressYourPhoto e Stellarizon Digitals Ltd não serão responsáveis por quaisquer danos diretos, indiretos, incidentais, especiais ou consequentes resultantes do seu uso do serviço, incluindo mas não limitado à perda de dados ou qualidade de imagem."
+    },
+    "changes": {
+      "title": "Alterações nos Termos",
+      "content": "Reservamo-nos o direito de modificar estes termos a qualquer momento. O uso continuado do serviço após as alterações constitui aceitação dos novos termos."
+    },
+    "contact": {
+      "title": "Contato",
+      "content": "Para dúvidas sobre estes Termos de Serviço, entre em contato em:"
+    }
+  },
+  "cookies": {
+    "title": "Política de Cookies",
+    "lastUpdated": "Última Atualização",
+    "what": {
+      "title": "O Que São Cookies?",
+      "content": "Cookies são pequenos arquivos de texto armazenados no seu dispositivo pelos sites que você visita. Eles ajudam os sites a lembrar suas preferências e melhorar sua experiência de navegação."
+    },
+    "usage": {
+      "title": "Como Usamos Cookies",
+      "content": "CompressYourPhoto usa cookies e armazenamento local mínimos. Priorizamos sua privacidade e armazenamos apenas informações essenciais para fornecer o serviço."
+    },
+    "types": {
+      "title": "Tipos de Dados que Armazenamos",
+      "essential": {
+        "title": "Armazenamento Essencial",
+        "content": "Usamos armazenamento local do navegador para salvar sua preferência de idioma para que o site seja exibido no idioma escolhido em visitas futuras."
+      },
+      "preference": {
+        "title": "Armazenamento de Preferências",
+        "content": "Suas configurações de compressão (nível de qualidade, formato de saída) podem ser salvas localmente para restaurar suas preferências em visitas futuras."
+      }
+    },
+    "thirdParty": {
+      "title": "Cookies de Terceiros",
+      "content": "Não usamos cookies de rastreamento de terceiros, serviços de análise ou redes de publicidade. Sua atividade de navegação no CompressYourPhoto não é rastreada ou compartilhada com ninguém."
+    },
+    "control": {
+      "title": "Gerenciamento de Cookies",
+      "content": "Você pode limpar o armazenamento local e os cookies do seu navegador a qualquer momento através das configurações do navegador. Isso redefinirá sua preferência de idioma, mas não afetará a funcionalidade principal do serviço."
+    },
+    "contact": {
+      "title": "Contato",
+      "content": "Para dúvidas sobre nossa Política de Cookies, entre em contato em:"
+    }
+  },
+  "disclaimer": {
+    "title": "Aviso Legal",
+    "lastUpdated": "Última Atualização",
+    "general": {
+      "title": "Aviso Legal Geral",
+      "content": "As informações e serviços fornecidos pelo CompressYourPhoto são apenas para uso geral. Embora nos esforcemos para fornecer um serviço de compressão de imagens confiável, não fazemos representações ou garantias sobre a precisão, confiabilidade ou adequação do serviço para qualquer finalidade específica."
+    },
+    "noWarranty": {
+      "title": "Sem Garantia",
+      "content": "CompressYourPhoto é fornecido 'como está' sem garantia de qualquer tipo, expressa ou implícita. Não garantimos que o serviço será ininterrupto, livre de erros, ou que quaisquer defeitos serão corrigidos."
+    },
+    "accuracy": {
+      "title": "Precisão dos Resultados",
+      "content": "Os resultados da compressão podem variar dependendo do tipo de imagem, conteúdo e configurações selecionadas. Não podemos garantir reduções específicas de tamanho de arquivo ou resultados de qualidade. Sempre mantenha cópias originais de imagens importantes."
+    },
+    "external": {
+      "title": "Links Externos",
+      "content": "Nosso site pode conter links para sites externos. Não somos responsáveis pelo conteúdo, políticas de privacidade ou práticas de quaisquer sites de terceiros."
+    },
+    "limitation": {
+      "title": "Limitação de Responsabilidade",
+      "content": "Em nenhum caso CompressYourPhoto ou Stellarizon Digitals Ltd serão responsáveis por qualquer perda ou dano decorrente do seu uso do serviço, incluindo perda de dados, receita ou lucros."
+    },
+    "contact": {
+      "title": "Contato",
+      "content": "Para dúvidas sobre este Aviso Legal, entre em contato em:"
+    }
+  },
+  "contact": {
+    "title": "Contate-nos",
+    "subtitle": "Tem dúvidas sobre o CompressYourPhoto? Precisa de suporte ou tem feedback?",
+    "email": {
+      "title": "Envie-nos um Email",
+      "description": "Adoraríamos ouvir de você. Envie-nos um email e responderemos o mais rápido possível."
+    },
+    "sendEmail": "Enviar Email",
+    "support": {
+      "title": "Suporte",
+      "content": "Está tendo problemas com o compressor de imagens? Avise-nos e ajudaremos você."
+    },
+    "feedback": {
+      "title": "Feedback",
+      "content": "Agradecemos suas sugestões para melhorar o CompressYourPhoto."
+    },
+    "operator": "Operado por"
   }
 }

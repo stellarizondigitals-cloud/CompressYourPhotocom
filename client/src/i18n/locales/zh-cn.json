@@ -51,10 +51,16 @@
     "clearAll": "清除全部"
   },
   "footer": {
+    "product": "产品",
+    "legal": "法律",
+    "connect": "连接",
     "privacy": "隐私政策",
+    "terms": "服务条款",
+    "cookiePolicy": "Cookie 政策",
+    "disclaimer": "免责声明",
     "howItWorks": "工作原理",
     "languages": "语言",
-    "links": "链接",
+    "contact": "联系我们",
     "stats": "已压缩超过 1000 万张照片",
     "allRightsReserved": "版权所有。"
   },
@@ -64,6 +70,10 @@
   "privacy": {
     "title": "隐私政策",
     "lastUpdated": "最后更新",
+    "operator": {
+      "title": "网站运营商",
+      "content": "本网站由以下公司运营："
+    },
     "noDataCollection": {
       "title": "不收集数据",
       "content": "我们不收集、存储或传输您的任何个人数据或图片。您的照片完全在浏览器中处理，永远不会离开您的设备。"
@@ -82,7 +92,7 @@
     },
     "contact": {
       "title": "联系我们",
-      "content": "如果您对我们的隐私做法有任何疑问，请通过 privacy@compressyourphoto.com 联系我们。"
+      "content": "如果您对我们的隐私做法有任何疑问，请联系我们。"
     }
   },
   "howItWorks": {
@@ -117,5 +127,114 @@
     "subtitle": "CompressYourPhoto 提供 8 种语言，服务全球用户",
     "helpTranslate": "想帮助将 CompressYourPhoto 翻译成您的语言吗？",
     "contactUs": "联系我们"
+  },
+  "terms": {
+    "title": "服务条款",
+    "lastUpdated": "最后更新",
+    "acceptance": {
+      "title": "条款接受",
+      "content": "通过访问和使用 CompressYourPhoto，您接受并同意受这些服务条款的约束。如果您不同意这些条款，请不要使用我们的服务。"
+    },
+    "service": {
+      "title": "服务描述",
+      "content": "CompressYourPhoto 提供免费的基于浏览器的图片压缩服务。所有图片处理都在您的浏览器中本地进行 - 没有文件被上传到任何服务器。服务按'原样'提供，不提供任何保证。"
+    },
+    "intellectual": {
+      "title": "知识产权",
+      "content": "您保留对您图片的所有权利。我们不对您使用我们服务压缩的图片主张任何所有权或权利。CompressYourPhoto 名称、标志和网站设计归 Stellarizon Digitals Ltd 所有。"
+    },
+    "liability": {
+      "title": "责任限制",
+      "content": "CompressYourPhoto 和 Stellarizon Digitals Ltd 对因您使用服务而产生的任何直接、间接、附带、特殊或后果性损害不承担责任，包括但不限于数据或图片质量损失。"
+    },
+    "changes": {
+      "title": "条款变更",
+      "content": "我们保留随时修改这些条款的权利。在变更后继续使用服务即表示接受新条款。"
+    },
+    "contact": {
+      "title": "联系方式",
+      "content": "如对这些服务条款有疑问，请联系我们："
+    }
+  },
+  "cookies": {
+    "title": "Cookie 政策",
+    "lastUpdated": "最后更新",
+    "what": {
+      "title": "什么是 Cookie？",
+      "content": "Cookie 是您访问的网站存储在您设备上的小型文本文件。它们帮助网站记住您的偏好并改善您的浏览体验。"
+    },
+    "usage": {
+      "title": "我们如何使用 Cookie",
+      "content": "CompressYourPhoto 使用最少的 Cookie 和本地存储。我们优先考虑您的隐私，只存储提供服务所必需的信息。"
+    },
+    "types": {
+      "title": "我们存储的数据类型",
+      "essential": {
+        "title": "必要存储",
+        "content": "我们使用浏览器本地存储来保存您的语言偏好，以便网站在您下次访问时以您选择的语言显示。"
+      },
+      "preference": {
+        "title": "偏好存储",
+        "content": "您的压缩设置（质量级别、输出格式）可能会本地保存，以便在未来访问时恢复您的偏好。"
+      }
+    },
+    "thirdParty": {
+      "title": "第三方 Cookie",
+      "content": "我们不使用任何第三方跟踪 Cookie、分析服务或广告网络。您在 CompressYourPhoto 上的浏览活动不会被跟踪或与任何人共享。"
+    },
+    "control": {
+      "title": "管理 Cookie",
+      "content": "您可以随时通过浏览器设置清除浏览器的本地存储和 Cookie。这将重置您的语言偏好，但不会影响服务的核心功能。"
+    },
+    "contact": {
+      "title": "联系方式",
+      "content": "如对我们的 Cookie 政策有疑问，请联系我们："
+    }
+  },
+  "disclaimer": {
+    "title": "免责声明",
+    "lastUpdated": "最后更新",
+    "general": {
+      "title": "一般免责声明",
+      "content": "CompressYourPhoto 提供的信息和服务仅供一般使用。虽然我们努力提供可靠的图片压缩服务，但我们不对服务的准确性、可靠性或适用于任何特定目的作出任何陈述或保证。"
+    },
+    "noWarranty": {
+      "title": "无保证",
+      "content": "CompressYourPhoto 按'原样'提供，不提供任何明示或暗示的保证。我们不保证服务不会中断、无错误或任何缺陷将被纠正。"
+    },
+    "accuracy": {
+      "title": "结果准确性",
+      "content": "压缩结果可能因图片类型、内容和选定的设置而异。我们无法保证特定的文件大小减少或质量结果。请始终保留重要图片的原始副本。"
+    },
+    "external": {
+      "title": "外部链接",
+      "content": "我们的网站可能包含指向外部网站的链接。我们对任何第三方网站的内容、隐私政策或做法不承担责任。"
+    },
+    "limitation": {
+      "title": "责任限制",
+      "content": "在任何情况下，CompressYourPhoto 或 Stellarizon Digitals Ltd 都不对因您使用服务而产生的任何损失或损害承担责任，包括数据、收入或利润损失。"
+    },
+    "contact": {
+      "title": "联系方式",
+      "content": "如对本免责声明有疑问，请联系我们："
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "对 CompressYourPhoto 有疑问？需要支持或有反馈？",
+    "email": {
+      "title": "发送邮件",
+      "description": "我们很乐意收到您的来信。发送电子邮件，我们会尽快回复。"
+    },
+    "sendEmail": "发送邮件",
+    "support": {
+      "title": "技术支持",
+      "content": "图片压缩器有问题？告诉我们，我们会帮助您。"
+    },
+    "feedback": {
+      "title": "反馈建议",
+      "content": "我们感谢您对改进 CompressYourPhoto 的建议。"
+    },
+    "operator": "运营商"
   }
 }
