@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Image, Github } from 'lucide-react';
+import { Image, Shield, Zap, Smartphone, FileImage, Lock } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 
 export function Footer() {
@@ -86,22 +86,29 @@ export function Footer() {
           </div>
 
           <div className="space-y-3">
-            <h4 className="font-medium text-sm">{t('footer.connect')}</h4>
-            <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
-              <Github className="h-4 w-4" />
-              <a 
-                href="https://github.com/stellarizondigitals-cloud/CompressYourPhotocom"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-github"
-              >
-                GitHub
-              </a>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              {t('footer.stats')}
-            </p>
+            <h4 className="font-medium text-sm">{t('footer.trustPerformance')}</h4>
+            <ul className="space-y-2">
+              <li className={`flex items-center gap-2 text-sm text-muted-foreground ${isRTL ? 'flex-row-reverse justify-end' : ''}`} data-testid="trust-browser-based">
+                <Shield className="h-3.5 w-3.5 flex-shrink-0" />
+                <span>{t('footer.browserBased')}</span>
+              </li>
+              <li className={`flex items-center gap-2 text-sm text-muted-foreground ${isRTL ? 'flex-row-reverse justify-end' : ''}`} data-testid="trust-private">
+                <Lock className="h-3.5 w-3.5 flex-shrink-0" />
+                <span>{t('footer.privateByDesign')}</span>
+              </li>
+              <li className={`flex items-center gap-2 text-sm text-muted-foreground ${isRTL ? 'flex-row-reverse justify-end' : ''}`} data-testid="trust-fast">
+                <Zap className="h-3.5 w-3.5 flex-shrink-0" />
+                <span>{t('footer.fastCompression')}</span>
+              </li>
+              <li className={`flex items-center gap-2 text-sm text-muted-foreground ${isRTL ? 'flex-row-reverse justify-end' : ''}`} data-testid="trust-mobile">
+                <Smartphone className="h-3.5 w-3.5 flex-shrink-0" />
+                <span>{t('footer.mobileDesktop')}</span>
+              </li>
+              <li className={`flex items-center gap-2 text-sm text-muted-foreground ${isRTL ? 'flex-row-reverse justify-end' : ''}`} data-testid="trust-formats">
+                <FileImage className="h-3.5 w-3.5 flex-shrink-0" />
+                <span>{t('footer.supportedFormats')}</span>
+              </li>
+            </ul>
           </div>
         </div>
 

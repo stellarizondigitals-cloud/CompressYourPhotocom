@@ -53,7 +53,7 @@
   "footer": {
     "product": "产品",
     "legal": "法律",
-    "connect": "连接",
+    "trustPerformance": "信任与性能",
     "privacy": "隐私政策",
     "terms": "服务条款",
     "cookiePolicy": "Cookie 政策",
@@ -61,7 +61,11 @@
     "howItWorks": "工作原理",
     "languages": "语言",
     "contact": "联系我们",
-    "stats": "已压缩超过 1000 万张照片",
+    "browserBased": "100% 浏览器处理（无需上传）",
+    "privateByDesign": "设计即隐私",
+    "fastCompression": "秒级快速压缩",
+    "mobileDesktop": "支持手机和电脑",
+    "supportedFormats": "支持 JPG、PNG、WebP、HEIC、GIF",
     "allRightsReserved": "版权所有。"
   },
   "language": {

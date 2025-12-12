@@ -53,7 +53,7 @@
   "footer": {
     "product": "المنتج",
     "legal": "قانوني",
-    "connect": "تواصل",
+    "trustPerformance": "الثقة والأداء",
     "privacy": "سياسة الخصوصية",
     "terms": "شروط الخدمة",
     "cookiePolicy": "سياسة الكوكيز",
@@ -61,7 +61,11 @@
     "howItWorks": "كيف يعمل",
     "languages": "اللغات",
     "contact": "اتصل بنا",
-    "stats": "تم ضغط أكثر من 10 مليون صورة",
+    "browserBased": "100% في المتصفح (بدون رفع)",
+    "privateByDesign": "خاص بالتصميم",
+    "fastCompression": "ضغط سريع في ثوانٍ",
+    "mobileDesktop": "يعمل على الجوال والكمبيوتر",
+    "supportedFormats": "يدعم JPG، PNG، WebP، HEIC، GIF",
     "allRightsReserved": "جميع الحقوق محفوظة."
   },
   "language": {

@@ -53,7 +53,7 @@
   "footer": {
     "product": "Produkt",
     "legal": "Rechtliches",
-    "connect": "Verbinden",
+    "trustPerformance": "Vertrauen & Leistung",
     "privacy": "Datenschutzrichtlinie",
     "terms": "Nutzungsbedingungen",
     "cookiePolicy": "Cookie-Richtlinie",
@@ -61,7 +61,11 @@
     "howItWorks": "So Funktioniert's",
     "languages": "Sprachen",
     "contact": "Kontakt",
-    "stats": "Über 10M Fotos komprimiert",
+    "browserBased": "100% browserbasiert (keine Uploads)",
+    "privateByDesign": "Privat durch Design",
+    "fastCompression": "Schnelle Komprimierung in Sekunden",
+    "mobileDesktop": "Funktioniert auf Handy & Desktop",
+    "supportedFormats": "Unterstützt JPG, PNG, WebP, HEIC, GIF",
     "allRightsReserved": "Alle Rechte vorbehalten."
   },
   "language": {

@@ -53,7 +53,7 @@
   "footer": {
     "product": "उत्पाद",
     "legal": "कानूनी",
-    "connect": "जुड़ें",
+    "trustPerformance": "विश्वास और प्रदर्शन",
     "privacy": "गोपनीयता नीति",
     "terms": "सेवा की शर्तें",
     "cookiePolicy": "कुकी नीति",
@@ -61,7 +61,11 @@
     "howItWorks": "यह कैसे काम करता है",
     "languages": "भाषाएं",
     "contact": "संपर्क",
-    "stats": "10M+ फ़ोटो संपीड़ित",
+    "browserBased": "100% ब्राउज़र-आधारित (कोई अपलोड नहीं)",
+    "privateByDesign": "डिज़ाइन से निजी",
+    "fastCompression": "सेकंडों में तेज़ संपीड़न",
+    "mobileDesktop": "मोबाइल और डेस्कटॉप पर काम करता है",
+    "supportedFormats": "JPG, PNG, WebP, HEIC, GIF समर्थित",
     "allRightsReserved": "सर्वाधिकार सुरक्षित।"
   },
   "language": {
