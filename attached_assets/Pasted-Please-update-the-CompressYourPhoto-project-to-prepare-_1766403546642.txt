@@ -1,0 +1,54 @@
+Please update the CompressYourPhoto project to prepare for monetisation and analytics, while keeping everything 100% client-side and free-tier friendly (no backend, no paid APIs).
+
+1) Google Analytics 4 Integration
+---------------------------------
+I will paste my GA4 Measurement ID later, so please:
+
+- Create a small helper in the client app to load GA4 when an environment variable is present.
+- In `index.html` or the main entry, add a placeholder comment where the GA4 script will go, with clear instructions like:
+  <!-- GA4 script goes here when G-XXXX is available -->
+
+- In React, create a small utility (e.g. `src/lib/analytics.ts`) with:
+  - `initAnalytics(measurementId: string)` – loads GA4 script dynamically.
+  - `trackPageView(path: string)` – sends a page_view to GA4.
+- In `App.tsx` (or the main router), call:
+  - `initAnalytics(import.meta.env.VITE_GA_MEASUREMENT_ID)` once on mount if the env var exists.
+  - `trackPageView(location.pathname)` whenever the route changes.
+
+Make sure:
+- No errors occur if `VITE_GA_MEASUREMENT_ID` is not set.
+- Everything remains purely client-side and works on Vercel Hobby free tier.
+
+2) Add a Monetisation / Recommendations Section
+-----------------------------------------------
+On the home page, above the footer, add a new section called "Recommended Tools" that is ready for affiliate links or AdSense later.
+
+Design:
+- H2: "Recommended Tools"
+- Short paragraph: "Here are some useful tools you might like. Some of these links may be affiliate links."
+- Three cards laid out responsively:
+  1) "Backup Your Photos"
+     Description: "Use a secure cloud storage provider to keep your compressed photos safe."
+     Button: "Learn more" with placeholder href `#`
+  2) "Edit Before You Compress"
+     Description: "Crop, rotate, and adjust your photos using a free online editor."
+     Button: "Open editor" with placeholder href `#`
+  3) "Optimize Your Website Images"
+     Description: "Developers can use automated tools to compress images as part of their build pipeline."
+     Button: "View developer tools" with placeholder href `#`
+
+Implementation details:
+- Use the same card styling as the existing feature cards for visual consistency.
+- Keep text and headings translatable with i18next (add new translation keys).
+- For now, use `href="#"` and `rel="noopener noreferrer"` and `target="_blank"` on the buttons, so I can replace them later with real affiliate URLs.
+
+3) Keep Everything Free-tier Friendly
+-------------------------------------
+- Do NOT add any backend API routes or databases.
+- Do NOT add any new paid SDKs or heavy analytics libraries.
+- The GA4 integration should only load the Google script from `https://www.googletagmanager.com/gtag/js?id=...` when a measurement ID is configured.
+- Ensure the build still works with Vite and deploys to Vercel without extra configuration.
+
+Finally, summarize:
+- Where to put my GA4 Measurement ID (which env var or which code line).
+- Which files were changed for the monetisation section so I can review them.
