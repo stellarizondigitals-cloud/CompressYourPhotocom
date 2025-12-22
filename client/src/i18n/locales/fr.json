@@ -240,5 +240,24 @@
       "content": "Nous apprécions vos suggestions pour améliorer CompressYourPhoto."
     },
     "operator": "Exploité par"
+  },
+  "recommendedTools": {
+    "title": "Outils Recommandés",
+    "subtitle": "Voici quelques outils utiles que vous pourriez aimer. Certains de ces liens peuvent être des liens d'affiliation.",
+    "backup": {
+      "title": "Sauvegardez Vos Photos",
+      "description": "Utilisez un fournisseur de stockage cloud sécurisé pour garder vos photos compressées en sécurité.",
+      "button": "En savoir plus"
+    },
+    "editor": {
+      "title": "Éditez Avant de Compresser",
+      "description": "Recadrez, faites pivoter et ajustez vos photos avec un éditeur en ligne gratuit.",
+      "button": "Ouvrir l'éditeur"
+    },
+    "developer": {
+      "title": "Optimisez les Images de Votre Site",
+      "description": "Les développeurs peuvent utiliser des outils automatisés pour compresser les images dans leur pipeline de build.",
+      "button": "Voir les outils développeur"
+    }
   }
 }

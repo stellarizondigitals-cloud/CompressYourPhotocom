@@ -240,5 +240,24 @@
       "content": "我们感谢您对改进 CompressYourPhoto 的建议。"
     },
     "operator": "运营商"
+  },
+  "recommendedTools": {
+    "title": "推荐工具",
+    "subtitle": "这里有一些您可能喜欢的实用工具。其中一些链接可能是联盟链接。",
+    "backup": {
+      "title": "备份您的照片",
+      "description": "使用安全的云存储提供商来保护您压缩后的照片。",
+      "button": "了解更多"
+    },
+    "editor": {
+      "title": "压缩前编辑",
+      "description": "使用免费的在线编辑器裁剪、旋转和调整您的照片。",
+      "button": "打开编辑器"
+    },
+    "developer": {
+      "title": "优化网站图片",
+      "description": "开发者可以使用自动化工具在构建过程中压缩图片。",
+      "button": "查看开发者工具"
+    }
   }
 }

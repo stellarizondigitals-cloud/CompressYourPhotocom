@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -14,6 +15,7 @@ import CookiePolicy from "@/pages/CookiePolicy";
 import Disclaimer from "@/pages/Disclaimer";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
+import { initAnalytics, trackPageView } from "@/lib/analytics";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -23,6 +25,20 @@ function Layout({ children }: { children: React.ReactNode }) {
       <Footer />
     </div>
   );
+}
+
+function AnalyticsTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    initAnalytics(import.meta.env.VITE_GA_MEASUREMENT_ID);
+  }, []);
+
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location.pathname]);
+
+  return null;
 }
 
 function AppRoutes() {
@@ -53,6 +69,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <BrowserRouter>
+          <AnalyticsTracker />
           <AppRoutes />
           <Toaster />
         </BrowserRouter>

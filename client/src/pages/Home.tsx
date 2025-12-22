@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Shield, Zap, Globe } from 'lucide-react';
 import { ImageCompressor } from '@/components/ImageCompressor';
 import { FeatureCard } from '@/components/FeatureCard';
+import { RecommendedTools } from '@/components/RecommendedTools';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/hooks/useLanguage';
 
@@ -75,6 +76,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <RecommendedTools />
     </div>
   );
 }

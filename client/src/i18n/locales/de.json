@@ -240,5 +240,24 @@
       "content": "Wir schätzen Ihre Vorschläge zur Verbesserung von CompressYourPhoto."
     },
     "operator": "Betrieben von"
+  },
+  "recommendedTools": {
+    "title": "Empfohlene Tools",
+    "subtitle": "Hier sind einige nützliche Tools, die Ihnen gefallen könnten. Einige dieser Links können Affiliate-Links sein.",
+    "backup": {
+      "title": "Sichern Sie Ihre Fotos",
+      "description": "Verwenden Sie einen sicheren Cloud-Speicheranbieter, um Ihre komprimierten Fotos sicher aufzubewahren.",
+      "button": "Mehr erfahren"
+    },
+    "editor": {
+      "title": "Bearbeiten Vor dem Komprimieren",
+      "description": "Schneiden, drehen und passen Sie Ihre Fotos mit einem kostenlosen Online-Editor an.",
+      "button": "Editor öffnen"
+    },
+    "developer": {
+      "title": "Optimieren Sie Website-Bilder",
+      "description": "Entwickler können automatisierte Tools verwenden, um Bilder als Teil ihrer Build-Pipeline zu komprimieren.",
+      "button": "Entwickler-Tools ansehen"
+    }
   }
 }
