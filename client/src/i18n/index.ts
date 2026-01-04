@@ -50,5 +50,5 @@ i18n
       caches: ['cookie', 'localStorage'],
     },
   });
-1   
+
 export default i18n;
