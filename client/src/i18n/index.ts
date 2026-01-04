@@ -41,6 +41,8 @@ i18n
     supportedLngs: ['en', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar'],
     fallbackLng: 'en',
     load: 'currentOnly',
+    lowerCaseLng: true,
+    cleanCode: true,
     interpolation: {
       escapeValue: false,
     },
