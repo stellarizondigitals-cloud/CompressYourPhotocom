@@ -1,0 +1,91 @@
+You are editing my Vite + React + TypeScript project for compressyourphoto.com.
+Right now, the URL https://www.compressyourphoto.com/zh-cn still shows English text instead of Chinese, even though the language switcher says 简体中文 ZH-CN.
+
+I need you to fix the i18n configuration so that /zh-cn really uses the Chinese translations.
+
+Please do all of the following:
+
+Open client/src/i18n/index.ts (or the main i18n setup file) and adjust language detection from the path:
+Make sure we are using a language detector with path detection.
+In the detection options, set:
+ts
+Copy
+detection: {
+  order: ['path', 'cookie', 'localStorage', 'navigator'],
+  lookupFromPathIndex: 1,
+  // keep other existing options if we already had them
+}
+Ensure that lookupFromPathIndex: 1 corresponds to the first segment after the domain, so /zh-cn is correctly read.
+Align supported languages and resource keys with the URL segment zh-cn:
+Make sure the supportedLngs (or equivalent) includes exactly 'zh-cn' (all lowercase with hyphen), e.g.:
+ts
+Copy
+supportedLngs: ['en', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar'],
+Make sure the resources (or equivalent i18n resources object) has a matching key:
+ts
+Copy
+const resources = {
+  en: { translation: en },
+  es: { translation: es },
+  pt: { translation: pt },
+  fr: { translation: fr },
+  de: { translation: de },
+  hi: { translation: hi },
+  'zh-cn': { translation: zhCN },
+  ar: { translation: ar },
+};
+If we currently use 'zh', 'zh_CN', or 'zh-CN' as a key, rename it consistently to 'zh-cn' and update the import accordingly.
+Do NOT break the other languages; just align the Chinese one.
+Check or create the Chinese translations file:
+Find the file where Chinese translations are defined, for example:
+client/src/i18n/zh-cn.ts
+or client/src/i18n/zhCN.ts
+or similar.
+If there is no clear Chinese translation object, create one with at least these keys translated into Simplified Chinese:
+ts
+Copy
+const zhCN = {
+  brandName: 'CompressYourPhoto',
+  languageName: '简体中文',
+  languageCode: 'ZH-CN',
+  heroTitle: '压缩您的照片',
+  heroSubtitle: '快速、私密且免费的图片压缩工具',
+  dropzoneTitle: '将照片拖到这里或点击上传',
+  dropzoneSubtitle: '支持 JPG、PNG、WebP、HEIC、GIF',
+  badgeJpg: 'JPG',
+  badgePng: 'PNG',
+  badgeWebp: 'WebP',
+  badgeHeic: 'HEIC',
+  badgeGif: 'GIF',
+  privacyLabel: '100% 本地处理 • 无需上传 • 隐私有保障',
+  featurePrivateTitle: '100% 私密',
+  featurePrivateBody: '所有压缩过程都在您的浏览器中完成，照片不会上传到服务器。',
+  featureFastTitle: '闪电般快速',
+  featureFastBody: '使用现代浏览器技术，在几秒钟内完成图片压缩。',
+  featureMultilingualTitle: '多语言支持',
+  featureMultilingualBody: '支持 8 种语言，为全球用户服务。',
+  recommendedToolsTitle: '推荐工具',
+  recommendedToolsIntro: '以下是一些可能对您有帮助的工具，其中部分链接可能为联盟链接。',
+  recommendedBackupTitle: '备份您的照片',
+  recommendedBackupBody: '使用安全的云存储服务，保护压缩后的照片。',
+  recommendedBackupCta: '了解更多',
+  recommendedEditorTitle: '压缩前先编辑',
+  recommendedEditorBody: '使用免费在线编辑器裁剪、旋转与调整您的照片。',
+  recommendedEditorCta: '打开编辑器',
+  recommendedDevTitle: '优化网站图片',
+  recommendedDevBody: '开发者可以在构建流程中自动压缩网站图片。',
+  recommendedDevCta: '查看开发者工具',
+};
+export default zhCN;
+Wire this zhCN object into the resources['zh-cn'] entry.
+Ensure the language switcher correctly links to /zh-cn:
+In the language switcher component (where languages are listed), confirm that the Simplified Chinese option points to path /zh-cn, not /zh, /zh_CN, or anything else.
+If it builds URLs programmatically from the locale key, make sure it uses 'zh-cn' consistently.
+General check:
+Make sure the default / fallback language is still en and that nothing else breaks for other languages.
+Do NOT introduce new dependencies; only adjust existing i18n config and translations.
+After you make these changes, stop.
+I will commit & push, then redeploy on Vercel and verify that:
+
+https://www.compressyourphoto.com/ is in English, and
+https://www.compressyourphoto.com/zh-cn shows the Chinese strings from the zh-cn translations.

@@ -38,13 +38,16 @@ i18n
       'zh-cn': { translation: zhCN },
       ar: { translation: ar },
     },
+    supportedLngs: ['en', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar'],
     fallbackLng: 'en',
+    load: 'currentOnly',
     interpolation: {
       escapeValue: false,
     },
     detection: {
-      order: ['path', 'localStorage', 'navigator'],
+      order: ['path', 'cookie', 'localStorage', 'navigator'],
       lookupFromPathIndex: 1,
+      caches: ['cookie', 'localStorage'],
     },
   });
 1   
