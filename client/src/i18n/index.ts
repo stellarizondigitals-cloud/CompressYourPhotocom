@@ -45,9 +45,9 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ['path', 'cookie', 'localStorage', 'navigator'],
+      order: ['path', 'navigator'],
       lookupFromPathIndex: 1,
-      caches: ['cookie', 'localStorage'],
+      caches: [],
     },
   });
 
