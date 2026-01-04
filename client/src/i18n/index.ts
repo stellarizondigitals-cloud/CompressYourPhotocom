@@ -47,5 +47,5 @@ i18n
       lookupFromPathIndex: 1,
     },
   });
-
+1,    
 export default i18n;
