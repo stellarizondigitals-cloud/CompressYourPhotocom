@@ -5,10 +5,15 @@ declare global {
   }
 }
 
+const CONSENT_KEY = 'cookie-consent';
 let isInitialized = false;
 
+function hasConsent(): boolean {
+  return localStorage.getItem(CONSENT_KEY) === 'accepted';
+}
+
 export function initAnalytics(measurementId: string | undefined): void {
-  if (!measurementId || isInitialized) {
+  if (!measurementId || isInitialized || !hasConsent()) {
     return;
   }
 

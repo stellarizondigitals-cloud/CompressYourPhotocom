@@ -53,6 +53,7 @@
   "footer": {
     "product": "Product",
     "legal": "Legal",
+    "company": "Company",
     "trustPerformance": "Trust & Performance",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -61,6 +62,7 @@
     "howItWorks": "How It Works",
     "languages": "Languages",
     "contact": "Contact",
+    "about": "About Us",
     "browserBased": "100% browser-based (no uploads)",
     "privateByDesign": "Private by design",
     "fastCompression": "Fast compression in seconds",
@@ -78,21 +80,29 @@
       "title": "Website Operator",
       "content": "This website is operated by:"
     },
-    "noDataCollection": {
-      "title": "No Data Collection",
-      "content": "We do not collect, store, or transmit any of your personal data or images. Your photos are processed entirely within your browser and never leave your device."
+    "imageProcessing": {
+      "title": "Image Processing - 100% Private",
+      "content": "All image compression happens locally in your browser using JavaScript. Your photos are never uploaded to any server. We do not collect, store, or have access to any images you compress."
     },
-    "clientSide": {
-      "title": "100% Client-Side Processing",
-      "content": "All image compression happens locally in your browser using JavaScript. We use the browser-image-compression library which runs entirely on your device. No images are ever uploaded to any server."
+    "analytics": {
+      "title": "Analytics",
+      "content": "We use Google Analytics to understand how visitors use our website. Google Analytics collects information such as how often users visit the site, what pages they view, and what other sites they visited prior to coming here. We use this information solely to improve our website. Google Analytics collects the IP address assigned to you on the date you visit the site, but not your name or other identifying information. We do not combine the information collected through Google Analytics with personally identifiable information. Google's ability to use and share information collected by Google Analytics is restricted by the Google Analytics Terms of Service and the Google Privacy Policy."
     },
-    "noServers": {
-      "title": "No Server Processing",
-      "content": "Unlike other image compression services, we don't have servers that process your images. This means your photos remain completely private and under your control at all times."
+    "advertising": {
+      "title": "Advertising",
+      "content": "We use Google AdSense to display advertisements on our website. Google AdSense may use cookies and web beacons to collect information about your visits to this and other websites in order to provide relevant advertisements about goods and services that may interest you. If you would like more information about this practice and to know your choices about not having this information used by Google, please visit Google's Advertising and Privacy page."
+    },
+    "affiliates": {
+      "title": "Affiliate Links",
+      "content": "Some pages on this website contain affiliate links. If you click on an affiliate link and make a purchase, we may receive a commission at no additional cost to you. We only recommend products and services that we believe will add value to our users. Our affiliate relationships do not influence our editorial content."
     },
     "cookies": {
       "title": "Cookies & Local Storage",
-      "content": "We only use local storage to remember your language preference. We do not use tracking cookies, analytics, or any third-party services that collect your data."
+      "content": "We use cookies and local storage to remember your language and theme preferences. Third-party services like Google Analytics and Google AdSense also use cookies. For more details, please see our Cookie Policy."
+    },
+    "yourRights": {
+      "title": "Your Rights (GDPR/CCPA)",
+      "content": "You have the right to opt out of cookies through your browser settings or our cookie consent banner. You can also request information about what data we collect. Since your images are processed locally and never stored on our servers, there is no image data for us to delete or provide."
     },
     "contact": {
       "title": "Contact Us",
@@ -169,26 +179,34 @@
     },
     "usage": {
       "title": "How We Use Cookies",
-      "content": "CompressYourPhoto uses minimal cookies and local storage. We prioritize your privacy and only store essential information to provide the service."
+      "content": "CompressYourPhoto uses cookies and local storage to provide and improve our service. Below is a detailed breakdown of the types of cookies we use."
     },
     "types": {
-      "title": "Types of Data We Store",
+      "title": "Types of Cookies We Use",
       "essential": {
-        "title": "Essential Storage",
-        "content": "We use browser local storage to save your language preference so the site displays in your chosen language on return visits."
+        "title": "Essential Cookies",
+        "content": "We use browser local storage to save your language and theme preferences so the site displays correctly on return visits. These are necessary for basic site functionality."
       },
-      "preference": {
-        "title": "Preference Storage",
-        "content": "Your compression settings (quality level, output format) may be saved locally to restore your preferences on future visits."
+      "analytics": {
+        "title": "Analytics Cookies (Google Analytics)",
+        "content": "We use Google Analytics to collect anonymous information about how visitors use our website. These cookies help us understand which pages are most popular and how users navigate our site. Data collected includes pages visited, time spent on site, and general geographic location. This information is used solely to improve our website and is not used to identify you personally."
+      },
+      "advertising": {
+        "title": "Advertising Cookies (Google AdSense)",
+        "content": "We use Google AdSense to display relevant advertisements. These cookies allow Google to show you ads based on your visits to our website and other sites on the internet. You can opt out of personalized advertising by visiting Google's Ad Settings or the Network Advertising Initiative opt-out page."
       }
     },
     "thirdParty": {
-      "title": "Third-Party Cookies",
-      "content": "We do not use any third-party tracking cookies, analytics services, or advertising networks. Your browsing activity on CompressYourPhoto is not tracked or shared with anyone."
+      "title": "Third-Party Services",
+      "content": "Our website uses third-party services that may set cookies: Google Analytics (for website analytics), Google AdSense (for advertising), and affiliate partner tracking. These services have their own privacy policies governing the use of cookies."
     },
     "control": {
       "title": "Managing Cookies",
-      "content": "You can clear your browser's local storage and cookies at any time through your browser settings. This will reset your language preference but will not affect the core functionality of the service."
+      "content": "You can control cookies through our cookie consent banner or your browser settings. Most browsers allow you to refuse cookies or delete existing cookies. Note that disabling cookies may affect the functionality of our website. You can also opt out of Google's use of cookies by visiting Google's Ad Settings."
+    },
+    "consent": {
+      "title": "Your Consent",
+      "content": "By using our website with the cookie consent banner active, you consent to our use of cookies as described in this policy. You can withdraw your consent at any time by clearing your cookies or adjusting your browser settings."
     },
     "contact": {
       "title": "Contact",
@@ -241,9 +259,33 @@
     },
     "operator": "Operated by"
   },
+  "about": {
+    "title": "About CompressYourPhoto",
+    "subtitle": "Learn more about our free image compression service",
+    "mission": {
+      "title": "Our Mission",
+      "content": "CompressYourPhoto was created to provide a fast, free, and completely private way to compress images. We believe your photos should stay on your device, which is why all compression happens right in your browser - no uploads, no servers, no data collection."
+    },
+    "whyWeBuilt": {
+      "title": "Why We Built This",
+      "content": "Many image compression tools require you to upload your photos to remote servers. This raises privacy concerns and takes longer. We built CompressYourPhoto to solve this problem by using modern browser technology to compress images locally on your device."
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "content": "CompressYourPhoto uses the browser-image-compression JavaScript library to process images entirely in your browser. When you select a photo, it never leaves your device. The compression algorithms run locally, and you download the result directly."
+    },
+    "operator": {
+      "title": "Who We Are",
+      "content": "CompressYourPhoto is operated by Stellarizon Digitals Ltd. We are committed to providing free, privacy-focused tools for everyday tasks."
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "content": "Have questions or feedback? We'd love to hear from you."
+    }
+  },
   "recommendedTools": {
     "title": "Recommended Tools",
-    "subtitle": "Here are some useful tools you might like. Some of these links may be affiliate links.",
+    "subtitle": "Disclosure: This page contains affiliate links. If you make a purchase through these links, we may earn a commission at no additional cost to you. We only recommend products we believe will add value to our users.",
     "backup": {
       "title": "Backup Your Photos",
       "description": "Use a secure cloud storage provider to keep your compressed photos safe.",
@@ -259,5 +301,11 @@
       "description": "Developers can use automated tools to compress images as part of their build pipeline.",
       "button": "View developer tools"
     }
+  },
+  "cookieConsent": {
+    "message": "We use cookies for analytics and advertising. By continuing to use this site, you consent to our use of cookies.",
+    "accept": "Accept All",
+    "decline": "Decline",
+    "learnMore": "Learn More"
   }
 }

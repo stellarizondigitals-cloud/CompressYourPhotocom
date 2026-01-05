@@ -14,8 +14,10 @@ import Terms from "@/pages/Terms";
 import CookiePolicy from "@/pages/CookiePolicy";
 import Disclaimer from "@/pages/Disclaimer";
 import Contact from "@/pages/Contact";
+import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
 import { initAnalytics, trackPageView } from "@/lib/analytics";
+import { CookieConsent } from "@/components/CookieConsent";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -59,6 +61,7 @@ function AppRoutes() {
       <Route path="/cookie-policy" element={<Layout><CookiePolicy /></Layout>} />
       <Route path="/disclaimer" element={<Layout><Disclaimer /></Layout>} />
       <Route path="/contact" element={<Layout><Contact /></Layout>} />
+      <Route path="/about" element={<Layout><About /></Layout>} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
@@ -71,6 +74,7 @@ function App() {
         <BrowserRouter>
           <AnalyticsTracker />
           <AppRoutes />
+          <CookieConsent />
           <Toaster />
         </BrowserRouter>
       </TooltipProvider>

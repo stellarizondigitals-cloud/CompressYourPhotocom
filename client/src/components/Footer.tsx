@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="border-t bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-        <div className={`grid grid-cols-1 md:grid-cols-4 gap-8 ${isRTL ? 'text-right' : ''}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-5 gap-8 ${isRTL ? 'text-right' : ''}`}>
           <div className="space-y-3">
             <Link to="/" className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
               <Image className="h-5 w-5 text-primary" />
@@ -40,6 +40,19 @@ export function Footer() {
                 data-testid="link-languages"
               >
                 {t('footer.languages')}
+              </Link>
+            </nav>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="font-medium text-sm">{t('footer.company')}</h4>
+            <nav className="flex flex-col gap-2">
+              <Link 
+                to="/about" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-about"
+              >
+                {t('footer.about')}
               </Link>
               <Link 
                 to="/contact" 

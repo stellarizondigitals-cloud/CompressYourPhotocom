@@ -53,6 +53,7 @@
   "footer": {
     "product": "Produit",
     "legal": "Légal",
+    "company": "Entreprise",
     "trustPerformance": "Confiance et Performance",
     "privacy": "Politique de Confidentialité",
     "terms": "Conditions d'Utilisation",
@@ -61,6 +62,7 @@
     "howItWorks": "Comment Ça Marche",
     "languages": "Langues",
     "contact": "Contact",
+    "about": "À Propos",
     "browserBased": "100% dans le navigateur (sans téléversement)",
     "privateByDesign": "Privé par conception",
     "fastCompression": "Compression rapide en secondes",
@@ -78,25 +80,33 @@
       "title": "Opérateur du Site",
       "content": "Ce site est exploité par:"
     },
-    "noDataCollection": {
-      "title": "Aucune Collecte de Données",
-      "content": "Nous ne collectons, stockons ni transmettons aucune de vos données personnelles ou images. Vos photos sont traitées entièrement dans votre navigateur et ne quittent jamais votre appareil."
+    "imageProcessing": {
+      "title": "Traitement des Images - 100% Privé",
+      "content": "Toute la compression d'images se fait localement dans votre navigateur en utilisant JavaScript. Vos photos ne sont jamais téléchargées vers un serveur. Nous ne collectons, ne stockons et n'avons accès à aucune image que vous compressez."
     },
-    "clientSide": {
-      "title": "Traitement 100% Local",
-      "content": "Toute la compression d'images se fait localement dans votre navigateur en utilisant JavaScript. Nous utilisons la bibliothèque browser-image-compression qui s'exécute entièrement sur votre appareil. Aucune image n'est jamais téléversée vers un serveur."
+    "analytics": {
+      "title": "Analytiques",
+      "content": "Nous utilisons Google Analytics pour comprendre comment les visiteurs utilisent notre site web. Google Analytics collecte des informations telles que la fréquence à laquelle les utilisateurs visitent le site, les pages qu'ils consultent et les autres sites qu'ils ont visités avant de venir ici. Nous utilisons ces informations uniquement pour améliorer notre site web. Google Analytics collecte l'adresse IP qui vous est attribuée à la date de votre visite, mais pas votre nom ni d'autres informations d'identification. Nous ne combinons pas les informations collectées par Google Analytics avec des informations personnellement identifiables. La capacité de Google à utiliser et à partager les informations collectées par Google Analytics est limitée par les conditions d'utilisation de Google Analytics et la politique de confidentialité de Google."
     },
-    "noServers": {
-      "title": "Aucun Traitement Serveur",
-      "content": "Contrairement à d'autres services de compression d'images, nous n'avons pas de serveurs qui traitent vos images. Cela signifie que vos photos restent complètement privées et sous votre contrôle à tout moment."
+    "advertising": {
+      "title": "Publicité",
+      "content": "Nous utilisons Google AdSense pour afficher des publicités sur notre site web. Google AdSense peut utiliser des cookies et des balises web pour collecter des informations sur vos visites sur ce site et sur d'autres sites web afin de fournir des publicités pertinentes sur des produits et services qui pourraient vous intéresser. Si vous souhaitez plus d'informations sur cette pratique et connaître vos choix concernant le fait de ne pas voir ces informations utilisées par Google, veuillez consulter la page Publicité et confidentialité de Google."
+    },
+    "affiliates": {
+      "title": "Liens d'Affiliation",
+      "content": "Certaines pages de ce site web contiennent des liens d'affiliation. Si vous cliquez sur un lien d'affiliation et effectuez un achat, nous pouvons recevoir une commission sans frais supplémentaires pour vous. Nous ne recommandons que des produits et services qui, selon nous, apporteront de la valeur à nos utilisateurs. Nos relations d'affiliation n'influencent pas notre contenu éditorial."
     },
     "cookies": {
       "title": "Cookies et Stockage Local",
-      "content": "Nous utilisons uniquement le stockage local pour mémoriser votre préférence de langue. Nous n'utilisons pas de cookies de suivi, d'analyses ou de services tiers qui collectent vos données."
+      "content": "Nous utilisons des cookies et le stockage local pour mémoriser vos préférences de langue et de thème. Des services tiers comme Google Analytics et Google AdSense utilisent également des cookies. Pour plus de détails, veuillez consulter notre politique relative aux cookies."
+    },
+    "yourRights": {
+      "title": "Vos Droits (RGPD/CCPA)",
+      "content": "Vous avez le droit de refuser les cookies via les paramètres de votre navigateur ou notre bannière de consentement aux cookies. Vous pouvez également demander des informations sur les données que nous collectons. Étant donné que vos images sont traitées localement et ne sont jamais stockées sur nos serveurs, il n'y a aucune donnée d'image à supprimer ou à fournir."
     },
     "contact": {
       "title": "Nous Contacter",
-      "content": "Si vous avez des questions sur nos pratiques de confidentialité, contactez-nous."
+      "content": "Si vous avez des questions sur nos pratiques de confidentialité, veuillez nous contacter."
     }
   },
   "howItWorks": {
@@ -169,26 +179,34 @@
     },
     "usage": {
       "title": "Comment Nous Utilisons les Cookies",
-      "content": "CompressYourPhoto utilise un minimum de cookies et de stockage local. Nous privilégions votre vie privée et ne stockons que les informations essentielles pour fournir le service."
+      "content": "CompressYourPhoto utilise des cookies et le stockage local pour fournir et améliorer notre service. Voici une ventilation détaillée des types de cookies que nous utilisons."
     },
     "types": {
-      "title": "Types de Données que Nous Stockons",
+      "title": "Types de Cookies que Nous Utilisons",
       "essential": {
-        "title": "Stockage Essentiel",
-        "content": "Nous utilisons le stockage local du navigateur pour sauvegarder votre préférence de langue afin que le site s'affiche dans la langue choisie lors de vos prochaines visites."
+        "title": "Cookies Essentiels",
+        "content": "Nous utilisons le stockage local du navigateur pour sauvegarder vos préférences de langue et de thème afin que le site s'affiche correctement lors de vos prochaines visites. Ceux-ci sont nécessaires pour la fonctionnalité de base du site."
       },
-      "preference": {
-        "title": "Stockage des Préférences",
-        "content": "Vos paramètres de compression (niveau de qualité, format de sortie) peuvent être sauvegardés localement pour restaurer vos préférences lors de futures visites."
+      "analytics": {
+        "title": "Cookies Analytiques (Google Analytics)",
+        "content": "Nous utilisons Google Analytics pour collecter des informations anonymes sur la façon dont les visiteurs utilisent notre site web. Ces cookies nous aident à comprendre quelles pages sont les plus populaires et comment les utilisateurs naviguent sur notre site. Les données collectées comprennent les pages visitées, le temps passé sur le site et la localisation géographique générale. Ces informations sont utilisées uniquement pour améliorer notre site web et ne sont pas utilisées pour vous identifier personnellement."
+      },
+      "advertising": {
+        "title": "Cookies Publicitaires (Google AdSense)",
+        "content": "Nous utilisons Google AdSense pour afficher des publicités pertinentes. Ces cookies permettent à Google de vous montrer des publicités basées sur vos visites sur notre site web et d'autres sites sur Internet. Vous pouvez désactiver la publicité personnalisée en consultant les paramètres des annonces de Google ou la page de désactivation de la Network Advertising Initiative."
       }
     },
     "thirdParty": {
-      "title": "Cookies Tiers",
-      "content": "Nous n'utilisons pas de cookies de suivi tiers, de services d'analyse ou de réseaux publicitaires. Votre activité de navigation sur CompressYourPhoto n'est pas suivie ni partagée avec quiconque."
+      "title": "Services Tiers",
+      "content": "Notre site web utilise des services tiers qui peuvent définir des cookies : Google Analytics (pour les analyses d'audience), Google AdSense (pour la publicité) et le suivi des partenaires d'affiliation. Ces services ont leurs propres politiques de confidentialité régissant l'utilisation des cookies."
     },
     "control": {
       "title": "Gestion des Cookies",
-      "content": "Vous pouvez effacer le stockage local et les cookies de votre navigateur à tout moment via les paramètres de votre navigateur. Cela réinitialisera votre préférence de langue mais n'affectera pas la fonctionnalité principale du service."
+      "content": "Vous pouvez contrôler les cookies via notre bannière de consentement ou les paramètres de votre navigateur. La plupart des navigateurs vous permettent de refuser les cookies ou de supprimer les cookies existants. Notez que la désactivation des cookies peut affecter la fonctionnalité de notre site web. Vous pouvez également désactiver l'utilisation des cookies par Google en consultant les paramètres des annonces de Google."
+    },
+    "consent": {
+      "title": "Votre Consentement",
+      "content": "En utilisant notre site web avec la bannière de consentement aux cookies active, vous consentez à notre utilisation des cookies telle que décrite dans cette politique. Vous pouvez retirer votre consentement à tout moment en effaçant vos cookies ou en ajustant les paramètres de votre navigateur."
     },
     "contact": {
       "title": "Contact",
@@ -204,7 +222,7 @@
     },
     "noWarranty": {
       "title": "Aucune Garantie",
-      "content": "CompressYourPhoto est fourni 'tel quel' sans garantie d'aucune sorte, expresse ou implicite. Nous ne garantissons pas que le service sera ininterrompu, exempt d'erreurs, ou que les défauts seront corrigés."
+      "content": "CompressYourPhoto est fourni 'tel quel' sans garantie d'aucune sorte, expresse ou impliquée. Nous ne garantissons pas que le service sera ininterrompu, exempt d'erreurs, ou que les défauts seront corrigés."
     },
     "accuracy": {
       "title": "Précision des Résultats",
@@ -241,9 +259,33 @@
     },
     "operator": "Exploité par"
   },
+  "about": {
+    "title": "À Propos de CompressYourPhoto",
+    "subtitle": "En savoir plus sur notre service gratuit de compression d'images",
+    "mission": {
+      "title": "Notre Mission",
+      "content": "CompressYourPhoto a été créé pour offrir un moyen rapide, gratuit et totalement privé de compresser des images. Nous pensons que vos photos doivent rester sur votre appareil, c'est pourquoi toute la compression se fait directement dans votre navigateur - pas de téléchargement, pas de serveurs, pas de collecte de données."
+    },
+    "whyWeBuilt": {
+      "title": "Pourquoi Nous L'avons Créé",
+      "content": "De nombreux outils de compression d'images vous obligent à télécharger vos photos sur des serveurs distants. Cela soulève des inquiétudes en matière de confidentialité et prend plus de temps. Nous avons construit CompressYourPhoto pour résoudre ce problème en utilisant la technologie moderne des navigateurs pour compresser les images localement sur votre appareil."
+    },
+    "howItWorks": {
+      "title": "Comment Ça Marche",
+      "content": "CompressYourPhoto utilise la bibliothèque JavaScript browser-image-compression pour traiter les images entièrement dans votre navigateur. Lorsque vous sélectionnez une photo, elle ne quitte jamais votre appareil. Les algorithmes de compression s'exécutent localement et vous téléchargez le résultat directement."
+    },
+    "operator": {
+      "title": "Qui Sommes-Nous",
+      "content": "CompressYourPhoto est exploité par Stellarizon Digitals Ltd. Nous nous engageons à fournir des outils gratuits et axés sur la confidentialité pour les tâches quotidiennes."
+    },
+    "contact": {
+      "title": "Contactez-Nous",
+      "content": "Vous avez des questions ou des commentaires ? Nous aimerions avoir de vos nouvelles."
+    }
+  },
   "recommendedTools": {
     "title": "Outils Recommandés",
-    "subtitle": "Voici quelques outils utiles que vous pourriez aimer. Certains de ces liens peuvent être des liens d'affiliation.",
+    "subtitle": "Divulgation : Cette page contient des liens d'affiliation. Si vous effectuez un achat via ces liens, nous pouvons percevoir une commission sans frais supplémentaires pour vous. Nous ne recommandons que des produits qui, selon nous, apporteront de la valeur à nos utilisateurs.",
     "backup": {
       "title": "Sauvegardez Vos Photos",
       "description": "Utilisez un fournisseur de stockage cloud sécurisé pour garder vos photos compressées en sécurité.",
@@ -259,5 +301,11 @@
       "description": "Les développeurs peuvent utiliser des outils automatisés pour compresser les images dans leur pipeline de build.",
       "button": "Voir les outils développeur"
     }
+  },
+  "cookieConsent": {
+    "message": "Nous utilisons des cookies pour les analyses et la publicité. En continuant à utiliser ce site, vous consentez à notre utilisation des cookies.",
+    "accept": "Tout Accepter",
+    "decline": "Refuser",
+    "learnMore": "En Savoir Plus"
   }
 }

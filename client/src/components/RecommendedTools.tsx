@@ -42,9 +42,11 @@ export function RecommendedTools() {
           <h2 className="text-2xl md:text-3xl font-bold mb-3" data-testid="heading-recommended-tools">
             {t('recommendedTools.title')}
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-affiliate-disclosure">
-            {t('recommendedTools.subtitle')}
-          </p>
+          <div className="bg-muted/50 border rounded-md p-3 max-w-2xl mx-auto" data-testid="text-affiliate-disclosure">
+            <p className="text-sm text-muted-foreground">
+              {t('recommendedTools.subtitle')}
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
