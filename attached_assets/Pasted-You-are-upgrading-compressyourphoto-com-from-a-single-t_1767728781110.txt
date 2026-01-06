@@ -1,0 +1,149 @@
+You are upgrading compressyourphoto.com from a single-tool site to a 4-in-1 photo power tool suite.
+
+The site currently has one tool: Compress. You must add 3 new tools: Resize, Convert, and Crop.
+
+All tools must work 100% client-side (no backend, no uploads to server) using browser APIs and libraries like browser-image-compression, pica, and canvas.
+
+Here is what you must do:
+
+---
+
+### 1. UPDATE HOMEPAGE (/)
+- Keep the existing hero, but change the subtitle to reflect all 4 tools:
+  "Compress, resize, convert, and crop your photos—fast, private, and free."
+
+- Replace or augment the current single compressor UI with a "Tool Selector" or 4-card grid that lets users choose:
+  1. Compress
+  2. Resize
+  3. Convert
+  4. Crop
+
+- Each card should link to a dedicated tool page:
+  - /compress
+  - /resize
+  - /convert
+  - /crop
+
+- Update the feature section to reflect the new capabilities (4 tools, not just compression).
+
+- Keep the existing "Recommended Tools" section, footer, language switcher, and legal page links unchanged.
+
+---
+
+### 2. CREATE DEDICATED TOOL PAGES
+
+#### A) /compress
+- Move the existing compress functionality here (drag-and-drop, format badges, quality slider, download).
+- Keep the existing logic intact.
+- Page title: "Compress Your Photos | Free Online Image Compressor"
+- Meta description: "Compress JPG, PNG, WebP, HEIC, and GIF images for free. Fast, private, client-side compression."
+
+#### B) /resize
+- UI:
+  - Drag-and-drop or file picker
+  - Options to resize by:
+    1. Target width/height (keep aspect ratio checkbox)
+    2. Percentage (e.g., 50%)
+    3. Presets: Instagram Post (1080x1080), Instagram Story (1080x1920), YouTube Thumbnail (1280x720), LinkedIn (1200x627), WhatsApp DP (500x500), Passport Photo (600x600)
+  - Live preview of resized dimensions
+  - Download button
+- Use canvas or pica library to resize client-side.
+- Page title: "Resize Image Online | Free Photo Resizer"
+- Meta description: "Resize images by pixels, percentage, or preset sizes for Instagram, YouTube, LinkedIn, and more."
+
+#### C) /convert
+- UI:
+  - Drag-and-drop or file picker (supports JPG, PNG, WebP, HEIC, GIF, BMP)
+  - Dropdown or radio buttons to choose output format: JPG, PNG, WebP
+  - If converting to JPG, add quality slider (default 90)
+  - If converting to PNG/WebP, option to preserve transparency (if supported)
+  - Batch convert support (multiple files → ZIP download)
+  - Show original format and target format clearly
+  - Download button (single file or ZIP for batch)
+- Use canvas and browser APIs to convert formats.
+- For HEIC, use heic2any library (install if needed: npm install heic2any) or instruct user that HEIC must be converted first in browser.
+- Page title: "Convert Image Format Online | JPG, PNG, WebP, HEIC Converter"
+- Meta description: "Convert images between JPG, PNG, WebP, and HEIC formats for free. Fast, private, client-side conversion."
+
+#### D) /crop
+- UI:
+  - Drag-and-drop or file picker
+  - Interactive crop box (use a simple crop library like react-easy-crop or build with canvas)
+  - Presets:
+    1. Square (1:1)
+    2. Instagram Story (9:16)
+    3. YouTube Thumbnail (16:9)
+    4. Circle Avatar (export as PNG with transparency, circular mask)
+    5. Free Crop (user drags corners)
+  - Live preview
+  - Download button
+- Page title: "Crop Image Online | Free Photo Cropper"
+- Meta description: "Crop images for Instagram, YouTube, or create circle avatars. Free online photo cropper."
+
+---
+
+### 3. NAVIGATION & ROUTING
+- Add a top navigation bar or sticky header with links to:
+  - Home (/)
+  - Compress (/compress)
+  - Resize (/resize)
+  - Convert (/convert)
+  - Crop (/crop)
+  - Language switcher (keep existing)
+
+- Ensure all routes work with the existing React Router setup (wouter or react-router).
+
+- Keep the existing i18n path-based routing (/es, /zh-cn, etc.) and ensure the new tool pages also respect language prefixes (e.g., /es/resize).
+
+---
+
+### 4. SEO UPDATES
+- Update public/sitemap.xml to include the new tool pages:
+  - https://www.compressyourphoto.com/compress
+  - https://www.compressyourphoto.com/resize
+  - https://www.compressyourphoto.com/convert
+  - https://www.compressyourphoto.com/crop
+
+- For each language, also include localized versions (e.g., /es/compress, /fr/resize, etc.).
+
+- Ensure each tool page has unique <title>, meta description, and canonical URL.
+
+- Add hreflang tags for multilingual versions of each tool page.
+
+---
+
+### 5. KEEP EVERYTHING CLIENT-SIDE & FREE-TIER
+- Do NOT introduce any backend API calls.
+- Use existing libraries (browser-image-compression, pica, canvas) or add lightweight ones if needed (heic2any, react-easy-crop).
+- All processing happens in the browser.
+- Files are never uploaded to a server.
+- Privacy messaging ("100% private, no upload") should appear on every tool page.
+
+---
+
+### 6. DESIGN & UX
+- Keep the existing Tailwind CSS styling and color scheme.
+- Make the UI consistent across all 4 tools (same buttons, drag-and-drop zones, download flow).
+- Ensure mobile-responsive (all tools work on mobile).
+- Add clear labels, tooltips, and help text where needed.
+
+---
+
+### 7. KEEP EXISTING FEATURES INTACT
+- Do NOT break:
+  - Existing compress tool logic
+  - Footer (Trust & Performance, legal links, contact email)
+  - Language switcher and i18n
+  - Legal pages (/privacy-policy, /terms, etc.)
+  - Recommended Tools section (we'll update affiliate links later)
+
+---
+
+### 8. AFTER COMPLETION
+- Tell me which files you created/edited.
+- Confirm all 4 tools are functional and routable.
+- Confirm sitemap and meta tags are updated.
+
+Do NOT ask me for clarification—use best practices for client-side image processing and build working, user-friendly tools.
+
+Begin now.
