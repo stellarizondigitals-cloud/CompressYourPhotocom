@@ -1,0 +1,126 @@
+You are upgrading the branding for compressyourphoto.com.
+
+Goal: Create a larger, more eye-catching, unique, modern brand logo and a full favicon set to replace the existing logo/favicon across the site.
+
+Constraints:
+- No paid APIs or external services required.
+- Everything must be created inside the codebase as SVG/PNG assets and integrated into the site.
+- Must look premium, clean, and trustworthy (tools/utility brand).
+- Must work on light and dark backgrounds.
+- Must scale well for mobile and desktop.
+
+Brand:
+- Name: CompressYourPhoto
+- Product: photo tools suite (Compress, Resize, Convert, Crop, Enhance)
+- Brand keywords: fast, private, simple, powerful, global, modern
+- Style: modern minimalist + slight “premium tech” feel
+- Colors: use a strong, high-contrast gradient (blue→purple or teal→blue) plus neutral dark text
+- Icon concept: “CYP” or a stylized camera/photo frame + compression arrows + sparkle (subtle) to represent enhance
+- Avoid generic clipart. Must be unique, geometric, and balanced.
+
+What to do:
+
+---
+
+## 1) Create Logo Assets (SVG)
+Create these files in the correct public assets folder used by the app (likely `public/`):
+
+1. `public/brand/logo-mark.svg`
+   - Icon only (no text)
+   - Square-friendly
+   - Must be readable even at 32x32
+
+2. `public/brand/logo-horizontal.svg`
+   - Icon + wordmark "CompressYourPhoto"
+   - Wordmark should be bold, modern sans-serif look (but as SVG text paths or simple SVG text)
+   - Ensure it looks good on white background
+
+3. `public/brand/logo-horizontal-dark.svg`
+   - Variant for dark backgrounds (white/near-white wordmark)
+   - Same icon
+
+Design requirements for SVG:
+- Use clean vector shapes (no raster).
+- Use a gradient in the icon (e.g., #2563EB to #7C3AED or #06B6D4 to #2563EB).
+- Include a subtle “compression” cue (inward arrows or shrinking frame) plus a tiny sparkle accent to imply enhancement.
+- Keep it simple enough to render fast and look sharp.
+
+---
+
+## 2) Create Favicon Set
+Create a modern favicon set from the new logo mark.
+
+Create:
+- `public/favicon.svg` (from logo-mark)
+- `public/favicon.ico` (multi-size if possible: 16/32/48)
+- `public/apple-touch-icon.png` (180x180)
+- `public/favicon-32x32.png`
+- `public/favicon-16x16.png`
+- `public/site.webmanifest`
+
+If generating .png/.ico purely in code is hard, you may:
+- Keep favicon.svg as primary
+- Provide pngs using a simple node script with canvas (if already available), OR generate minimal pngs via a build script.
+But prefer to include the correct static files in `public/`.
+
+---
+
+## 3) Integrate Into App UI
+Replace the existing logo usages:
+
+- Header/navbar should use the new `logo-horizontal.svg` (large and clear).
+- On mobile, use `logo-mark.svg`.
+- Update any footer branding to match.
+- Ensure it is crisp and not blurry.
+
+If there is a `Logo` component, update it to:
+- Render correct variant based on theme/background
+- Use responsive sizing:
+  - Desktop header: height ~36–44px
+  - Mobile header: icon ~28–32px
+
+---
+
+## 4) Update HTML Head References
+In `index.html` (or equivalent Vite entry HTML), update:
+- favicon links to point to the new assets
+- apple-touch-icon
+- manifest link
+- theme-color (match brand primary, e.g. #2563EB)
+
+Add/ensure:
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+---
+
+## 5) Manifest Content
+Create `public/site.webmanifest` with:
+- name: "CompressYourPhoto"
+- short_name: "CYP"
+- icons entries for 192x192 and 512x512 (create these pngs if possible)
+- start_url: "/"
+- display: "standalone"
+- background_color: "#0B1220" (or white if you prefer)
+- theme_color: "#2563EB"
+
+---
+
+## 6) Quality Checks
+After changes:
+- Verify the logo displays correctly on homepage and tool pages.
+- Verify favicon appears in browser tab.
+- Verify apple touch icon works.
+- Ensure no broken asset paths in production builds.
+
+---
+
+## 7) After completion
+Tell me:
+- Exact files you created/edited
+- Where the logo is used in the app
+- Any build steps needed (if you created scripts)
+
+Proceed now. Do not ask me questions; use best practices and implement fully.

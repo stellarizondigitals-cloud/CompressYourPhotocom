@@ -13,7 +13,7 @@ export function Footer() {
         <div className={`grid grid-cols-1 md:grid-cols-5 gap-8 ${isRTL ? 'text-right' : ''}`}>
           <div className="space-y-3">
             <Link to="/" className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
-              <Image className="h-5 w-5 text-primary" />
+              <img src="/brand/logo-mark.svg" alt="CompressYourPhoto" className="h-8 w-8" />
               <span className="font-semibold">{t('app.title')}</span>
             </Link>
             <p className="text-sm text-muted-foreground">

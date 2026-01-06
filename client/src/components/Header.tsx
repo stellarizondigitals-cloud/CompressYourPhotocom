@@ -5,7 +5,6 @@ import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles } from 'lucide-
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
-import logoImage from '@assets/generated_images/compressyourphoto_logo_icon.png';
 
 const navTools = [
   { key: 'compress', path: '/compress', icon: Minimize2 },
@@ -39,11 +38,26 @@ export function Header() {
         <div className={`flex h-16 items-center justify-between gap-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
           <Link 
             to={homeLink}
-            className={`flex items-center gap-2 font-semibold text-lg ${isRTL ? 'flex-row-reverse' : ''}`}
+            className={`flex items-center gap-2.5 font-semibold text-lg ${isRTL ? 'flex-row-reverse' : ''}`}
             data-testid="link-home"
           >
-            <img src={logoImage} alt="CompressYourPhoto" className="h-8 w-8" />
-            <span className="hidden sm:inline">{t('app.title', 'CompressYourPhoto')}</span>
+            {/* Mobile: icon only */}
+            <img 
+              src="/brand/logo-mark.svg" 
+              alt="CompressYourPhoto" 
+              className="h-10 w-10 sm:hidden" 
+            />
+            {/* Desktop: horizontal logo with wordmark */}
+            <img 
+              src="/brand/logo-horizontal.svg" 
+              alt="CompressYourPhoto" 
+              className="hidden sm:block h-10 dark:hidden" 
+            />
+            <img 
+              src="/brand/logo-horizontal-dark.svg" 
+              alt="CompressYourPhoto" 
+              className="hidden dark:sm:block h-10" 
+            />
           </Link>
 
           <nav className={`hidden md:flex items-center gap-1 ${isRTL ? 'flex-row-reverse' : ''}`}>

@@ -1,0 +1,23 @@
+{
+  "name": "CompressYourPhoto",
+  "short_name": "CompressYourPhoto",
+  "description": "Free online image tools: compress, resize, convert, crop, and enhance photos instantly. 100% private - files never leave your device.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563EB",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
