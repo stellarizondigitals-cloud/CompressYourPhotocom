@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Image } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
+import logoImage from '@assets/generated_images/compressyourphoto_logo_icon.png';
 
 export function Header() {
   const { t } = useTranslation();
@@ -19,7 +19,7 @@ export function Header() {
             className={`flex items-center gap-2 font-semibold text-lg ${isRTL ? 'flex-row-reverse' : ''}`}
             data-testid="link-home"
           >
-            <Image className="h-6 w-6 text-primary" />
+            <img src={logoImage} alt="CompressYourPhoto" className="h-8 w-8" />
             <span>{t('app.title')}</span>
           </Link>
           <LanguageSwitcher />
