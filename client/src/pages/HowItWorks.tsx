@@ -3,10 +3,16 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { Upload, Settings, Download, Zap, Shield, FileImage } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function HowItWorks() {
   const { t } = useTranslation();
-  const { isRTL } = useLanguage();
+  const { isRTL, currentLanguage } = useLanguage();
+
+  useEffect(() => {
+    document.title = `${t('howItWorks.title')} | CompressYourPhoto`;
+  }, [t]);
 
   const steps = [
     { icon: Upload, step: 1 },
@@ -17,6 +23,11 @@ export default function HowItWorks() {
 
   return (
     <div className="flex-1">
+      <Helmet>
+        <title>{t('howItWorks.title')} | CompressYourPhoto</title>
+        <meta name="description" content={t('howItWorks.metaDescription', 'Learn how to compress, resize, convert, crop, and enhance your photos in 4 simple steps. 100% browser-based, private, and free.')} />
+        <link rel="canonical" href={`https://www.compressyourphoto.com${currentLanguage.code === 'en' ? '' : `/${currentLanguage.code}`}/how-it-works`} />
+      </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
           <div className={`text-center mb-12 ${isRTL ? 'text-right md:text-center' : ''}`}>

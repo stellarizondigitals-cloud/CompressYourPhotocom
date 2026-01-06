@@ -1,0 +1,55 @@
+Perform a technical SEO + content synchronization pass across compressyourphoto.com.
+
+Goals:
+1) Fix robots.txt and sitemap.xml so they are served as real static files on Vercel (not intercepted by SPA routing).
+2) Make English homepage match the multi-tool suite and update language count to 9.
+3) Ensure unique SEO <title> and meta description for /how-it-works and /languages (and avoid duplicates).
+4) Fix /enhance route so both /enhance and /enhance/ work consistently and do not 404. Use redirects/canonical to avoid duplicates.
+5) Remove/soften any unprovable claims like “trusted by millions worldwide”.
+6) Remove or replace placeholder “#” links in Recommended Tools with either real URLs or hide the section until real links exist.
+7) Ensure all pages have correct canonical URLs and hreflang alternates for supported languages (en, es, pt, fr, de, hi, zh-cn, ar, id).
+
+Implementation details:
+
+A) Static SEO files
+- Ensure these exist at Vite root: public/robots.txt, public/sitemap.xml, public/ads.txt
+- robots.txt must be plain text and include:
+  User-agent: *
+  Allow: /
+  Sitemap: https://www.compressyourphoto.com/sitemap.xml
+
+- sitemap.xml MUST be valid XML using <urlset> and include all key URLs for:
+  /, /compress, /resize, /convert, /crop, /enhance, /how-it-works, /languages, /privacy-policy, /terms, /cookie-policy, /disclaimer, /contact, /about
+  plus language-prefixed equivalents for: es, pt, fr, de, hi, zh-cn, ar, id.
+- Remove any URLs that do not actually exist.
+
+B) Vercel SPA routing
+- Update or create vercel.json at repo root so it DOES NOT route /robots.txt, /sitemap.xml, /ads.txt into index.html.
+- Ensure these 3 files are served directly.
+- Keep SPA rewrite for all other routes.
+
+C) Routing consistency
+- Ensure /enhance works (no trailing slash required).
+- If you want to standardize trailing slashes, implement redirects to one canonical form.
+
+D) English homepage sync
+- Update / (English) so it is a multi-tool landing page like /id:
+  - show tool cards for Compress / Resize / Convert / Crop / Enhance
+  - update “Available in 9 languages…”
+  - keep consistent styling with the rest of the site.
+
+E) Unique SEO titles/descriptions
+- Set unique titles + meta descriptions for:
+  - /how-it-works  => “How It Works | CompressYourPhoto” + description describing all tools
+  - /languages     => “Languages | CompressYourPhoto” + description
+- Ensure tool pages also have unique titles (they already seem to).
+
+F) Claims and placeholders
+- In /about: replace “trusted by millions worldwide” with a truthful alternative like:
+  “A fast, privacy-first browser-based photo toolkit.”
+- Replace the Recommended Tools links (#) with real URLs if present in config, otherwise hide the buttons/section.
+
+After completion:
+- List all files changed and their paths.
+- Show the final contents of public/robots.txt and the first 30 lines of public/sitemap.xml
+- Confirm /robots.txt returns plain text and /sitemap.xml returns valid XML in local preview.

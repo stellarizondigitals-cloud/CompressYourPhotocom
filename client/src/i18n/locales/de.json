@@ -241,6 +241,30 @@
     },
     "operator": "Betrieben von"
   },
+  "about": {
+    "title": "Über CompressYourPhoto",
+    "subtitle": "Ein schnelles, datenschutzorientiertes, browserbasiertes Foto-Toolkit",
+    "mission": {
+      "title": "Unsere Mission",
+      "content": "CompressYourPhoto existiert, um Bildbearbeitung für jeden zugänglich zu machen—völlig kostenlos, ohne Kompromisse bei der Privatsphäre. Wir glauben, dass Ihre Fotos persönlich sind und niemals auf unbekannte Server hochgeladen werden sollten. Deshalb läuft jede Funktion zu 100% in Ihrem Browser."
+    },
+    "whyWeBuilt": {
+      "title": "Warum Wir Das Gebaut Haben",
+      "content": "Traditionelle Bildwerkzeuge zwingen Sie, Fotos auf entfernte Server hochzuladen, was Datenschutzrisiken und langsame Erfahrungen schafft. Wir haben CompressYourPhoto mit modernster Browser-Technologie gebaut, damit Sie Bilder sofort komprimieren, skalieren, konvertieren und zuschneiden können—ohne dass Ihre Dateien jemals Ihr Gerät verlassen."
+    },
+    "howItWorks": {
+      "title": "So Funktioniert Es",
+      "content": "CompressYourPhoto verwendet fortschrittliche JavaScript-Bibliotheken, die vollständig in Ihrem Webbrowser laufen. Wenn Sie ein Bild auswählen, findet die gesamte Verarbeitung auf Ihrem Computer oder Telefon statt. Das Ergebnis wird direkt zu Ihnen heruntergeladen—wir sehen, speichern oder übertragen Ihre Fotos niemals."
+    },
+    "operator": {
+      "title": "Betrieben von Stellarizon Digitals Ltd",
+      "content": "CompressYourPhoto wird von Stellarizon Digitals Ltd entwickelt und gepflegt, einem Unternehmen, das sich dem Aufbau kostenloser, datenschutzorientierter Web-Tools widmet. Wir sind bestrebt, diesen Service für immer kostenlos zu halten und ihn basierend auf Benutzerfeedback kontinuierlich zu verbessern."
+    },
+    "contact": {
+      "title": "Kontaktieren Sie Uns",
+      "content": "Haben Sie Fragen, Feedback oder Vorschläge? Wir würden gerne von Ihnen hören. Unser Team antwortet auf jede Nachricht."
+    }
+  },
   "recommendedTools": {
     "title": "Empfohlene Tools",
     "subtitle": "Hier sind einige nützliche Tools, die Ihnen gefallen könnten. Einige dieser Links können Affiliate-Links sein.",

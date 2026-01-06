@@ -241,6 +241,30 @@
     },
     "operator": "运营商"
   },
+  "about": {
+    "title": "关于 CompressYourPhoto",
+    "subtitle": "快速、隐私优先的浏览器端照片工具包",
+    "mission": {
+      "title": "我们的使命",
+      "content": "CompressYourPhoto 的存在是为了让图片编辑对每个人都触手可及——完全免费，不牺牲隐私。我们相信您的照片是私人的，永远不应该被上传到未知的服务器。这就是为什么每个功能都100%在您的浏览器中运行。"
+    },
+    "whyWeBuilt": {
+      "title": "为什么我们创建这个工具",
+      "content": "传统的图片工具强迫您将照片上传到远程服务器，造成隐私风险和缓慢的体验。我们使用尖端浏览器技术构建了 CompressYourPhoto，让您可以即时压缩、调整大小、转换和裁剪图片——您的文件永远不会离开您的设备。"
+    },
+    "howItWorks": {
+      "title": "工作原理",
+      "content": "CompressYourPhoto 使用完全在您的网页浏览器中运行的高级 JavaScript 库。当您选择一张图片时，所有处理都在您的电脑或手机上进行。结果直接下载到您那里——我们永远不会看到、存储或传输您的照片。"
+    },
+    "operator": {
+      "title": "由 Stellarizon Digitals Ltd 运营",
+      "content": "CompressYourPhoto 由 Stellarizon Digitals Ltd 开发和维护，这是一家致力于构建免费、隐私优先网络工具的公司。我们承诺永远保持这项服务免费，并根据用户反馈不断改进。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "content": "有问题、反馈或建议？我们很乐意听取您的意见。我们的团队会回复每一条消息。"
+    }
+  },
   "recommendedTools": {
     "title": "推荐工具",
     "subtitle": "这里有一些您可能喜欢的实用工具。其中一些链接可能是联盟链接。",

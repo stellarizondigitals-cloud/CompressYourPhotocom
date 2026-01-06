@@ -241,6 +241,30 @@
     },
     "operator": "Operado por"
   },
+  "about": {
+    "title": "Sobre o CompressYourPhoto",
+    "subtitle": "Um kit de ferramentas de fotos rápido, privado e baseado em navegador",
+    "mission": {
+      "title": "Nossa Missão",
+      "content": "O CompressYourPhoto existe para tornar a edição de imagens acessível a todos—completamente grátis, sem comprometer a privacidade. Acreditamos que suas fotos são pessoais e nunca devem ser enviadas para servidores desconhecidos. Por isso, cada recurso funciona 100% no seu navegador."
+    },
+    "whyWeBuilt": {
+      "title": "Por Que Construímos Isso",
+      "content": "Ferramentas de imagem tradicionais forçam você a enviar fotos para servidores remotos, criando riscos de privacidade e experiências lentas. Construímos o CompressYourPhoto usando tecnologia de navegador de ponta para que você possa comprimir, redimensionar, converter e cortar imagens instantaneamente—sem que seus arquivos saiam do seu dispositivo."
+    },
+    "howItWorks": {
+      "title": "Como Funciona",
+      "content": "O CompressYourPhoto usa bibliotecas JavaScript avançadas que rodam inteiramente no seu navegador web. Quando você seleciona uma imagem, todo o processamento acontece no seu computador ou celular. O resultado é baixado diretamente para você—nunca vemos, armazenamos ou transmitimos suas fotos."
+    },
+    "operator": {
+      "title": "Operado pela Stellarizon Digitals Ltd",
+      "content": "O CompressYourPhoto é desenvolvido e mantido pela Stellarizon Digitals Ltd, uma empresa dedicada a construir ferramentas web gratuitas e focadas em privacidade. Estamos comprometidos em manter este serviço gratuito para sempre e melhorá-lo continuamente com base no feedback dos usuários."
+    },
+    "contact": {
+      "title": "Entre em Contato",
+      "content": "Tem perguntas, feedback ou sugestões? Adoraríamos ouvir de você. Nossa equipe responde a todas as mensagens."
+    }
+  },
   "recommendedTools": {
     "title": "Ferramentas Recomendadas",
     "subtitle": "Aqui estão algumas ferramentas úteis que você pode gostar. Alguns desses links podem ser links de afiliados.",

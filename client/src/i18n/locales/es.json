@@ -241,6 +241,30 @@
     },
     "operator": "Operado por"
   },
+  "about": {
+    "title": "Acerca de CompressYourPhoto",
+    "subtitle": "Un kit de herramientas de fotos rápido, privado y basado en navegador",
+    "mission": {
+      "title": "Nuestra Misión",
+      "content": "CompressYourPhoto existe para hacer la edición de imágenes accesible para todos—completamente gratis, sin comprometer la privacidad. Creemos que tus fotos son personales y nunca deberían subirse a servidores desconocidos. Por eso, cada función se ejecuta 100% en tu navegador."
+    },
+    "whyWeBuilt": {
+      "title": "Por Qué Lo Construimos",
+      "content": "Las herramientas de imagen tradicionales te obligan a subir fotos a servidores remotos, creando riesgos de privacidad y experiencias lentas. Construimos CompressYourPhoto usando tecnología de navegador de vanguardia para que puedas comprimir, redimensionar, convertir y recortar imágenes al instante—sin que tus archivos salgan de tu dispositivo."
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "content": "CompressYourPhoto usa bibliotecas JavaScript avanzadas que se ejecutan completamente en tu navegador web. Cuando seleccionas una imagen, todo el procesamiento ocurre en tu computadora o teléfono. El resultado se descarga directamente a ti—nunca vemos, almacenamos ni transmitimos tus fotos."
+    },
+    "operator": {
+      "title": "Operado por Stellarizon Digitals Ltd",
+      "content": "CompressYourPhoto es desarrollado y mantenido por Stellarizon Digitals Ltd, una empresa dedicada a construir herramientas web gratuitas y privadas. Estamos comprometidos a mantener este servicio gratuito para siempre y mejorarlo continuamente basándonos en los comentarios de los usuarios."
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "content": "¿Tienes preguntas, comentarios o sugerencias? Nos encantaría saber de ti. Nuestro equipo responde a cada mensaje."
+    }
+  },
   "recommendedTools": {
     "title": "Herramientas Recomendadas",
     "subtitle": "Aquí hay algunas herramientas útiles que podrían gustarte. Algunos de estos enlaces pueden ser enlaces de afiliados.",

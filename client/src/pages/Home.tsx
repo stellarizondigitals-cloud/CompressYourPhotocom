@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, Sparkles } from 'lucide-react';
 import { FeatureCard } from '@/components/FeatureCard';
-import { RecommendedTools } from '@/components/RecommendedTools';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -177,7 +176,6 @@ export default function Home() {
         </div>
       </section>
 
-      <RecommendedTools />
     </div>
   );
 }

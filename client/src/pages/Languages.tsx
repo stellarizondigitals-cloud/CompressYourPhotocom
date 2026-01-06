@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Globe, Check } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const languages = [
   { code: 'en', name: 'English', nativeName: 'English', path: '/' },
@@ -19,11 +21,20 @@ const languages = [
 
 export default function Languages() {
   const { t, i18n } = useTranslation();
-  const { isRTL } = useLanguage();
+  const { isRTL, currentLanguage } = useLanguage();
   const currentLang = i18n.language;
+
+  useEffect(() => {
+    document.title = `${t('languages.title')} | CompressYourPhoto`;
+  }, [t]);
 
   return (
     <div className="flex-1">
+      <Helmet>
+        <title>{t('languages.title')} | CompressYourPhoto</title>
+        <meta name="description" content={t('languages.metaDescription', 'CompressYourPhoto is available in 9 languages: English, Spanish, Portuguese, French, German, Hindi, Chinese, Arabic, and Indonesian. Choose your preferred language.')} />
+        <link rel="canonical" href={`https://www.compressyourphoto.com${currentLanguage.code === 'en' ? '' : `/${currentLanguage.code}`}/languages`} />
+      </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
           <div className={`text-center mb-12 ${isRTL ? 'text-right md:text-center' : ''}`}>

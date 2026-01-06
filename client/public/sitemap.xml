@@ -1,41 +1,882 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage with all language variants -->
   <url>
     <loc>https://www.compressyourphoto.com/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/" />
   </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/es</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/pt</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/fr</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/de</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/hi</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/zh-cn</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/ar</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/id</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/" />
+  </url>
+
+  <!-- Compress tool with all language variants -->
   <url>
     <loc>https://www.compressyourphoto.com/compress</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/compress" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/compress" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/compress" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/compress" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/compress" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/compress" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/compress" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/compress" />
   </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/es/compress</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/compress" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/compress" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/compress" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/compress" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/compress" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/compress" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/compress" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/compress" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/pt/compress</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/compress" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/compress" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/compress" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/compress" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/compress" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/compress" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/compress" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/compress" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/fr/compress</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/compress" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/compress" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/compress" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/compress" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/compress" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/compress" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/compress" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/compress" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/de/compress</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/compress" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/compress" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/compress" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/compress" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/compress" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/compress" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/compress" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/compress" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/hi/compress</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/compress" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/compress" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/compress" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/compress" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/compress" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/compress" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/compress" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/compress" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/zh-cn/compress</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/compress" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/compress" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/compress" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/compress" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/compress" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/compress" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/compress" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/compress" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/ar/compress</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/compress" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/compress" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/compress" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/compress" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/compress" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/compress" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/compress" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/compress" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/id/compress</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/compress" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/compress" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/compress" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/compress" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/compress" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/compress" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/compress" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/compress" />
+  </url>
+
+  <!-- Resize tool with all language variants -->
   <url>
     <loc>https://www.compressyourphoto.com/resize</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/resize" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/resize" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/resize" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/resize" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/resize" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/resize" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/resize" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/resize" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/resize" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/resize" />
   </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/es/resize</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/resize" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/resize" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/resize" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/resize" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/resize" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/resize" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/resize" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/resize" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/resize" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/resize" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/pt/resize</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/resize" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/resize" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/resize" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/resize" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/resize" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/resize" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/resize" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/resize" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/resize" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/resize" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/fr/resize</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/resize" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/resize" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/resize" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/resize" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/resize" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/resize" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/resize" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/resize" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/resize" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/resize" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/de/resize</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/resize" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/resize" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/resize" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/resize" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/resize" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/resize" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/resize" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/resize" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/resize" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/resize" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/hi/resize</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/resize" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/resize" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/resize" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/resize" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/resize" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/resize" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/resize" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/resize" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/resize" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/resize" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/zh-cn/resize</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/resize" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/resize" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/resize" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/resize" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/resize" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/resize" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/resize" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/resize" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/resize" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/resize" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/ar/resize</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/resize" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/resize" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/resize" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/resize" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/resize" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/resize" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/resize" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/resize" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/resize" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/resize" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/id/resize</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/resize" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/resize" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/resize" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/resize" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/resize" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/resize" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/resize" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/resize" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/resize" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/resize" />
+  </url>
+
+  <!-- Convert tool with all language variants -->
   <url>
     <loc>https://www.compressyourphoto.com/convert</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/convert" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/convert" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/convert" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/convert" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/convert" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/convert" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/convert" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/convert" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/convert" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/convert" />
   </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/es/convert</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/convert" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/convert" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/convert" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/convert" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/convert" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/convert" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/convert" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/convert" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/convert" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/convert" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/pt/convert</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/convert" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/convert" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/convert" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/convert" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/convert" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/convert" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/convert" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/convert" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/convert" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/convert" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/fr/convert</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/convert" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/convert" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/convert" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/convert" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/convert" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/convert" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/convert" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/convert" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/convert" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/convert" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/de/convert</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/convert" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/convert" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/convert" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/convert" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/convert" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/convert" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/convert" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/convert" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/convert" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/convert" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/hi/convert</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/convert" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/convert" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/convert" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/convert" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/convert" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/convert" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/convert" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/convert" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/convert" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/convert" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/zh-cn/convert</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/convert" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/convert" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/convert" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/convert" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/convert" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/convert" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/convert" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/convert" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/convert" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/convert" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/ar/convert</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/convert" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/convert" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/convert" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/convert" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/convert" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/convert" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/convert" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/convert" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/convert" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/convert" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/id/convert</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/convert" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/convert" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/convert" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/convert" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/convert" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/convert" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/convert" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/convert" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/convert" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/convert" />
+  </url>
+
+  <!-- Crop tool with all language variants -->
   <url>
     <loc>https://www.compressyourphoto.com/crop</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/crop" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/crop" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/crop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/crop" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/crop" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/crop" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/crop" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/crop" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/crop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/crop" />
   </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/es/crop</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/crop" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/crop" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/crop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/crop" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/crop" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/crop" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/crop" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/crop" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/crop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/crop" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/pt/crop</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/crop" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/crop" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/crop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/crop" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/crop" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/crop" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/crop" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/crop" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/crop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/crop" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/fr/crop</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/crop" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/crop" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/crop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/crop" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/crop" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/crop" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/crop" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/crop" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/crop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/crop" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/de/crop</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/crop" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/crop" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/crop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/crop" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/crop" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/crop" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/crop" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/crop" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/crop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/crop" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/hi/crop</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/crop" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/crop" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/crop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/crop" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/crop" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/crop" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/crop" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/crop" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/crop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/crop" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/zh-cn/crop</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/crop" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/crop" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/crop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/crop" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/crop" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/crop" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/crop" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/crop" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/crop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/crop" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/ar/crop</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/crop" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/crop" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/crop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/crop" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/crop" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/crop" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/crop" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/crop" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/crop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/crop" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/id/crop</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/crop" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/crop" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/crop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/crop" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/crop" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/crop" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/crop" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/crop" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/crop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/crop" />
+  </url>
+
+  <!-- Enhance tool with all language variants -->
   <url>
     <loc>https://www.compressyourphoto.com/enhance</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/enhance" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/enhance" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/enhance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/enhance" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/enhance" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/enhance" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/enhance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/enhance" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/enhance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/enhance" />
   </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/es/enhance</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/enhance" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/enhance" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/enhance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/enhance" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/enhance" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/enhance" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/enhance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/enhance" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/enhance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/enhance" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/pt/enhance</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/enhance" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/enhance" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/enhance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/enhance" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/enhance" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/enhance" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/enhance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/enhance" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/enhance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/enhance" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/fr/enhance</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/enhance" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/enhance" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/enhance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/enhance" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/enhance" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/enhance" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/enhance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/enhance" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/enhance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/enhance" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/de/enhance</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/enhance" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/enhance" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/enhance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/enhance" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/enhance" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/enhance" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/enhance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/enhance" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/enhance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/enhance" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/hi/enhance</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/enhance" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/enhance" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/enhance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/enhance" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/enhance" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/enhance" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/enhance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/enhance" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/enhance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/enhance" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/zh-cn/enhance</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/enhance" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/enhance" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/enhance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/enhance" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/enhance" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/enhance" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/enhance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/enhance" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/enhance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/enhance" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/ar/enhance</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/enhance" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/enhance" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/enhance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/enhance" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/enhance" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/enhance" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/enhance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/enhance" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/enhance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/enhance" />
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/id/enhance</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.compressyourphoto.com/enhance" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.compressyourphoto.com/es/enhance" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.compressyourphoto.com/pt/enhance" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.compressyourphoto.com/fr/enhance" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.compressyourphoto.com/de/enhance" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.compressyourphoto.com/hi/enhance" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.compressyourphoto.com/zh-cn/enhance" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.compressyourphoto.com/ar/enhance" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id/enhance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.compressyourphoto.com/enhance" />
+  </url>
+
+  <!-- Static pages (English only) -->
   <url>
     <loc>https://www.compressyourphoto.com/how-it-works</loc>
     <lastmod>2026-01-06</lastmod>
@@ -47,6 +888,18 @@
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/about</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.compressyourphoto.com/contact</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.compressyourphoto.com/privacy-policy</loc>
@@ -71,305 +924,5 @@
     <lastmod>2026-01-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/contact</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/about</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/es</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/es/compress</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/es/resize</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/es/convert</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/es/crop</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/es/enhance</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/pt</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/pt/compress</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/pt/resize</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/pt/convert</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/pt/crop</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/pt/enhance</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/fr</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/fr/compress</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/fr/resize</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/fr/convert</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/fr/crop</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/fr/enhance</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/de</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/de/compress</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/de/resize</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/de/convert</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/de/crop</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/de/enhance</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/hi</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/hi/compress</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/hi/resize</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/hi/convert</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/hi/crop</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/hi/enhance</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/zh-cn</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/zh-cn/compress</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/zh-cn/resize</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/zh-cn/convert</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/zh-cn/crop</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/zh-cn/enhance</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/ar</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/ar/compress</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/ar/resize</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/ar/convert</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/ar/crop</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/ar/enhance</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/id</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/id/compress</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/id/resize</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/id/convert</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/id/crop</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.compressyourphoto.com/id/enhance</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
