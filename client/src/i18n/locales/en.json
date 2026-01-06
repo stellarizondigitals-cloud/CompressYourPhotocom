@@ -6,6 +6,7 @@
   "hero": {
     "headline": "Compress Your Photos",
     "subheadline": "Fast, private, and free image compression",
+    "subheadlineExpanded": "Compress, resize, convert, and crop your photos—fast, private, and free.",
     "dropzone": "Drop photos here or click to upload",
     "supportedFormats": "Supports JPG, PNG, WebP, HEIC, GIF",
     "clientSide": "100% client-side",
@@ -307,5 +308,68 @@
     "accept": "Accept All",
     "decline": "Decline",
     "learnMore": "Learn More"
+  },
+  "tools": {
+    "compress": {
+      "navLabel": "Compress",
+      "cardTitle": "Compress",
+      "cardDescription": "Reduce file size without losing quality",
+      "title": "Compress Your Photos",
+      "subtitle": "Reduce image file size without losing quality. 100% private, processed in your browser.",
+      "pageTitle": "Compress Your Photos | Free Online Image Compressor",
+      "metaDescription": "Compress JPG, PNG, WebP, HEIC, and GIF images for free. Fast, private, client-side compression."
+    },
+    "resize": {
+      "navLabel": "Resize",
+      "cardTitle": "Resize",
+      "cardDescription": "Change dimensions by pixels or percentage",
+      "title": "Resize Your Photos",
+      "subtitle": "Resize images by pixels, percentage, or preset sizes. 100% private.",
+      "pageTitle": "Resize Image Online | Free Photo Resizer",
+      "metaDescription": "Resize images by pixels, percentage, or preset sizes for Instagram, YouTube, LinkedIn, and more.",
+      "options": "Resize Options",
+      "mode": "Resize Mode",
+      "byDimensions": "By Dimensions",
+      "byPercentage": "By Percentage",
+      "byPreset": "Social Media Presets",
+      "width": "Width (px)",
+      "height": "Height (px)",
+      "percentage": "Percentage",
+      "preset": "Preset",
+      "selectPreset": "Select a preset",
+      "keepAspect": "Keep aspect ratio",
+      "processing": "Processing",
+      "resizeButton": "Resize Images"
+    },
+    "convert": {
+      "navLabel": "Convert",
+      "cardTitle": "Convert",
+      "cardDescription": "Change format between JPG, PNG, WebP",
+      "title": "Convert Image Format",
+      "subtitle": "Convert between JPG, PNG, WebP, and HEIC. 100% private.",
+      "pageTitle": "Convert Image Format Online | JPG, PNG, WebP, HEIC Converter",
+      "metaDescription": "Convert images between JPG, PNG, WebP, and HEIC formats for free. Fast, private, client-side conversion.",
+      "options": "Conversion Options",
+      "outputFormat": "Output Format",
+      "quality": "Quality",
+      "supportedInput": "Supports JPG, PNG, WebP, HEIC, GIF, BMP",
+      "converting": "Converting",
+      "convertButton": "Convert Images"
+    },
+    "crop": {
+      "navLabel": "Crop",
+      "cardTitle": "Crop",
+      "cardDescription": "Trim and adjust image boundaries",
+      "title": "Crop Your Photos",
+      "subtitle": "Crop images with presets for social media or create circle avatars. 100% private.",
+      "pageTitle": "Crop Image Online | Free Photo Cropper",
+      "metaDescription": "Crop images for Instagram, YouTube, or create circle avatars. Free online photo cropper.",
+      "options": "Crop Options",
+      "aspectRatio": "Aspect Ratio",
+      "zoom": "Zoom",
+      "reset": "Choose Another Image",
+      "processing": "Processing",
+      "cropAndDownload": "Crop & Download"
+    }
   }
 }

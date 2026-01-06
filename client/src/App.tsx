@@ -4,9 +4,14 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { HelmetProvider } from "react-helmet-async";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
+import Compress from "@/pages/Compress";
+import Resize from "@/pages/Resize";
+import Convert from "@/pages/Convert";
+import CropPage from "@/pages/Crop";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import HowItWorks from "@/pages/HowItWorks";
 import Languages from "@/pages/Languages";
@@ -43,17 +48,21 @@ function AnalyticsTracker() {
   return null;
 }
 
+const languages = ['', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar'];
+
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Layout><Home /></Layout>} />
-      <Route path="/es" element={<Layout><Home /></Layout>} />
-      <Route path="/pt" element={<Layout><Home /></Layout>} />
-      <Route path="/fr" element={<Layout><Home /></Layout>} />
-      <Route path="/de" element={<Layout><Home /></Layout>} />
-      <Route path="/hi" element={<Layout><Home /></Layout>} />
-      <Route path="/zh-cn" element={<Layout><Home /></Layout>} />
-      <Route path="/ar" element={<Layout><Home /></Layout>} />
+      {languages.map((lang) => {
+        const prefix = lang ? `/${lang}` : '';
+        return [
+          <Route key={`${lang}-home`} path={prefix || '/'} element={<Layout><Home /></Layout>} />,
+          <Route key={`${lang}-compress`} path={`${prefix}/compress`} element={<Layout><Compress /></Layout>} />,
+          <Route key={`${lang}-resize`} path={`${prefix}/resize`} element={<Layout><Resize /></Layout>} />,
+          <Route key={`${lang}-convert`} path={`${prefix}/convert`} element={<Layout><Convert /></Layout>} />,
+          <Route key={`${lang}-crop`} path={`${prefix}/crop`} element={<Layout><CropPage /></Layout>} />,
+        ];
+      })}
       <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />
       <Route path="/how-it-works" element={<Layout><HowItWorks /></Layout>} />
       <Route path="/languages" element={<Layout><Languages /></Layout>} />
@@ -69,16 +78,18 @@ function AppRoutes() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <BrowserRouter>
-          <AnalyticsTracker />
-          <AppRoutes />
-          <CookieConsent />
-          <Toaster />
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <BrowserRouter>
+            <AnalyticsTracker />
+            <AppRoutes />
+            <CookieConsent />
+            <Toaster />
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   );
 }
 
