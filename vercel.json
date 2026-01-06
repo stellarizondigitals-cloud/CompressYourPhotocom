@@ -3,6 +3,10 @@
   "outputDirectory": "dist/public",
   "framework": "vite",
   "rewrites": [
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/ads.txt", "destination": "/ads.txt" },
+    { "source": "/favicon.png", "destination": "/favicon.png" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
