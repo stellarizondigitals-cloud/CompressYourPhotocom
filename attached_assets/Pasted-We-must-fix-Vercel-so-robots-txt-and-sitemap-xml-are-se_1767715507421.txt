@@ -1,0 +1,52 @@
+We must fix Vercel so /robots.txt and /sitemap.xml are served as real static files, not routed into the SPA.
+
+Create/verify these files exist EXACTLY in public/ (not src/, not client/src/):
+public/robots.txt with:
+User-agent: *
+Allow: /
+ 
+Sitemap: https://www.compressyourphoto.com/sitemap.xml
+public/ads.txt with:
+# ads.txt placeholder until AdSense approval
+Replace public/sitemap.xml with a VALID XML sitemap (must include <urlset> and <url> entries). Use this exact list of URLs and REMOVE /about unless there is a real route/page:
+https://www.compressyourphoto.com/
+https://www.compressyourphoto.com/how-it-works
+https://www.compressyourphoto.com/languages
+https://www.compressyourphoto.com/privacy-policy
+https://www.compressyourphoto.com/terms
+https://www.compressyourphoto.com/cookie-policy
+https://www.compressyourphoto.com/disclaimer
+https://www.compressyourphoto.com/contact
+https://www.compressyourphoto.com/es
+https://www.compressyourphoto.com/pt
+https://www.compressyourphoto.com/fr
+https://www.compressyourphoto.com/de
+https://www.compressyourphoto.com/hi
+https://www.compressyourphoto.com/zh-cn
+https://www.compressyourphoto.com/ar
+Open vercel.json (create it if missing) and ensure routing does NOT intercept these static files.
+Use this config:
+json
+Copy
+{
+  "headers": [
+    { "source": "/robots.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] },
+    { "source": "/ads.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] },
+    { "source": "/sitemap.xml", "headers": [{ "key": "Content-Type", "value": "application/xml; charset=utf-8" }] }
+  ],
+  "rewrites": [
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/ads.txt", "destination": "/ads.txt" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+After making changes, tell me which files you created/edited, and their paths.
+Then Commit + Push so Vercel redeploys.
+
+Important: verify you actually deployed the latest commit
+After you push, go to Vercel → Deployments and confirm the latest deployment matches the time you pushed.
+
+If you want a quick sanity check without guessing: tell me the latest GitHub commit message/time and I’ll tell you what to look for in Vercel.
+
+Once you re-push, I’ll re-check live again
