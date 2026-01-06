@@ -137,7 +137,7 @@ export default function Home() {
             <FeatureCard
               icon={Globe}
               title={t('features.multilingual.title', 'Multilingual')}
-              description={t('features.multilingual.description', 'Available in 8 languages including RTL support.')}
+              description={t('features.multilingual.description', 'Available in 9 languages including RTL support.')}
             />
           </div>
         </div>
