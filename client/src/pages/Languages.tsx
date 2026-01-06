@@ -73,7 +73,7 @@ export default function Languages() {
               {t('languages.helpTranslate')}
             </p>
             <Button variant="outline" asChild>
-              <a href="mailto:contact@stellarizondigitals.com">
+              <a href="mailto:contact@compressyourphoto.com">
                 {t('languages.contactUs')}
               </a>
             </Button>
