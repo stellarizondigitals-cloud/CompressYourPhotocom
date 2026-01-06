@@ -51,30 +51,46 @@ export default function PrivacyPolicy() {
                       {t(`privacy.${key}.content`)}
                     </p>
                     {showCompany && (
-                      <>
-                        <p className="mt-2 font-medium">Stellarizon Digitals Ltd</p>
-                        <p className="mt-1">
-                          <a href="mailto:contact@compressyourphoto.com" className="text-primary hover:underline">
-                            contact@compressyourphoto.com
+                      <div className="mt-3 p-4 bg-muted/50 rounded-lg">
+                        <p className="font-medium">{t('legal.company.name')}</p>
+                        <p className="text-sm text-muted-foreground mt-1">{t('legal.company.number')}</p>
+                        <p className="text-sm text-muted-foreground mt-1">{t('legal.company.address')}</p>
+                        <p className="mt-2">
+                          <a href={`mailto:${t('legal.company.email')}`} className="text-primary hover:underline">
+                            {t('legal.company.email')}
                           </a>
                         </p>
-                      </>
+                      </div>
                     )}
                   </div>
                 </div>
               </Card>
             ))}
 
+            <Card className="p-6 bg-muted/30">
+              <h2 className="text-xl font-semibold mb-3">{t('legal.ukGdpr.title')}</h2>
+              <p className="text-muted-foreground leading-relaxed mb-3">
+                {t('legal.ukGdpr.content')}
+              </p>
+              <p className="text-sm text-muted-foreground">
+                {t('legal.governingLaw.content')}
+              </p>
+            </Card>
+
             <div className="pt-6 border-t">
               <h2 className="text-xl font-semibold mb-3">{t('privacy.contact.title')}</h2>
               <p className="text-muted-foreground leading-relaxed">
                 {t('privacy.contact.content')}
               </p>
-              <p className="mt-2">
-                <a href="mailto:contact@compressyourphoto.com" className="text-primary hover:underline">
-                  contact@compressyourphoto.com
-                </a>
-              </p>
+              <div className="mt-3 p-4 bg-muted/50 rounded-lg">
+                <p className="font-medium">{t('legal.company.name')}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t('legal.company.address')}</p>
+                <p className="mt-2">
+                  <a href={`mailto:${t('legal.company.email')}`} className="text-primary hover:underline">
+                    {t('legal.company.email')}
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

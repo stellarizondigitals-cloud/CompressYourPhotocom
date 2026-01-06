@@ -414,5 +414,28 @@
     "a5": "Oui! Téléchargez plusieurs images et traitez-les toutes ensemble. Téléchargez individuellement ou en fichier ZIP.",
     "q6": "Cela fonctionne-t-il sur les téléphones mobiles?",
     "a6": "Oui, CompressYourPhoto fonctionne sur tous les navigateurs mobiles modernes, y compris Safari sur iPhone et Chrome sur Android."
+  },
+  "legal": {
+    "company": {
+      "name": "Stellarizon Digitals Ltd",
+      "number": "Company Number: 16748429 (England and Wales)",
+      "address": "Registered Office: 86-90 Paul Street, London EC2A 4NE",
+      "email": "contact@stellarizondigitals.com"
+    },
+    "serviceOperator": {
+      "title": "Opérateur du Service",
+      "content": "CompressYourPhoto est exploité par Stellarizon Digitals Ltd, une société enregistrée en Angleterre et au Pays de Galles."
+    },
+    "ukGdpr": {
+      "title": "Droits RGPD du Royaume-Uni",
+      "content": "En vertu de la loi britannique sur la protection des données, vous avez le droit de : accéder à vos données personnelles, rectifier des données inexactes, effacer vos données, restreindre le traitement, la portabilité des données et vous opposer au traitement. Pour exercer ces droits, contactez-nous à l'adresse ci-dessous.",
+      "cookieNote": "En vertu de la loi britannique sur la protection des données, vous avez des droits concernant les cookies et les données personnelles collectées par leur intermédiaire. Pour plus d'informations sur vos droits, veuillez consulter notre Politique de Confidentialité."
+    },
+    "governingLaw": {
+      "title": "Loi Applicable",
+      "content": "Cette politique est régie par les lois de l'Angleterre et du Pays de Galles.",
+      "termsContent": "Ces Conditions sont régies par les lois de l'Angleterre et du Pays de Galles. Tout litige découlant de ces Conditions ou de votre utilisation de nos services sera soumis à la juridiction exclusive des tribunaux d'Angleterre et du Pays de Galles.",
+      "disclaimerContent": "Cet avertissement est régi par les lois de l'Angleterre et du Pays de Galles. Dans toute la mesure permise par la loi britannique, Stellarizon Digitals Ltd ne sera pas responsable des dommages indirects, accessoires, spéciaux ou consécutifs résultant de votre utilisation de ce service."
+    }
   }
 }

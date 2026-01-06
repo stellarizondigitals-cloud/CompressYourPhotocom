@@ -366,5 +366,28 @@
     "a5": "Ja! Laden Sie mehrere Bilder hoch und verarbeiten Sie sie alle zusammen. Laden Sie einzeln oder als ZIP-Datei herunter.",
     "q6": "Funktioniert es auf Mobiltelefonen?",
     "a6": "Ja, CompressYourPhoto funktioniert auf allen modernen mobilen Browsern einschließlich iPhone Safari und Android Chrome."
+  },
+  "legal": {
+    "company": {
+      "name": "Stellarizon Digitals Ltd",
+      "number": "Company Number: 16748429 (England and Wales)",
+      "address": "Registered Office: 86-90 Paul Street, London EC2A 4NE",
+      "email": "contact@stellarizondigitals.com"
+    },
+    "serviceOperator": {
+      "title": "Dienstbetreiber",
+      "content": "CompressYourPhoto wird von Stellarizon Digitals Ltd betrieben, einem in England und Wales registrierten Unternehmen."
+    },
+    "ukGdpr": {
+      "title": "UK-DSGVO-Rechte",
+      "content": "Nach dem britischen Datenschutzgesetz haben Sie das Recht auf: Zugang zu Ihren persönlichen Daten, Berichtigung ungenauer Daten, Löschung Ihrer Daten, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gegen die Verarbeitung. Um diese Rechte auszuüben, kontaktieren Sie uns unter der unten angegebenen Adresse.",
+      "cookieNote": "Nach dem britischen Datenschutzgesetz haben Sie Rechte bezüglich Cookies und der durch sie erhobenen personenbezogenen Daten. Weitere Informationen über Ihre Rechte finden Sie in unserer Datenschutzrichtlinie."
+    },
+    "governingLaw": {
+      "title": "Anwendbares Recht",
+      "content": "Diese Richtlinie unterliegt den Gesetzen von England und Wales.",
+      "termsContent": "Diese Bedingungen unterliegen den Gesetzen von England und Wales. Alle Streitigkeiten, die sich aus diesen Bedingungen oder Ihrer Nutzung unserer Dienste ergeben, unterliegen der ausschließlichen Zuständigkeit der Gerichte von England und Wales.",
+      "disclaimerContent": "Dieser Haftungsausschluss unterliegt den Gesetzen von England und Wales. Im größtmöglichen gesetzlich zulässigen Umfang haftet Stellarizon Digitals Ltd nicht für indirekte, zufällige, besondere oder Folgeschäden, die aus Ihrer Nutzung dieses Dienstes entstehen."
+    }
   }
 }

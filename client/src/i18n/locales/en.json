@@ -417,5 +417,28 @@
     "a5": "Yes! Upload multiple images and process them all together. Download individually or as a ZIP file.",
     "q6": "Does it work on mobile phones?",
     "a6": "Yes, CompressYourPhoto works on all modern mobile browsers including iPhone Safari and Android Chrome."
+  },
+  "legal": {
+    "company": {
+      "name": "Stellarizon Digitals Ltd",
+      "number": "Company Number: 16748429 (England and Wales)",
+      "address": "Registered Office: 86-90 Paul Street, London EC2A 4NE",
+      "email": "contact@stellarizondigitals.com"
+    },
+    "serviceOperator": {
+      "title": "Service Operator",
+      "content": "CompressYourPhoto is operated by Stellarizon Digitals Ltd, a company registered in England and Wales."
+    },
+    "ukGdpr": {
+      "title": "UK GDPR Rights",
+      "content": "Under UK data protection law, you have the right to: access your personal data, rectification of inaccurate data, erasure of your data, restrict processing, data portability, and object to processing. To exercise these rights, contact us at the address below.",
+      "cookieNote": "Under UK data protection law, you have rights regarding cookies and personal data collected through them. For more information about your rights, please see our Privacy Policy."
+    },
+    "governingLaw": {
+      "title": "Governing Law",
+      "content": "This policy is governed by the laws of England and Wales.",
+      "termsContent": "These Terms are governed by the laws of England and Wales. Any disputes arising from these Terms or your use of our services shall be subject to the exclusive jurisdiction of the courts of England and Wales.",
+      "disclaimerContent": "This disclaimer is governed by the laws of England and Wales. To the fullest extent permitted by UK law, Stellarizon Digitals Ltd shall not be liable for indirect, incidental, special, or consequential damages arising from your use of this service."
+    }
   }
 }

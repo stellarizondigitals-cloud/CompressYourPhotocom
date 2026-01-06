@@ -366,5 +366,28 @@
     "a5": "¡Sí! Sube múltiples imágenes y procésalas todas juntas. Descarga individualmente o como archivo ZIP.",
     "q6": "¿Funciona en teléfonos móviles?",
     "a6": "Sí, CompressYourPhoto funciona en todos los navegadores móviles modernos incluyendo Safari de iPhone y Chrome de Android."
+  },
+  "legal": {
+    "company": {
+      "name": "Stellarizon Digitals Ltd",
+      "number": "Company Number: 16748429 (England and Wales)",
+      "address": "Registered Office: 86-90 Paul Street, London EC2A 4NE",
+      "email": "contact@stellarizondigitals.com"
+    },
+    "serviceOperator": {
+      "title": "Operador del Servicio",
+      "content": "CompressYourPhoto es operado por Stellarizon Digitals Ltd, una empresa registrada en Inglaterra y Gales."
+    },
+    "ukGdpr": {
+      "title": "Derechos RGPD del Reino Unido",
+      "content": "Bajo la ley de protección de datos del Reino Unido, usted tiene derecho a: acceder a sus datos personales, rectificación de datos inexactos, eliminación de sus datos, restringir el procesamiento, portabilidad de datos y oponerse al procesamiento. Para ejercer estos derechos, contáctenos en la dirección a continuación.",
+      "cookieNote": "Bajo la ley de protección de datos del Reino Unido, usted tiene derechos respecto a las cookies y los datos personales recopilados a través de ellas. Para más información sobre sus derechos, consulte nuestra Política de Privacidad."
+    },
+    "governingLaw": {
+      "title": "Ley Aplicable",
+      "content": "Esta política se rige por las leyes de Inglaterra y Gales.",
+      "termsContent": "Estos Términos se rigen por las leyes de Inglaterra y Gales. Cualquier disputa que surja de estos Términos o de su uso de nuestros servicios estará sujeta a la jurisdicción exclusiva de los tribunales de Inglaterra y Gales.",
+      "disclaimerContent": "Este aviso legal se rige por las leyes de Inglaterra y Gales. En la máxima medida permitida por la ley del Reino Unido, Stellarizon Digitals Ltd no será responsable de daños indirectos, incidentales, especiales o consecuentes derivados de su uso de este servicio."
+    }
   }
 }

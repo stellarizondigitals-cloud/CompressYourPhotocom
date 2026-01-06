@@ -14,6 +14,7 @@ const languages = [
   { code: 'hi', name: 'Hindi', nativeName: 'हिन्दी', path: '/hi' },
   { code: 'zh-cn', name: 'Chinese (Simplified)', nativeName: '简体中文', path: '/zh-cn' },
   { code: 'ar', name: 'Arabic', nativeName: 'العربية', path: '/ar' },
+  { code: 'id', name: 'Indonesian', nativeName: 'Bahasa Indonesia', path: '/id' },
 ];
 
 export default function Languages() {
@@ -72,7 +73,7 @@ export default function Languages() {
               {t('languages.helpTranslate')}
             </p>
             <Button variant="outline" asChild>
-              <a href="mailto:translate@compressyourphoto.com">
+              <a href="mailto:contact@stellarizondigitals.com">
                 {t('languages.contactUs')}
               </a>
             </Button>

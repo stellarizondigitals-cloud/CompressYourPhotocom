@@ -36,14 +36,14 @@ export default function Contact() {
               {t('contact.email.description')}
             </p>
             <a 
-              href="mailto:contact@compressyourphoto.com"
+              href="mailto:contact@stellarizondigitals.com"
               className="text-2xl font-semibold text-primary hover:underline block mb-6"
               data-testid="link-contact-email"
             >
-              contact@compressyourphoto.com
+              contact@stellarizondigitals.com
             </a>
             <Button size="lg" asChild>
-              <a href="mailto:contact@compressyourphoto.com" data-testid="button-send-email">
+              <a href="mailto:contact@stellarizondigitals.com" data-testid="button-send-email">
                 <Mail className="w-4 h-4 mr-2" />
                 {t('contact.sendEmail')}
               </a>

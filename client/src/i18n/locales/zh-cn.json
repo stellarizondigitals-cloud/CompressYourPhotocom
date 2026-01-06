@@ -366,5 +366,28 @@
     "a5": "可以！上传多张图片并一起处理。单独下载或打包成ZIP文件下载。",
     "q6": "在手机上可以使用吗？",
     "a6": "是的，CompressYourPhoto可在所有现代移动浏览器上使用，包括iPhone Safari和Android Chrome。"
+  },
+  "legal": {
+    "company": {
+      "name": "Stellarizon Digitals Ltd",
+      "number": "Company Number: 16748429 (England and Wales)",
+      "address": "Registered Office: 86-90 Paul Street, London EC2A 4NE",
+      "email": "contact@stellarizondigitals.com"
+    },
+    "serviceOperator": {
+      "title": "服务运营商",
+      "content": "CompressYourPhoto 由 Stellarizon Digitals Ltd 运营，这是一家在英格兰和威尔士注册的公司。"
+    },
+    "ukGdpr": {
+      "title": "英国 GDPR 权利",
+      "content": "根据英国数据保护法，您有权：访问您的个人数据、更正不准确的数据、删除您的数据、限制处理、数据可携带性以及反对处理。如需行使这些权利，请通过以下地址与我们联系。",
+      "cookieNote": "根据英国数据保护法，您对 Cookie 及通过其收集的个人数据享有相关权利。有关您的权利的更多信息，请参阅我们的隐私政策。"
+    },
+    "governingLaw": {
+      "title": "适用法律",
+      "content": "本政策受英格兰和威尔士法律管辖。",
+      "termsContent": "本条款受英格兰和威尔士法律管辖。因本条款或您使用我们服务而产生的任何争议应受英格兰和威尔士法院的专属管辖。",
+      "disclaimerContent": "本免责声明受英格兰和威尔士法律管辖。在英国法律允许的最大范围内，Stellarizon Digitals Ltd 对因您使用本服务而产生的间接、附带、特殊或后果性损害不承担责任。"
+    }
   }
 }

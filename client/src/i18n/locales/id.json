@@ -417,5 +417,28 @@
     "a5": "Ya! Unggah beberapa gambar dan proses semuanya bersama. Unduh secara individual atau sebagai file ZIP.",
     "q6": "Apakah ini berfungsi di ponsel?",
     "a6": "Ya, CompressYourPhoto berfungsi di semua browser mobile modern termasuk Safari iPhone dan Chrome Android."
+  },
+  "legal": {
+    "company": {
+      "name": "Stellarizon Digitals Ltd",
+      "number": "Company Number: 16748429 (England and Wales)",
+      "address": "Registered Office: 86-90 Paul Street, London EC2A 4NE",
+      "email": "contact@stellarizondigitals.com"
+    },
+    "serviceOperator": {
+      "title": "Operator Layanan",
+      "content": "CompressYourPhoto dioperasikan oleh Stellarizon Digitals Ltd, sebuah perusahaan yang terdaftar di Inggris dan Wales."
+    },
+    "ukGdpr": {
+      "title": "Hak GDPR Inggris",
+      "content": "Berdasarkan undang-undang perlindungan data Inggris, Anda memiliki hak untuk: mengakses data pribadi Anda, perbaikan data yang tidak akurat, penghapusan data Anda, membatasi pemrosesan, portabilitas data, dan menolak pemrosesan. Untuk menggunakan hak-hak ini, hubungi kami di alamat di bawah.",
+      "cookieNote": "Berdasarkan undang-undang perlindungan data Inggris, Anda memiliki hak terkait cookie dan data pribadi yang dikumpulkan melaluinya. Untuk informasi lebih lanjut tentang hak Anda, silakan lihat Kebijakan Privasi kami."
+    },
+    "governingLaw": {
+      "title": "Hukum yang Berlaku",
+      "content": "Kebijakan ini diatur oleh hukum Inggris dan Wales.",
+      "termsContent": "Syarat-syarat ini diatur oleh hukum Inggris dan Wales. Setiap perselisihan yang timbul dari Syarat ini atau penggunaan layanan kami akan tunduk pada yurisdiksi eksklusif pengadilan Inggris dan Wales.",
+      "disclaimerContent": "Penafian ini diatur oleh hukum Inggris dan Wales. Sejauh diizinkan oleh hukum Inggris, Stellarizon Digitals Ltd tidak bertanggung jawab atas kerusakan tidak langsung, insidental, khusus, atau konsekuensial yang timbul dari penggunaan layanan ini."
+    }
   }
 }

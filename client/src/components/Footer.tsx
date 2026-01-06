@@ -20,7 +20,9 @@ export function Footer() {
               {t('app.tagline')}
             </p>
             <p className="text-xs text-muted-foreground mt-4">
-              Stellarizon Digitals Ltd
+              <a href="https://stellarizondigitals.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                Stellarizon Digitals Ltd
+              </a>
             </p>
           </div>
 
@@ -154,7 +156,19 @@ export function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; 2025 CompressYourPhoto. {t('footer.allRightsReserved')}</p>
+          <p>&copy; 2026 CompressYourPhoto. {t('footer.allRightsReserved')}</p>
+          <p className="mt-1 text-xs">
+            Operated by{' '}
+            <a 
+              href="https://stellarizondigitals.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              Stellarizon Digitals Ltd
+            </a>
+            {' '}(Company No. 16748429)
+          </p>
         </div>
       </div>
     </footer>
