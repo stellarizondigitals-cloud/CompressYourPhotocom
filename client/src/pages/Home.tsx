@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, ChevronDown } from 'lucide-react';
+import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop } from 'lucide-react';
 import { FeatureCard } from '@/components/FeatureCard';
 import { RecommendedTools } from '@/components/RecommendedTools';
 import { Card } from '@/components/ui/card';
