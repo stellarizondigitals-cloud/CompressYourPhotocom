@@ -56,6 +56,13 @@ export function Footer() {
                 {t('tools.crop.navLabel', 'Crop Images')}
               </Link>
               <Link 
+                to="/enhance" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-enhance"
+              >
+                {t('tools.enhance.navLabel', 'Enhance Photos')}
+              </Link>
+              <Link 
                 to="/how-it-works" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-how-it-works"

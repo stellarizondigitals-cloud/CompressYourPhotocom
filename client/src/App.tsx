@@ -12,6 +12,7 @@ import Compress from "@/pages/Compress";
 import Resize from "@/pages/Resize";
 import Convert from "@/pages/Convert";
 import CropPage from "@/pages/Crop";
+import EnhancePage from "@/pages/Enhance";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import HowItWorks from "@/pages/HowItWorks";
 import Languages from "@/pages/Languages";
@@ -61,6 +62,7 @@ function AppRoutes() {
           <Route key={`${lang}-resize`} path={`${prefix}/resize`} element={<Layout><Resize /></Layout>} />,
           <Route key={`${lang}-convert`} path={`${prefix}/convert`} element={<Layout><Convert /></Layout>} />,
           <Route key={`${lang}-crop`} path={`${prefix}/crop`} element={<Layout><CropPage /></Layout>} />,
+          <Route key={`${lang}-enhance`} path={`${prefix}/enhance`} element={<Layout><EnhancePage /></Layout>} />,
         ];
       })}
       <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />

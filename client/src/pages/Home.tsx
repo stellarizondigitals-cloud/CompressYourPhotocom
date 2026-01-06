@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop } from 'lucide-react';
+import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, Sparkles } from 'lucide-react';
 import { FeatureCard } from '@/components/FeatureCard';
 import { RecommendedTools } from '@/components/RecommendedTools';
 import { Card } from '@/components/ui/card';
@@ -33,6 +33,12 @@ const tools = [
     path: '/crop',
     color: 'bg-orange-500/10 text-orange-600 dark:text-orange-400',
   },
+  { 
+    key: 'enhance',
+    icon: Sparkles,
+    path: '/enhance',
+    color: 'bg-pink-500/10 text-pink-600 dark:text-pink-400',
+  },
 ];
 
 const formats = ['JPG', 'PNG', 'WebP', 'HEIC', 'GIF'];
@@ -59,7 +65,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto mb-10">
             {tools.map((tool) => {
               const Icon = tool.icon;
               return (

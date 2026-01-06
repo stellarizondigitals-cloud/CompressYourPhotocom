@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Minimize2, Maximize, RefreshCw, Crop } from 'lucide-react';
+import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
@@ -12,6 +12,7 @@ const navTools = [
   { key: 'resize', path: '/resize', icon: Maximize },
   { key: 'convert', path: '/convert', icon: RefreshCw },
   { key: 'crop', path: '/crop', icon: Crop },
+  { key: 'enhance', path: '/enhance', icon: Sparkles },
 ];
 
 export function Header() {

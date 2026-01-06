@@ -1,0 +1,144 @@
+You are adding a 5th tool to compressyourphoto.com: "Enhance Your Photo."
+
+The site already has 4 working tools: Compress, Resize, Convert, and Crop.
+
+You must now add: Enhance.
+
+This tool must work 100% client-side using Canvas and CSS filters. No backend, no API calls, no uploads to server.
+
+Here is what you must do:
+
+---
+
+### 1. CREATE /enhance PAGE
+
+#### UI Components:
+- Drag-and-drop or file picker (supports JPG, PNG, WebP)
+- Live side-by-side preview:
+  - Left: Original image
+  - Right: Enhanced image (live preview of adjustments)
+- One-click "Auto-Enhance" button:
+  - Automatically applies moderate improvements:
+    - Brightness: +10%
+    - Contrast: +15%
+    - Saturation: +10%
+    - Sharpness: slight edge enhancement
+  - User can see the result immediately and adjust further with sliders if needed
+- Manual adjustment sliders (with live preview):
+  1. Brightness (-100 to +100, default 0)
+  2. Contrast (-100 to +100, default 0)
+  3. Saturation (-100 to +100, default 0)
+  4. Sharpness (0 to 100, default 0)
+- Optional quick filter buttons:
+  - Black & White
+  - Sepia
+  - Vivid (high saturation boost)
+  - Reset (back to original)
+- Download button (exports the enhanced image as JPG or PNG, user can choose)
+- Privacy assurance text: "100% private—all processing happens in your browser"
+
+#### Implementation:
+- Use HTML5 Canvas to apply filters:
+  - Brightness/Contrast/Saturation: use Canvas context filters or pixel manipulation
+  - Sharpness: convolution filter (kernel sharpening) or CSS filter approximation
+- Render the original image on one canvas, apply filters to a second canvas for preview
+- On download, export the enhanced canvas as image file
+
+#### Page Metadata:
+- Page title: "Enhance Photo Online | Free Image Quality Enhancer"
+- Meta description: "Improve your photo quality instantly. Adjust brightness, contrast, saturation, and sharpness for free. 100% private and client-side."
+- Canonical URL: https://www.compressyourphoto.com/enhance
+
+---
+
+### 2. UPDATE NAVIGATION
+- Add "Enhance" link to the main navigation bar (alongside Compress, Resize, Convert, Crop)
+- Order should be logical, e.g.:
+  - Home
+  - Compress
+  - Resize
+  - Convert
+  - Crop
+  - Enhance
+  - (Language switcher stays on the right)
+
+---
+
+### 3. UPDATE HOMEPAGE (/)
+- Update the hero subtitle to reflect 5 tools:
+  "Compress, resize, convert, crop, and enhance your photos—fast, private, and free."
+- If there is a 4-card tool selector grid on the homepage, add a 5th card for "Enhance":
+  - Icon/emoji: ✨ or 🎨
+  - Title: "Enhance"
+  - Description: "Improve brightness, contrast, and sharpness"
+  - Link: /enhance
+
+---
+
+### 4. UPDATE SEO FILES
+- Add the new tool page to public/sitemap.xml:
+  - https://www.compressyourphoto.com/enhance
+- Also add localized versions for all supported languages:
+  - /es/enhance
+  - /pt/enhance
+  - /fr/enhance
+  - /de/enhance
+  - /hi/enhance
+  - /zh-cn/enhance
+  - /ar/enhance
+
+- Ensure sitemap.xml remains valid XML with proper <urlset>, <url>, <loc>, <lastmod>, <changefreq>, <priority> tags.
+
+---
+
+### 5. KEEP EVERYTHING CLIENT-SIDE & FREE-TIER
+- Do NOT use any external APIs (e.g., no AI upscaling APIs, no cloud services)
+- All image processing must happen in the browser using Canvas
+- Files are never uploaded to a server
+- Keep performance fast—optimize Canvas operations for mobile devices
+
+---
+
+### 6. DESIGN & UX CONSISTENCY
+- Use the same Tailwind CSS styling as the other 4 tools
+- Ensure mobile-responsive (sliders work on touch devices)
+- Match button styles, drag-and-drop zone, download flow, and privacy messaging
+- Add tooltips or help text to explain what each slider does (e.g., "Brightness: Make your photo lighter or darker")
+
+---
+
+### 7. i18n SUPPORT
+- Ensure all UI text on the /enhance page is translatable using the existing i18n setup
+- Add translation keys for:
+  - "Enhance Your Photo"
+  - "Auto-Enhance"
+  - "Brightness", "Contrast", "Saturation", "Sharpness"
+  - "Black & White", "Sepia", "Vivid", "Reset"
+  - "Download Enhanced Photo"
+- If translation files (en.json, es.json, etc.) need to be updated, add the keys with English defaults and placeholder text for other languages (I will provide real translations later if needed)
+
+---
+
+### 8. ROUTING
+- Ensure the new /enhance route works with the existing React Router (wouter or react-router)
+- Ensure language-prefixed routes also work (e.g., /es/enhance, /zh-cn/enhance)
+
+---
+
+### 9. KEEP EXISTING FEATURES INTACT
+- Do NOT break:
+  - Existing 4 tools (Compress, Resize, Convert, Crop)
+  - Footer, legal pages, language switcher
+  - Recommended Tools section
+  - Any existing SEO files (robots.txt, sitemap.xml, ads.txt)
+
+---
+
+### 10. AFTER COMPLETION
+- Tell me which files you created/edited
+- Confirm /enhance is functional and routable
+- Confirm sitemap and navigation are updated
+
+Do NOT ask me for clarification—use best practices for client-side Canvas image filters and build a working, user-friendly Enhance tool.
+
+Begin now.
