@@ -1,7 +1,9 @@
 {
   "app": {
     "title": "CompressYourPhoto",
-    "tagline": "Free Online Image Compressor, Resizer, Converter & Cropper"
+    "tagline": "Free Online Image Compressor, Resizer, Converter, Cropper & Enhancer",
+    "homePageTitle": "Compress, Resize, Convert, Crop & Enhance Images Free Online | CompressYourPhoto",
+    "homeMetaDescription": "Free online photo tools. Compress, resize, convert, crop, and enhance images instantly in your browser. 100% private—your photos never leave your device. Supports JPG, PNG, WebP, HEIC, GIF."
   },
   "hero": {
     "headline": "Free Online Photo Tools",

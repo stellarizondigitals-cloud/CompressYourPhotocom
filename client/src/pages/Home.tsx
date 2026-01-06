@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, Sparkles } from 'lucide-react';
 import { FeatureCard } from '@/components/FeatureCard';
 import { Card } from '@/components/ui/card';
@@ -51,8 +52,17 @@ export default function Home() {
     return `/${currentLanguage.code}${path}`;
   };
 
+  const canonicalUrl = currentLanguage.code === 'en' 
+    ? 'https://www.compressyourphoto.com/' 
+    : `https://www.compressyourphoto.com/${currentLanguage.code}`;
+
   return (
     <div className="flex-1">
+      <Helmet>
+        <title>{t('app.homePageTitle', 'Compress, Resize, Convert, Crop & Enhance Images Free Online | CompressYourPhoto')}</title>
+        <meta name="description" content={t('app.homeMetaDescription', 'Free online photo tools. Compress, resize, convert, crop, and enhance images instantly in your browser. 100% private—your photos never leave your device.')} />
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <div className={`text-center mb-10 space-y-4 ${isRTL ? 'text-right md:text-center' : ''}`}>
