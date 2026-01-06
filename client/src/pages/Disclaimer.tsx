@@ -24,7 +24,7 @@ export default function Disclaimer() {
               {t('disclaimer.title')}
             </h1>
             <p className="text-muted-foreground">
-              {t('disclaimer.lastUpdated')}: January 2025
+              {t('disclaimer.lastUpdated')}: January 2026
             </p>
           </div>
 

@@ -24,7 +24,7 @@ export default function Terms() {
               {t('terms.title')}
             </h1>
             <p className="text-muted-foreground">
-              {t('terms.lastUpdated')}: January 2025
+              {t('terms.lastUpdated')}: January 2026
             </p>
           </div>
 

@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
               {t('privacy.title')}
             </h1>
             <p className="text-muted-foreground">
-              {t('privacy.lastUpdated')}: January 2025
+              {t('privacy.lastUpdated')}: January 2026
             </p>
           </div>
 

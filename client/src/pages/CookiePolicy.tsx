@@ -24,7 +24,7 @@ export default function CookiePolicy() {
               {t('cookies.title')}
             </h1>
             <p className="text-muted-foreground">
-              {t('cookies.lastUpdated')}: January 2025
+              {t('cookies.lastUpdated')}: January 2026
             </p>
           </div>
 
