@@ -23,7 +23,7 @@
     },
     "multilingual": {
       "title": "Multilingüe",
-      "description": "Disponible en 8 idiomas para usuarios de todo el mundo."
+      "description": "Disponible en 9 idiomas para usuarios de todo el mundo."
     }
   },
   "compression": {
@@ -128,7 +128,7 @@
   },
   "languages": {
     "title": "Idiomas Disponibles",
-    "subtitle": "CompressYourPhoto está disponible en 8 idiomas para servir a usuarios de todo el mundo",
+    "subtitle": "CompressYourPhoto está disponible en 9 idiomas para servir a usuarios de todo el mundo",
     "helpTranslate": "¿Quieres ayudar a traducir CompressYourPhoto a tu idioma?",
     "contactUs": "Contáctanos"
   },

@@ -10,6 +10,7 @@ import de from './locales/de.json';
 import hi from './locales/hi.json';
 import zhCN from './locales/zh-cn.json';
 import ar from './locales/ar.json';
+import id from './locales/id.json';
 
 export const languages = [
   { code: 'en', name: 'English', nativeName: 'English', dir: 'ltr' },
@@ -20,6 +21,7 @@ export const languages = [
   { code: 'hi', name: 'Hindi', nativeName: 'हिन्दी', dir: 'ltr' },
   { code: 'zh-cn', name: 'Chinese (Simplified)', nativeName: '简体中文', dir: 'ltr' },
   { code: 'ar', name: 'Arabic', nativeName: 'العربية', dir: 'rtl' },
+  { code: 'id', name: 'Indonesian', nativeName: 'Bahasa Indonesia', dir: 'ltr' },
 ] as const;
 
 export type LanguageCode = typeof languages[number]['code'];
@@ -37,8 +39,9 @@ i18n
       hi: { translation: hi },
       'zh-cn': { translation: zhCN },
       ar: { translation: ar },
+      id: { translation: id },
     },
-    supportedLngs: ['en', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar'],
+    supportedLngs: ['en', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id'],
     fallbackLng: 'en',
     load: 'currentOnly',
     lowerCaseLng: true,

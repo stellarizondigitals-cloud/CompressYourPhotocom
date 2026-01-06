@@ -49,7 +49,7 @@ function AnalyticsTracker() {
   return null;
 }
 
-const languages = ['', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar'];
+const languages = ['', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id'];
 
 function AppRoutes() {
   return (

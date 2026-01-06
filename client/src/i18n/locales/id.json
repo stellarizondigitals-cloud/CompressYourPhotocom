@@ -1,0 +1,421 @@
+{
+  "app": {
+    "title": "CompressYourPhoto",
+    "tagline": "Kompresor, Pengubah Ukuran, Konverter & Pemotong Gambar Online Gratis"
+  },
+  "hero": {
+    "headline": "Alat Foto Online Gratis",
+    "subheadline": "Kompres, ubah ukuran, konversi, potong, dan tingkatkan gambar secara instan",
+    "subheadlineExpanded": "Kompres, ubah ukuran, konversi, potong, dan tingkatkan foto Anda—100% gratis, pribadi, dan berfungsi di perangkat apa pun. Tidak perlu mendaftar.",
+    "dropzone": "Seret foto ke sini atau klik untuk mengunggah",
+    "supportedFormats": "Mendukung JPG, PNG, WebP, HEIC, GIF",
+    "clientSide": "100% Berbasis Browser",
+    "noUpload": "Tidak Ada Unggahan ke Server",
+    "privacyGuaranteed": "Privasi Anda Terlindungi"
+  },
+  "features": {
+    "privacy": {
+      "title": "100% Pribadi & Aman",
+      "description": "Foto Anda tidak pernah meninggalkan perangkat Anda. Semua pemrosesan terjadi secara lokal di browser Anda—kami tidak dapat melihat gambar Anda."
+    },
+    "speed": {
+      "title": "Pemrosesan Sangat Cepat",
+      "description": "Kompres, ubah ukuran, atau konversi gambar dalam hitungan detik. Tidak perlu menunggu unggahan atau pemrosesan server."
+    },
+    "multilingual": {
+      "title": "Tersedia dalam 9 Bahasa",
+      "description": "Gunakan CompressYourPhoto dalam bahasa Inggris, Spanyol, Portugis, Prancis, Jerman, Hindi, Cina, Arab, atau Indonesia."
+    }
+  },
+  "compression": {
+    "original": "Asli",
+    "compressed": "Terkompresi",
+    "quality": "Kualitas",
+    "qualityLabel": "Kualitas ({{value}}%)",
+    "maxWidth": "Lebar Maks (px)",
+    "maxWidthPlaceholder": "Tidak ada batas",
+    "outputFormat": "Format Output",
+    "keepOriginal": "Pertahankan Asli",
+    "compressButton": "Kompres Gambar",
+    "compressing": "Mengompresi {{current}} dari {{total}} gambar...",
+    "download": "Unduh",
+    "downloadAll": "Unduh Semua sebagai ZIP",
+    "compressAnother": "Kompres Lagi",
+    "saved": "dihemat",
+    "results": "Hasil",
+    "noFiles": "Tidak ada file yang dipilih",
+    "error": "Kesalahan",
+    "unsupportedFormat": "Format tidak didukung",
+    "compressionFailed": "Kompresi gagal",
+    "pending": "Menunggu",
+    "done": "Selesai",
+    "clearAll": "Hapus Semua"
+  },
+  "footer": {
+    "product": "Alat",
+    "legal": "Hukum",
+    "company": "Perusahaan",
+    "trustPerformance": "Mengapa Memilih Kami",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat Layanan",
+    "cookiePolicy": "Kebijakan Cookie",
+    "disclaimer": "Penafian",
+    "howItWorks": "Cara Kerja",
+    "languages": "Bahasa",
+    "contact": "Kontak",
+    "about": "Tentang Kami",
+    "browserBased": "100% pemrosesan berbasis browser",
+    "privateByDesign": "File Anda tidak pernah meninggalkan perangkat",
+    "fastCompression": "Hasil instan dalam hitungan detik",
+    "mobileDesktop": "Berfungsi di perangkat apa pun",
+    "supportedFormats": "Dukungan JPG, PNG, WebP, HEIC, GIF",
+    "allRightsReserved": "Hak cipta dilindungi.",
+    "tagline": "Alat gambar online gratis. Kompres, ubah ukuran, konversi, dan potong foto secara pribadi di browser Anda."
+  },
+  "language": {
+    "select": "Pilih Bahasa"
+  },
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "lastUpdated": "Terakhir Diperbarui",
+    "intro": "Privasi Anda adalah prioritas utama kami. CompressYourPhoto dirancang dari awal untuk melindungi data pribadi dan gambar Anda.",
+    "operator": {
+      "title": "Operator Situs Web",
+      "content": "Situs web ini dioperasikan oleh:"
+    },
+    "imageProcessing": {
+      "title": "Pemrosesan Gambar - 100% Pribadi",
+      "content": "Semua kompresi gambar, pengubahan ukuran, konversi, dan pemotongan terjadi secara lokal di browser web Anda menggunakan JavaScript. Foto Anda tidak pernah diunggah ke server mana pun. Kami tidak dapat melihat, mengakses, mengumpulkan, atau menyimpan gambar apa pun yang Anda proses menggunakan CompressYourPhoto. File Anda tetap eksklusif di perangkat Anda setiap saat."
+    },
+    "analytics": {
+      "title": "Analitik",
+      "content": "Kami menggunakan Google Analytics untuk memahami bagaimana pengunjung menggunakan situs web kami. Google Analytics mengumpulkan informasi seperti seberapa sering pengguna mengunjungi situs, halaman apa yang mereka lihat, dan situs apa yang mereka kunjungi sebelumnya. Kami menggunakan informasi ini semata-mata untuk meningkatkan situs web kami. Google Analytics mengumpulkan alamat IP yang ditetapkan kepada Anda pada tanggal Anda mengunjungi situs, tetapi bukan nama Anda atau informasi pengenal lainnya."
+    },
+    "advertising": {
+      "title": "Periklanan",
+      "content": "Kami menggunakan Google AdSense untuk menampilkan iklan di situs web kami. Google AdSense dapat menggunakan cookie dan web beacon untuk mengumpulkan informasi tentang kunjungan Anda ke situs ini dan situs web lain untuk memberikan iklan yang relevan tentang barang dan layanan yang mungkin menarik bagi Anda."
+    },
+    "affiliates": {
+      "title": "Tautan Afiliasi",
+      "content": "Beberapa halaman di situs web ini berisi tautan afiliasi. Jika Anda mengklik tautan afiliasi dan melakukan pembelian, kami mungkin menerima komisi tanpa biaya tambahan kepada Anda. Kami hanya merekomendasikan produk dan layanan yang kami yakini akan memberikan nilai bagi pengguna kami."
+    },
+    "cookies": {
+      "title": "Cookie & Penyimpanan Lokal",
+      "content": "Kami menggunakan cookie dan penyimpanan lokal untuk mengingat preferensi bahasa dan tema Anda. Layanan pihak ketiga seperti Google Analytics dan Google AdSense juga menggunakan cookie. Untuk detail lebih lanjut, silakan lihat Kebijakan Cookie kami."
+    },
+    "yourRights": {
+      "title": "Hak Anda (GDPR/CCPA)",
+      "content": "Anda memiliki hak untuk menolak cookie melalui pengaturan browser Anda atau banner persetujuan cookie kami. Anda juga dapat meminta informasi tentang data apa yang kami kumpulkan. Karena gambar Anda diproses secara lokal dan tidak pernah disimpan di server kami, tidak ada data gambar untuk kami hapus atau berikan."
+    },
+    "contact": {
+      "title": "Hubungi Kami",
+      "content": "Jika Anda memiliki pertanyaan tentang praktik privasi kami, silakan hubungi kami."
+    }
+  },
+  "howItWorks": {
+    "title": "Cara Kerja",
+    "subtitle": "Kompres gambar Anda dalam 4 langkah sederhana - semuanya dalam browser Anda",
+    "step1": {
+      "title": "Unggah Gambar Anda",
+      "content": "Seret dan lepas foto Anda ke area unggah, atau klik untuk memilih file dari perangkat Anda. Kami mendukung format JPG, PNG, WebP, HEIC, dan GIF."
+    },
+    "step2": {
+      "title": "Sesuaikan Pengaturan",
+      "content": "Pilih kualitas kompresi Anda (10-100%), atur lebar maksimum jika diperlukan, dan pilih format output yang Anda inginkan. Kualitas lebih tinggi berarti file lebih besar, kualitas lebih rendah berarti file lebih kecil."
+    },
+    "step3": {
+      "title": "Kompres",
+      "content": "Klik tombol kompres dan lihat gambar Anda diproses secara instan di browser Anda. Kompresi menggunakan algoritma canggih untuk mengurangi ukuran file sambil mempertahankan kualitas visual."
+    },
+    "step4": {
+      "title": "Unduh",
+      "content": "Unduh gambar terkompresi Anda secara individual atau sekaligus sebagai file ZIP. File asli Anda tetap tidak tersentuh di perangkat Anda."
+    },
+    "whyPrivate": {
+      "title": "Mengapa Ini Pribadi?",
+      "content": "Gambar Anda tidak pernah meninggalkan perangkat Anda. Semua kompresi terjadi di browser Anda menggunakan JavaScript. Kami tidak memiliki server yang menerima foto Anda - semuanya berjalan secara lokal di komputer atau ponsel Anda."
+    },
+    "formats": {
+      "title": "Format yang Didukung"
+    }
+  },
+  "languages": {
+    "title": "Bahasa yang Tersedia",
+    "subtitle": "CompressYourPhoto tersedia dalam 9 bahasa untuk melayani pengguna di seluruh dunia",
+    "helpTranslate": "Ingin membantu menerjemahkan CompressYourPhoto ke bahasa Anda?",
+    "contactUs": "Hubungi Kami"
+  },
+  "terms": {
+    "title": "Syarat Layanan",
+    "lastUpdated": "Terakhir Diperbarui",
+    "acceptance": {
+      "title": "Penerimaan Syarat",
+      "content": "Dengan mengakses dan menggunakan CompressYourPhoto, Anda menerima dan setuju untuk terikat oleh Syarat Layanan ini. Jika Anda tidak setuju dengan syarat-syarat ini, harap jangan gunakan layanan kami."
+    },
+    "service": {
+      "title": "Deskripsi Layanan",
+      "content": "CompressYourPhoto menyediakan layanan kompresi gambar gratis berbasis browser. Semua pemrosesan gambar terjadi secara lokal di browser Anda - tidak ada file yang diunggah ke server mana pun. Layanan ini disediakan 'apa adanya' tanpa jaminan apa pun."
+    },
+    "intellectual": {
+      "title": "Kekayaan Intelektual",
+      "content": "Anda mempertahankan semua hak atas gambar Anda. Kami tidak mengklaim kepemilikan atau hak atas gambar yang Anda kompres menggunakan layanan kami. Nama, logo, dan desain situs web CompressYourPhoto adalah milik Stellarizon Digitals Ltd."
+    },
+    "liability": {
+      "title": "Batasan Tanggung Jawab",
+      "content": "CompressYourPhoto dan Stellarizon Digitals Ltd tidak bertanggung jawab atas kerusakan langsung, tidak langsung, insidental, khusus, atau konsekuensial yang dihasilkan dari penggunaan layanan Anda, termasuk tetapi tidak terbatas pada kehilangan data atau kualitas gambar."
+    },
+    "changes": {
+      "title": "Perubahan Syarat",
+      "content": "Kami berhak untuk mengubah syarat-syarat ini kapan saja. Penggunaan layanan yang berkelanjutan setelah perubahan merupakan penerimaan syarat baru."
+    },
+    "contact": {
+      "title": "Kontak",
+      "content": "Untuk pertanyaan tentang Syarat Layanan ini, silakan hubungi kami di:"
+    }
+  },
+  "cookies": {
+    "title": "Kebijakan Cookie",
+    "lastUpdated": "Terakhir Diperbarui",
+    "what": {
+      "title": "Apa Itu Cookie?",
+      "content": "Cookie adalah file teks kecil yang disimpan di perangkat Anda oleh situs web yang Anda kunjungi. Mereka membantu situs web mengingat preferensi Anda dan meningkatkan pengalaman browsing Anda."
+    },
+    "usage": {
+      "title": "Bagaimana Kami Menggunakan Cookie",
+      "content": "CompressYourPhoto menggunakan cookie dan penyimpanan lokal untuk menyediakan dan meningkatkan layanan kami. Di bawah ini adalah rincian jenis cookie yang kami gunakan."
+    },
+    "types": {
+      "title": "Jenis Cookie yang Kami Gunakan",
+      "essential": {
+        "title": "Cookie Esensial",
+        "content": "Kami menggunakan penyimpanan lokal browser untuk menyimpan preferensi bahasa dan tema Anda sehingga situs ditampilkan dengan benar saat kunjungan kembali. Ini diperlukan untuk fungsionalitas situs dasar."
+      },
+      "analytics": {
+        "title": "Cookie Analitik (Google Analytics)",
+        "content": "Kami menggunakan Google Analytics untuk mengumpulkan informasi anonim tentang bagaimana pengunjung menggunakan situs web kami. Cookie ini membantu kami memahami halaman mana yang paling populer dan bagaimana pengguna menavigasi situs kami."
+      },
+      "advertising": {
+        "title": "Cookie Periklanan (Google AdSense)",
+        "content": "Kami menggunakan Google AdSense untuk menampilkan iklan yang relevan. Cookie ini memungkinkan Google menampilkan iklan berdasarkan kunjungan Anda ke situs web kami dan situs lain di internet."
+      }
+    },
+    "thirdParty": {
+      "title": "Layanan Pihak Ketiga",
+      "content": "Situs web kami menggunakan layanan pihak ketiga yang dapat mengatur cookie: Google Analytics (untuk analitik situs web), Google AdSense (untuk periklanan), dan pelacakan mitra afiliasi. Layanan-layanan ini memiliki kebijakan privasi mereka sendiri yang mengatur penggunaan cookie."
+    },
+    "control": {
+      "title": "Mengelola Cookie",
+      "content": "Anda dapat mengontrol cookie melalui banner persetujuan cookie kami atau pengaturan browser Anda. Sebagian besar browser memungkinkan Anda untuk menolak cookie atau menghapus cookie yang ada. Perhatikan bahwa menonaktifkan cookie dapat mempengaruhi fungsionalitas situs web kami."
+    },
+    "consent": {
+      "title": "Persetujuan Anda",
+      "content": "Dengan menggunakan situs web kami dengan banner persetujuan cookie aktif, Anda menyetujui penggunaan cookie kami sebagaimana dijelaskan dalam kebijakan ini. Anda dapat menarik persetujuan Anda kapan saja dengan menghapus cookie Anda atau menyesuaikan pengaturan browser Anda."
+    },
+    "contact": {
+      "title": "Kontak",
+      "content": "Untuk pertanyaan tentang Kebijakan Cookie kami, silakan hubungi kami di:"
+    }
+  },
+  "disclaimer": {
+    "title": "Penafian",
+    "lastUpdated": "Terakhir Diperbarui",
+    "general": {
+      "title": "Penafian Umum",
+      "content": "Informasi dan layanan yang disediakan oleh CompressYourPhoto hanya untuk penggunaan umum. Meskipun kami berusaha untuk menyediakan layanan kompresi gambar yang andal, kami tidak membuat pernyataan atau jaminan tentang keakuratan, keandalan, atau kesesuaian layanan untuk tujuan tertentu."
+    },
+    "noWarranty": {
+      "title": "Tanpa Jaminan",
+      "content": "CompressYourPhoto disediakan 'apa adanya' tanpa jaminan dalam bentuk apa pun, tersurat maupun tersirat. Kami tidak menjamin bahwa layanan akan tidak terputus, bebas kesalahan, atau bahwa cacat apa pun akan diperbaiki."
+    },
+    "accuracy": {
+      "title": "Keakuratan Hasil",
+      "content": "Hasil kompresi dapat bervariasi tergantung pada jenis gambar, konten, dan pengaturan yang dipilih. Kami tidak dapat menjamin pengurangan ukuran file tertentu atau hasil kualitas. Selalu simpan salinan asli dari gambar penting."
+    },
+    "external": {
+      "title": "Tautan Eksternal",
+      "content": "Situs web kami mungkin berisi tautan ke situs eksternal. Kami tidak bertanggung jawab atas konten, kebijakan privasi, atau praktik situs web pihak ketiga mana pun."
+    },
+    "limitation": {
+      "title": "Batasan Tanggung Jawab",
+      "content": "Dalam keadaan apa pun CompressYourPhoto atau Stellarizon Digitals Ltd tidak bertanggung jawab atas kerugian atau kerusakan yang timbul dari penggunaan layanan Anda, termasuk kehilangan data, pendapatan, atau keuntungan."
+    },
+    "contact": {
+      "title": "Kontak",
+      "content": "Untuk pertanyaan tentang Penafian ini, silakan hubungi kami di:"
+    }
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Punya pertanyaan tentang CompressYourPhoto? Butuh dukungan atau punya masukan?",
+    "email": {
+      "title": "Email Kami",
+      "description": "Kami senang mendengar dari Anda. Kirim email dan kami akan merespons sesegera mungkin."
+    },
+    "sendEmail": "Kirim Email",
+    "support": {
+      "title": "Dukungan",
+      "content": "Mengalami masalah dengan kompresor gambar? Beri tahu kami dan kami akan membantu Anda."
+    },
+    "feedback": {
+      "title": "Masukan",
+      "content": "Kami menghargai saran Anda untuk meningkatkan CompressYourPhoto."
+    },
+    "operator": "Dioperasikan oleh"
+  },
+  "about": {
+    "title": "Tentang CompressYourPhoto",
+    "subtitle": "Alat gambar berbasis browser yang gratis, pribadi, dan dipercaya jutaan orang di seluruh dunia",
+    "mission": {
+      "title": "Misi Kami",
+      "content": "CompressYourPhoto hadir untuk membuat pengeditan gambar dapat diakses oleh semua orang—sepenuhnya gratis, tanpa kompromi pada privasi. Kami percaya foto Anda bersifat pribadi, dan tidak seharusnya diunggah ke server yang tidak dikenal. Itulah mengapa setiap fitur berjalan 100% di browser Anda."
+    },
+    "whyWeBuilt": {
+      "title": "Mengapa Kami Membangun Ini",
+      "content": "Alat gambar tradisional memaksa Anda mengunggah foto ke server jarak jauh, menciptakan risiko privasi dan pengalaman yang lambat. Kami membangun CompressYourPhoto menggunakan teknologi browser mutakhir sehingga Anda dapat mengompres, mengubah ukuran, mengonversi, dan memotong gambar secara instan—tanpa file Anda pernah meninggalkan perangkat Anda."
+    },
+    "howItWorks": {
+      "title": "Cara Kerja",
+      "content": "CompressYourPhoto menggunakan pustaka JavaScript canggih yang berjalan sepenuhnya di browser web Anda. Ketika Anda memilih gambar, semua pemrosesan terjadi di komputer atau ponsel Anda. Hasilnya diunduh langsung kepada Anda—kami tidak pernah melihat, menyimpan, atau mentransmisikan foto Anda."
+    },
+    "operator": {
+      "title": "Dioperasikan oleh Stellarizon Digitals Ltd",
+      "content": "CompressYourPhoto dikembangkan dan dikelola oleh Stellarizon Digitals Ltd, sebuah perusahaan yang didedikasikan untuk membangun alat web gratis yang mengutamakan privasi. Kami berkomitmen untuk menjaga layanan ini gratis selamanya dan terus meningkatkannya berdasarkan masukan pengguna."
+    },
+    "contact": {
+      "title": "Hubungi Kami",
+      "content": "Punya pertanyaan, masukan, atau saran? Kami senang mendengar dari Anda. Tim kami merespons setiap pesan."
+    }
+  },
+  "recommendedTools": {
+    "title": "Alat yang Direkomendasikan",
+    "subtitle": "Pengungkapan: Halaman ini berisi tautan afiliasi. Jika Anda melakukan pembelian melalui tautan ini, kami mungkin mendapat komisi tanpa biaya tambahan kepada Anda. Kami hanya merekomendasikan produk yang kami yakini akan memberikan nilai bagi pengguna kami.",
+    "backup": {
+      "title": "Cadangkan Foto Anda",
+      "description": "Gunakan penyedia penyimpanan cloud yang aman untuk menyimpan foto terkompresi Anda dengan aman.",
+      "button": "Pelajari lebih lanjut"
+    },
+    "editor": {
+      "title": "Edit Sebelum Mengompres",
+      "description": "Potong, putar, dan sesuaikan foto Anda menggunakan editor online gratis.",
+      "button": "Buka editor"
+    },
+    "developer": {
+      "title": "Optimalkan Gambar Situs Web Anda",
+      "description": "Developer dapat menggunakan alat otomatis untuk mengompres gambar sebagai bagian dari pipeline build mereka.",
+      "button": "Lihat alat developer"
+    }
+  },
+  "cookieConsent": {
+    "message": "Kami menggunakan cookie untuk analitik dan periklanan. Dengan terus menggunakan situs ini, Anda menyetujui penggunaan cookie kami.",
+    "accept": "Terima Semua",
+    "decline": "Tolak",
+    "learnMore": "Pelajari Lebih Lanjut"
+  },
+  "tools": {
+    "compress": {
+      "navLabel": "Kompres",
+      "cardTitle": "Kompres Gambar",
+      "cardDescription": "Kurangi ukuran file hingga 90% tanpa kehilangan kualitas",
+      "title": "Kompres Gambar Online Gratis",
+      "subtitle": "Kurangi ukuran file JPG, PNG, WebP, HEIC, GIF hingga 90% sambil mempertahankan kualitas. 100% pribadi—foto Anda tidak pernah meninggalkan perangkat Anda.",
+      "pageTitle": "Kompres Gambar Online Gratis | Kurangi Ukuran JPG PNG WebP | CompressYourPhoto",
+      "metaDescription": "Kompres gambar online gratis. Kurangi ukuran file JPG, PNG, WebP, HEIC, GIF hingga 90%. Kompresi cepat, pribadi, berbasis browser."
+    },
+    "resize": {
+      "navLabel": "Ubah Ukuran",
+      "cardTitle": "Ubah Ukuran Foto",
+      "cardDescription": "Ubah dimensi untuk web, media sosial, atau cetak",
+      "title": "Ubah Ukuran Gambar Online Gratis",
+      "subtitle": "Ubah ukuran foto dengan piksel tepat, persentase, atau gunakan preset untuk Instagram, YouTube, LinkedIn, dan lainnya. 100% pribadi.",
+      "pageTitle": "Ubah Ukuran Gambar Online Gratis | Pengubah Ukuran Foto untuk Instagram YouTube | CompressYourPhoto",
+      "metaDescription": "Pengubah ukuran gambar online gratis. Ubah ukuran foto dengan piksel, persentase, atau preset media sosial.",
+      "options": "Opsi Pengubahan Ukuran",
+      "mode": "Mode Pengubahan Ukuran",
+      "byDimensions": "Berdasarkan Dimensi (piksel)",
+      "byPercentage": "Berdasarkan Persentase (%)",
+      "byPreset": "Preset Media Sosial",
+      "width": "Lebar (px)",
+      "height": "Tinggi (px)",
+      "percentage": "Persentase Skala",
+      "preset": "Pilih Preset",
+      "selectPreset": "Pilih ukuran preset",
+      "keepAspect": "Pertahankan rasio aspek",
+      "processing": "Memproses",
+      "resizeButton": "Ubah Ukuran Gambar"
+    },
+    "convert": {
+      "navLabel": "Konversi",
+      "cardTitle": "Konversi Format",
+      "cardDescription": "Konversi HEIC ke JPG, PNG ke WebP, dan lainnya",
+      "title": "Konversi Format Gambar Online Gratis",
+      "subtitle": "Konversi HEIC ke JPG, PNG ke WebP, atau kombinasi apa pun. Sempurna untuk foto HEIC iPhone. 100% pribadi.",
+      "pageTitle": "Konversi HEIC ke JPG Gratis | Konverter PNG ke WebP Online | CompressYourPhoto",
+      "metaDescription": "Konverter format gambar gratis. Konversi HEIC ke JPG, PNG ke WebP, JPG ke PNG online. Sempurna untuk foto iPhone.",
+      "options": "Opsi Konversi",
+      "outputFormat": "Format Output",
+      "quality": "Kualitas Output",
+      "supportedInput": "Input: JPG, PNG, WebP, HEIC, GIF, BMP",
+      "converting": "Mengonversi",
+      "convertButton": "Konversi Gambar"
+    },
+    "crop": {
+      "navLabel": "Potong",
+      "cardTitle": "Potong Gambar",
+      "cardDescription": "Potong untuk Instagram, YouTube, atau avatar lingkaran",
+      "title": "Potong Gambar Online Gratis",
+      "subtitle": "Potong foto dengan preset untuk Instagram (1:1), YouTube (16:9), Stories (9:16), atau buat avatar lingkaran. 100% pribadi.",
+      "pageTitle": "Potong Gambar Online Gratis | Pemotong Instagram YouTube | CompressYourPhoto",
+      "metaDescription": "Pemotong gambar online gratis. Potong foto untuk Instagram, thumbnail YouTube, Stories, atau buat avatar lingkaran.",
+      "options": "Opsi Pemotongan",
+      "aspectRatio": "Rasio Aspek",
+      "zoom": "Tingkat Zoom",
+      "reset": "Pilih Gambar Lain",
+      "processing": "Memproses",
+      "cropAndDownload": "Potong & Unduh"
+    },
+    "enhance": {
+      "navLabel": "Tingkatkan",
+      "cardTitle": "Tingkatkan Foto",
+      "cardDescription": "Tingkatkan kecerahan, kontras, dan ketajaman",
+      "title": "Tingkatkan Foto Anda",
+      "subtitle": "Tingkatkan kecerahan, kontras, saturasi, dan ketajaman secara instan. Terapkan filter cepat atau gunakan Auto-Enhance. 100% pribadi.",
+      "pageTitle": "Tingkatkan Foto Online | Penambah Kualitas Gambar Gratis | CompressYourPhoto",
+      "metaDescription": "Tingkatkan kualitas foto Anda secara instan. Sesuaikan kecerahan, kontras, saturasi, dan ketajaman gratis. 100% pribadi dan sisi klien.",
+      "options": "Opsi Peningkatan",
+      "autoEnhance": "Auto-Enhance",
+      "brightness": "Kecerahan",
+      "brightnessTooltip": "Buat foto Anda lebih terang atau lebih gelap",
+      "contrast": "Kontras",
+      "contrastTooltip": "Tingkatkan atau kurangi perbedaan antara area terang dan gelap",
+      "saturation": "Saturasi",
+      "saturationTooltip": "Buat warna lebih atau kurang cerah",
+      "sharpness": "Ketajaman",
+      "sharpnessTooltip": "Tingkatkan definisi tepi dan kejernihan",
+      "blackWhite": "Hitam & Putih",
+      "sepia": "Sepia",
+      "vivid": "Cerah",
+      "reset": "Reset",
+      "chooseAnother": "Pilih Gambar Lain",
+      "enhanced": "Ditingkatkan",
+      "outputFormat": "Format Output",
+      "processing": "Memproses",
+      "download": "Unduh Foto yang Ditingkatkan",
+      "supportedFormats": "Mendukung JPG, PNG, WebP"
+    }
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "q1": "Apakah CompressYourPhoto benar-benar gratis?",
+    "a1": "Ya, CompressYourPhoto 100% gratis tanpa biaya tersembunyi, tanpa pendaftaran diperlukan, dan tanpa watermark pada gambar Anda.",
+    "q2": "Apakah foto saya diunggah ke server?",
+    "a2": "Tidak, foto Anda tidak pernah meninggalkan perangkat Anda. Semua pemrosesan terjadi secara lokal di browser web Anda menggunakan JavaScript.",
+    "q3": "Format gambar apa yang didukung?",
+    "a3": "Kami mendukung format JPG/JPEG, PNG, WebP, HEIC/HEIF (foto iPhone), GIF, dan BMP.",
+    "q4": "Berapa banyak saya dapat mengurangi ukuran gambar saya?",
+    "a4": "Biasanya 50-90% pengurangan sambil mempertahankan kualitas visual yang baik, tergantung pada gambar asli dan pengaturan.",
+    "q5": "Bisakah saya memproses banyak gambar sekaligus?",
+    "a5": "Ya! Unggah beberapa gambar dan proses semuanya bersama. Unduh secara individual atau sebagai file ZIP.",
+    "q6": "Apakah ini berfungsi di ponsel?",
+    "a6": "Ya, CompressYourPhoto berfungsi di semua browser mobile modern termasuk Safari iPhone dan Chrome Android."
+  }
+}

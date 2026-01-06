@@ -1,0 +1,216 @@
+You are adding Indonesian (Bahasa Indonesia) as the 9th language to compressyourphoto.com.
+
+The site currently supports 8 languages: English, Spanish, Portuguese, French, German, Hindi, Chinese (Simplified), and Arabic.
+
+Indonesian must be fully integrated into the existing i18n system, navigation, routing, and SEO files.
+
+Here is what you must do:
+
+---
+
+### 1. CREATE INDONESIAN TRANSLATION FILE
+
+Create a new file: `client/src/i18n/locales/id.json`
+
+The language code for Indonesian is "id" (ISO 639-1).
+
+Populate it with complete translations for all existing UI strings. Use these Indonesian translations:
+
+```json
+{
+  "brandName": "CompressYourPhoto",
+  "languageName": "Bahasa Indonesia",
+  "languageCode": "ID",
+  
+  "heroTitle": "Kompres, Ubah Ukuran, Konversi, Potong & Tingkatkan Foto Anda",
+  "heroSubtitle": "Cepat, pribadi, dan gratis—semua alat untuk foto Anda",
+  
+  "toolCompressTitle": "Kompres",
+  "toolCompressDesc": "Kurangi ukuran file gambar",
+  "toolResizeTitle": "Ubah Ukuran",
+  "toolResizeDesc": "Ubah dimensi gambar",
+  "toolConvertTitle": "Konversi",
+  "toolConvertDesc": "Ubah format gambar",
+  "toolCropTitle": "Potong",
+  "toolCropDesc": "Pangkas dan sesuaikan foto",
+  "toolEnhanceTitle": "Tingkatkan",
+  "toolEnhanceDesc": "Tingkatkan kualitas gambar",
+  
+  "dropzoneTitle": "Seret foto ke sini atau klik untuk mengunggah",
+  "dropzoneSubtitle": "Mendukung JPG, PNG, WebP, HEIC, GIF",
+  
+  "badgeJpg": "JPG",
+  "badgePng": "PNG",
+  "badgeWebp": "WebP",
+  "badgeHeic": "HEIC",
+  "badgeGif": "GIF",
+  
+  "privacyLabel": "100% diproses di browser • Tidak ada unggahan • Privasi terjamin",
+  
+  "featurePrivateTitle": "100% Pribadi",
+  "featurePrivateBody": "Semua pemrosesan terjadi di browser Anda. Foto Anda tidak pernah meninggalkan perangkat Anda.",
+  
+  "featureFastTitle": "Sangat Cepat",
+  "featureFastBody": "Kompres gambar dalam hitungan detik menggunakan teknologi browser modern.",
+  
+  "featureMultilingualTitle": "Multibahasa",
+  "featureMultilingualBody": "Tersedia dalam 9 bahasa untuk melayani pengguna di seluruh dunia.",
+  
+  "recommendedToolsTitle": "Alat yang Direkomendasikan",
+  "recommendedToolsIntro": "Berikut beberapa alat berguna yang mungkin Anda sukai. Beberapa tautan ini mungkin merupakan tautan afiliasi.",
+  
+  "recommendedBackupTitle": "Cadangkan Foto Anda",
+  "recommendedBackupBody": "Gunakan penyedia penyimpanan cloud yang aman untuk menyimpan foto terkompresi Anda.",
+  "recommendedBackupCta": "Pelajari lebih lanjut",
+  
+  "recommendedEditorTitle": "Edit Sebelum Mengompres",
+  "recommendedEditorBody": "Pangkas, putar, dan sesuaikan foto Anda menggunakan editor online gratis.",
+  "recommendedEditorCta": "Buka editor",
+  
+  "recommendedDevTitle": "Optimalkan Gambar Website",
+  "recommendedDevBody": "Developer dapat menggunakan alat otomatis untuk mengompres gambar sebagai bagian dari proses build.",
+  "recommendedDevCta": "Lihat alat developer",
+  
+  "navHome": "Beranda",
+  "navCompress": "Kompres",
+  "navResize": "Ubah Ukuran",
+  "navConvert": "Konversi",
+  "navCrop": "Potong",
+  "navEnhance": "Tingkatkan",
+  
+  "footerAbout": "Tentang",
+  "footerHowItWorks": "Cara Kerja",
+  "footerLanguages": "Bahasa",
+  "footerPrivacy": "Kebijakan Privasi",
+  "footerTerms": "Syarat Layanan",
+  "footerCookiePolicy": "Kebijakan Cookie",
+  "footerDisclaimer": "Penafian",
+  "footerContact": "Kontak",
+  
+  "compressPageTitle": "Kompres Foto Anda",
+  "compressPageDesc": "Kompres JPG, PNG, WebP, HEIC, dan GIF secara gratis. Cepat, pribadi, dan diproses di browser.",
+  
+  "resizePageTitle": "Ubah Ukuran Gambar",
+  "resizePageDesc": "Ubah ukuran gambar berdasarkan piksel, persentase, atau ukuran preset untuk Instagram, YouTube, LinkedIn, dan lainnya.",
+  
+  "convertPageTitle": "Konversi Format Gambar",
+  "convertPageDesc": "Konversi gambar antara JPG, PNG, WebP, dan HEIC secara gratis. Cepat, pribadi, dan diproses di browser.",
+  
+  "cropPageTitle": "Potong Gambar",
+  "cropPageDesc": "Potong gambar untuk Instagram, YouTube, atau buat avatar lingkaran. Pemotong foto online gratis.",
+  
+  "enhancePageTitle": "Tingkatkan Foto",
+  "enhancePageDesc": "Tingkatkan kualitas foto Anda secara instan. Sesuaikan kecerahan, kontras, saturasi, dan ketajaman secara gratis.",
+  
+  "downloadButton": "Unduh",
+  "autoEnhanceButton": "Tingkatkan Otomatis",
+  "resetButton": "Reset",
+  "brightnessLabel": "Kecerahan",
+  "contrastLabel": "Kontras",
+  "saturationLabel": "Saturasi",
+  "sharpnessLabel": "Ketajaman",
+  "qualityLabel": "Kualitas"
+}
+If any keys are missing from this template that exist in other language files (en.json, es.json, etc.), add them with appropriate Indonesian translations.
+
+2. UPDATE i18n CONFIGURATION
+Open client/src/i18n/index.ts (or wherever your i18n setup is).
+
+Import the new Indonesian translations:
+ts
+Copy
+import id from './locales/id.json';
+Add Indonesian to the languages array:
+ts
+Copy
+{ code: 'id', name: 'Indonesian', nativeName: 'Bahasa Indonesia', dir: 'ltr' }
+Add Indonesian to the resources object:
+ts
+Copy
+resources: {
+  en: { translation: en },
+  es: { translation: es },
+  pt: { translation: pt },
+  fr: { translation: fr },
+  de: { translation: de },
+  hi: { translation: hi },
+  'zh-cn': { translation: zhCN },
+  ar: { translation: ar },
+  id: { translation: id },
+}
+Add 'id' to the supportedLngs array:
+ts
+Copy
+supportedLngs: ['en', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id']
+3. UPDATE LANGUAGE SWITCHER
+Locate the language switcher component (likely in src/components/LanguageSwitcher.tsx or similar).
+
+Ensure Indonesian appears in the dropdown with:
+
+Display name: "Bahasa Indonesia"
+Code: "id"
+Link: /id or /id/[current-page]
+The switcher should dynamically list all 9 languages from the languages array in i18n config.
+
+4. UPDATE SITEMAP
+Open public/sitemap.xml.
+
+Add Indonesian paths for ALL pages and tools:
+
+https://www.compressyourphoto.com/id
+https://www.compressyourphoto.com/id/compress
+https://www.compressyourphoto.com/id/resize
+https://www.compressyourphoto.com/id/convert
+https://www.compressyourphoto.com/id/crop
+https://www.compressyourphoto.com/id/enhance
+https://www.compressyourphoto.com/id/how-it-works
+https://www.compressyourphoto.com/id/languages
+https://www.compressyourphoto.com/id/privacy-policy
+https://www.compressyourphoto.com/id/terms
+https://www.compressyourphoto.com/id/cookie-policy
+https://www.compressyourphoto.com/id/disclaimer
+https://www.compressyourphoto.com/id/contact
+Use the same format as the existing language entries (lastmod: 2026-01-06, changefreq: weekly, priority: 0.9 for main tool pages).
+
+Ensure the sitemap remains valid XML.
+
+5. UPDATE META TAGS & HREFLANG (IF APPLICABLE)
+If your site uses hreflang tags (in index.html or per-page meta), add:
+
+html
+Copy
+<link rel="alternate" hreflang="id" href="https://www.compressyourphoto.com/id" />
+For each tool page, add the Indonesian alternate as well.
+
+6. UPDATE HOMEPAGE COPY
+Update the hero subtitle on the homepage to reflect "9 languages":
+
+English: "Available in 9 languages to serve users worldwide."
+Update this in all other language files as well (e.g., es.json: "Disponible en 9 idiomas...", etc.)
+7. ROUTING
+Ensure the existing React Router (wouter or react-router) correctly handles:
+
+/id → Indonesian homepage
+/id/compress, /id/resize, /id/convert, /id/crop, /id/enhance → Indonesian tool pages
+The routing logic should already be dynamic (using /:lang?/:page? or similar). Confirm Indonesian paths work.
+
+8. TESTING CHECKLIST
+After implementation, verify:
+
+/id loads the homepage in Indonesian
+Language switcher shows "Bahasa Indonesia" and switches correctly
+All 5 tool pages render in Indonesian when accessed via /id/compress, etc.
+Navigation, footer, and legal page links work
+Sitemap includes all Indonesian URLs
+9. DO NOT BREAK EXISTING LANGUAGES
+Ensure the 8 existing languages still work perfectly. Do not remove or alter any existing translation files or routes.
+
+10. AFTER COMPLETION
+Tell me:
+
+Which files you created/edited
+Confirm Indonesian is live and functional
+Confirm sitemap has been updated
+Do NOT ask for clarification—implement Indonesian support fully using the translations provided above.
+
+Begin now.

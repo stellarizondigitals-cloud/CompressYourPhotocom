@@ -23,8 +23,8 @@
       "description": "Compress, resize, or convert images in seconds. No waiting for uploads or server processing."
     },
     "multilingual": {
-      "title": "Available in 8 Languages",
-      "description": "Use CompressYourPhoto in English, Spanish, Portuguese, French, German, Hindi, Chinese, or Arabic."
+      "title": "Available in 9 Languages",
+      "description": "Use CompressYourPhoto in English, Spanish, Portuguese, French, German, Hindi, Chinese, Arabic, or Indonesian."
     }
   },
   "compression": {
@@ -141,7 +141,7 @@
   },
   "languages": {
     "title": "Available Languages",
-    "subtitle": "CompressYourPhoto is available in 8 languages to serve users worldwide",
+    "subtitle": "CompressYourPhoto is available in 9 languages to serve users worldwide",
     "helpTranslate": "Want to help translate CompressYourPhoto into your language?",
     "contactUs": "Contact Us"
   },
