@@ -1,0 +1,101 @@
+Replit AI Prompt (Foundation SEO Fix)
+Update my Vite + React project for compressyourphoto.com to fix SEO infrastructure.
+
+Create a public/robots.txt file (Vite serves /public/* at the site root). Contents:
+User-agent: *
+Allow: /
+ 
+Sitemap: https://www.compressyourphoto.com/sitemap.xml
+Create a public/sitemap.xml file with valid XML and include these URLs (set lastmod to today’s date):
+https://www.compressyourphoto.com/
+https://www.compressyourphoto.com/how-it-works
+https://www.compressyourphoto.com/languages
+https://www.compressyourphoto.com/privacy-policy
+https://www.compressyourphoto.com/terms
+https://www.compressyourphoto.com/cookie-policy
+https://www.compressyourphoto.com/disclaimer
+https://www.compressyourphoto.com/contact
+And also include language entry points:
+https://www.compressyourphoto.com/es
+https://www.compressyourphoto.com/pt
+https://www.compressyourphoto.com/fr
+https://www.compressyourphoto.com/de
+https://www.compressyourphoto.com/hi
+https://www.compressyourphoto.com/zh-cn
+https://www.compressyourphoto.com/ar
+Create public/ads.txt with a placeholder line and comment indicating it will be updated after AdSense approval:
+# ads.txt will be added here after AdSense approval
+Ensure these files are included in the Vercel build output and accessible at:
+/robots.txt
+/sitemap.xml
+/ads.txt
+Do not change app logic. Only add these files.
+
+Then: Commit → Push → Vercel redeploy.
+After deploy, you should be able to open in browser:
+
+https://www.compressyourphoto.com/robots.txt
+https://www.compressyourphoto.com/sitemap.xml
+If either still shows your SPA 404 page, tell me immediately—your routing rewrite is intercepting static files and we’ll adjust it.
+
+2) On-page SEO upgrades (high impact, low risk)
+Goal: Higher CTR + clearer relevance.
+
+Do these next:
+
+Fix the title spacing: Compress Your Photo – Free Online Image Compressor…
+Ensure you have a strong meta description (155–160 chars).
+Add canonical URL (choose www as canonical).
+Add OpenGraph + Twitter tags.
+Replit AI Prompt (Head Meta + Title)
+Improve SEO meta tags for the homepage.
+
+Open the main Vite index.html (root or under client/ depending on project).
+Update the <title> to:
+Compress Your Photo – Free Online Image Compressor | JPG, PNG, WebP, HEIC, GIF
+Add a meta description:
+Compress JPG, PNG, WebP, HEIC, and GIF images online for free. Fast, private, client-side compression—your photos stay on your device.
+Add canonical:
+<link rel="canonical" href="https://www.compressyourphoto.com/" />
+Add basic OpenGraph and Twitter meta tags (title/description/url/type).
+Keep everything else unchanged.
+
+3) Multilingual SEO (so /zh-cn etc can rank)
+Goal: Each language path is understood by Google properly.
+
+Add hreflang alternate links (important). This helps Google show the right language version.
+
+You already have path-based languages (/es, /zh-cn, etc). Now we should add:
+
+link rel="alternate" hreflang="en" href=".../"
+hreflang="es" href=".../es"
+…
+hreflang="x-default" pointing to /
+This can be placed in index.html (static), but better is to manage per-language in React. If you want the simplest approach now, do it in index.html.
+
+4) Content strategy to actually compete (this is what wins rankings)
+A single page can rank, but “#1” for huge keywords usually requires more pages.
+
+Best approach (still “one app”):
+Create dedicated landing pages:
+
+/compress-jpg
+/compress-png
+/compress-webp
+/compress-heic
+/compress-gif
+/reduce-image-size
+/bulk-image-compressor
+Each page:
+
+targets one keyword cluster
+has 300–800 words of helpful content + FAQs
+links back into the same compressor UI (same component)
+This is how you beat generic tools long-term.
+
+After you do Step 1 (robots + sitemap), we do “registration”
+To get indexed fast:
+
+Google Search Console: add your site + submit sitemap
+Bing Webmaster Tools: add site + submit sitemap
+You don’t need code for this—just verification and sitemap submission.

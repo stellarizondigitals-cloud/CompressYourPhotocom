@@ -1,0 +1,3 @@
+# ads.txt will be added here after AdSense approval
+# Once approved, add your publisher ID like:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
