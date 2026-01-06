@@ -28,18 +28,39 @@ export function Footer() {
             <h4 className="font-medium text-sm">{t('footer.product')}</h4>
             <nav className="flex flex-col gap-2">
               <Link 
+                to="/compress" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-compress"
+              >
+                {t('tools.compress.navLabel', 'Compress Images')}
+              </Link>
+              <Link 
+                to="/resize" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-resize"
+              >
+                {t('tools.resize.navLabel', 'Resize Photos')}
+              </Link>
+              <Link 
+                to="/convert" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-convert"
+              >
+                {t('tools.convert.navLabel', 'Convert Format')}
+              </Link>
+              <Link 
+                to="/crop" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-crop"
+              >
+                {t('tools.crop.navLabel', 'Crop Images')}
+              </Link>
+              <Link 
                 to="/how-it-works" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-how-it-works"
               >
                 {t('footer.howItWorks')}
-              </Link>
-              <Link 
-                to="/languages" 
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-languages"
-              >
-                {t('footer.languages')}
               </Link>
             </nav>
           </div>

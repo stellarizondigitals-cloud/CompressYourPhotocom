@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop } from 'lucide-react';
+import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, ChevronDown } from 'lucide-react';
 import { FeatureCard } from '@/components/FeatureCard';
 import { RecommendedTools } from '@/components/RecommendedTools';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/hooks/useLanguage';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const tools = [
   { 
@@ -133,6 +134,40 @@ export default function Home() {
               description={t('features.multilingual.description', 'Available in 8 languages including RTL support.')}
             />
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 px-4 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            {t('faq.title', 'Frequently Asked Questions')}
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="q1">
+              <AccordionTrigger data-testid="faq-q1">{t('faq.q1', 'Is CompressYourPhoto really free?')}</AccordionTrigger>
+              <AccordionContent>{t('faq.a1', 'Yes, CompressYourPhoto is 100% free with no hidden fees, no signup required, and no watermarks.')}</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q2">
+              <AccordionTrigger data-testid="faq-q2">{t('faq.q2', 'Are my photos uploaded to a server?')}</AccordionTrigger>
+              <AccordionContent>{t('faq.a2', 'No, your photos never leave your device. All processing happens locally in your browser.')}</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q3">
+              <AccordionTrigger data-testid="faq-q3">{t('faq.q3', 'What image formats are supported?')}</AccordionTrigger>
+              <AccordionContent>{t('faq.a3', 'We support JPG/JPEG, PNG, WebP, HEIC/HEIF (iPhone photos), GIF, and BMP formats.')}</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q4">
+              <AccordionTrigger data-testid="faq-q4">{t('faq.q4', 'How much can I reduce my image size?')}</AccordionTrigger>
+              <AccordionContent>{t('faq.a4', 'Typically 50-90% reduction while maintaining good visual quality.')}</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q5">
+              <AccordionTrigger data-testid="faq-q5">{t('faq.q5', 'Can I process multiple images at once?')}</AccordionTrigger>
+              <AccordionContent>{t('faq.a5', 'Yes! Upload multiple images and process them all together. Download individually or as a ZIP file.')}</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q6">
+              <AccordionTrigger data-testid="faq-q6">{t('faq.q6', 'Does it work on mobile phones?')}</AccordionTrigger>
+              <AccordionContent>{t('faq.a6', 'Yes, CompressYourPhoto works on all modern mobile browsers including iPhone Safari and Android Chrome.')}</AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 

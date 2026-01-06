@@ -1,30 +1,30 @@
 {
   "app": {
     "title": "CompressYourPhoto",
-    "tagline": "Compress images instantly, privately, and for free"
+    "tagline": "Free Online Image Compressor, Resizer, Converter & Cropper"
   },
   "hero": {
-    "headline": "Compress Your Photos",
-    "subheadline": "Fast, private, and free image compression",
-    "subheadlineExpanded": "Compress, resize, convert, and crop your photos—fast, private, and free.",
+    "headline": "Free Online Photo Tools",
+    "subheadline": "Compress, resize, convert, and crop images instantly",
+    "subheadlineExpanded": "Compress, resize, convert, and crop your photos—100% free, private, and works on any device. No signup required.",
     "dropzone": "Drop photos here or click to upload",
     "supportedFormats": "Supports JPG, PNG, WebP, HEIC, GIF",
-    "clientSide": "100% client-side",
-    "noUpload": "No upload required",
-    "privacyGuaranteed": "Privacy guaranteed"
+    "clientSide": "100% Browser-Based",
+    "noUpload": "No Server Upload",
+    "privacyGuaranteed": "Your Privacy Protected"
   },
   "features": {
     "privacy": {
-      "title": "100% Private",
-      "description": "All compression happens in your browser. Your photos never leave your device."
+      "title": "100% Private & Secure",
+      "description": "Your photos never leave your device. All processing happens locally in your browser—we can't see your images."
     },
     "speed": {
-      "title": "Lightning Fast",
-      "description": "Compress images in seconds using modern browser technology."
+      "title": "Lightning Fast Processing",
+      "description": "Compress, resize, or convert images in seconds. No waiting for uploads or server processing."
     },
     "multilingual": {
-      "title": "Multilingual",
-      "description": "Available in 8 languages to serve users worldwide."
+      "title": "Available in 8 Languages",
+      "description": "Use CompressYourPhoto in English, Spanish, Portuguese, French, German, Hindi, Chinese, or Arabic."
     }
   },
   "compression": {
@@ -52,10 +52,10 @@
     "clearAll": "Clear All"
   },
   "footer": {
-    "product": "Product",
+    "product": "Tools",
     "legal": "Legal",
     "company": "Company",
-    "trustPerformance": "Trust & Performance",
+    "trustPerformance": "Why Choose Us",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookiePolicy": "Cookie Policy",
@@ -64,12 +64,13 @@
     "languages": "Languages",
     "contact": "Contact",
     "about": "About Us",
-    "browserBased": "100% browser-based (no uploads)",
-    "privateByDesign": "Private by design",
-    "fastCompression": "Fast compression in seconds",
-    "mobileDesktop": "Works on mobile & desktop",
-    "supportedFormats": "Supports JPG, PNG, WebP, HEIC, GIF",
-    "allRightsReserved": "All rights reserved."
+    "browserBased": "100% browser-based processing",
+    "privateByDesign": "Your files never leave your device",
+    "fastCompression": "Instant results in seconds",
+    "mobileDesktop": "Works on any device",
+    "supportedFormats": "JPG, PNG, WebP, HEIC, GIF support",
+    "allRightsReserved": "All rights reserved.",
+    "tagline": "Free online image tools. Compress, resize, convert, and crop photos privately in your browser."
   },
   "language": {
     "select": "Select Language"
@@ -77,13 +78,14 @@
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last Updated",
+    "intro": "Your privacy is our top priority. CompressYourPhoto is designed from the ground up to protect your personal data and images.",
     "operator": {
       "title": "Website Operator",
       "content": "This website is operated by:"
     },
     "imageProcessing": {
       "title": "Image Processing - 100% Private",
-      "content": "All image compression happens locally in your browser using JavaScript. Your photos are never uploaded to any server. We do not collect, store, or have access to any images you compress."
+      "content": "All image compression, resizing, converting, and cropping happens locally in your web browser using JavaScript. Your photos are never uploaded to any server. We cannot see, access, collect, or store any images you process using CompressYourPhoto. Your files remain exclusively on your device at all times."
     },
     "analytics": {
       "title": "Analytics",
@@ -262,26 +264,26 @@
   },
   "about": {
     "title": "About CompressYourPhoto",
-    "subtitle": "Learn more about our free image compression service",
+    "subtitle": "The free, private, browser-based image tool trusted by millions worldwide",
     "mission": {
       "title": "Our Mission",
-      "content": "CompressYourPhoto was created to provide a fast, free, and completely private way to compress images. We believe your photos should stay on your device, which is why all compression happens right in your browser - no uploads, no servers, no data collection."
+      "content": "CompressYourPhoto exists to make image editing accessible to everyone—completely free, with no compromises on privacy. We believe your photos are personal, and they should never be uploaded to unknown servers. That's why every feature runs 100% in your browser."
     },
     "whyWeBuilt": {
       "title": "Why We Built This",
-      "content": "Many image compression tools require you to upload your photos to remote servers. This raises privacy concerns and takes longer. We built CompressYourPhoto to solve this problem by using modern browser technology to compress images locally on your device."
+      "content": "Traditional image tools force you to upload photos to remote servers, creating privacy risks and slow experiences. We built CompressYourPhoto using cutting-edge browser technology so you can compress, resize, convert, and crop images instantly—without your files ever leaving your device."
     },
     "howItWorks": {
       "title": "How It Works",
-      "content": "CompressYourPhoto uses the browser-image-compression JavaScript library to process images entirely in your browser. When you select a photo, it never leaves your device. The compression algorithms run locally, and you download the result directly."
+      "content": "CompressYourPhoto uses advanced JavaScript libraries that run entirely in your web browser. When you select an image, all processing happens on your computer or phone. The result is downloaded directly to you—we never see, store, or transmit your photos."
     },
     "operator": {
-      "title": "Who We Are",
-      "content": "CompressYourPhoto is operated by Stellarizon Digitals Ltd. We are committed to providing free, privacy-focused tools for everyday tasks."
+      "title": "Operated by Stellarizon Digitals Ltd",
+      "content": "CompressYourPhoto is developed and maintained by Stellarizon Digitals Ltd, a company dedicated to building free, privacy-first web tools. We are committed to keeping this service free forever and continuously improving it based on user feedback."
     },
     "contact": {
       "title": "Get in Touch",
-      "content": "Have questions or feedback? We'd love to hear from you."
+      "content": "Have questions, feedback, or suggestions? We'd love to hear from you. Our team responds to every message."
     }
   },
   "recommendedTools": {
@@ -312,64 +314,79 @@
   "tools": {
     "compress": {
       "navLabel": "Compress",
-      "cardTitle": "Compress",
-      "cardDescription": "Reduce file size without losing quality",
-      "title": "Compress Your Photos",
-      "subtitle": "Reduce image file size without losing quality. 100% private, processed in your browser.",
-      "pageTitle": "Compress Your Photos | Free Online Image Compressor",
-      "metaDescription": "Compress JPG, PNG, WebP, HEIC, and GIF images for free. Fast, private, client-side compression."
+      "cardTitle": "Compress Images",
+      "cardDescription": "Reduce file size up to 90% without losing quality",
+      "title": "Compress Images Online Free",
+      "subtitle": "Reduce JPG, PNG, WebP, HEIC, GIF file size by up to 90% while maintaining quality. 100% private—your photos never leave your device.",
+      "pageTitle": "Compress Images Online Free | Reduce JPG PNG WebP Size | CompressYourPhoto",
+      "metaDescription": "Compress images online for free. Reduce JPG, PNG, WebP, HEIC, GIF file size by up to 90%. Fast, private, browser-based compression. No upload to servers."
     },
     "resize": {
       "navLabel": "Resize",
-      "cardTitle": "Resize",
-      "cardDescription": "Change dimensions by pixels or percentage",
-      "title": "Resize Your Photos",
-      "subtitle": "Resize images by pixels, percentage, or preset sizes. 100% private.",
-      "pageTitle": "Resize Image Online | Free Photo Resizer",
-      "metaDescription": "Resize images by pixels, percentage, or preset sizes for Instagram, YouTube, LinkedIn, and more.",
+      "cardTitle": "Resize Photos",
+      "cardDescription": "Change dimensions for web, social media, or print",
+      "title": "Resize Images Online Free",
+      "subtitle": "Resize photos by exact pixels, percentage, or use presets for Instagram, YouTube, LinkedIn, and more. 100% private.",
+      "pageTitle": "Resize Images Online Free | Photo Resizer for Instagram YouTube | CompressYourPhoto",
+      "metaDescription": "Free online image resizer. Resize photos by pixels, percentage, or social media presets (Instagram, YouTube, LinkedIn). Works on any device.",
       "options": "Resize Options",
       "mode": "Resize Mode",
-      "byDimensions": "By Dimensions",
-      "byPercentage": "By Percentage",
+      "byDimensions": "By Dimensions (pixels)",
+      "byPercentage": "By Percentage (%)",
       "byPreset": "Social Media Presets",
       "width": "Width (px)",
       "height": "Height (px)",
-      "percentage": "Percentage",
-      "preset": "Preset",
-      "selectPreset": "Select a preset",
-      "keepAspect": "Keep aspect ratio",
+      "percentage": "Scale Percentage",
+      "preset": "Choose Preset",
+      "selectPreset": "Select a preset size",
+      "keepAspect": "Maintain aspect ratio",
       "processing": "Processing",
       "resizeButton": "Resize Images"
     },
     "convert": {
       "navLabel": "Convert",
-      "cardTitle": "Convert",
-      "cardDescription": "Change format between JPG, PNG, WebP",
-      "title": "Convert Image Format",
-      "subtitle": "Convert between JPG, PNG, WebP, and HEIC. 100% private.",
-      "pageTitle": "Convert Image Format Online | JPG, PNG, WebP, HEIC Converter",
-      "metaDescription": "Convert images between JPG, PNG, WebP, and HEIC formats for free. Fast, private, client-side conversion.",
+      "cardTitle": "Convert Format",
+      "cardDescription": "Convert HEIC to JPG, PNG to WebP, and more",
+      "title": "Convert Image Format Online Free",
+      "subtitle": "Convert HEIC to JPG, PNG to WebP, or any combination. Perfect for iPhone HEIC photos. 100% private.",
+      "pageTitle": "Convert HEIC to JPG Free | PNG to WebP Converter Online | CompressYourPhoto",
+      "metaDescription": "Free image format converter. Convert HEIC to JPG, PNG to WebP, JPG to PNG online. Perfect for iPhone photos. No upload required.",
       "options": "Conversion Options",
       "outputFormat": "Output Format",
-      "quality": "Quality",
-      "supportedInput": "Supports JPG, PNG, WebP, HEIC, GIF, BMP",
+      "quality": "Output Quality",
+      "supportedInput": "Input: JPG, PNG, WebP, HEIC, GIF, BMP",
       "converting": "Converting",
       "convertButton": "Convert Images"
     },
     "crop": {
       "navLabel": "Crop",
-      "cardTitle": "Crop",
-      "cardDescription": "Trim and adjust image boundaries",
-      "title": "Crop Your Photos",
-      "subtitle": "Crop images with presets for social media or create circle avatars. 100% private.",
-      "pageTitle": "Crop Image Online | Free Photo Cropper",
-      "metaDescription": "Crop images for Instagram, YouTube, or create circle avatars. Free online photo cropper.",
+      "cardTitle": "Crop Images",
+      "cardDescription": "Crop for Instagram, YouTube, or circle avatars",
+      "title": "Crop Images Online Free",
+      "subtitle": "Crop photos with presets for Instagram (1:1), YouTube (16:9), Stories (9:16), or create circle avatars. 100% private.",
+      "pageTitle": "Crop Images Online Free | Instagram YouTube Cropper | CompressYourPhoto",
+      "metaDescription": "Free online image cropper. Crop photos for Instagram, YouTube thumbnails, Stories, or create circle avatars. Works on mobile and desktop.",
       "options": "Crop Options",
       "aspectRatio": "Aspect Ratio",
-      "zoom": "Zoom",
+      "zoom": "Zoom Level",
       "reset": "Choose Another Image",
       "processing": "Processing",
       "cropAndDownload": "Crop & Download"
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Is CompressYourPhoto really free?",
+    "a1": "Yes, CompressYourPhoto is 100% free with no hidden fees, no signup required, and no watermarks on your images.",
+    "q2": "Are my photos uploaded to a server?",
+    "a2": "No, your photos never leave your device. All processing happens locally in your web browser using JavaScript.",
+    "q3": "What image formats are supported?",
+    "a3": "We support JPG/JPEG, PNG, WebP, HEIC/HEIF (iPhone photos), GIF, and BMP formats.",
+    "q4": "How much can I reduce my image size?",
+    "a4": "Typically 50-90% reduction while maintaining good visual quality, depending on the original image and settings.",
+    "q5": "Can I process multiple images at once?",
+    "a5": "Yes! Upload multiple images and process them all together. Download individually or as a ZIP file.",
+    "q6": "Does it work on mobile phones?",
+    "a6": "Yes, CompressYourPhoto works on all modern mobile browsers including iPhone Safari and Android Chrome."
   }
 }
