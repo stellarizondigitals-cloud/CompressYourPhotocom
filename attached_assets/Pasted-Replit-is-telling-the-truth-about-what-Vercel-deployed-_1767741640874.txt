@@ -1,0 +1,92 @@
+Replit is telling the truth about what Vercel deployed (commit 88f55cf is indeed in Production), but production is still serving the wrong robots.txt / sitemap.xml and the English homepage still says “8 languages” when I fetch it publicly.
+
+That combination usually means the build output being deployed does not actually contain the files/content Replit thinks it contains, or Vercel is deploying a build where those files are in the wrong place for Vite, so they never get served at /{file}.
+
+What your Vercel screenshot proves
+From your deployment details:
+
+Environment: Production (Current)
+Source: main @ 88f55cf
+Framework: Vite 5.4.20
+Build output shows: ../dist/public/index.html etc.
+So: Vercel is deploying the latest commit correctly. This is not a “Vercel didn’t deploy” issue.
+
+What the live site still proves
+Right now, publicly:
+
+robots.txt → SPA 404 page (should be plain text)
+sitemap.xml → not valid XML
+homepage → still says 8 languages
+So: the deployed build is not producing what you expected.
+
+The most likely root cause (90%+)
+In a Vite project:
+
+Files must be in public/robots.txt and public/sitemap.xml (project root).
+They are copied to the build output root and served as:
+/robots.txt
+/sitemap.xml
+If instead they are in:
+
+src/public/...
+dist/public/... manually
+some other folder (or generated at runtime by router)
+…then Vercel will not serve them as expected, and your SPA rewrite will catch them (leading to the SPA 404 you’re seeing).
+
+Also: your build log suggests output is being created under /dist/public/... which hints your project might have a custom outDir / base path setup that’s not standard, and that can break where static root files end up.
+
+How to verify in 2 minutes (no guessing)
+Step 1 — Check the deployed “Static Assets” list in Vercel
+On the same deployment page you shared:
+
+Go to Deployment Summary → Static Assets
+Filter Misc
+Look for:
+robots.txt
+sitemap.xml
+ads.txt (optional)
+If you do NOT see robots.txt and sitemap.xml there, then they are not in the build output, regardless of what Replit says.
+
+Step 2 — Open the file directly in the deployment output (if possible)
+Vercel UI sometimes lets you click an asset and see its path. Confirm it is exactly:
+
+/robots.txt
+/sitemap.xml
+Fix (works even if “everything is already configured”)
+You want the simplest “force-correct” approach:
+
+Required structure in repo
+public/robots.txt
+public/sitemap.xml
+Also ensure Vercel rewrite is not intercepting them
+Even with SPA rewrites, Vercel should serve existing static files first, but if you have a misconfigured rewrite, it can override.
+
+Minimal vercel.json that is safe
+json
+Copy
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+Vercel will still serve /robots.txt and /sitemap.xml if they exist in output.
+
+If you have more complex rewrites that accidentally override, simplify.
+
+Why the homepage still says “8 languages”
+That means the deployed JS/translation JSON/text for the English homepage is still the older copy.
+
+This can happen if:
+
+the English homepage text is hardcoded in one component and Replit only updated another locale file, or
+you have two different English entry pages (/ vs /compress), and only one got updated.
+What I need from you to pinpoint exactly
+On your Vercel deployment page (the one you linked), in Static Assets → Misc, do you see:
+
+robots.txt (yes/no)
+sitemap.xml (yes/no)
+Reply with just:
+
+robots: yes/no
+sitemap: yes/no
+…and I’ll tell you the exact next step (either “files missing from build output” or “rewrites overriding existing files”).
