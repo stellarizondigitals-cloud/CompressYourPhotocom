@@ -186,6 +186,12 @@ export default function Home() {
         </div>
       </section>
 
+      {currentLanguage.code === 'en' && (
+        <div className="text-center py-4 text-xs text-muted-foreground/50" data-testid="deploy-check">
+          DEPLOY CHECK: HOME-V2-9LANG
+        </div>
+      )}
+
     </div>
   );
 }
