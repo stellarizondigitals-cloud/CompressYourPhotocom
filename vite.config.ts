@@ -5,8 +5,6 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
   plugins: [
-Selection deleted
-
     react(),
     runtimeErrorOverlay(),
     ...(process.env.NODE_ENV !== "production" &&
