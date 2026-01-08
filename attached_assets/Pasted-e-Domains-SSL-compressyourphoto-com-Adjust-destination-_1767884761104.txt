@@ -1,0 +1,45 @@
+e
+Domains & SSL
+compressyourphoto.com
+Adjust destination
+Reset domain
+Details
+Subdomains
+Contact details
+Renewal & transfer
+Nameserver
+DNS
+ Domain Guard is active. Some of the domain settings can therefore not be changed. Disable Domain Guard
+
+DNSSEC
+Not active
+Enable
+Host name, value, type…
+Host name, value, type…
+
+Add record
+Select all	Type	Host name	Value	Service	Actions
+Select	CNAME	_domainconnect	_domainconnect.ionos.com	Domain Connect	
+Select	TXT	@	"google-site-verification=0LsGhmUoh1dqoQzMj6SHJ5-66NUtbbYYV8myzH60fps"	Domain Verification	
+Select	TXT	@	"google-site-verification=jcaLk5WlVxJ0xH8uBb_mOAJNE7pGXlJfxCV8Fqow_YI"	Domain Verification	
+Select	MX	@	mx00.ionos.co.uk	Mail	
+Select	MX	@	mx01.ionos.co.uk	Mail	
+Select	TXT	@	"v=spf1 include:_spf-eu.ionos.com ~all"	Mail	
+Select	CNAME	s1-ionos._domainkey	s1.dkim.ionos.com	Mail	
+Select	CNAME	s2-ionos._domainkey	s2.dkim.ionos.com	Mail	
+Select	CNAME	s42582890._domainkey	s42582890.dkim.ionos.com	Mail	
+Select	CNAME	autodiscover	adsredir.ionos.info	Mail	
+Select	A	@	216.198.79.1	-	
+Select	CNAME	www	b8338dd918a862be.vercel-dns-017.com	-	
+More features
+Open API Portal
+Increased stability through advanced DNS settings
+DNS Pro provides reliability and superior performance through a variety of features by distributing DNS data among multiple servers around the world so that visitors to your site are connected to the nearest server location for low latency. DNS Pro is a package of DNS security and management features:
+
+Premium Anycast Low latency and high availability for your domains around the world. (Does not work in combination with secondary DNS)
+DNSSEC Prevents hackers from taking control of your website and stealing messages and data. (Does not work in combination with secondary DNS)
+DNS templates Create reusable groups of DNS records that can be applied to each of your domains.
+DNS backup Back up and restore DNS settings
+Secondary DNS Dedicated to DNS administrators/providers who need strong secondary services or want to hide their primary server.
+Order
+Recommended help topics
