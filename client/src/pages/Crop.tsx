@@ -9,7 +9,9 @@ import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Helmet } from 'react-helmet-async';
+import { ToolPageSEO } from '@/components/ToolPageSEO';
+import { RelatedTools } from '@/components/RelatedTools';
+import { AboutTool } from '@/components/AboutTool';
 
 type AspectPreset = 'free' | '1:1' | '16:9' | '9:16' | '4:3' | '3:4' | 'circle';
 
@@ -161,11 +163,11 @@ export default function CropPage() {
 
   return (
     <>
-      <Helmet>
-        <title>{t('tools.crop.pageTitle', 'Crop Image Online | Free Photo Cropper')}</title>
-        <meta name="description" content={t('tools.crop.metaDescription', 'Crop images for Instagram, YouTube, or create circle avatars. Free online photo cropper.')} />
-        <link rel="canonical" href={`https://www.compressyourphoto.com${currentLanguage.code === 'en' ? '' : `/${currentLanguage.code}`}/crop`} />
-      </Helmet>
+      <ToolPageSEO
+        tool="crop"
+        title={t('tools.crop.pageTitle', 'Crop Images Online Free | Instagram YouTube Cropper | CompressYourPhoto')}
+        description={t('tools.crop.metaDescription', 'Free online image cropper. Crop photos for Instagram, YouTube thumbnails, Stories, or create circle avatars. Works on mobile and desktop.')}
+      />
       <div className="flex-1">
         <section className="py-12 md:py-20 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
@@ -261,6 +263,8 @@ export default function CropPage() {
           </div>
         </section>
       </div>
+      <AboutTool tool="crop" />
+      <RelatedTools currentTool="crop" />
     </>
   );
 }

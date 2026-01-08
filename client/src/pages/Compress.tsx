@@ -3,7 +3,9 @@ import { Shield } from 'lucide-react';
 import { ImageCompressor } from '@/components/ImageCompressor';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Helmet } from 'react-helmet-async';
+import { ToolPageSEO } from '@/components/ToolPageSEO';
+import { RelatedTools } from '@/components/RelatedTools';
+import { AboutTool } from '@/components/AboutTool';
 
 const formats = ['JPG', 'PNG', 'WebP', 'HEIC', 'GIF'];
 
@@ -13,11 +15,11 @@ export default function Compress() {
 
   return (
     <>
-      <Helmet>
-        <title>{t('tools.compress.pageTitle', 'Compress Your Photos | Free Online Image Compressor')}</title>
-        <meta name="description" content={t('tools.compress.metaDescription', 'Compress JPG, PNG, WebP, HEIC, and GIF images for free. Fast, private, client-side compression.')} />
-        <link rel="canonical" href={`https://www.compressyourphoto.com${currentLanguage.code === 'en' ? '' : `/${currentLanguage.code}`}/compress`} />
-      </Helmet>
+      <ToolPageSEO
+        tool="compress"
+        title={t('tools.compress.pageTitle', 'Compress Images Online Free | Reduce JPG PNG WebP Size | CompressYourPhoto')}
+        description={t('tools.compress.metaDescription', 'Compress images online for free. Reduce JPG, PNG, WebP, HEIC, GIF file size by up to 90%. Fast, private, browser-based compression. No upload to servers.')}
+      />
       <div className="flex-1">
         <section className="py-12 md:py-20 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
@@ -60,6 +62,8 @@ export default function Compress() {
           </div>
         </section>
       </div>
+      <AboutTool tool="compress" />
+      <RelatedTools currentTool="compress" />
     </>
   );
 }

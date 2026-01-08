@@ -10,7 +10,9 @@ import { Slider } from '@/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Helmet } from 'react-helmet-async';
+import { ToolPageSEO } from '@/components/ToolPageSEO';
+import { RelatedTools } from '@/components/RelatedTools';
+import { AboutTool } from '@/components/AboutTool';
 
 interface ImageFile {
   id: string;
@@ -196,11 +198,11 @@ export default function Convert() {
 
   return (
     <>
-      <Helmet>
-        <title>{t('tools.convert.pageTitle', 'Convert Image Format Online | JPG, PNG, WebP, HEIC Converter')}</title>
-        <meta name="description" content={t('tools.convert.metaDescription', 'Convert images between JPG, PNG, WebP, and HEIC formats for free. Fast, private, client-side conversion.')} />
-        <link rel="canonical" href={`https://www.compressyourphoto.com${currentLanguage.code === 'en' ? '' : `/${currentLanguage.code}`}/convert`} />
-      </Helmet>
+      <ToolPageSEO
+        tool="convert"
+        title={t('tools.convert.pageTitle', 'Convert HEIC to JPG Free | PNG to WebP Converter Online | CompressYourPhoto')}
+        description={t('tools.convert.metaDescription', 'Free image format converter. Convert HEIC to JPG, PNG to WebP, JPG to PNG online. Perfect for iPhone photos. No upload required.')}
+      />
       <div className="flex-1">
         <section className="py-12 md:py-20 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
@@ -329,6 +331,8 @@ export default function Convert() {
           </div>
         </section>
       </div>
+      <AboutTool tool="convert" />
+      <RelatedTools currentTool="convert" />
     </>
   );
 }

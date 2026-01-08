@@ -11,7 +11,9 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Helmet } from 'react-helmet-async';
+import { ToolPageSEO } from '@/components/ToolPageSEO';
+import { RelatedTools } from '@/components/RelatedTools';
+import { AboutTool } from '@/components/AboutTool';
 
 interface ImageFile {
   id: string;
@@ -252,11 +254,11 @@ export default function Resize() {
 
   return (
     <>
-      <Helmet>
-        <title>{t('tools.resize.pageTitle', 'Resize Image Online | Free Photo Resizer')}</title>
-        <meta name="description" content={t('tools.resize.metaDescription', 'Resize images by pixels, percentage, or preset sizes for Instagram, YouTube, LinkedIn, and more.')} />
-        <link rel="canonical" href={`https://www.compressyourphoto.com${currentLanguage.code === 'en' ? '' : `/${currentLanguage.code}`}/resize`} />
-      </Helmet>
+      <ToolPageSEO
+        tool="resize"
+        title={t('tools.resize.pageTitle', 'Resize Images Online Free | Photo Resizer for Instagram YouTube | CompressYourPhoto')}
+        description={t('tools.resize.metaDescription', 'Free online image resizer. Resize photos by pixels, percentage, or social media presets (Instagram, YouTube, LinkedIn). Works on any device.')}
+      />
       <div className="flex-1">
         <section className="py-12 md:py-20 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
@@ -415,6 +417,8 @@ export default function Resize() {
           </div>
         </section>
       </div>
+      <AboutTool tool="resize" />
+      <RelatedTools currentTool="resize" />
     </>
   );
 }

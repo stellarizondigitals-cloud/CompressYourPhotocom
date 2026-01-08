@@ -7,7 +7,9 @@ import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Helmet } from 'react-helmet-async';
+import { ToolPageSEO } from '@/components/ToolPageSEO';
+import { RelatedTools } from '@/components/RelatedTools';
+import { AboutTool } from '@/components/AboutTool';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface EnhanceSettings {
@@ -238,11 +240,11 @@ export default function EnhancePage() {
 
   return (
     <>
-      <Helmet>
-        <title>{t('tools.enhance.pageTitle', 'Enhance Photo Online | Free Image Quality Enhancer')}</title>
-        <meta name="description" content={t('tools.enhance.metaDescription', 'Improve your photo quality instantly. Adjust brightness, contrast, saturation, and sharpness for free. 100% private and client-side.')} />
-        <link rel="canonical" href={`https://www.compressyourphoto.com${currentLanguage.code === 'en' ? '' : `/${currentLanguage.code}`}/enhance`} />
-      </Helmet>
+      <ToolPageSEO
+        tool="enhance"
+        title={t('tools.enhance.pageTitle', 'Enhance Photo Online | Free Image Quality Enhancer | CompressYourPhoto')}
+        description={t('tools.enhance.metaDescription', 'Improve your photo quality instantly. Adjust brightness, contrast, saturation, and sharpness for free. 100% private and client-side.')}
+      />
       <div className="flex-1">
         <section className="py-12 md:py-20 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
@@ -441,6 +443,8 @@ export default function EnhancePage() {
           </div>
         </section>
       </div>
+      <AboutTool tool="enhance" />
+      <RelatedTools currentTool="enhance" />
     </>
   );
 }
