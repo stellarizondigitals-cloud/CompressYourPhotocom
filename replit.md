@@ -10,6 +10,12 @@ The project follows a monorepo structure with a React frontend and Express backe
 
 Preferred communication style: Simple, everyday language.
 
+### Domain & Hosting
+- **Domain Registrar**: IONOS (all domains purchased from IONOS)
+- **Production Hosting**: Vercel (free tier)
+- **Domain**: compressyourphoto.com (and www.compressyourphoto.com)
+- **Company**: Stellarizon Digitals Ltd (Company No. 16748429, England and Wales)
+
 ## System Architecture
 
 ### Frontend Architecture
