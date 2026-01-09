@@ -10,6 +10,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
 import { AboutTool } from '@/components/AboutTool';
+import { PopularUseCases } from '@/components/PopularUseCases';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface EnhanceSettings {
@@ -444,6 +445,7 @@ export default function EnhancePage() {
         </section>
       </div>
       <AboutTool tool="enhance" />
+      <PopularUseCases tool="enhance" />
       <RelatedTools currentTool="enhance" />
     </>
   );

@@ -13,6 +13,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
 import { AboutTool } from '@/components/AboutTool';
+import { PopularUseCases } from '@/components/PopularUseCases';
 
 interface ImageFile {
   id: string;
@@ -332,6 +333,7 @@ export default function Convert() {
         </section>
       </div>
       <AboutTool tool="convert" />
+      <PopularUseCases tool="convert" />
       <RelatedTools currentTool="convert" />
     </>
   );

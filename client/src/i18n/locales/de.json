@@ -285,6 +285,13 @@
     }
   },
   "tools": {
+    "popularUseCases": {
+      "links": {
+        "resizeSocial": "Für Social Media anpassen",
+        "compressShare": "Zum Teilen komprimieren",
+        "cropThumbnails": "Für Thumbnails zuschneiden"
+      }
+    },
     "compress": {
       "navLabel": "Komprimieren",
       "cardTitle": "Bilder Komprimieren",
@@ -294,7 +301,21 @@
       "pageTitle": "Bilder Online Kostenlos Komprimieren | JPG PNG WebP Größe Reduzieren | CompressYourPhoto",
       "metaDescription": "Bilder online kostenlos komprimieren. Reduzieren Sie JPG, PNG, WebP, HEIC, GIF Dateigröße um bis zu 90%. Schnelle, private, browserbasierte Komprimierung.",
       "aboutTitle": "Über Unseren Kostenlosen Bildkompressor",
-      "aboutContent": "Der Bildkompressor von CompressYourPhoto verwendet fortschrittliche browserbasierte Algorithmen, um Ihre Fotos um bis zu 90% zu verkleinern und dabei die visuelle Qualität zu erhalten. Anders als herkömmliche Online-Kompressoren, die Ihre Bilder auf entfernte Server hochladen, verarbeitet unser Tool alles lokal in Ihrem Webbrowser mit JavaScript. Das bedeutet, Ihre Fotos verlassen nie Ihr Gerät, was 100% Privatsphäre garantiert. Unser Kompressor unterstützt alle gängigen Bildformate einschließlich JPG, JPEG, PNG, WebP, HEIC (iPhone-Fotos) und GIF. Ob Sie Bilder für E-Mail-Anhänge, Website-Optimierung, Social-Media-Posts oder einfach zum Speicherplatz sparen komprimieren müssen, unser Tool liefert sofort professionelle Ergebnisse. Der einstellbare Qualitätsregler ermöglicht es Ihnen, die perfekte Balance zwischen Dateigröße und Bildqualität zu finden. Die Stapelverarbeitung ermöglicht das gleichzeitige Komprimieren mehrerer Bilder."
+      "aboutContent": "Der Bildkompressor von CompressYourPhoto verwendet fortschrittliche browserbasierte Algorithmen, um Ihre Fotos um bis zu 90% zu verkleinern und dabei die visuelle Qualität zu erhalten. Anders als herkömmliche Online-Kompressoren, die Ihre Bilder auf entfernte Server hochladen, verarbeitet unser Tool alles lokal in Ihrem Webbrowser mit JavaScript. Das bedeutet, Ihre Fotos verlassen nie Ihr Gerät, was 100% Privatsphäre garantiert. Unser Kompressor unterstützt alle gängigen Bildformate einschließlich JPG, JPEG, PNG, WebP, HEIC (iPhone-Fotos) und GIF. Ob Sie Bilder für E-Mail-Anhänge, Website-Optimierung, Social-Media-Posts oder einfach zum Speicherplatz sparen komprimieren müssen, unser Tool liefert sofort professionelle Ergebnisse. Der einstellbare Qualitätsregler ermöglicht es Ihnen, die perfekte Balance zwischen Dateigröße und Bildqualität zu finden. Die Stapelverarbeitung ermöglicht das gleichzeitige Komprimieren mehrerer Bilder.",
+      "popularUseCases": {
+        "title": "Beliebte Anwendungsfälle",
+        "summary": "Komprimieren Sie Fotos für schnelleres Teilen auf Instagram, Facebook, X (Twitter), TikTok, YouTube und LinkedIn. Ideal für WhatsApp, Telegram und Pinterest. Reduzieren Sie die Dateigröße von Produktbildern für Etsy, eBay und Amazon.",
+        "bullets": [
+          "Instagram & Facebook Posts und Stories",
+          "X (Twitter) und LinkedIn Profilbilder",
+          "YouTube Thumbnails und Kanalkunst",
+          "TikTok and Snapchat Inhalte",
+          "Teilen von Medien über WhatsApp und Telegram",
+          "Pinterest Pins und Boards",
+          "Produktfotos für Etsy, eBay & Amazon",
+          "E-Mail-Anhänge unter 25 MB"
+        ]
+      }
     },
     "resize": {
       "navLabel": "Skalieren",
@@ -318,7 +339,21 @@
       "selectPreset": "Eine Voreinstellung auswählen",
       "keepAspect": "Seitenverhältnis beibehalten",
       "processing": "Verarbeitung",
-      "resizeButton": "Bilder Skalieren"
+      "resizeButton": "Bilder Skalieren",
+      "popularUseCases": {
+        "title": "Beliebte Anwendungsfälle",
+        "summary": "Ändern Sie die Bildgröße auf exakte Maße für Instagram (1080x1080), Facebook-Cover, X (Twitter)-Header, YouTube-Thumbnails und TikTok. Erhalten Sie perfekte Größen für LinkedIn-Profile, WhatsApp-Status, Pinterest-Pins und Snapchat-Stories.",
+        "bullets": [
+          "Instagram-Posts (1080x1080) und Stories (1080x1920)",
+          "Facebook-Profilbilder und Titelbilder",
+          "X (Twitter) Header und Profilbilder",
+          "YouTube-Thumbnails (1280x720) und Banner",
+          "TikTok- und Snapchat-Video-Thumbnails",
+          "LinkedIn-Profil- und Bannerbilder",
+          "Pinterest-Pins und WhatsApp-Status",
+          "Produktbilder für Etsy, eBay & Amazon"
+        ]
+      }
     },
     "convert": {
       "navLabel": "Konvertieren",
@@ -335,7 +370,21 @@
       "quality": "Ausgabequalität",
       "supportedInput": "Eingabe: JPG, PNG, WebP, HEIC, GIF, BMP",
       "converting": "Konvertierung",
-      "convertButton": "Bilder Konvertieren"
+      "convertButton": "Bilder Konvertieren",
+      "popularUseCases": {
+        "title": "Beliebte Anwendungsfälle",
+        "summary": "Konvertieren Sie iPhone HEIC-Fotos in JPG für Instagram, Facebook und X (Twitter). Optimieren Sie Website-Bilder durch Konvertierung von PNG in WebP. Stellen Sie die Kompatibilität für Amazon-, eBay- und Etsy-Angebote sicher.",
+        "bullets": [
+          "iPhone HEIC in JPG für Social Media konvertieren",
+          "PNG in WebP für schnellere Websites umwandeln",
+          "JPG in PNG für transparente Logos konvertieren",
+          "Dateien für WhatsApp- und Telegram-Sharing vorbereiten",
+          "Anforderungen für Etsy-, eBay- & Amazon-Bilder erfüllen",
+          "WebP in JPG für ältere Browser-Kompatibilität",
+          "Fotos für LinkedIn- und YouTube-Uploads anpassen",
+          "Snapchat- und TikTok-Assets optimieren"
+        ]
+      }
     },
     "crop": {
       "navLabel": "Zuschneiden",
@@ -352,7 +401,21 @@
       "zoom": "Zoomstufe",
       "reset": "Anderes Bild Wählen",
       "processing": "Verarbeitung",
-      "cropAndDownload": "Zuschneiden & Herunterladen"
+      "cropAndDownload": "Zuschneiden & Herunterladen",
+      "popularUseCases": {
+        "title": "Beliebte Anwendungsfälle",
+        "summary": "Schneiden Sie Fotos perfekt für Instagram-Quadrate, Facebook-Header, YouTube-Thumbnails und LinkedIn-Profile zu. Erstellen Sie kreisförmige Profilbilder für WhatsApp, X (Twitter) und TikTok. Optimieren Sie Produktansichten für Etsy, eBay und Amazon.",
+        "bullets": [
+          "Instagram-Quadrate und Porträt-Ausschnitte",
+          "Kreisförmige Profilbilder für WhatsApp & TikTok",
+          "YouTube-Thumbnails und Kanal-Header",
+          "Facebook-Titelbilder und X (Twitter) Banner",
+          "LinkedIn-Hintergrundbilder und Avatare",
+          "Pinterest-Pins und Snapchat-Story-Ausschnitte",
+          "Fokussierte Produktbilder für Etsy, eBay & Amazon",
+          "Telegram-Sticker und Profilfoto-Zuschnitte"
+        ]
+      }
     },
     "enhance": {
       "navLabel": "Verbessern",
@@ -383,7 +446,21 @@
       "outputFormat": "Ausgabeformat",
       "processing": "Verarbeitung",
       "download": "Verbessertes Foto Herunterladen",
-      "supportedFormats": "Unterstützt JPG, PNG, WebP"
+      "supportedFormats": "Unterstützt JPG, PNG, WebP",
+      "popularUseCases": {
+        "title": "Beliebte Anwendungsfälle",
+        "summary": "Verbessern Sie die Fotoqualität für Instagram, Facebook und LinkedIn. Machen Sie Produktbilder für Etsy, eBay und Amazon schärfer. Optimieren Sie Porträts für WhatsApp, X (Twitter), TikTok und YouTube-Thumbnails.",
+        "bullets": [
+          "Verbesserung von Instagram- und Facebook-Fotos",
+          "Schärfere Produktbilder für Etsy, eBay & Amazon",
+          "Hochwertige Porträts für LinkedIn & X (Twitter)",
+          "Klarere Thumbnails für YouTube & TikTok",
+          "Verbesserung von WhatsApp- & Telegram-Medien",
+          "Optimierung von Pinterest-Pins & Snapchat-Inhalten",
+          "Alte Fotos für digitales Archivieren aufwerten",
+          "Profilbilder für alle Plattformen optimieren"
+        ]
+      }
     }
   },
   "faq": {

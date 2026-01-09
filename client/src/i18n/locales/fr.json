@@ -323,6 +323,13 @@
     "learnMore": "En Savoir Plus"
   },
   "tools": {
+    "popularUseCases": {
+      "links": {
+        "resizeSocial": "Redimensionner pour les Réseaux Sociaux",
+        "compressShare": "Compresser pour Partager",
+        "cropThumbnails": "Recadrer pour les Miniatures"
+      }
+    },
     "compress": {
       "navLabel": "Compresser",
       "cardTitle": "Compresser les Images",
@@ -332,7 +339,21 @@
       "pageTitle": "Compresser des Images en Ligne Gratuit | Réduire la Taille JPG PNG WebP | CompressYourPhoto",
       "metaDescription": "Compressez des images en ligne gratuitement. Réduisez la taille des fichiers JPG, PNG, WebP, HEIC, GIF jusqu'à 90%. Compression rapide, privée, basée sur le navigateur.",
       "aboutTitle": "À Propos de Notre Compresseur d'Images Gratuit",
-      "aboutContent": "Le compresseur d'images de CompressYourPhoto utilise des algorithmes avancés basés sur le navigateur pour réduire la taille de vos photos jusqu'à 90% tout en préservant la qualité visuelle. Contrairement aux compresseurs en ligne traditionnels qui téléchargent vos images sur des serveurs distants, notre outil traite tout localement dans votre navigateur web en utilisant JavaScript. Cela signifie que vos photos ne quittent jamais votre appareil, garantissant une confidentialité à 100%. Notre compresseur prend en charge tous les formats d'image populaires, notamment JPG, JPEG, PNG, WebP, HEIC (photos iPhone) et GIF. Que vous ayez besoin de compresser des images pour des pièces jointes d'e-mail, l'optimisation de sites web, les publications sur les réseaux sociaux ou simplement pour économiser de l'espace de stockage, notre outil offre des résultats professionnels instantanément. Le curseur de qualité ajustable vous permet de trouver l'équilibre parfait entre la taille du fichier et la qualité de l'image. Le traitement par lots vous permet de compresser plusieurs images simultanément."
+      "aboutContent": "Le compresseur d'images de CompressYourPhoto utilise des algorithmes avancés basés sur le navigateur pour réduire la taille de vos photos jusqu'à 90% tout en préservant la qualité visuelle. Contrairement aux compresseurs en ligne traditionnels qui téléchargent vos images sur des serveurs distants, notre outil traite tout localement dans votre navigateur web en utilisant JavaScript. Cela signifie que vos photos ne quittent jamais votre appareil, garantissant une confidentialité à 100%. Notre compresseur prend en charge tous les formats d'image populaires, notamment JPG, JPEG, PNG, WebP, HEIC (photos iPhone) et GIF. Que vous ayez besoin de compresser des images pour des pièces jointes d'e-mail, l'optimisation de sites web, les publications sur les réseaux sociaux ou simplement pour économiser de l'espace de stockage, notre outil offre des résultats professionnels instantanément. Le curseur de qualité ajustable vous permet de trouver l'équilibre parfait entre la taille du fichier et la qualité de l'image. Le traitement par lots vous permet de compresser plusieurs images simultanément.",
+      "popularUseCases": {
+        "title": "Cas d'Utilisation Populaires",
+        "summary": "Compressez des photos pour un partage plus rapide sur Instagram, Facebook, X (Twitter), TikTok, YouTube et LinkedIn. Parfait pour le partage sur WhatsApp, Telegram et Pinterest. Réduisez la taille des images de produits pour les annonces Etsy, eBay et Amazon.",
+        "bullets": [
+          "Publications et stories Instagram et Facebook",
+          "Photos de profil X (Twitter) et LinkedIn",
+          "Miniatures et bannières YouTube",
+          "Contenu TikTok et Snapchat",
+          "Partage média WhatsApp et Telegram",
+          "Épingles et tableaux Pinterest",
+          "Photos de produits Etsy, eBay et Amazon",
+          "Pièces jointes email de moins de 25 Mo"
+        ]
+      }
     },
     "resize": {
       "navLabel": "Redimensionner",
@@ -344,6 +365,20 @@
       "metaDescription": "Redimensionneur d'images en ligne gratuit. Redimensionnez les photos par pixels, pourcentage ou préréglages de réseaux sociaux.",
       "aboutTitle": "À Propos de Notre Redimensionneur d'Images Gratuit",
       "aboutContent": "Le redimensionneur d'images de CompressYourPhoto est un outil puissant axé sur la confidentialité qui vous permet de modifier les dimensions de vos photos instantanément dans votre navigateur. Que vous ayez besoin de redimensionner des images pour les publications Instagram (1080x1080), les miniatures YouTube (1280x720), les bannières LinkedIn, les couvertures Facebook ou des dimensions personnalisées, notre outil a tout ce qu'il vous faut. Choisissez parmi trois modes de redimensionnement flexibles: dimensions exactes en pixels pour un contrôle précis, mise à l'échelle en pourcentage pour agrandir ou réduire les images proportionnellement, ou des préréglages pratiques pour les réseaux sociaux. Le verrouillage du rapport d'aspect garantit que vos photos ne sont pas étirées ou déformées lors du redimensionnement. Tout le traitement se fait localement dans votre navigateur web, garantissant une confidentialité complète. Notre redimensionneur prend en charge les formats JPG, PNG, WebP, HEIC et GIF.",
+      "popularUseCases": {
+        "title": "Cas d'Utilisation Populaires",
+        "summary": "Redimensionnez les photos aux dimensions exactes pour Instagram (1080x1080), les couvertures Facebook, les en-têtes X (Twitter), les miniatures YouTube et TikTok. Obtenez des tailles parfaites pour les profils LinkedIn, les statuts WhatsApp, les épingles Pinterest et les stories Snapchat.",
+        "bullets": [
+          "Publications Instagram (1080x1080) et stories (1080x1920)",
+          "Photos de profil et couvertures Facebook",
+          "En-têtes et images de profil X (Twitter)",
+          "Miniatures YouTube (1280x720) et bannières",
+          "Miniatures vidéo TikTok et Snapchat",
+          "Images de profil et bannière LinkedIn",
+          "Épingles Pinterest et statuts WhatsApp",
+          "Annonces de produits Etsy, eBay et Amazon"
+        ]
+      },
       "options": "Options de Redimensionnement",
       "mode": "Mode de Redimensionnement",
       "byDimensions": "Par Dimensions (pixels)",
@@ -368,6 +403,20 @@
       "metaDescription": "Convertisseur de format d'image gratuit. Convertissez HEIC en JPG, PNG en WebP, JPG en PNG en ligne. Parfait pour les photos iPhone.",
       "aboutTitle": "À Propos de Notre Convertisseur de Format d'Image Gratuit",
       "aboutContent": "Le convertisseur de format d'image de CompressYourPhoto facilite la conversion de photos entre différents formats de fichiers directement dans votre navigateur. Notre outil est particulièrement populaire pour convertir HEIC en JPG, parfait pour les utilisateurs d'iPhone et iPad qui ont besoin de leurs photos dans un format universellement compatible. Convertissez PNG en WebP pour des tailles de fichiers plus petites et un chargement de sites web plus rapide, ou passez de JPG à PNG lorsque vous avez besoin de la prise en charge de la transparence. Nous prenons en charge les conversions entre les formats JPG, JPEG, PNG, WebP, HEIC, HEIF, GIF et BMP. Toutes les conversions se font localement dans votre navigateur en utilisant des bibliothèques JavaScript avancées, garantissant une confidentialité et une sécurité complètes. La conversion par lots vous permet de traiter plusieurs images simultanément. Notre convertisseur fonctionne sur tous les appareils, y compris Windows, Mac, Linux, Android et iOS.",
+      "popularUseCases": {
+        "title": "Cas d'Utilisation Populaires",
+        "summary": "Convertissez les photos HEIC d'iPhone en JPG pour le partage sur Instagram, Facebook et X (Twitter). Transformez PNG en WebP pour des sites web plus rapides. Convertissez des images pour YouTube, TikTok, LinkedIn, Pinterest et les plateformes e-commerce comme Etsy et Amazon.",
+        "bullets": [
+          "HEIC iPhone vers JPG pour toutes les plateformes",
+          "PNG vers WebP pour des sites web plus rapides",
+          "Formats compatibles Instagram et Facebook",
+          "Conversion d'images X (Twitter) et LinkedIn",
+          "Formats de miniatures YouTube et TikTok",
+          "Partage WhatsApp, Telegram et Snapchat",
+          "Épingles Pinterest et annonces e-commerce",
+          "Images de produits Etsy, eBay et Amazon"
+        ]
+      },
       "options": "Options de Conversion",
       "outputFormat": "Format de Sortie",
       "quality": "Qualité de Sortie",
@@ -385,6 +434,20 @@
       "metaDescription": "Outil de recadrage d'images en ligne gratuit. Recadrez les photos pour Instagram, miniatures YouTube, Stories ou créez des avatars circulaires.",
       "aboutTitle": "À Propos de Notre Outil de Recadrage d'Images Gratuit",
       "aboutContent": "L'outil de recadrage d'images de CompressYourPhoto offre un moyen intuitif de recadrer des photos pour n'importe quel usage, le tout dans votre navigateur. Notre outil de recadrage inclut des préréglages populaires de rapport d'aspect pour les plateformes de réseaux sociaux: carré 1:1 pour les publications et photos de profil Instagram, 16:9 pour les miniatures YouTube et fonds d'écran de bureau, 9:16 pour les Stories Instagram et TikTok, 4:3 pour les photos standard et recadrage libre pour les dimensions personnalisées. La fonction de recadrage circulaire est parfaite pour créer des photos de profil et avatars ronds. Notre interface de recadrage interactive vous permet de faire glisser, zoomer et positionner votre image avec précision. Tout le traitement se fait localement dans votre navigateur web, garantissant une confidentialité à 100%. Nous prenons en charge le recadrage d'images JPG, PNG, WebP, HEIC et GIF.",
+      "popularUseCases": {
+        "title": "Cas d'Utilisation Populaires",
+        "summary": "Recadrez des photos pour les carrés Instagram (1:1), les miniatures YouTube (16:9), les Stories TikTok et Instagram (9:16). Créez des avatars circulaires pour LinkedIn, Facebook, X (Twitter) et WhatsApp. Recadrage parfait pour Pinterest, Snapchat et les photos de produits.",
+        "bullets": [
+          "Publications Instagram (1:1) et stories (9:16)",
+          "Miniatures et bannières de chaîne YouTube",
+          "Couvertures vidéo TikTok et Snapchat",
+          "Photos de profil Facebook et LinkedIn",
+          "En-têtes et avatars X (Twitter)",
+          "Photos de profil WhatsApp et Telegram",
+          "Épingles et tableaux Pinterest",
+          "Icônes de produits circulaires Etsy et Amazon"
+        ]
+      },
       "options": "Options de Recadrage",
       "aspectRatio": "Rapport d'Aspect",
       "zoom": "Niveau de Zoom",
@@ -402,6 +465,20 @@
       "metaDescription": "Améliorez la qualité de vos photos instantanément. Ajustez la luminosité, le contraste, la saturation et la netteté gratuitement. 100% privé et côté client.",
       "aboutTitle": "À Propos de Notre Améliorateur de Photos Gratuit",
       "aboutContent": "L'outil d'amélioration de photos de CompressYourPhoto vous aide à améliorer la qualité de l'image avec des ajustements de niveau professionnel, le tout traité localement dans votre navigateur. Ajustez la luminosité pour éclaircir ou assombrir les photos, augmentez le contraste pour faire ressortir les images, augmentez la saturation pour des couleurs plus vibrantes et améliorez la netteté pour des résultats cristallins. Notre fonction d'amélioration automatique analyse automatiquement votre photo et applique des ajustements optimisés en un clic. Appliquez des filtres créatifs, notamment Noir et Blanc, Sépia pour un look vintage classique et Vif pour des couleurs extra intenses. L'aperçu en temps réel montre vos modifications instantanément. Toutes les améliorations se font entièrement dans votre navigateur web, garantissant une confidentialité complète. Nous prenons en charge l'amélioration d'images JPG, PNG, WebP et HEIC. L'outil fonctionne sur tous les appareils, y compris Windows, Mac, Android et iOS.",
+      "popularUseCases": {
+        "title": "Cas d'Utilisation Populaires",
+        "summary": "Améliorez les photos pour Instagram, Facebook et TikTok avec des couleurs vibrantes. Optimisez les photos de profil LinkedIn et les miniatures YouTube. Parfait pour la luminosité et le contraste sur X (Twitter), Pinterest et Snapchat. Améliorez les images de produits pour Etsy, eBay et Amazon.",
+        "bullets": [
+          "Amélioration du contenu Instagram et TikTok",
+          "Photos Facebook avec des couleurs vibrantes",
+          "Portraits professionnels LinkedIn",
+          "Miniatures YouTube qui ressortent",
+          "Attrait visuel X (Twitter) et Pinterest",
+          "Qualité WhatsApp, Telegram et Snapchat",
+          "Photos de produits Etsy, eBay et Amazon",
+          "Amélioration des photos de mariage et événements"
+        ]
+      },
       "options": "Options d'Amélioration",
       "autoEnhance": "Amélioration Automatique",
       "brightness": "Luminosité",

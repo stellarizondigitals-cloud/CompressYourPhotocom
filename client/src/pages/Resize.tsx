@@ -14,6 +14,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
 import { AboutTool } from '@/components/AboutTool';
+import { PopularUseCases } from '@/components/PopularUseCases';
 
 interface ImageFile {
   id: string;
@@ -418,6 +419,7 @@ export default function Resize() {
         </section>
       </div>
       <AboutTool tool="resize" />
+      <PopularUseCases tool="resize" />
       <RelatedTools currentTool="resize" />
     </>
   );

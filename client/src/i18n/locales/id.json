@@ -312,6 +312,13 @@
     "learnMore": "Pelajari Lebih Lanjut"
   },
   "tools": {
+    "popularUseCases": {
+      "links": {
+        "resizeSocial": "Ubah Ukuran untuk Media Sosial",
+        "compressShare": "Kompres untuk Berbagi",
+        "cropThumbnails": "Potong untuk Thumbnail"
+      }
+    },
     "compress": {
       "navLabel": "Kompres",
       "cardTitle": "Kompres Gambar",
@@ -321,7 +328,21 @@
       "pageTitle": "Kompres Gambar Online Gratis | Kurangi Ukuran JPG PNG WebP | CompressYourPhoto",
       "metaDescription": "Kompres gambar online gratis. Kurangi ukuran file JPG, PNG, WebP, HEIC, GIF hingga 90%. Kompresi cepat, pribadi, berbasis browser.",
       "aboutTitle": "Tentang Kompresor Gambar Gratis Kami",
-      "aboutContent": "Kompresor gambar CompressYourPhoto menggunakan algoritma berbasis browser yang canggih untuk mengurangi ukuran foto Anda hingga 90% sambil mempertahankan kualitas visual. Berbeda dengan kompresor online tradisional yang mengunggah gambar Anda ke server jarak jauh, alat kami memproses semuanya secara lokal di browser web Anda menggunakan JavaScript. Ini berarti foto Anda tidak pernah meninggalkan perangkat Anda, memastikan privasi 100%. Kompresor kami mendukung semua format gambar populer termasuk JPG, JPEG, PNG, WebP, HEIC (foto iPhone), dan GIF. Baik Anda perlu mengompres gambar untuk lampiran email, optimasi situs web, posting media sosial, atau hanya untuk menghemat ruang penyimpanan, alat kami memberikan hasil profesional secara instan. Slider kualitas yang dapat disesuaikan memungkinkan Anda menemukan keseimbangan sempurna antara ukuran file dan kualitas gambar."
+      "aboutContent": "Kompresor gambar CompressYourPhoto menggunakan algoritma berbasis browser yang canggih untuk mengurangi ukuran foto Anda hingga 90% sambil mempertahankan kualitas visual. Berbeda dengan kompresor online tradisional yang mengunggah gambar Anda ke server jarak jauh, alat kami memproses semuanya secara lokal di browser web Anda menggunakan JavaScript. Ini berarti foto Anda tidak pernah meninggalkan perangkat Anda, memastikan privasi 100%. Kompresor kami mendukung semua format gambar populer termasuk JPG, JPEG, PNG, WebP, HEIC (foto iPhone), dan GIF. Baik Anda perlu mengompres gambar untuk lampiran email, optimasi situs web, posting media sosial, atau hanya untuk menghemat ruang penyimpanan, alat kami memberikan hasil profesional secara instan. Slider kualitas yang dapat disesuaikan memungkinkan Anda menemukan keseimbangan sempurna antara ukuran file dan kualitas gambar.",
+      "popularUseCases": {
+        "title": "Kasus Penggunaan Populer",
+        "summary": "Kompres foto untuk berbagi lebih cepat di Instagram, Facebook, X (Twitter), TikTok, YouTube, dan LinkedIn. Sempurna untuk berbagi di WhatsApp, Telegram, dan Pinterest. Perkecil ukuran foto produk untuk listing Etsy, eBay, dan Amazon.",
+        "bullets": [
+          "Posting dan stories Instagram & Facebook",
+          "Foto profil X (Twitter) dan LinkedIn",
+          "Thumbnail dan channel art YouTube",
+          "Konten TikTok dan Snapchat",
+          "Berbagi media WhatsApp dan Telegram",
+          "Pin dan board Pinterest",
+          "Foto produk Etsy, eBay & Amazon",
+          "Lampiran email di bawah 25MB"
+        ]
+      }
     },
     "resize": {
       "navLabel": "Ubah Ukuran",
@@ -333,6 +354,20 @@
       "metaDescription": "Pengubah ukuran gambar online gratis. Ubah ukuran foto dengan piksel, persentase, atau preset media sosial.",
       "aboutTitle": "Tentang Pengubah Ukuran Gambar Gratis Kami",
       "aboutContent": "Pengubah ukuran gambar CompressYourPhoto adalah alat yang kuat dan berfokus pada privasi yang memungkinkan Anda mengubah dimensi foto secara instan di browser Anda. Baik Anda perlu mengubah ukuran gambar untuk posting Instagram (1080x1080), thumbnail YouTube (1280x720), banner LinkedIn, cover Facebook, atau dimensi kustom, alat kami memiliki semuanya. Pilih dari tiga mode pengubahan ukuran yang fleksibel: dimensi piksel tepat untuk kontrol presisi, penskalaan persentase untuk memperbesar atau memperkecil gambar secara proporsional, atau preset media sosial yang nyaman. Penguncian rasio aspek memastikan foto Anda tidak meregang atau terdistorsi selama pengubahan ukuran. Semua pemrosesan terjadi secara lokal di browser web Anda, memastikan privasi lengkap. Pengubah ukuran kami mendukung format JPG, PNG, WebP, HEIC, dan GIF.",
+      "popularUseCases": {
+        "title": "Kasus Penggunaan Populer",
+        "summary": "Ubah ukuran foto ke dimensi tepat untuk Instagram (1080x1080), cover Facebook, header X (Twitter), thumbnail YouTube, dan TikTok. Dapatkan ukuran sempurna untuk profil LinkedIn, status WhatsApp, pin Pinterest, dan stories Snapchat.",
+        "bullets": [
+          "Posting Instagram (1080x1080) dan stories (1080x1920)",
+          "Foto profil dan cover Facebook",
+          "Header dan gambar profil X (Twitter)",
+          "Thumbnail YouTube (1280x720) dan banner",
+          "Thumbnail video TikTok dan Snapchat",
+          "Gambar profil dan banner LinkedIn",
+          "Pin Pinterest dan status WhatsApp",
+          "Listing produk Etsy, eBay & Amazon"
+        ]
+      },
       "options": "Opsi Pengubahan Ukuran",
       "mode": "Mode Pengubahan Ukuran",
       "byDimensions": "Berdasarkan Dimensi (piksel)",
@@ -357,6 +392,20 @@
       "metaDescription": "Konverter format gambar gratis. Konversi HEIC ke JPG, PNG ke WebP, JPG ke PNG online. Sempurna untuk foto iPhone.",
       "aboutTitle": "Tentang Konverter Format Gambar Gratis Kami",
       "aboutContent": "Konverter format gambar CompressYourPhoto memudahkan konversi foto antara format file yang berbeda langsung di browser Anda. Alat kami sangat populer untuk mengkonversi HEIC ke JPG, sempurna untuk pengguna iPhone dan iPad yang membutuhkan foto mereka dalam format yang kompatibel secara universal. Konversi PNG ke WebP untuk ukuran file yang lebih kecil dan pemuatan situs web yang lebih cepat, atau ubah JPG ke PNG ketika Anda membutuhkan dukungan transparansi. Kami mendukung konversi antara format JPG, JPEG, PNG, WebP, HEIC, HEIF, GIF, dan BMP. Semua konversi terjadi secara lokal di browser Anda menggunakan pustaka JavaScript canggih, memastikan privasi dan keamanan lengkap. Konversi batch memungkinkan Anda memproses beberapa gambar secara bersamaan.",
+      "popularUseCases": {
+        "title": "Kasus Penggunaan Populer",
+        "summary": "Konversi foto HEIC iPhone ke JPG untuk berbagi di Instagram, Facebook, dan X (Twitter). Ubah PNG ke WebP untuk situs web lebih cepat. Konversi gambar untuk YouTube, TikTok, LinkedIn, Pinterest, dan platform e-commerce seperti Etsy dan Amazon.",
+        "bullets": [
+          "HEIC iPhone ke JPG untuk semua platform",
+          "PNG ke WebP untuk situs web lebih cepat",
+          "Format kompatibel Instagram dan Facebook",
+          "Konversi gambar X (Twitter) dan LinkedIn",
+          "Format thumbnail YouTube dan TikTok",
+          "Berbagi WhatsApp, Telegram & Snapchat",
+          "Pin Pinterest dan listing e-commerce",
+          "Gambar produk Etsy, eBay & Amazon"
+        ]
+      },
       "options": "Opsi Konversi",
       "outputFormat": "Format Output",
       "quality": "Kualitas Output",
@@ -374,6 +423,20 @@
       "metaDescription": "Pemotong gambar online gratis. Potong foto untuk Instagram, thumbnail YouTube, Stories, atau buat avatar lingkaran.",
       "aboutTitle": "Tentang Alat Pemotong Gambar Gratis Kami",
       "aboutContent": "Alat pemotong gambar CompressYourPhoto menyediakan cara intuitif untuk memotong foto untuk tujuan apa pun, semuanya dalam browser Anda. Pemotong kami mencakup preset rasio aspek populer untuk platform media sosial: kotak 1:1 untuk posting dan foto profil Instagram, 16:9 untuk thumbnail YouTube dan wallpaper desktop, 9:16 untuk Instagram Stories dan TikTok, 4:3 untuk foto standar, dan pemotongan bebas untuk dimensi kustom. Fitur pemotongan lingkaran sempurna untuk membuat foto profil dan avatar bulat. Antarmuka pemotongan interaktif kami memungkinkan Anda menyeret, memperbesar, dan memposisikan gambar Anda dengan presisi. Semua pemrosesan terjadi secara lokal di browser web Anda, memastikan privasi 100%. Kami mendukung pemotongan gambar JPG, PNG, WebP, HEIC, dan GIF.",
+      "popularUseCases": {
+        "title": "Kasus Penggunaan Populer",
+        "summary": "Potong foto untuk kotak Instagram (1:1), thumbnail YouTube (16:9), TikTok dan Instagram Stories (9:16). Buat avatar lingkaran untuk LinkedIn, Facebook, X (Twitter), dan WhatsApp. Pemotongan sempurna untuk Pinterest, Snapchat, dan foto produk.",
+        "bullets": [
+          "Posting Instagram (1:1) dan stories (9:16)",
+          "Thumbnail dan banner channel YouTube",
+          "Cover video TikTok dan Snapchat",
+          "Foto profil Facebook dan LinkedIn",
+          "Header dan avatar X (Twitter)",
+          "Foto profil WhatsApp dan Telegram",
+          "Pin dan board Pinterest",
+          "Ikon produk lingkaran Etsy & Amazon"
+        ]
+      },
       "options": "Opsi Pemotongan",
       "aspectRatio": "Rasio Aspek",
       "zoom": "Tingkat Zoom",
@@ -391,6 +454,20 @@
       "metaDescription": "Tingkatkan kualitas foto Anda secara instan. Sesuaikan kecerahan, kontras, saturasi, dan ketajaman gratis. 100% pribadi dan sisi klien.",
       "aboutTitle": "Tentang Penambah Foto Gratis Kami",
       "aboutContent": "Alat peningkatan foto CompressYourPhoto membantu Anda meningkatkan kualitas gambar dengan penyesuaian tingkat profesional, semuanya diproses secara lokal di browser Anda. Sesuaikan kecerahan untuk membuat foto lebih terang atau lebih gelap, tingkatkan kontras untuk membuat gambar menonjol, tingkatkan saturasi untuk warna yang lebih hidup, dan tingkatkan ketajaman untuk hasil yang sangat jernih. Fitur Auto-Enhance kami secara otomatis menganalisis foto Anda dan menerapkan penyesuaian yang dioptimalkan dengan satu klik. Terapkan filter kreatif termasuk Hitam Putih, Sepia untuk tampilan vintage klasik, dan Vivid untuk warna yang sangat intens. Pratinjau real-time menunjukkan perubahan Anda secara instan. Semua peningkatan terjadi sepenuhnya di browser web Anda, memastikan privasi lengkap. Kami mendukung peningkatan gambar JPG, PNG, WebP, dan HEIC.",
+      "popularUseCases": {
+        "title": "Kasus Penggunaan Populer",
+        "summary": "Tingkatkan foto untuk Instagram, Facebook, dan TikTok dengan warna yang lebih hidup. Perbaiki foto profil LinkedIn dan thumbnail YouTube. Kecerahan dan kontras sempurna untuk X (Twitter), Pinterest, dan Snapchat. Tingkatkan gambar produk untuk Etsy, eBay, dan Amazon.",
+        "bullets": [
+          "Peningkatan konten Instagram dan TikTok",
+          "Foto Facebook dengan warna cerah",
+          "Headshot profesional LinkedIn",
+          "Thumbnail YouTube yang menonjol",
+          "Daya tarik visual X (Twitter) dan Pinterest",
+          "Kualitas WhatsApp, Telegram & Snapchat",
+          "Foto produk Etsy, eBay & Amazon",
+          "Peningkatan foto pernikahan dan acara"
+        ]
+      },
       "options": "Opsi Peningkatan",
       "autoEnhance": "Auto-Enhance",
       "brightness": "Kecerahan",

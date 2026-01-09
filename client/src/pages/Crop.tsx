@@ -12,6 +12,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
 import { AboutTool } from '@/components/AboutTool';
+import { PopularUseCases } from '@/components/PopularUseCases';
 
 type AspectPreset = 'free' | '1:1' | '16:9' | '9:16' | '4:3' | '3:4' | 'circle';
 
@@ -264,6 +265,7 @@ export default function CropPage() {
         </section>
       </div>
       <AboutTool tool="crop" />
+      <PopularUseCases tool="crop" />
       <RelatedTools currentTool="crop" />
     </>
   );

@@ -6,6 +6,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
 import { AboutTool } from '@/components/AboutTool';
+import { PopularUseCases } from '@/components/PopularUseCases';
 
 const formats = ['JPG', 'PNG', 'WebP', 'HEIC', 'GIF'];
 
@@ -63,6 +64,7 @@ export default function Compress() {
         </section>
       </div>
       <AboutTool tool="compress" />
+      <PopularUseCases tool="compress" />
       <RelatedTools currentTool="compress" />
     </>
   );

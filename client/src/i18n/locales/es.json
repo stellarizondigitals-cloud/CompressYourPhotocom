@@ -285,6 +285,13 @@
     }
   },
   "tools": {
+    "popularUseCases": {
+      "links": {
+        "resizeSocial": "Redimensionar para Redes Sociales",
+        "compressShare": "Comprimir para Compartir",
+        "cropThumbnails": "Recortar para Miniaturas"
+      }
+    },
     "compress": {
       "navLabel": "Comprimir",
       "cardTitle": "Comprimir Imágenes",
@@ -294,7 +301,21 @@
       "pageTitle": "Comprimir Imágenes Online Gratis | Reducir Tamaño JPG PNG WebP | CompressYourPhoto",
       "metaDescription": "Comprime imágenes online gratis. Reduce el tamaño de archivos JPG, PNG, WebP, HEIC, GIF hasta un 90%. Compresión rápida, privada, basada en navegador.",
       "aboutTitle": "Sobre Nuestro Compresor de Imágenes Gratuito",
-      "aboutContent": "El compresor de imágenes de CompressYourPhoto utiliza algoritmos avanzados basados en navegador para reducir el tamaño de tus fotos hasta un 90% mientras preserva la calidad visual. A diferencia de los compresores en línea tradicionales que suben tus imágenes a servidores remotos, nuestra herramienta procesa todo localmente en tu navegador web usando JavaScript. Esto significa que tus fotos nunca salen de tu dispositivo, garantizando 100% de privacidad. Nuestro compresor soporta todos los formatos de imagen populares incluyendo JPG, JPEG, PNG, WebP, HEIC (fotos de iPhone) y GIF. Ya sea que necesites comprimir imágenes para adjuntos de correo electrónico, optimización de sitios web, publicaciones en redes sociales o simplemente para ahorrar espacio de almacenamiento, nuestra herramienta ofrece resultados profesionales al instante. El control deslizante de calidad ajustable te permite encontrar el equilibrio perfecto entre tamaño de archivo y calidad de imagen. El procesamiento por lotes te permite comprimir múltiples imágenes simultáneamente, y puedes descargarlas individualmente o como un archivo ZIP conveniente. CompressYourPhoto funciona en todos los dispositivos sin necesidad de instalar software."
+      "aboutContent": "El compresor de imágenes de CompressYourPhoto utiliza algoritmos avanzados basados en navegador para reducir el tamaño de tus fotos hasta un 90% mientras preserva la calidad visual. A diferencia de los compresores en línea tradicionales que suben tus imágenes a servidores remotos, nuestra herramienta procesa todo localmente en tu navegador web usando JavaScript. Esto significa que tus fotos nunca salen de tu dispositivo, garantizando 100% de privacidad. Nuestro compresor soporta todos los formatos de imagen populares incluyendo JPG, JPEG, PNG, WebP, HEIC (fotos de iPhone) y GIF. Ya sea que necesites comprimir imágenes para adjuntos de correo electrónico, optimización de sitios web, publicaciones en redes sociales o simplemente para ahorrar espacio de almacenamiento, nuestra herramienta ofrece resultados profesionales al instante. El control deslizante de calidad ajustable te permite encontrar el equilibrio perfecto entre tamaño de archivo y calidad de imagen. El procesamiento por lotes te permite comprimir múltiples imágenes simultáneamente, y puedes descargarlas individualmente o como un archivo ZIP conveniente. CompressYourPhoto funciona en todos los dispositivos sin necesidad de instalar software.",
+      "popularUseCases": {
+        "title": "Casos de Uso Populares",
+        "summary": "Comprime fotos para compartir más rápido en Instagram, Facebook, X (Twitter), TikTok, YouTube y LinkedIn. Perfecto para compartir en WhatsApp, Telegram y Pinterest. Reduce el tamaño de imágenes de productos para Etsy, eBay y Amazon.",
+        "bullets": [
+          "Publicaciones y stories de Instagram y Facebook",
+          "Fotos de perfil de X (Twitter) y LinkedIn",
+          "Miniaturas y arte de canal de YouTube",
+          "Contenido de TikTok y Snapchat",
+          "Compartir medios en WhatsApp y Telegram",
+          "Pines y tableros de Pinterest",
+          "Fotos de productos para Etsy, eBay y Amazon",
+          "Archivos adjuntos de email de menos de 25MB"
+        ]
+      }
     },
     "resize": {
       "navLabel": "Redimensionar",
@@ -318,7 +339,21 @@
       "selectPreset": "Seleccionar un tamaño preajustado",
       "keepAspect": "Mantener relación de aspecto",
       "processing": "Procesando",
-      "resizeButton": "Redimensionar Imágenes"
+      "resizeButton": "Redimensionar Imágenes",
+      "popularUseCases": {
+        "title": "Casos de Uso Populares",
+        "summary": "Redimensiona fotos a dimensiones exactas para Instagram (1080x1080), portadas de Facebook, encabezados de X (Twitter), miniaturas de YouTube y TikTok. Tamaños perfectos para LinkedIn, estado de WhatsApp, pines de Pinterest y stories de Snapchat.",
+        "bullets": [
+          "Publicaciones de Instagram (1080x1080) y stories (1080x1920)",
+          "Fotos de perfil y portadas de Facebook",
+          "Encabezados y fotos de perfil de X (Twitter)",
+          "Miniaturas de YouTube (1280x720) y banners",
+          "Miniaturas de videos de TikTok y Snapchat",
+          "Imágenes de perfil y banner de LinkedIn",
+          "Pines de Pinterest y estado de WhatsApp",
+          "Listados de productos en Etsy, eBay y Amazon"
+        ]
+      }
     },
     "convert": {
       "navLabel": "Convertir",
@@ -335,7 +370,21 @@
       "quality": "Calidad de Salida",
       "supportedInput": "Entrada: JPG, PNG, WebP, HEIC, GIF, BMP",
       "converting": "Convirtiendo",
-      "convertButton": "Convertir Imágenes"
+      "convertButton": "Convertir Imágenes",
+      "popularUseCases": {
+        "title": "Casos de Uso Populares",
+        "summary": "Convierte fotos HEIC de iPhone a JPG para compartir en Instagram, Facebook y X (Twitter). Transforma PNG a WebP para sitios web más rápidos. Convierte imágenes para YouTube, TikTok, LinkedIn, Pinterest y plataformas de e-commerce como Etsy y Amazon.",
+        "bullets": [
+          "HEIC de iPhone a JPG para todas las plataformas",
+          "PNG a WebP para sitios web más rápidos",
+          "Formatos compatibles con Instagram y Facebook",
+          "Conversión de imágenes para X (Twitter) y LinkedIn",
+          "Formatos de miniaturas de YouTube y TikTok",
+          "Compartir en WhatsApp, Telegram y Snapchat",
+          "Pinterest y listados de e-commerce",
+          "Imágenes de productos para Etsy, eBay y Amazon"
+        ]
+      }
     },
     "crop": {
       "navLabel": "Recortar",
@@ -352,7 +401,21 @@
       "zoom": "Nivel de Zoom",
       "reset": "Elegir Otra Imagen",
       "processing": "Procesando",
-      "cropAndDownload": "Recortar y Descargar"
+      "cropAndDownload": "Recortar y Descargar",
+      "popularUseCases": {
+        "title": "Casos de Uso Populares",
+        "summary": "Recorta fotos para cuadrados de Instagram (1:1), miniaturas de YouTube (16:9), TikTok e Instagram Stories (9:16). Crea avatares circulares para LinkedIn, Facebook, X (Twitter) y WhatsApp. Recorte perfecto para Pinterest, Snapchat y fotos de productos.",
+        "bullets": [
+          "Publicaciones de Instagram (1:1) y stories (9:16)",
+          "Miniaturas y banners de canal de YouTube",
+          "Portadas de videos de TikTok y Snapchat",
+          "Fotos de perfil de Facebook y LinkedIn",
+          "Encabezados y avatares de X (Twitter)",
+          "Fotos de perfil de WhatsApp y Telegram",
+          "Pines y tableros de Pinterest",
+          "Iconos de productos circulares para Etsy y Amazon"
+        ]
+      }
     },
     "enhance": {
       "navLabel": "Mejorar",
@@ -383,7 +446,21 @@
       "outputFormat": "Formato de Salida",
       "processing": "Procesando",
       "download": "Descargar Foto Mejorada",
-      "supportedFormats": "Soporta JPG, PNG, WebP"
+      "supportedFormats": "Soporta JPG, PNG, WebP",
+      "popularUseCases": {
+        "title": "Casos de Uso Populares",
+        "summary": "Mejora fotos para Instagram, Facebook y TikTok con colores vibrantes. Mejora fotos de perfil de LinkedIn y miniaturas de YouTube. Brillo y contraste perfectos para X (Twitter), Pinterest y Snapchat. Mejora imágenes de productos para Etsy, eBay y Amazon.",
+        "bullets": [
+          "Mejora de contenido de Instagram y TikTok",
+          "Fotos de Facebook con colores vibrantes",
+          "Retratos profesionales de LinkedIn",
+          "Miniaturas de YouTube que destacan",
+          "Atractivo visual para X (Twitter) y Pinterest",
+          "Calidad para WhatsApp, Telegram y Snapchat",
+          "Fotos de productos para Etsy, eBay y Amazon",
+          "Mejora de fotos de bodas y eventos"
+        ]
+      }
     }
   },
   "faq": {

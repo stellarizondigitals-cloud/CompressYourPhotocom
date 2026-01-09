@@ -285,6 +285,13 @@
     }
   },
   "tools": {
+    "popularUseCases": {
+      "links": {
+        "resizeSocial": "调整社交媒体大小",
+        "compressShare": "压缩以分享",
+        "cropThumbnails": "裁剪缩略图"
+      }
+    },
     "compress": {
       "navLabel": "压缩",
       "cardTitle": "压缩图片",
@@ -294,7 +301,21 @@
       "pageTitle": "免费在线压缩图片 | 减少JPG PNG WebP大小 | CompressYourPhoto",
       "metaDescription": "免费在线压缩图片。将JPG、PNG、WebP、HEIC、GIF文件大小减少高达90%。快速、私密、基于浏览器的压缩。",
       "aboutTitle": "关于我们的免费图片压缩器",
-      "aboutContent": "CompressYourPhoto的图片压缩器使用先进的基于浏览器的算法，将您的照片大小减少高达90%，同时保持视觉质量。与将图片上传到远程服务器的传统在线压缩器不同，我们的工具使用JavaScript在您的网页浏览器中本地处理所有内容。这意味着您的照片永远不会离开您的设备，确保100%隐私。我们的压缩器支持所有流行的图片格式，包括JPG、JPEG、PNG、WebP、HEIC（iPhone照片）和GIF。无论您需要为电子邮件附件、网站优化、社交媒体帖子压缩图片，还是只是为了节省存储空间，我们的工具都能立即提供专业结果。可调节的质量滑块让您找到文件大小和图片质量之间的完美平衡。批量处理让您可以同时压缩多张图片。"
+      "aboutContent": "CompressYourPhoto的图片压缩器使用先进的基于浏览器的算法，将您的照片大小减少高达90%，同时保持视觉质量。与将图片上传到远程服务器的传统在线压缩器不同，我们的工具使用JavaScript在您的网页浏览器中本地处理所有内容。这意味着您的照片永远不会离开您的设备，确保100%隐私。我们的压缩器支持所有流行的图片格式，包括JPG、JPEG、PNG、WebP、HEIC（iPhone照片）和GIF。无论您需要为电子邮件附件、网站优化、社交媒体帖子压缩图片，还是只是为了节省存储空间，我们的工具都能立即提供专业结果。可调节的质量滑块让您找到文件大小和图片质量之间的完美平衡。批量处理让您可以同时压缩多张图片。",
+      "popularUseCases": {
+        "title": "热门用例",
+        "summary": "压缩照片以便在Instagram、Facebook、X（Twitter）、TikTok、YouTube和LinkedIn上更快分享。非常适合WhatsApp、Telegram和Pinterest分享。为Etsy、eBay和Amazon商品列表减小产品图片大小。",
+        "bullets": [
+          "Instagram和Facebook帖子及快拍",
+          "X（Twitter）和LinkedIn个人资料照片",
+          "YouTube缩略图和频道封面",
+          "TikTok和Snapchat内容",
+          "WhatsApp和Telegram媒体分享",
+          "Pinterest图钉和画板",
+          "Etsy、eBay和Amazon产品照片",
+          "25MB以内的电子邮件附件"
+        ]
+      }
     },
     "resize": {
       "navLabel": "调整大小",
@@ -306,6 +327,20 @@
       "metaDescription": "免费在线图片调整器。按像素、百分比或社交媒体预设调整照片大小。",
       "aboutTitle": "关于我们的免费图片调整器",
       "aboutContent": "CompressYourPhoto的图片调整器是一个强大的、注重隐私的工具，让您可以在浏览器中即时更改照片尺寸。无论您需要为Instagram帖子（1080x1080）、YouTube缩略图（1280x720）、LinkedIn横幅、Facebook封面或自定义尺寸调整图片大小，我们的工具都能满足您的需求。从三种灵活的调整模式中选择：精确像素尺寸以获得精确控制、百分比缩放以按比例放大或缩小图片，或方便的社交媒体预设。纵横比锁定确保您的照片在调整大小时不会被拉伸或扭曲。所有处理都在您的网页浏览器中本地进行，确保完全隐私。我们的调整器支持JPG、PNG、WebP、HEIC和GIF格式。",
+      "popularUseCases": {
+        "title": "热门用例",
+        "summary": "将照片调整为Instagram（1080x1080）、Facebook封面、X（Twitter）横幅、YouTube缩略图和TikTok的精确尺寸。获取LinkedIn个人资料、WhatsApp状态、Pinterest图钉和Snapchat快拍的完美尺寸。",
+        "bullets": [
+          "Instagram帖子（1080x1080）和快拍（1080x1920）",
+          "Facebook个人资料图片和封面照片",
+          "X（Twitter）横幅和个人资料图片",
+          "YouTube缩略图（1280x720）和横幅",
+          "TikTok和Snapchat视频缩略图",
+          "LinkedIn个人资料和横幅图片",
+          "Pinterest图钉和WhatsApp状态",
+          "Etsy、eBay和Amazon产品列表"
+        ]
+      },
       "options": "调整大小选项",
       "mode": "调整模式",
       "byDimensions": "按尺寸（像素）",
@@ -330,6 +365,20 @@
       "metaDescription": "免费图片格式转换器。在线将HEIC转换为JPG、PNG转换为WebP、JPG转换为PNG。非常适合iPhone照片。",
       "aboutTitle": "关于我们的免费图片格式转换器",
       "aboutContent": "CompressYourPhoto的图片格式转换器使您可以轻松地直接在浏览器中在不同文件格式之间转换照片。我们的工具特别受欢迎用于将HEIC转换为JPG，非常适合需要将照片转换为通用兼容格式的iPhone和iPad用户。将PNG转换为WebP可获得更小的文件大小和更快的网站加载速度，或者在需要透明度支持时将JPG转换为PNG。我们支持JPG、JPEG、PNG、WebP、HEIC、HEIF、GIF和BMP格式之间的转换。所有转换都使用先进的JavaScript库在您的浏览器中本地进行，确保完全的隐私和安全。批量转换让您可以同时处理多张图片。我们的转换器在所有设备上都能工作，包括Windows、Mac、Linux、Android和iOS。",
+      "popularUseCases": {
+        "title": "热门用例",
+        "summary": "将iPhone HEIC照片转换为JPG以便在Instagram、Facebook和X（Twitter）上分享。将PNG转换为WebP以加快网站速度。为YouTube、TikTok、LinkedIn、Pinterest和Etsy、Amazon等电商平台转换图片。",
+        "bullets": [
+          "iPhone HEIC转JPG适用于所有平台",
+          "PNG转WebP加快网站速度",
+          "Instagram和Facebook兼容格式",
+          "X（Twitter）和LinkedIn图片转换",
+          "YouTube和TikTok缩略图格式",
+          "WhatsApp、Telegram和Snapchat分享",
+          "Pinterest和电商商品列表",
+          "Etsy、eBay和Amazon产品图片"
+        ]
+      },
       "options": "转换选项",
       "outputFormat": "输出格式",
       "quality": "输出质量",
@@ -347,6 +396,20 @@
       "metaDescription": "免费在线图片裁剪工具。为Instagram、YouTube缩略图、Stories裁剪照片或创建圆形头像。",
       "aboutTitle": "关于我们的免费图片裁剪工具",
       "aboutContent": "CompressYourPhoto的图片裁剪工具提供了一种直观的方式来为任何目的裁剪照片，所有操作都在您的浏览器中完成。我们的裁剪器包含流行的社交媒体平台纵横比预设：1:1正方形用于Instagram帖子和头像、16:9用于YouTube缩略图和桌面壁纸、9:16用于Instagram Stories和TikTok、4:3用于标准照片，以及自由裁剪用于自定义尺寸。圆形裁剪功能非常适合创建圆形头像和头像图片。我们的交互式裁剪界面让您可以精确地拖动、缩放和定位图片。所有处理都在您的网页浏览器中本地进行，确保100%隐私。我们支持裁剪JPG、PNG、WebP、HEIC和GIF图片。",
+      "popularUseCases": {
+        "title": "热门用例",
+        "summary": "为Instagram正方形（1:1）、YouTube缩略图（16:9）、TikTok和Instagram快拍（9:16）裁剪照片。为LinkedIn、Facebook、X（Twitter）和WhatsApp创建圆形头像。完美裁剪Pinterest、Snapchat和产品照片。",
+        "bullets": [
+          "Instagram帖子（1:1）和快拍（9:16）",
+          "YouTube缩略图和频道横幅",
+          "TikTok和Snapchat视频封面",
+          "Facebook和LinkedIn个人资料图片",
+          "X（Twitter）横幅和头像",
+          "WhatsApp和Telegram个人资料照片",
+          "Pinterest图钉和画板",
+          "Etsy和Amazon圆形产品图标"
+        ]
+      },
       "options": "裁剪选项",
       "aspectRatio": "纵横比",
       "zoom": "缩放级别",
@@ -364,6 +427,20 @@
       "metaDescription": "即时提升您的照片质量。免费调整亮度、对比度、饱和度和清晰度。100%隐私和客户端处理。",
       "aboutTitle": "关于我们的免费照片增强器",
       "aboutContent": "CompressYourPhoto的照片增强工具帮助您使用专业级调整来改善图片质量，所有处理都在您的浏览器中本地完成。调整亮度使照片变亮或变暗，增加对比度使图片更加突出，增加饱和度使颜色更加鲜艳，增强清晰度以获得水晶般清晰的效果。我们的自动增强功能会自动分析您的照片并一键应用优化调整。应用创意滤镜，包括黑白、复古效果的棕褐色调和超强烈色彩的鲜艳模式。实时预览即时显示您的更改。所有增强完全在您的网页浏览器中进行，确保完全隐私。我们支持增强JPG、PNG、WebP和HEIC图片。该工具在所有设备上都能工作，包括Windows、Mac、Android和iOS。",
+      "popularUseCases": {
+        "title": "热门用例",
+        "summary": "为Instagram、Facebook和TikTok增强照片，打造鲜艳色彩。改善LinkedIn个人资料照片和YouTube缩略图。为X（Twitter）、Pinterest和Snapchat完美调整亮度和对比度。为Etsy、eBay和Amazon增强产品图片。",
+        "bullets": [
+          "Instagram和TikTok内容增强",
+          "Facebook照片鲜艳色彩",
+          "LinkedIn专业头像",
+          "YouTube缩略图更吸睛",
+          "X（Twitter）和Pinterest视觉效果",
+          "WhatsApp、Telegram和Snapchat质量提升",
+          "Etsy、eBay和Amazon产品照片",
+          "婚礼和活动照片改善"
+        ]
+      },
       "options": "增强选项",
       "autoEnhance": "自动增强",
       "brightness": "亮度",
