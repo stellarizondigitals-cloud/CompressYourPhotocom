@@ -36,7 +36,7 @@ export function ToolPageSEO({ tool, title, description }: ToolPageSEOProps) {
         <link
           key={lang}
           rel="alternate"
-          hrefLang={lang === 'zh-cn' ? 'zh-Hans' : lang}
+          hrefLang={lang === 'zh-cn' ? 'zh-CN' : lang}
           href={getHreflangUrl(lang)}
         />
       ))}
