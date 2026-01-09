@@ -72,7 +72,15 @@
     "mobileDesktop": "Works on any device",
     "supportedFormats": "JPG, PNG, WebP, HEIC, GIF support",
     "allRightsReserved": "All rights reserved.",
-    "tagline": "Free online image tools. Compress, resize, convert, and crop photos privately in your browser."
+    "tagline": "Free online image tools. Compress, resize, convert, and crop photos privately in your browser.",
+    "popularTools": "Popular Tools",
+    "links": {
+      "compressJpg": "Compress JPG",
+      "heicToJpg": "HEIC to JPG",
+      "resizeInstagram": "Resize for Instagram",
+      "cropCircle": "Circle Crop",
+      "compressEmail": "Compress for Email"
+    }
   },
   "language": {
     "select": "Select Language"

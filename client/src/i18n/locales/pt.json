@@ -70,7 +70,14 @@
     "supportedFormats": "Suporte a JPG, PNG, WebP, HEIC, GIF",
     "allRightsReserved": "Todos os direitos reservados.",
     "tagline": "Ferramentas de imagem online grátis. Comprima, redimensione, converta e corte fotos de forma privada no seu navegador.",
-    "popularTools": "Ferramentas Populares"
+    "popularTools": "Ferramentas Populares",
+    "links": {
+      "compressJpg": "Comprimir JPG",
+      "heicToJpg": "HEIC para JPG",
+      "resizeInstagram": "Redimensionar para Instagram",
+      "cropCircle": "Corte Circular",
+      "compressEmail": "Comprimir para Email"
+    }
   },
   "language": {
     "select": "Selecionar Idioma"
