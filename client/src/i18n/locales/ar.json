@@ -70,7 +70,14 @@
     "supportedFormats": "يدعم JPG وPNG وWebP وHEIC وGIF",
     "allRightsReserved": "جميع الحقوق محفوظة.",
     "tagline": "أدوات صور مجانية أونلاين. اضغط وغيّر حجم وحوّل وقص الصور بخصوصية في متصفحك.",
-    "popularTools": "الأدوات الشائعة"
+    "popularTools": "الأدوات الشائعة",
+    "links": {
+      "compressJpg": "ضغط JPG",
+      "heicToJpg": "HEIC إلى JPG",
+      "resizeInstagram": "تغيير الحجم لـ Instagram",
+      "cropCircle": "قص دائري",
+      "compressEmail": "ضغط للبريد الإلكتروني"
+    }
   },
   "language": {
     "select": "اختر اللغة"
@@ -652,16 +659,6 @@
         {"question": "ماذا يفعل التحسين التلقائي؟", "answer": "التحسين التلقائي يضبط تلقائياً السطوع (+10%) والتباين (+15%) والتشبع (+10%) والحدة (+20%) للحصول على تحسين متوازن."},
         {"question": "هل التحسين يقلل جودة الصورة؟", "answer": "التحسين نفسه لا يقلل الجودة. لكن التعديلات المفرطة يمكن أن تجعل الصور تبدو غير طبيعية. استخدم تعديلات دقيقة للحصول على أفضل النتائج."}
       ]
-    }
-  },
-  "footer": {
-    "popularTools": "الأدوات الشائعة",
-    "links": {
-      "compressJpg": "ضغط JPG",
-      "heicToJpg": "HEIC إلى JPG",
-      "resizeInstagram": "تغيير الحجم لـ Instagram",
-      "cropCircle": "قص دائري",
-      "compressEmail": "ضغط للبريد الإلكتروني"
     }
   }
 }

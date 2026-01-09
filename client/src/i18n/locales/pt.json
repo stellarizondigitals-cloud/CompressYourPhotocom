@@ -653,15 +653,5 @@
         {"question": "Melhorar vai reduzir a qualidade da imagem?", "answer": "A melhoria em si não reduz a qualidade. No entanto, ajustes excessivos podem fazer as imagens parecerem artificiais. Use ajustes sutis para melhores resultados."}
       ]
     }
-  },
-  "footer": {
-    "popularTools": "Ferramentas Populares",
-    "links": {
-      "compressJpg": "Comprimir JPG",
-      "heicToJpg": "HEIC para JPG",
-      "resizeInstagram": "Redimensionar para Instagram",
-      "cropCircle": "Corte Circular",
-      "compressEmail": "Comprimir para Email"
-    }
   }
 }

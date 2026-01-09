@@ -52,6 +52,7 @@
   },
   "footer": {
     "product": "Produkt",
+    "company": "Unternehmen",
     "legal": "Rechtliches",
     "trustPerformance": "Vertrauen & Leistung",
     "privacy": "Datenschutzrichtlinie",
@@ -61,12 +62,22 @@
     "howItWorks": "So Funktioniert's",
     "languages": "Sprachen",
     "contact": "Kontakt",
+    "about": "Über Uns",
     "browserBased": "100% browserbasiert (keine Uploads)",
     "privateByDesign": "Privat durch Design",
     "fastCompression": "Schnelle Komprimierung in Sekunden",
     "mobileDesktop": "Funktioniert auf Handy & Desktop",
     "supportedFormats": "Unterstützt JPG, PNG, WebP, HEIC, GIF",
-    "allRightsReserved": "Alle Rechte vorbehalten."
+    "allRightsReserved": "Alle Rechte vorbehalten.",
+    "tagline": "Kostenlose Online-Bildwerkzeuge. Komprimieren, skalieren, konvertieren und zuschneiden Sie Fotos privat in Ihrem Browser.",
+    "popularTools": "Beliebte Werkzeuge",
+    "links": {
+      "compressJpg": "JPG Komprimieren",
+      "heicToJpg": "HEIC zu JPG",
+      "resizeInstagram": "Größe für Instagram",
+      "cropCircle": "Kreisförmig Zuschneiden",
+      "compressEmail": "Für E-Mail Komprimieren"
+    }
   },
   "language": {
     "select": "Sprache Auswählen"
@@ -648,16 +659,6 @@
         {"question": "Was macht Auto-Verbesserung?", "answer": "Auto-Verbesserung passt automatisch Helligkeit (+10%), Kontrast (+15%), Sättigung (+10%) und Schärfe (+20%) für eine ausgewogene Verbesserung an."},
         {"question": "Reduziert Verbesserung die Bildqualität?", "answer": "Verbesserung an sich reduziert die Qualität nicht. Übermäßige Anpassungen können Bilder jedoch unnatürlich aussehen lassen. Verwenden Sie subtile Anpassungen für beste Ergebnisse."}
       ]
-    }
-  },
-  "footer": {
-    "popularTools": "Beliebte Tools",
-    "links": {
-      "compressJpg": "JPG Komprimieren",
-      "heicToJpg": "HEIC zu JPG",
-      "resizeInstagram": "Für Instagram skalieren",
-      "cropCircle": "Kreis-Zuschnitt",
-      "compressEmail": "Für E-Mail komprimieren"
     }
   }
 }

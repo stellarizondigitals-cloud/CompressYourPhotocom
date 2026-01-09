@@ -52,6 +52,7 @@
   },
   "footer": {
     "product": "Producto",
+    "company": "Empresa",
     "legal": "Legal",
     "trustPerformance": "Confianza y Rendimiento",
     "privacy": "Política de Privacidad",
@@ -61,12 +62,22 @@
     "howItWorks": "Cómo Funciona",
     "languages": "Idiomas",
     "contact": "Contacto",
+    "about": "Sobre Nosotros",
     "browserBased": "100% en navegador (sin subidas)",
     "privateByDesign": "Privado por diseño",
     "fastCompression": "Compresión rápida en segundos",
     "mobileDesktop": "Funciona en móvil y escritorio",
     "supportedFormats": "Soporta JPG, PNG, WebP, HEIC, GIF",
-    "allRightsReserved": "Todos los derechos reservados."
+    "allRightsReserved": "Todos los derechos reservados.",
+    "tagline": "Herramientas de imagen online gratis. Comprime, redimensiona, convierte y recorta fotos de forma privada en tu navegador.",
+    "popularTools": "Herramientas Populares",
+    "links": {
+      "compressJpg": "Comprimir JPG",
+      "heicToJpg": "HEIC a JPG",
+      "resizeInstagram": "Redimensionar para Instagram",
+      "cropCircle": "Recorte Circular",
+      "compressEmail": "Comprimir para Email"
+    }
   },
   "language": {
     "select": "Seleccionar Idioma"
@@ -648,16 +659,6 @@
         {"question": "¿Qué hace la Auto-Mejora?", "answer": "Auto-Mejora ajusta automáticamente brillo (+10%), contraste (+15%), saturación (+10%) y nitidez (+20%) para una mejora equilibrada."},
         {"question": "¿Mejorar reducirá la calidad de imagen?", "answer": "La mejora en sí no reduce la calidad. Sin embargo, ajustes excesivos pueden hacer que las imágenes luzcan poco naturales. Usa ajustes sutiles para mejores resultados."}
       ]
-    }
-  },
-  "footer": {
-    "popularTools": "Herramientas Populares",
-    "links": {
-      "compressJpg": "Comprimir JPG",
-      "heicToJpg": "HEIC a JPG",
-      "resizeInstagram": "Redimensionar para Instagram",
-      "cropCircle": "Recorte Circular",
-      "compressEmail": "Comprimir para Email"
     }
   }
 }

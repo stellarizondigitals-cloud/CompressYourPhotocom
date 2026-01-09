@@ -52,6 +52,7 @@
   },
   "footer": {
     "product": "产品",
+    "company": "公司",
     "legal": "法律",
     "trustPerformance": "信任与性能",
     "privacy": "隐私政策",
@@ -61,12 +62,22 @@
     "howItWorks": "工作原理",
     "languages": "语言",
     "contact": "联系我们",
+    "about": "关于我们",
     "browserBased": "100% 浏览器处理（无需上传）",
     "privateByDesign": "设计即隐私",
     "fastCompression": "秒级快速压缩",
     "mobileDesktop": "支持手机和电脑",
     "supportedFormats": "支持 JPG、PNG、WebP、HEIC、GIF",
-    "allRightsReserved": "版权所有。"
+    "allRightsReserved": "版权所有。",
+    "tagline": "免费在线图片工具。在浏览器中私密压缩、调整大小、转换和裁剪照片。",
+    "popularTools": "热门工具",
+    "links": {
+      "compressJpg": "压缩 JPG",
+      "heicToJpg": "HEIC 转 JPG",
+      "resizeInstagram": "调整 Instagram 尺寸",
+      "cropCircle": "圆形裁剪",
+      "compressEmail": "压缩电子邮件图片"
+    }
   },
   "language": {
     "select": "选择语言"
@@ -648,16 +659,6 @@
         {"question": "自动增强有什么作用？", "answer": "自动增强会自动调整亮度（+10%）、对比度（+15%）、饱和度（+10%）和清晰度（+20%），实现平衡的改进。"},
         {"question": "增强会降低图片质量吗？", "answer": "增强本身不会降低质量。但是，过度调整可能会使图片看起来不自然。建议使用微妙的调整以获得最佳效果。"}
       ]
-    }
-  },
-  "footer": {
-    "popularTools": "热门工具",
-    "links": {
-      "compressJpg": "压缩 JPG",
-      "heicToJpg": "HEIC 转 JPG",
-      "resizeInstagram": "调整 Instagram 尺寸",
-      "cropCircle": "圆形裁剪",
-      "compressEmail": "压缩电子邮件图片"
     }
   }
 }

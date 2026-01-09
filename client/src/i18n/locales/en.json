@@ -681,15 +681,5 @@
         {"question": "Will enhancing reduce image quality?", "answer": "Enhancement itself doesn't reduce quality. However, excessive adjustments can make images look unnatural. Use subtle adjustments for best results."}
       ]
     }
-  },
-  "footer": {
-    "popularTools": "Popular Tools",
-    "links": {
-      "compressJpg": "Compress JPG",
-      "heicToJpg": "HEIC to JPG",
-      "resizeInstagram": "Resize for Instagram",
-      "cropCircle": "Circle Crop",
-      "compressEmail": "Compress for Email"
-    }
   }
 }

@@ -52,22 +52,8 @@
   },
   "footer": {
     "product": "Produit",
-    "legal": "Légal",
     "company": "Entreprise",
-    "popularTools": {
-      "compress": "Compresser",
-      "resize": "Redimensionner",
-      "convert": "Convertir",
-      "crop": "Recadrer",
-      "enhance": "Améliorer"
-    },
-    "links": {
-      "compressJpg": "Compresser JPG",
-      "heicToJpg": "HEIC vers JPG",
-      "resizeInstagram": "Redimensionner pour Instagram",
-      "cropCircle": "Recadrage Circulaire",
-      "compressEmail": "Compresser pour Email"
-    },
+    "legal": "Légal",
     "trustPerformance": "Confiance et Performance",
     "privacy": "Politique de Confidentialité",
     "terms": "Conditions d'Utilisation",
@@ -82,7 +68,16 @@
     "fastCompression": "Compression rapide en secondes",
     "mobileDesktop": "Fonctionne sur mobile et ordinateur",
     "supportedFormats": "Supporte JPG, PNG, WebP, HEIC, GIF",
-    "allRightsReserved": "Tous droits réservés."
+    "allRightsReserved": "Tous droits réservés.",
+    "tagline": "Outils d'image en ligne gratuits. Compressez, redimensionnez, convertissez et recadrez des photos en privé dans votre navigateur.",
+    "popularTools": "Outils Populaires",
+    "links": {
+      "compressJpg": "Compresser JPG",
+      "heicToJpg": "HEIC vers JPG",
+      "resizeInstagram": "Redimensionner pour Instagram",
+      "cropCircle": "Recadrage Circulaire",
+      "compressEmail": "Compresser pour Email"
+    }
   },
   "language": {
     "select": "Sélectionner la Langue"
@@ -690,8 +685,5 @@
   },
   "relatedTools": {
     "title": "Outils Connexes"
-  },
-  "footer": {
-    "popularTools": "Outils Populaires"
   }
 }

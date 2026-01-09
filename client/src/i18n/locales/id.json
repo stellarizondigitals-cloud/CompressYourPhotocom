@@ -70,7 +70,15 @@
     "mobileDesktop": "Berfungsi di perangkat apa pun",
     "supportedFormats": "Dukungan JPG, PNG, WebP, HEIC, GIF",
     "allRightsReserved": "Hak cipta dilindungi.",
-    "tagline": "Alat gambar online gratis. Kompres, ubah ukuran, konversi, dan potong foto secara pribadi di browser Anda."
+    "tagline": "Alat gambar online gratis. Kompres, ubah ukuran, konversi, dan potong foto secara pribadi di browser Anda.",
+    "popularTools": "Alat Populer",
+    "links": {
+      "compressJpg": "Kompres JPG",
+      "heicToJpg": "HEIC ke JPG",
+      "resizeInstagram": "Ubah Ukuran untuk Instagram",
+      "cropCircle": "Potong Lingkaran",
+      "compressEmail": "Kompres untuk Email"
+    }
   },
   "language": {
     "select": "Pilih Bahasa"
@@ -678,16 +686,6 @@
         {"question": "Apa yang dilakukan Tingkatkan Otomatis?", "answer": "Tingkatkan Otomatis secara otomatis menyesuaikan kecerahan (+10%), kontras (+15%), saturasi (+10%), dan ketajaman (+20%) untuk perbaikan yang seimbang."},
         {"question": "Apakah peningkatan mengurangi kualitas gambar?", "answer": "Peningkatan itu sendiri tidak mengurangi kualitas. Namun, penyesuaian yang berlebihan dapat membuat gambar terlihat tidak alami. Gunakan penyesuaian yang halus untuk hasil terbaik."}
       ]
-    }
-  },
-  "footer": {
-    "popularTools": "Alat Populer",
-    "links": {
-      "compressJpg": "Kompres JPG",
-      "heicToJpg": "HEIC ke JPG",
-      "resizeInstagram": "Ubah Ukuran untuk Instagram",
-      "cropCircle": "Potong Lingkaran",
-      "compressEmail": "Kompres untuk Email"
     }
   }
 }
