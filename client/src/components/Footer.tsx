@@ -82,35 +82,35 @@ export function Footer() {
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-compress-jpg"
               >
-                Compress JPG
+                {t('footer.links.compressJpg', 'Compress JPG')}
               </Link>
               <Link 
                 to="/convert-heic-to-jpg" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-heic-to-jpg"
               >
-                HEIC to JPG
+                {t('footer.links.heicToJpg', 'HEIC to JPG')}
               </Link>
               <Link 
                 to="/resize-for-instagram" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-instagram"
               >
-                Resize for Instagram
+                {t('footer.links.resizeInstagram', 'Resize for Instagram')}
               </Link>
               <Link 
                 to="/crop-circle" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-crop-circle"
               >
-                Crop Circle
+                {t('footer.links.cropCircle', 'Crop Circle')}
               </Link>
               <Link 
                 to="/compress-for-email" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-compress-email"
               >
-                Compress for Email
+                {t('footer.links.compressEmail', 'Compress for Email')}
               </Link>
             </nav>
           </div>

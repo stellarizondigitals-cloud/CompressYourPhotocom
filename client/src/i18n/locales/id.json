@@ -450,5 +450,167 @@
       "termsContent": "Syarat-syarat ini diatur oleh hukum Inggris dan Wales. Setiap perselisihan yang timbul dari Syarat ini atau penggunaan layanan kami akan tunduk pada yurisdiksi eksklusif pengadilan Inggris dan Wales.",
       "disclaimerContent": "Penafian ini diatur oleh hukum Inggris dan Wales. Sejauh diizinkan oleh hukum Inggris, Stellarizon Digitals Ltd tidak bertanggung jawab atas kerusakan tidak langsung, insidental, khusus, atau konsekuensial yang timbul dari penggunaan layanan ini."
     }
+  },
+  "relatedTools": {
+    "title": "Alat Terkait"
+  },
+  "common": {
+    "faq": "Pertanyaan yang Sering Diajukan"
+  },
+  "seoPages": {
+    "compressJpg": {
+      "title": "Kompres Gambar JPG Online Gratis - Perkecil Ukuran File JPEG",
+      "metaDescription": "Kompres gambar JPG dan JPEG online gratis. Perkecil ukuran file hingga 90% tanpa mengorbankan kualitas. Tanpa pendaftaran, 100% diproses di browser secara pribadi.",
+      "h1": "Kompres Gambar JPG Online Gratis",
+      "subtitle": "Perkecil ukuran file JPEG tanpa kehilangan kualitas. Cepat, pribadi, dan sepenuhnya gratis.",
+      "contentTitle": "Cara Mengompres Gambar JPG",
+      "content": "JPG (JPEG) adalah format gambar paling populer untuk foto dan gambar web. Kompresor JPG gratis kami membantu Anda mengurangi ukuran file secara signifikan sambil mempertahankan kualitas visual yang sangat baik. Baik Anda perlu mengompres foto untuk email, mengoptimalkan gambar untuk situs web, atau menghemat ruang penyimpanan, alat kami memproses semuanya secara lokal di browser Anda.\n\nAlgoritma kompresi canggih kami menganalisis setiap gambar JPG dan menghapus data yang tidak diperlukan sambil mempertahankan detail visual penting. Anda dapat menyesuaikan slider kualitas untuk menemukan keseimbangan sempurna antara ukuran file dan kualitas gambar. Sebagian besar pengguna mencapai pengurangan ukuran file 50-80% tanpa kehilangan kualitas yang terlihat.\n\nBerbeda dengan kompresor online lainnya, foto Anda tidak pernah meninggalkan perangkat. Semua pemrosesan terjadi di browser web menggunakan JavaScript, memastikan privasi dan keamanan lengkap. Ini juga berarti pemrosesan lebih cepat karena tidak ada waktu unggah atau unduh ke server.\n\nKompresor JPG kami berfungsi di semua perangkat termasuk Windows, Mac, Linux, Android, dan iOS. Proses gambar satu per satu atau batch kompres beberapa JPG sekaligus. Unduh file terkompresi secara individual atau sebagai arsip ZIP.",
+      "faqs": [
+        {"question": "Seberapa banyak saya bisa mengurangi ukuran file JPG?", "answer": "Biasanya 50-90% pengurangan tergantung pada gambar asli dan pengaturan kualitas. Foto dengan banyak detail akan terkompres lebih sedikit dibandingkan gambar yang lebih sederhana."},
+        {"question": "Apakah mengompres JPG akan mengurangi kualitas gambar?", "answer": "JPG menggunakan kompresi lossy, jadi ada sedikit kehilangan kualitas. Namun, pada pengaturan kualitas 80-90%, perbedaannya biasanya tidak terlihat oleh mata manusia."},
+        {"question": "Apakah gambar JPG saya diunggah ke server Anda?", "answer": "Tidak, sama sekali tidak. Semua kompresi terjadi secara lokal di browser Anda. Gambar Anda tidak pernah meninggalkan perangkat, menjamin privasi 100%."}
+      ]
+    },
+    "compressPng": {
+      "title": "Kompres Gambar PNG Online Gratis - Perkecil Ukuran File PNG",
+      "metaDescription": "Kompres gambar PNG online gratis. Perkecil ukuran file sambil mempertahankan transparansi. Tanpa pendaftaran, kompresi 100% berbasis browser yang pribadi.",
+      "h1": "Kompres Gambar PNG Online Gratis",
+      "subtitle": "Perkecil ukuran file PNG sambil mempertahankan transparansi dan kualitas. Cepat dan pribadi.",
+      "contentTitle": "Cara Mengompres Gambar PNG",
+      "content": "Gambar PNG sangat penting untuk grafis dengan transparansi, logo, dan gambar yang memerlukan kualitas lossless. Namun, file PNG bisa cukup besar. Kompresor PNG gratis kami membantu Anda mengurangi ukuran file secara signifikan sambil mempertahankan transparansi dan kualitas visual.\n\nKompresi PNG bekerja secara berbeda dari JPG. Alat kami menggunakan algoritma canggih untuk mengurangi kedalaman warna dan mengoptimalkan data gambar tanpa mempengaruhi area transparan. Anda dapat mencapai pengurangan ukuran file yang substansial, terutama untuk gambar dengan warna solid atau palet warna terbatas.\n\nUntuk kompresi maksimum, pertimbangkan untuk mengonversi PNG ke format WebP yang menawarkan kompresi lebih baik dengan dukungan transparansi. Alat kami dapat membantu Anda memilih format terbaik untuk kebutuhan Anda sambil menjaga pengaturan kualitas yang dapat disesuaikan.\n\nSemua pemrosesan terjadi secara lokal di browser web Anda—gambar PNG Anda tidak pernah meninggalkan perangkat. Ini memastikan privasi lengkap dan pemrosesan lebih cepat dibandingkan alat berbasis server. Batch kompres beberapa file PNG dan unduh secara individual atau sebagai arsip ZIP.",
+      "faqs": [
+        {"question": "Apakah kompresi PNG mempengaruhi transparansi?", "answer": "Tidak, kompresor PNG kami mempertahankan transparansi sepenuhnya. Channel alpha tetap utuh setelah kompresi."},
+        {"question": "Seberapa banyak saya bisa mengurangi ukuran file PNG?", "answer": "Kompresi PNG sangat bervariasi—grafis sederhana dengan sedikit warna dapat berkurang 70-90%, sementara gambar kompleks mungkin hanya berkurang 10-30%."},
+        {"question": "Haruskah saya mengonversi PNG ke JPG untuk kompresi yang lebih baik?", "answer": "Hanya jika Anda tidak membutuhkan transparansi. JPG tidak mendukung transparansi. Untuk gambar transparan, pertimbangkan WebP yang menawarkan kompresi lebih baik dari PNG."}
+      ]
+    },
+    "convertHeicToJpg": {
+      "title": "Konversi HEIC ke JPG Online Gratis - Konverter Foto iPhone",
+      "metaDescription": "Konversi HEIC ke JPG online gratis. Ubah foto iPhone dan iPad ke format JPEG yang kompatibel secara universal. Tanpa pendaftaran, 100% pribadi.",
+      "h1": "Konversi HEIC ke JPG Online Gratis",
+      "subtitle": "Ubah foto HEIC iPhone ke format JPG yang kompatibel secara universal dalam sekejap.",
+      "ctaLabel": "Buka Alat Konverter Lengkap",
+      "ctaDescription": "Gunakan konverter gambar lengkap kami untuk mengubah file HEIC ke JPG dengan pengaturan kualitas yang dapat disesuaikan.",
+      "contentTitle": "Cara Mengonversi HEIC ke JPG",
+      "content": "HEIC (High Efficiency Image Container) adalah format gambar modern Apple yang digunakan di iPhone dan iPad. Meskipun HEIC menawarkan kompresi yang lebih baik dari JPG, banyak situs web, aplikasi, dan perangkat lama tidak mendukungnya. Konverter HEIC ke JPG gratis kami menyelesaikan masalah kompatibilitas ini dengan cepat.\n\nCukup unggah foto HEIC Anda dan konverter kami akan mengubahnya ke format JPG yang kompatibel secara universal. Anda dapat menyesuaikan kualitas output untuk menyeimbangkan ukuran file dan kualitas gambar. Konversi mempertahankan detail foto penting sambil membuat file yang berfungsi di mana saja.\n\nKonverter HEIC kami memproses semuanya secara lokal di browser Anda. Foto iPhone Anda tidak pernah meninggalkan perangkat, memastikan privasi lengkap. Ini sangat penting untuk foto pribadi yang tidak ingin Anda unggah ke server yang tidak dikenal.\n\nKonversi batch beberapa file HEIC sekaligus—sempurna saat Anda telah mentransfer banyak foto iPhone ke komputer Anda. Unduh JPG yang sudah dikonversi secara individual atau sebagai arsip ZIP. Berfungsi di Windows, Mac, Linux, dan bahkan perangkat mobile lainnya.",
+      "faqs": [
+        {"question": "Apa itu format HEIC?", "answer": "HEIC (High Efficiency Image Container) adalah format gambar modern Apple. Format ini menawarkan kompresi yang lebih baik dari JPG sambil mempertahankan kualitas, tetapi tidak didukung secara universal."},
+        {"question": "Mengapa saya harus mengonversi HEIC ke JPG?", "answer": "JPG kompatibel secara universal dengan semua perangkat, situs web, dan aplikasi. Konversi HEIC ke JPG saat Anda perlu berbagi foto di platform non-Apple atau perangkat lunak yang lebih lama."},
+        {"question": "Apakah konversi HEIC ke JPG kehilangan kualitas?", "answer": "Ada sedikit kehilangan kualitas saat mengonversi pada pengaturan kualitas tinggi (90%+). Perbedaannya biasanya tidak terlihat untuk sebagian besar penggunaan."}
+      ]
+    },
+    "resizeForInstagram": {
+      "title": "Ubah Ukuran Gambar untuk Instagram Online - Gratis & Tanpa Pendaftaran",
+      "metaDescription": "Ubah ukuran foto untuk posting Instagram, stories, dan reels. Dimensi sempurna untuk semua format Instagram. Gratis, tanpa pendaftaran, 100% pribadi.",
+      "h1": "Ubah Ukuran Gambar untuk Instagram",
+      "subtitle": "Dapatkan dimensi sempurna untuk posting Instagram, stories, dan reels. Cepat dan gratis.",
+      "ctaLabel": "Buka Pengubah Ukuran Gambar",
+      "ctaDescription": "Gunakan pengubah ukuran gambar lengkap kami dengan preset Instagram untuk mengubah ukuran foto Anda dengan sempurna.",
+      "contentTitle": "Panduan Ukuran Gambar Instagram",
+      "content": "Instagram memiliki persyaratan dimensi gambar tertentu untuk berbagai jenis posting. Menggunakan gambar dengan ukuran yang salah dapat mengakibatkan pemotongan yang janggal atau kualitas yang berkurang. Pengubah ukuran gambar Instagram gratis kami memastikan foto Anda terlihat sempurna setiap saat.\n\nUntuk posting feed Instagram, ukuran kotak ideal adalah 1080x1080 piksel (rasio aspek 1:1). Posting portrait paling baik pada 1080x1350 piksel (rasio 4:5), sedangkan posting landscape harus 1080x608 piksel (rasio 1.91:1). Instagram Stories dan Reels membutuhkan 1080x1920 piksel (format vertikal 9:16).\n\nPengubah ukuran kami mencakup dimensi preset untuk semua format Instagram. Cukup pilih format yang Anda inginkan, unggah gambar Anda, dan dapatkan hasil dengan ukuran yang sempurna. Alat ini mempertahankan kualitas gambar saat mengubah ukuran ke spesifikasi tepat Anda.\n\nSemua pemrosesan terjadi di browser Anda—foto Anda tidak pernah meninggalkan perangkat. Ini sangat penting untuk konten pribadi atau brand yang ingin Anda jaga kerahasiaannya sebelum diposting. Batch ubah ukuran beberapa gambar untuk alur kerja yang efisien saat menyiapkan kalender konten.",
+      "faqs": [
+        {"question": "Berapa ukuran foto Instagram yang ideal?", "answer": "Posting kotak: 1080x1080px. Portrait: 1080x1350px. Landscape: 1080x608px. Stories/Reels: 1080x1920px."},
+        {"question": "Apakah Instagram mengompres foto saya?", "answer": "Ya, Instagram mengompres gambar yang diunggah. Memulai dengan gambar berkualitas tinggi dan ukuran yang benar membantu mempertahankan kualitas yang lebih baik setelah kompresi Instagram."},
+        {"question": "Bisakah saya mengubah ukuran tanpa kehilangan kualitas?", "answer": "Memperbesar gambar akan kehilangan kualitas. Untuk hasil terbaik, mulai dengan gambar yang lebih besar dari ukuran target Anda dan ubah ukuran ke bawah."}
+      ]
+    },
+    "resizeForFacebook": {
+      "title": "Ubah Ukuran Gambar untuk Facebook Online - Gratis & Tanpa Pendaftaran",
+      "metaDescription": "Ubah ukuran foto untuk posting Facebook, cover, dan foto profil. Dimensi sempurna untuk semua format Facebook. Gratis, tanpa pendaftaran, 100% pribadi.",
+      "h1": "Ubah Ukuran Gambar untuk Facebook",
+      "subtitle": "Dapatkan dimensi sempurna untuk posting Facebook, cover, dan profil. Cepat dan gratis.",
+      "ctaLabel": "Buka Pengubah Ukuran Gambar",
+      "ctaDescription": "Gunakan pengubah ukuran gambar lengkap kami dengan preset Facebook untuk mengubah ukuran foto Anda dengan sempurna.",
+      "contentTitle": "Panduan Ukuran Gambar Facebook",
+      "content": "Facebook memiliki persyaratan dimensi gambar tertentu untuk berbagai penggunaan. Menggunakan gambar dengan ukuran yang benar memastikan foto Anda ditampilkan dengan indah tanpa pemotongan yang janggal atau kehilangan kualitas. Pengubah ukuran gambar Facebook gratis kami membantu Anda mendapatkan hasil sempurna setiap saat.\n\nUntuk foto profil Facebook, gunakan 170x170 piksel (ditampilkan 170px di desktop, 128px di mobile). Foto cover harus 820x312 piksel untuk tampilan optimal. Gambar yang dibagikan di posting paling baik pada 1200x630 piksel untuk engagement maksimum.\n\nFoto cover event membutuhkan 1920x1005 piksel, sementara foto cover grup membutuhkan 1640x922 piksel. Gambar iklan Facebook memiliki persyaratan tersendiri tergantung format iklan—alat kami menangani semua dimensi preset ini.\n\nPengubah ukuran kami memproses semuanya secara lokal di browser Anda. Foto Anda tidak pernah meninggalkan perangkat, memastikan privasi untuk gambar pribadi dan bisnis. Batch ubah ukuran beberapa gambar sekaligus untuk manajemen media sosial yang efisien.",
+      "faqs": [
+        {"question": "Berapa ukuran foto profil Facebook yang ideal?", "answer": "Foto profil harus minimal 170x170 piksel. Facebook menampilkannya pada 170px di desktop dan 128px di smartphone."},
+        {"question": "Berapa ukuran foto cover Facebook?", "answer": "Foto cover Facebook harus 820x312 piksel. Ditampilkan pada 820x312 di desktop dan 640x360 di mobile."},
+        {"question": "Apakah Facebook mengompres gambar yang diunggah?", "answer": "Ya, Facebook mengompres gambar. Unggah gambar berkualitas tinggi pada dimensi yang benar untuk hasil terbaik setelah kompresi."}
+      ]
+    },
+    "cropCircle": {
+      "title": "Potong Gambar Menjadi Lingkaran Online Gratis - Pembuat Foto Profil Bulat",
+      "metaDescription": "Potong foto menjadi bentuk lingkaran online gratis. Sempurna untuk foto profil dan avatar. Tanpa pendaftaran, pemrosesan 100% di browser secara pribadi.",
+      "h1": "Potong Gambar Menjadi Lingkaran",
+      "subtitle": "Buat foto profil dan avatar bulat yang sempurna. Cepat, gratis, dan pribadi.",
+      "ctaLabel": "Buka Pemotong Gambar",
+      "ctaDescription": "Gunakan pemotong gambar lengkap kami dengan mode potong lingkaran untuk membuat gambar bulat yang sempurna.",
+      "contentTitle": "Cara Membuat Foto Profil Lingkaran",
+      "content": "Foto profil bulat sangat penting untuk platform media sosial, aplikasi pesan, dan profil profesional. Alat potong lingkaran gratis kami memudahkan pembuatan gambar bulat sempurna dari foto persegi panjang apa pun.\n\nCukup unggah gambar Anda dan pilih opsi potong lingkaran. Posisikan dan zoom untuk membingkai subjek Anda dengan sempurna, lalu potong untuk membuat gambar bulat. Alat ini mempertahankan kualitas tinggi sambil membuat lingkaran sempurna dengan latar belakang transparan.\n\nAvatar lingkaran sangat cocok untuk LinkedIn, Slack, Discord, WhatsApp, dan berbagai platform lainnya. Bahkan jika platform tidak memerlukan gambar bulat, foto profil melingkar sering terlihat lebih profesional dan menarik.\n\nPemotong lingkaran kami memproses semuanya di browser Anda—foto Anda tidak pernah meninggalkan perangkat. Ini sangat penting untuk foto headshot profesional dan foto pribadi. Unduh gambar melingkar Anda dalam format PNG untuk mempertahankan latar belakang transparan, atau JPG dengan latar belakang putih.",
+      "faqs": [
+        {"question": "Format apa yang harus saya gunakan untuk gambar lingkaran?", "answer": "Format PNG mempertahankan latar belakang transparan di sekitar lingkaran. JPG akan memiliki latar belakang putih atau berwarna."},
+        {"question": "Berapa ukuran foto profil yang ideal?", "answer": "Sebagian besar platform merekomendasikan minimal 400x400 piksel untuk foto profil. Alat kami mempertahankan kualitas pada ukuran apa pun yang Anda pilih."},
+        {"question": "Bisakah saya memotong bentuk apa pun menjadi lingkaran?", "answer": "Ya! Unggah gambar persegi panjang apa pun dan alat kami akan memungkinkan Anda memposisikan dan memotongnya menjadi lingkaran sempurna."}
+      ]
+    },
+    "convertWebpToJpg": {
+      "title": "Konversi WebP ke JPG Online Gratis - Konverter WebP ke JPEG",
+      "metaDescription": "Konversi gambar WebP ke JPG online gratis. Ubah file WebP ke format JPEG yang kompatibel secara universal. Tanpa pendaftaran, 100% pribadi.",
+      "h1": "Konversi WebP ke JPG Online Gratis",
+      "subtitle": "Ubah gambar WebP ke format JPG yang kompatibel secara universal dalam sekejap.",
+      "ctaLabel": "Buka Alat Konverter Lengkap",
+      "ctaDescription": "Gunakan konverter gambar lengkap kami untuk mengubah file WebP ke JPG dengan pengaturan kualitas yang dapat disesuaikan.",
+      "contentTitle": "Cara Mengonversi WebP ke JPG",
+      "content": "WebP adalah format gambar modern yang dikembangkan oleh Google yang menawarkan kompresi yang sangat baik. Namun, beberapa perangkat lunak, perangkat, dan situs web yang lebih lama tidak mendukung WebP. Konverter WebP ke JPG gratis kami menyelesaikan masalah kompatibilitas ini dengan cepat.\n\nCukup unggah gambar WebP Anda dan konversi ke format JPG yang kompatibel secara universal. Sesuaikan kualitas output untuk menyeimbangkan ukuran file dan kualitas gambar berdasarkan kebutuhan Anda. Konversi mempertahankan detail gambar sambil membuat file yang berfungsi di mana saja.\n\nKonversi WebP ke JPG sangat berguna saat Anda telah menyimpan gambar dari situs web (banyak yang sekarang menggunakan WebP) dan perlu menggunakannya di aplikasi yang lebih lama. Ini juga membantu untuk berbagi gambar dengan orang yang menggunakan perangkat atau perangkat lunak yang lebih lama.\n\nSemua pemrosesan terjadi secara lokal di browser Anda. Gambar Anda tidak pernah meninggalkan perangkat, memastikan privasi lengkap dan pemrosesan lebih cepat dari alat berbasis server. Batch konversi beberapa file WebP dan unduh secara individual atau sebagai arsip ZIP.",
+      "faqs": [
+        {"question": "Apa itu format WebP?", "answer": "WebP adalah format gambar modern yang dikembangkan oleh Google. Format ini menawarkan kompresi yang lebih baik dari JPG dan PNG sambil mendukung transparansi dan animasi."},
+        {"question": "Mengapa mengonversi WebP ke JPG?", "answer": "Meskipun WebP menawarkan kompresi yang lebih baik, JPG kompatibel secara universal. Konversi saat Anda perlu menggunakan gambar di perangkat lunak yang lebih lama atau berbagi dengan orang yang menggunakan perangkat lama."},
+        {"question": "Apakah konversi WebP ke JPG kehilangan kualitas?", "answer": "Ada sedikit kehilangan kualitas pada pengaturan kualitas tinggi. Karena WebP sudah terkompresi, konversi ke JPG mungkin sedikit meningkatkan ukuran file."}
+      ]
+    },
+    "resizeForLinkedin": {
+      "title": "Ubah Ukuran Gambar untuk LinkedIn Online - Gratis & Tanpa Pendaftaran",
+      "metaDescription": "Ubah ukuran foto untuk profil LinkedIn, banner, dan posting. Dimensi sempurna untuk jaringan profesional. Gratis, tanpa pendaftaran, 100% pribadi.",
+      "h1": "Ubah Ukuran Gambar untuk LinkedIn",
+      "subtitle": "Dapatkan dimensi sempurna untuk profil LinkedIn, banner, dan posting. Profesional dan gratis.",
+      "ctaLabel": "Buka Pengubah Ukuran Gambar",
+      "ctaDescription": "Gunakan pengubah ukuran gambar lengkap kami dengan preset LinkedIn untuk mengubah ukuran foto Anda dengan sempurna.",
+      "contentTitle": "Panduan Ukuran Gambar LinkedIn",
+      "content": "LinkedIn adalah jaringan profesional terbesar di dunia, dan kehadiran visual Anda sangat penting. Menggunakan gambar dengan ukuran yang benar memastikan profil Anda terlihat rapi dan profesional. Pengubah ukuran gambar LinkedIn gratis kami membantu Anda membuat gambar sempurna untuk setiap format LinkedIn.\n\nFoto profil LinkedIn harus minimal 400x400 piksel, ditampilkan sebagai lingkaran. Gambar latar belakang/banner harus 1584x396 piksel untuk tampilan optimal. Gambar yang dibagikan di posting paling baik pada 1200x627 piksel untuk memaksimalkan engagement.\n\nLogo halaman perusahaan harus 300x300 piksel, sementara gambar cover perusahaan membutuhkan 1128x191 piksel. Untuk artikel LinkedIn, ukuran gambar cover yang direkomendasikan adalah 1280x720 piksel.\n\nKehadiran LinkedIn yang profesional dapat sangat mempengaruhi peluang karier Anda. Pengubah ukuran kami memastikan foto headshot, banner, dan konten yang dibagikan selalu terlihat terbaik. Semua pemrosesan terjadi di browser Anda—foto profesional Anda tidak pernah meninggalkan perangkat.",
+      "faqs": [
+        {"question": "Berapa ukuran foto profil LinkedIn yang ideal?", "answer": "Foto profil LinkedIn harus minimal 400x400 piksel. Ditampilkan sebagai lingkaran, jadi pusatkan wajah Anda dalam bingkai."},
+        {"question": "Berapa ukuran banner LinkedIn?", "answer": "Gambar latar belakang/banner LinkedIn harus 1584x396 piksel untuk tampilan optimal di desktop dan mobile."},
+        {"question": "Ukuran gambar apa yang terbaik untuk posting LinkedIn?", "answer": "Untuk engagement maksimum, gunakan 1200x627 piksel untuk gambar yang dibagikan di posting LinkedIn."}
+      ]
+    },
+    "compressForEmail": {
+      "title": "Kompres Gambar untuk Email - Perkecil Ukuran Foto untuk Lampiran",
+      "metaDescription": "Kompres gambar untuk lampiran email. Perkecil ukuran file foto agar sesuai dengan batas email. Gratis, tanpa pendaftaran, pemrosesan 100% di browser secara pribadi.",
+      "h1": "Kompres Gambar untuk Email",
+      "subtitle": "Perkecil ukuran file foto untuk lampiran email. Mudah tetap di bawah batas ukuran.",
+      "contentTitle": "Cara Mengompres Gambar untuk Email",
+      "content": "Batas ukuran lampiran email adalah frustrasi umum saat berbagi foto. Gmail, Outlook, Yahoo, dan layanan email lainnya biasanya membatasi lampiran hingga 25MB, dan banyak server email perusahaan memiliki batas yang lebih ketat. Kompresor gambar email gratis kami membantu Anda tetap di bawah batas ini.\n\nAlat kami dapat mengurangi ukuran file gambar sebesar 50-90% sambil mempertahankan kualitas visual yang baik. Ini berarti Anda dapat melampirkan lebih banyak foto per email atau mengirim gambar resolusi tinggi yang seharusnya terlalu besar. Slider kualitas memungkinkan Anda menemukan keseimbangan yang sempurna.\n\nUntuk lampiran email, kami merekomendasikan mengompres gambar sekitar 70-80% kualitas. Ini memberikan pengurangan ukuran file yang signifikan sambil menjaga gambar terlihat bagus di layar. Penerima tidak akan melihat perbedaannya, tetapi email akan berhasil terkirim.\n\nSemua kompresi terjadi di browser Anda—foto Anda tidak pernah meninggalkan perangkat. Ini sangat penting untuk gambar pribadi atau bisnis yang sensitif. Batch kompres beberapa gambar dan unduh siap untuk dilampirkan ke email.",
+      "faqs": [
+        {"question": "Berapa batas ukuran lampiran email?", "answer": "Sebagian besar layanan email membatasi lampiran hingga total 25MB. Server email perusahaan sering memiliki batas yang lebih ketat 10-20MB."},
+        {"question": "Seberapa banyak saya harus mengompres gambar untuk email?", "answer": "Kami merekomendasikan kualitas 70-80% untuk email. Ini mengurangi ukuran file secara signifikan sambil mempertahankan kualitas visual yang baik untuk dilihat di layar."},
+        {"question": "Bisakah saya mengompres beberapa gambar untuk satu email?", "answer": "Ya! Batch kompres semua gambar Anda sekaligus. Alat kami akan mengurangi setiap ukuran file sehingga semuanya muat dalam batas email bersama-sama."}
+      ]
+    },
+    "enhancePhotoQuality": {
+      "title": "Tingkatkan Kualitas Foto Online Gratis - Perbaiki Kejernihan Gambar",
+      "metaDescription": "Tingkatkan kualitas foto online gratis. Perbaiki kecerahan, kontras, ketajaman, dan warna. Tingkatkan otomatis dengan satu klik. 100% pribadi.",
+      "h1": "Tingkatkan Kualitas Foto Online Gratis",
+      "subtitle": "Perbaiki kecerahan, kontras, ketajaman, dan warna secara instan. Tingkatkan otomatis dengan satu klik.",
+      "ctaLabel": "Buka Penambah Foto",
+      "ctaDescription": "Gunakan penambah foto lengkap kami dengan pengaturan yang dapat disesuaikan dan filter cepat.",
+      "contentTitle": "Cara Meningkatkan Kualitas Foto",
+      "content": "Tidak setiap foto keluar sempurna, tetapi penambah foto gratis kami dapat membantu memperbaiki gambar Anda hanya dengan beberapa penyesuaian. Baik foto Anda terlalu gelap, kurang kontras, atau membutuhkan warna yang lebih cerah, alat kami menyediakan opsi peningkatan yang mudah digunakan.\n\nPenambah foto kami mencakup slider yang dapat disesuaikan untuk kecerahan, kontras, saturasi, dan ketajaman. Fitur Tingkatkan Otomatis dengan satu klik secara otomatis menerapkan perbaikan yang seimbang untuk membuat foto Anda terlihat terbaik. Filter cepat seperti hitam putih, sepia, dan cerah memberikan efek kreatif instan.\n\nPenyesuaian ketajaman sangat berguna untuk foto yang sedikit buram atau gambar yang membutuhkan definisi detail lebih. Meningkatkan kontras membuat gambar lebih menonjol, sementara penyesuaian saturasi dapat membuat warna lebih cerah atau menciptakan tampilan yang lebih lembut dan sofistikated.\n\nSemua pemrosesan peningkatan terjadi secara lokal di browser Anda. Foto Anda tidak pernah meninggalkan perangkat, memastikan privasi lengkap. Ini sangat penting saat meningkatkan foto pribadi atau pekerjaan profesional. Unduh gambar yang ditingkatkan dalam format dan level kualitas pilihan Anda.",
+      "faqs": [
+        {"question": "Bisakah peningkatan foto memperbaiki gambar buram?", "answer": "Penyesuaian ketajaman dapat memperbaiki gambar yang sedikit kurang tajam, tetapi tidak dapat sepenuhnya memulihkan foto yang sangat buram atau tidak fokus."},
+        {"question": "Apa yang dilakukan Tingkatkan Otomatis?", "answer": "Tingkatkan Otomatis secara otomatis menyesuaikan kecerahan (+10%), kontras (+15%), saturasi (+10%), dan ketajaman (+20%) untuk perbaikan yang seimbang."},
+        {"question": "Apakah peningkatan mengurangi kualitas gambar?", "answer": "Peningkatan itu sendiri tidak mengurangi kualitas. Namun, penyesuaian yang berlebihan dapat membuat gambar terlihat tidak alami. Gunakan penyesuaian yang halus untuk hasil terbaik."}
+      ]
+    }
+  },
+  "footer": {
+    "popularTools": "Alat Populer",
+    "links": {
+      "compressJpg": "Kompres JPG",
+      "heicToJpg": "HEIC ke JPG",
+      "resizeInstagram": "Ubah Ukuran untuk Instagram",
+      "cropCircle": "Potong Lingkaran",
+      "compressEmail": "Kompres untuk Email"
+    }
   }
 }

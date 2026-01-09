@@ -606,6 +606,13 @@
     }
   },
   "footer": {
-    "popularTools": "Popular Tools"
+    "popularTools": "Popular Tools",
+    "links": {
+      "compressJpg": "Compress JPG",
+      "heicToJpg": "HEIC to JPG",
+      "resizeInstagram": "Resize for Instagram",
+      "cropCircle": "Circle Crop",
+      "compressEmail": "Compress for Email"
+    }
   }
 }
