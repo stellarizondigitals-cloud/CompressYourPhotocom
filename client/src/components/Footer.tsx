@@ -75,42 +75,42 @@ export function Footer() {
           </div>
 
           <div className="space-y-3">
-            <h4 className="font-medium text-sm">{t('footer.popularTools', 'Popular Tools')}</h4>
+            <h4 className="font-medium text-sm">{t('footer.popularTools')}</h4>
             <nav className="flex flex-col gap-2">
               <Link 
                 to="/compress-jpg" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-compress-jpg"
               >
-                {t('footer.links.compressJpg', 'Compress JPG')}
+                {t('footer.links.compressJpg')}
               </Link>
               <Link 
                 to="/convert-heic-to-jpg" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-heic-to-jpg"
               >
-                {t('footer.links.heicToJpg', 'HEIC to JPG')}
+                {t('footer.links.heicToJpg')}
               </Link>
               <Link 
                 to="/resize-for-instagram" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-instagram"
               >
-                {t('footer.links.resizeInstagram', 'Resize for Instagram')}
+                {t('footer.links.resizeInstagram')}
               </Link>
               <Link 
                 to="/crop-circle" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-crop-circle"
               >
-                {t('footer.links.cropCircle', 'Crop Circle')}
+                {t('footer.links.cropCircle')}
               </Link>
               <Link 
                 to="/compress-for-email" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-compress-email"
               >
-                {t('footer.links.compressEmail', 'Compress for Email')}
+                {t('footer.links.compressEmail')}
               </Link>
             </nav>
           </div>
