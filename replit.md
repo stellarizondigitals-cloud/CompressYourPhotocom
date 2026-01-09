@@ -10,6 +10,11 @@ The project follows a monorepo structure with a React frontend and Express backe
 
 Preferred communication style: Simple, everyday language.
 
+### Deployment Workflow
+- **NEVER suggest Replit publish/deploy** - User deploys via Git + Vercel auto-deploy (free tier)
+- Git commits auto-sync to repository → Vercel auto-deploys → Live at compressyourphoto.com
+- **Maximize cost efficiency** - Be concise, batch operations, minimize back-and-forth
+
 ### Domain & Hosting
 - **Domain Registrar**: IONOS (all domains purchased from IONOS)
 - **Production Hosting**: Vercel (free tier)
