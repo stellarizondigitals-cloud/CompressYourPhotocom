@@ -6,6 +6,7 @@
   "hero": {
     "headline": "اضغط صورك",
     "subheadline": "ضغط صور سريع وخاص ومجاني",
+    "subheadlineExpanded": "اضغط وغيّر حجم وحوّل وقص وحسّن صورك—مجاني 100%، خاص، ويعمل على أي جهاز. لا حاجة للتسجيل.",
     "dropzone": "اسحب الصور هنا أو انقر للتحميل",
     "supportedFormats": "يدعم JPG، PNG، WebP، HEIC، GIF",
     "clientSide": "100% على جهازك",

@@ -6,6 +6,7 @@
   "hero": {
     "headline": "Komprimiere Deine Fotos",
     "subheadline": "Schnelle, private und kostenlose Bildkomprimierung",
+    "subheadlineExpanded": "Komprimieren, skalieren, konvertieren, zuschneiden und verbessern Sie Ihre Fotos—100% kostenlos, privat und funktioniert auf jedem Gerät. Keine Anmeldung erforderlich.",
     "dropzone": "Fotos hier ablegen oder klicken zum Hochladen",
     "supportedFormats": "Unterstützt JPG, PNG, WebP, HEIC, GIF",
     "clientSide": "100% clientseitig",

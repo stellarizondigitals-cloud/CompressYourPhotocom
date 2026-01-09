@@ -6,6 +6,7 @@
   "hero": {
     "headline": "Compressez Vos Photos",
     "subheadline": "Compression d'images rapide, privée et gratuite",
+    "subheadlineExpanded": "Compressez, redimensionnez, convertissez, recadrez et améliorez vos photos—100% gratuit, privé et fonctionne sur tout appareil. Aucune inscription requise.",
     "dropzone": "Déposez vos photos ici ou cliquez pour télécharger",
     "supportedFormats": "Supporte JPG, PNG, WebP, HEIC, GIF",
     "clientSide": "100% côté client",

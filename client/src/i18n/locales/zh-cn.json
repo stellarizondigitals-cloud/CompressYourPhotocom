@@ -6,6 +6,7 @@
   "hero": {
     "headline": "压缩您的照片",
     "subheadline": "快速、私密、免费的图片压缩",
+    "subheadlineExpanded": "压缩、调整大小、转换、裁剪和增强您的照片—100%免费、私密，适用于任何设备。无需注册。",
     "dropzone": "将照片拖放到此处或点击上传",
     "supportedFormats": "支持 JPG、PNG、WebP、HEIC、GIF",
     "clientSide": "100% 客户端处理",
