@@ -3,6 +3,12 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/ads.txt", "destination": "/ads.txt" },
+    { "source": "/e3a0aef5b84b44a6837f59055f4d868a.txt", "destination": "/e3a0aef5b84b44a6837f59055f4d868a.txt" },
+    { "source": "/site.webmanifest", "destination": "/site.webmanifest" },
+    { "source": "/favicon.ico", "destination": "/favicon.ico" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
