@@ -25,6 +25,17 @@ import NotFound from "@/pages/not-found";
 import { initAnalytics, trackPageView } from "@/lib/analytics";
 import { CookieConsent } from "@/components/CookieConsent";
 
+import CompressJpg from "@/pages/seo/CompressJpg";
+import CompressPng from "@/pages/seo/CompressPng";
+import ConvertHeicToJpg from "@/pages/seo/ConvertHeicToJpg";
+import ResizeForInstagram from "@/pages/seo/ResizeForInstagram";
+import ResizeForFacebook from "@/pages/seo/ResizeForFacebook";
+import CropCircle from "@/pages/seo/CropCircle";
+import ConvertWebpToJpg from "@/pages/seo/ConvertWebpToJpg";
+import ResizeForLinkedin from "@/pages/seo/ResizeForLinkedin";
+import CompressForEmail from "@/pages/seo/CompressForEmail";
+import EnhancePhotoQuality from "@/pages/seo/EnhancePhotoQuality";
+
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
@@ -63,6 +74,16 @@ function AppRoutes() {
           <Route key={`${lang}-convert`} path={`${prefix}/convert`} element={<Layout><Convert /></Layout>} />,
           <Route key={`${lang}-crop`} path={`${prefix}/crop`} element={<Layout><CropPage /></Layout>} />,
           <Route key={`${lang}-enhance`} path={`${prefix}/enhance`} element={<Layout><EnhancePage /></Layout>} />,
+          <Route key={`${lang}-compress-jpg`} path={`${prefix}/compress-jpg`} element={<Layout><CompressJpg /></Layout>} />,
+          <Route key={`${lang}-compress-png`} path={`${prefix}/compress-png`} element={<Layout><CompressPng /></Layout>} />,
+          <Route key={`${lang}-convert-heic-to-jpg`} path={`${prefix}/convert-heic-to-jpg`} element={<Layout><ConvertHeicToJpg /></Layout>} />,
+          <Route key={`${lang}-resize-for-instagram`} path={`${prefix}/resize-for-instagram`} element={<Layout><ResizeForInstagram /></Layout>} />,
+          <Route key={`${lang}-resize-for-facebook`} path={`${prefix}/resize-for-facebook`} element={<Layout><ResizeForFacebook /></Layout>} />,
+          <Route key={`${lang}-crop-circle`} path={`${prefix}/crop-circle`} element={<Layout><CropCircle /></Layout>} />,
+          <Route key={`${lang}-convert-webp-to-jpg`} path={`${prefix}/convert-webp-to-jpg`} element={<Layout><ConvertWebpToJpg /></Layout>} />,
+          <Route key={`${lang}-resize-for-linkedin`} path={`${prefix}/resize-for-linkedin`} element={<Layout><ResizeForLinkedin /></Layout>} />,
+          <Route key={`${lang}-compress-for-email`} path={`${prefix}/compress-for-email`} element={<Layout><CompressForEmail /></Layout>} />,
+          <Route key={`${lang}-enhance-photo-quality`} path={`${prefix}/enhance-photo-quality`} element={<Layout><EnhancePhotoQuality /></Layout>} />,
         ];
       })}
       <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />

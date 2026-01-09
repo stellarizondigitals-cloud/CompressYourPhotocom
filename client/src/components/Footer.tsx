@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="border-t bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-        <div className={`grid grid-cols-1 md:grid-cols-5 gap-8 ${isRTL ? 'text-right' : ''}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 ${isRTL ? 'text-right' : ''}`}>
           <div className="space-y-3">
             <Link to="/" className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
               <img src="/brand/logo-mark.svg" alt="CompressYourPhoto" className="h-8 w-8" />
@@ -70,6 +70,47 @@ export function Footer() {
                 data-testid="link-how-it-works"
               >
                 {t('footer.howItWorks')}
+              </Link>
+            </nav>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="font-medium text-sm">{t('footer.popularTools', 'Popular Tools')}</h4>
+            <nav className="flex flex-col gap-2">
+              <Link 
+                to="/compress-jpg" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-compress-jpg"
+              >
+                Compress JPG
+              </Link>
+              <Link 
+                to="/convert-heic-to-jpg" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-heic-to-jpg"
+              >
+                HEIC to JPG
+              </Link>
+              <Link 
+                to="/resize-for-instagram" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-instagram"
+              >
+                Resize for Instagram
+              </Link>
+              <Link 
+                to="/crop-circle" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-crop-circle"
+              >
+                Crop Circle
+              </Link>
+              <Link 
+                to="/compress-for-email" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-compress-email"
+              >
+                Compress for Email
               </Link>
             </nav>
           </div>

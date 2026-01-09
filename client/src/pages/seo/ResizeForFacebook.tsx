@@ -1,11 +1,14 @@
-import { ImageCompressor } from '@/components/ImageCompressor';
 import { SEOLandingPage } from '@/components/SEOLandingPage';
 
 export default function ResizeForFacebook() {
   return (
     <SEOLandingPage
       slug="resizeForFacebook"
-      toolComponent={<ImageCompressor />}
+      cta={{
+        href: '/resize',
+        labelKey: 'seoPages.resizeForFacebook.ctaLabel',
+        descriptionKey: 'seoPages.resizeForFacebook.ctaDescription'
+      }}
       parentTool="resize"
     />
   );

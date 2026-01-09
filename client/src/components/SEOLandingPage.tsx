@@ -1,7 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import { Shield, ChevronDown, ChevronUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Shield, ChevronDown, ChevronUp, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
@@ -12,9 +14,16 @@ interface FAQ {
   answer: string;
 }
 
+interface CTAConfig {
+  href: string;
+  labelKey: string;
+  descriptionKey: string;
+}
+
 interface SEOLandingPageProps {
   slug: string;
-  toolComponent: React.ReactNode;
+  toolComponent?: React.ReactNode;
+  cta?: CTAConfig;
   parentTool: 'compress' | 'resize' | 'convert' | 'crop' | 'enhance';
   formats?: string[];
 }
@@ -24,12 +33,18 @@ const defaultFormats = ['JPG', 'PNG', 'WebP', 'HEIC', 'GIF'];
 export function SEOLandingPage({ 
   slug, 
   toolComponent, 
+  cta,
   parentTool,
   formats = defaultFormats 
 }: SEOLandingPageProps) {
   const { t } = useTranslation();
-  const { isRTL } = useLanguage();
+  const { isRTL, currentLanguage } = useLanguage();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  
+  const getLocalizedPath = (path: string) => {
+    if (currentLanguage.code === 'en') return path;
+    return `/${currentLanguage.code}${path}`;
+  };
 
   const title = t(`seoPages.${slug}.title`);
   const metaDescription = t(`seoPages.${slug}.metaDescription`);
@@ -57,9 +72,25 @@ export function SEOLandingPage({
               </p>
             </div>
 
-            <div className="max-w-[800px] mx-auto mb-6">
-              {toolComponent}
-            </div>
+            {toolComponent ? (
+              <div className="max-w-[800px] mx-auto mb-6">
+                {toolComponent}
+              </div>
+            ) : cta ? (
+              <div className="max-w-[600px] mx-auto mb-6 text-center">
+                <Card className="p-8">
+                  <p className="text-muted-foreground mb-6">
+                    {t(cta.descriptionKey)}
+                  </p>
+                  <Button asChild size="lg" className="gap-2" data-testid={`cta-${slug}`}>
+                    <Link to={getLocalizedPath(cta.href)}>
+                      {t(cta.labelKey)}
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </Button>
+                </Card>
+              </div>
+            ) : null}
 
             <div className="max-w-[800px] mx-auto text-center space-y-4 mb-8">
               <p className="text-sm text-muted-foreground" data-testid="text-supported-formats">

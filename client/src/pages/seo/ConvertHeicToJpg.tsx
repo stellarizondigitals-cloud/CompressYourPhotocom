@@ -1,11 +1,14 @@
-import { ImageCompressor } from '@/components/ImageCompressor';
 import { SEOLandingPage } from '@/components/SEOLandingPage';
 
 export default function ConvertHeicToJpg() {
   return (
     <SEOLandingPage
       slug="convertHeicToJpg"
-      toolComponent={<ImageCompressor />}
+      cta={{
+        href: '/convert',
+        labelKey: 'seoPages.convertHeicToJpg.ctaLabel',
+        descriptionKey: 'seoPages.convertHeicToJpg.ctaDescription'
+      }}
       parentTool="convert"
       formats={['HEIC', 'HEIF', 'JPG']}
     />
