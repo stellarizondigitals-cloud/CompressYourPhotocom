@@ -317,6 +317,13 @@
     "title": "Related Tools"
   },
   "tools": {
+    "popularUseCases": {
+      "links": {
+        "resizeSocial": "Resize for Social Media",
+        "compressShare": "Compress for Sharing",
+        "cropThumbnails": "Crop for Thumbnails"
+      }
+    },
     "compress": {
       "navLabel": "Compress",
       "cardTitle": "Compress Images",
@@ -326,7 +333,21 @@
       "pageTitle": "Compress Images Online Free | Reduce JPG PNG WebP Size | CompressYourPhoto",
       "metaDescription": "Compress images online for free. Reduce JPG, PNG, WebP, HEIC, GIF file size by up to 90%. Fast, private, browser-based compression. No upload to servers.",
       "aboutTitle": "About Our Free Image Compressor",
-      "aboutContent": "CompressYourPhoto's image compression tool uses advanced browser-based algorithms to reduce your photo file sizes by up to 90% while preserving visual quality. Unlike traditional online compressors that upload your images to remote servers, our tool processes everything locally in your web browser using JavaScript. This means your photos never leave your device—guaranteed 100% privacy. Our compressor supports all popular image formats including JPG, JPEG, PNG, WebP, HEIC (iPhone photos), and GIF. Whether you need to compress images for email attachments, website optimization, social media uploads, or simply to save storage space, our tool delivers professional results instantly. The adjustable quality slider lets you find the perfect balance between file size and image quality. Batch processing allows you to compress multiple images simultaneously, and you can download them individually or as a convenient ZIP file. CompressYourPhoto works on all devices—desktop computers, laptops, tablets, and mobile phones—with no software installation required."
+      "aboutContent": "CompressYourPhoto's image compression tool uses advanced browser-based algorithms to reduce your photo file sizes by up to 90% while preserving visual quality. Unlike traditional online compressors that upload your images to remote servers, our tool processes everything locally in your web browser using JavaScript. This means your photos never leave your device—guaranteed 100% privacy. Our compressor supports all popular image formats including JPG, JPEG, PNG, WebP, HEIC (iPhone photos), and GIF. Whether you need to compress images for email attachments, website optimization, social media uploads, or simply to save storage space, our tool delivers professional results instantly. The adjustable quality slider lets you find the perfect balance between file size and image quality. Batch processing allows you to compress multiple images simultaneously, and you can download them individually or as a convenient ZIP file. CompressYourPhoto works on all devices—desktop computers, laptops, tablets, and mobile phones—with no software installation required.",
+      "popularUseCases": {
+        "title": "Popular Use Cases",
+        "summary": "Compress photos for faster sharing on Instagram, Facebook, X (Twitter), TikTok, YouTube, and LinkedIn. Perfect for WhatsApp, Telegram, and Pinterest sharing. Reduce product image sizes for Etsy, eBay, and Amazon listings.",
+        "bullets": [
+          "Instagram & Facebook posts and stories",
+          "X (Twitter) and LinkedIn profile photos",
+          "YouTube thumbnails and channel art",
+          "TikTok and Snapchat content",
+          "WhatsApp and Telegram media sharing",
+          "Pinterest pins and boards",
+          "Etsy, eBay & Amazon product photos",
+          "Email attachments under 25MB"
+        ]
+      }
     },
     "resize": {
       "navLabel": "Resize",
@@ -338,6 +359,20 @@
       "metaDescription": "Free online image resizer. Resize photos by pixels, percentage, or social media presets (Instagram, YouTube, LinkedIn). Works on any device.",
       "aboutTitle": "About Our Free Image Resizer",
       "aboutContent": "CompressYourPhoto's image resizer is a powerful, privacy-first tool that lets you change photo dimensions instantly in your browser. Whether you need to resize images for Instagram posts (1080x1080), YouTube thumbnails (1280x720), LinkedIn banners, Facebook covers, or custom dimensions, our tool has you covered. Choose from three flexible resize modes: exact pixel dimensions for precise control, percentage scaling to proportionally enlarge or shrink images, or convenient social media presets that automatically apply the correct dimensions for popular platforms. The aspect ratio lock ensures your photos don't get stretched or distorted during resizing. All processing happens locally in your web browser—your images are never uploaded to any server, guaranteeing complete privacy. Our resizer supports JPG, PNG, WebP, HEIC, and GIF formats, and works seamlessly on desktop computers, tablets, and mobile phones. Batch processing lets you resize multiple images at once, saving valuable time. Download your resized images individually or as a ZIP file.",
+      "popularUseCases": {
+        "title": "Popular Use Cases",
+        "summary": "Resize photos to exact dimensions for Instagram (1080x1080), Facebook covers, X (Twitter) headers, YouTube thumbnails, and TikTok. Get perfect sizes for LinkedIn profiles, WhatsApp status, Pinterest pins, and Snapchat stories.",
+        "bullets": [
+          "Instagram posts (1080x1080) and stories (1080x1920)",
+          "Facebook profile pictures and cover photos",
+          "X (Twitter) headers and profile images",
+          "YouTube thumbnails (1280x720) and banners",
+          "TikTok and Snapchat video thumbnails",
+          "LinkedIn profile and banner images",
+          "Pinterest pins and WhatsApp status",
+          "Etsy, eBay & Amazon product listings"
+        ]
+      },
       "options": "Resize Options",
       "mode": "Resize Mode",
       "byDimensions": "By Dimensions (pixels)",
@@ -362,6 +397,20 @@
       "metaDescription": "Free image format converter. Convert HEIC to JPG, PNG to WebP, JPG to PNG online. Perfect for iPhone photos. No upload required.",
       "aboutTitle": "About Our Free Image Format Converter",
       "aboutContent": "CompressYourPhoto's image format converter makes it easy to convert photos between different file formats directly in your browser. Our tool is especially popular for converting HEIC to JPG—perfect for iPhone and iPad users who need their photos in a universally compatible format. Convert PNG to WebP for smaller file sizes and faster website loading, or change JPG to PNG when you need transparency support. We support conversions between JPG, JPEG, PNG, WebP, HEIC, HEIF, GIF, and BMP formats. The adjustable quality slider lets you control the output file size and image quality for lossy formats like JPG and WebP. All conversions happen locally in your browser using advanced JavaScript libraries—your photos never leave your device, ensuring complete privacy and security. Batch conversion allows you to process multiple images simultaneously, and you can download results individually or as a ZIP file. Our converter works on all devices including Windows, Mac, Linux, Android, and iOS.",
+      "popularUseCases": {
+        "title": "Popular Use Cases",
+        "summary": "Convert HEIC iPhone photos to JPG for sharing on Instagram, Facebook, and X (Twitter). Transform PNG to WebP for faster websites. Convert images for YouTube, TikTok, LinkedIn, Pinterest, and e-commerce platforms like Etsy and Amazon.",
+        "bullets": [
+          "iPhone HEIC to JPG for all platforms",
+          "PNG to WebP for faster websites",
+          "Instagram and Facebook compatible formats",
+          "X (Twitter) and LinkedIn image conversion",
+          "YouTube and TikTok thumbnail formats",
+          "WhatsApp, Telegram & Snapchat sharing",
+          "Pinterest and e-commerce listings",
+          "Etsy, eBay & Amazon product images"
+        ]
+      },
       "options": "Conversion Options",
       "outputFormat": "Output Format",
       "quality": "Output Quality",
@@ -379,6 +428,20 @@
       "metaDescription": "Free online image cropper. Crop photos for Instagram, YouTube thumbnails, Stories, or create circle avatars. Works on mobile and desktop.",
       "aboutTitle": "About Our Free Image Cropper",
       "aboutContent": "CompressYourPhoto's image cropping tool provides an intuitive way to crop photos for any purpose—all within your browser. Our cropper includes popular aspect ratio presets for social media platforms: square 1:1 for Instagram posts and profile pictures, 16:9 for YouTube thumbnails and desktop wallpapers, 9:16 for Instagram Stories and TikTok, 4:3 for standard photos, and freeform cropping for custom dimensions. The circle crop feature is perfect for creating round profile pictures and avatars. Our interactive crop interface lets you drag, zoom, and position your image precisely to get the perfect crop every time. All processing happens locally in your web browser—your photos never leave your device, guaranteeing 100% privacy. We support cropping JPG, PNG, WebP, HEIC, and GIF images. The tool works flawlessly on desktop computers, tablets, and mobile phones with touch-friendly controls. After cropping, download your image in your preferred format with adjustable quality settings.",
+      "popularUseCases": {
+        "title": "Popular Use Cases",
+        "summary": "Crop photos for Instagram squares (1:1), YouTube thumbnails (16:9), TikTok and Instagram Stories (9:16). Create circle avatars for LinkedIn, Facebook, X (Twitter), and WhatsApp. Perfect cropping for Pinterest, Snapchat, and product photos.",
+        "bullets": [
+          "Instagram posts (1:1) and stories (9:16)",
+          "YouTube thumbnails and channel banners",
+          "TikTok and Snapchat video covers",
+          "Facebook and LinkedIn profile pictures",
+          "X (Twitter) headers and avatars",
+          "WhatsApp and Telegram profile photos",
+          "Pinterest pins and boards",
+          "Etsy & Amazon circular product icons"
+        ]
+      },
       "options": "Crop Options",
       "aspectRatio": "Aspect Ratio",
       "zoom": "Zoom Level",
@@ -396,6 +459,20 @@
       "metaDescription": "Improve your photo quality instantly. Adjust brightness, contrast, saturation, and sharpness for free. 100% private and client-side.",
       "aboutTitle": "About Our Free Photo Enhancer",
       "aboutContent": "CompressYourPhoto's photo enhancement tool helps you improve image quality with professional-grade adjustments—all processed locally in your browser. Adjust brightness to lighten or darken photos, increase contrast to make images pop, boost saturation for more vibrant colors, and sharpen details for crystal-clear results. Our Auto-Enhance feature automatically analyzes your photo and applies optimal adjustments with one click. Apply creative filters including Black & White for dramatic monochrome effects, Sepia for a classic vintage look, and Vivid for extra-punchy colors. The real-time preview shows your changes instantly, and you can fine-tune each parameter using intuitive sliders. All enhancements happen entirely in your web browser—your photos never leave your device, ensuring complete privacy. We support enhancing JPG, PNG, WebP, and HEIC images. The tool works on all devices including Windows, Mac, Android, and iOS. Download your enhanced photos in your choice of format with adjustable quality settings.",
+      "popularUseCases": {
+        "title": "Popular Use Cases",
+        "summary": "Enhance photos for Instagram, Facebook, and TikTok with vibrant colors. Improve LinkedIn profile photos and YouTube thumbnails. Perfect brightness and contrast for X (Twitter), Pinterest, and Snapchat. Enhance product images for Etsy, eBay, and Amazon.",
+        "bullets": [
+          "Instagram and TikTok content enhancement",
+          "Facebook photos with vibrant colors",
+          "LinkedIn professional headshots",
+          "YouTube thumbnails that pop",
+          "X (Twitter) and Pinterest visual appeal",
+          "WhatsApp, Telegram & Snapchat quality",
+          "Etsy, eBay & Amazon product photos",
+          "Wedding and event photo improvement"
+        ]
+      },
       "options": "Enhancement Options",
       "autoEnhance": "Auto-Enhance",
       "brightness": "Brightness",
