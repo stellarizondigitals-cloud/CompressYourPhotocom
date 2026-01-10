@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import JSZip from 'jszip';
 import { Upload, Download, Loader2, CheckCircle, AlertCircle, Trash2, Archive, Shield, Maximize } from 'lucide-react';
-import { downloadFile, downloadFileFromFile } from '@/lib/download';
+import { triggerDownload } from '@/lib/download';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -219,7 +219,7 @@ export default function Resize() {
 
   const handleDownloadFile = (file: ImageFile) => {
     if (!file.resizedFile) return;
-    downloadFileFromFile(file.resizedFile);
+    triggerDownload(file.resizedFile, file.resizedFile.name);
   };
 
   const downloadAllAsZip = async () => {
@@ -230,7 +230,7 @@ export default function Resize() {
       if (file.resizedFile) zip.file(file.resizedFile.name, file.resizedFile);
     });
     const blob = await zip.generateAsync({ type: 'blob' });
-    downloadFile(blob, 'resized-photos.zip');
+    triggerDownload(blob, 'resized-photos.zip');
   };
 
   const clearAll = () => setFiles([]);

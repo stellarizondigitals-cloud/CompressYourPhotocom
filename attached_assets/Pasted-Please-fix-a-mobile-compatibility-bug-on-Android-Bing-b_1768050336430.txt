@@ -1,0 +1,56 @@
+Please fix a mobile compatibility bug: on Android Bing browser, when users click “Download” after converting an image, nothing happens. On mobile Chrome it works. This suggests the current download implementation is not compatible with Bing/WebView.
+
+Requirements
+Make downloads work reliably on mobile Bing, Chrome, Samsung Internet, and iOS Safari.
+Support:
+Single file download (converted image)
+Batch ZIP download (if present)
+Keep current UX, but ensure the final “Download” action is triggered in a way that preserves a user gesture and avoids blocked programmatic clicks.
+Implementation guidance (do all of this)
+Locate the existing download helper/util (e.g. downloadFile, downloadBlob, saveAs, etc.) used by Convert tool and other tools.
+Replace the download logic with a robust cross-browser strategy:
+Strategy
+Primary method:
+Create an <a> element with href = objectURL and download = filename
+Append to DOM
+Call a.click() immediately inside the same synchronous click handler if possible
+Remove element
+Important: On some WebViews/Bing, a.click() may fail silently.
+Add a fallback: window.location.href = objectURL (or window.open(objectURL, "_self")) when a.click() does not start a download.
+Ensure the objectURL is not revoked too early:
+Delay URL.revokeObjectURL(objectURL) by at least 30–60 seconds (or after a timeout), not immediately after click.
+Ensure the download click is truly user-initiated:
+The “Download” button should call the download function synchronously.
+If conversion is async, store the result blob in state first, then the user clicks Download as a separate action. Do not auto-download after async work on Bing.
+If ZIP downloads are used:
+Confirm ZIP is generated as a Blob (application/zip)
+Use the same robust download method above
+Same delayed revoke rule
+Add debug logging (temporary):
+Log userAgent and which download path was used (anchor vs fallback)
+Keep logs behind a if (import.meta.env.DEV) guard
+Acceptance tests
+On Android Bing:
+Convert an image → click Download → file downloads
+On Android Chrome:
+Still works
+On iPhone Safari:
+Download either triggers share sheet or downloads (acceptable), but must not do nothing
+No console errors in production build
+After implementing, run the app, test locally, then commit with message:
+Fix mobile Bing download fallback
+
+Why this will fix it (in plain terms)
+Bing mobile sometimes blocks the “synthetic click download” pattern unless:
+
+it’s directly tied to a user click, and/or
+you use a navigation fallback, and/or
+you don’t revoke the blob URL too quickly.
+This prompt forces your implementation to satisfy all three.
+
+One more thing (very important)
+If your current flow is auto-downloading immediately after conversion completes, change it to:
+
+show a Download button once the blob is ready,
+then download only when the user taps.
+That single change fixes a huge chunk of WebView/Bing failures.

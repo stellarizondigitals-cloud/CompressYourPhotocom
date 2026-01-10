@@ -1,7 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Upload, Download, Loader2, Shield, Sparkles, RotateCcw, Sun, Contrast, Palette, Focus } from 'lucide-react';
-import { downloadFile } from '@/lib/download';
+import { triggerDownload } from '@/lib/download';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
@@ -213,7 +213,7 @@ export default function EnhancePage() {
           if (blob) {
             const ext = outputFormat === 'png' ? 'png' : 'jpg';
             const newName = originalFile.name.replace(/\.[^/.]+$/, '') + `_enhanced.${ext}`;
-            downloadFile(blob, newName);
+            triggerDownload(blob, newName);
           }
           setIsProcessing(false);
         },

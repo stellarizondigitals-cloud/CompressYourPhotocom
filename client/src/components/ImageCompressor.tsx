@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import imageCompression from 'browser-image-compression';
 import JSZip from 'jszip';
 import { Upload, Download, Loader2, CheckCircle, AlertCircle, Trash2, Archive } from 'lucide-react';
-import { downloadFile, downloadFileFromFile } from '@/lib/download';
+import { triggerDownload } from '@/lib/download';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -157,7 +157,7 @@ export function ImageCompressor() {
 
   const handleDownloadFile = (file: ImageFile) => {
     if (!file.compressedFile) return;
-    downloadFileFromFile(file.compressedFile);
+    triggerDownload(file.compressedFile, file.compressedFile.name);
   };
 
   const downloadAllAsZip = async () => {
@@ -172,7 +172,7 @@ export function ImageCompressor() {
     });
 
     const blob = await zip.generateAsync({ type: 'blob' });
-    downloadFile(blob, 'compressed-photos.zip');
+    triggerDownload(blob, 'compressed-photos.zip');
   };
 
   const clearAll = () => {
