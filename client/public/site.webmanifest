@@ -34,7 +34,7 @@
       "purpose": "any maskable"
     },
     {
-      "src": "/favicon.png",
+      "src": "/android-chrome-512x512-v4.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

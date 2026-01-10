@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import JSZip from 'jszip';
 import { Upload, Download, Loader2, CheckCircle, AlertCircle, Trash2, Archive, Shield, RefreshCw } from 'lucide-react';
+import { downloadFile, downloadFileFromFile } from '@/lib/download';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -160,16 +161,9 @@ export default function Convert() {
     setCurrentIndex(0);
   };
 
-  const downloadFile = (file: ImageFile) => {
+  const handleDownloadFile = (file: ImageFile) => {
     if (!file.convertedFile) return;
-    const url = URL.createObjectURL(file.convertedFile);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = file.convertedFile.name;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    downloadFileFromFile(file.convertedFile);
   };
 
   const downloadAllAsZip = async () => {
@@ -180,14 +174,7 @@ export default function Convert() {
       if (file.convertedFile) zip.file(file.convertedFile.name, file.convertedFile);
     });
     const blob = await zip.generateAsync({ type: 'blob' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'converted-photos.zip';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    downloadFile(blob, 'converted-photos.zip');
   };
 
   const clearAll = () => setFiles([]);
@@ -307,7 +294,7 @@ export default function Convert() {
                               </div>
                             </div>
                             <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                              {file.status === 'done' && (<Button variant="outline" size="sm" onClick={() => downloadFile(file)} data-testid={`button-download-convert-${file.id}`}><Download className="w-4 h-4 mr-1" />{t('compression.download', 'Download')}</Button>)}
+                              {file.status === 'done' && (<Button variant="outline" size="sm" onClick={() => handleDownloadFile(file)} data-testid={`button-download-convert-${file.id}`}><Download className="w-4 h-4 mr-1" />{t('compression.download', 'Download')}</Button>)}
                               <Button variant="ghost" size="icon" onClick={() => removeFile(file.id)} className="text-muted-foreground" data-testid={`button-remove-convert-${file.id}`}><Trash2 className="w-4 h-4" /></Button>
                             </div>
                           </div>

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Cropper from 'react-easy-crop';
 import type { Area, Point } from 'react-easy-crop';
 import { Upload, Download, Loader2, Shield, Crop as CropIcon, RotateCcw } from 'lucide-react';
+import { downloadFile } from '@/lib/download';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
@@ -139,14 +140,7 @@ export default function CropPage() {
       const croppedBlob = await getCroppedImage(imageSrc, croppedAreaPixels, isCircle);
       const ext = isCircle ? 'png' : 'jpg';
       const newName = originalFile.name.replace(/\.[^/.]+$/, '') + `_cropped.${ext}`;
-      const url = URL.createObjectURL(croppedBlob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = newName;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+      downloadFile(croppedBlob, newName);
     } catch (error) {
       console.error('Crop failed:', error);
     }

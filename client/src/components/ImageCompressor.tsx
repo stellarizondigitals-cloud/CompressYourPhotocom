@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import imageCompression from 'browser-image-compression';
 import JSZip from 'jszip';
 import { Upload, Download, Loader2, CheckCircle, AlertCircle, Trash2, Archive } from 'lucide-react';
+import { downloadFile, downloadFileFromFile } from '@/lib/download';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -154,16 +155,9 @@ export function ImageCompressor() {
     setCurrentIndex(0);
   };
 
-  const downloadFile = (file: ImageFile) => {
+  const handleDownloadFile = (file: ImageFile) => {
     if (!file.compressedFile) return;
-    const url = URL.createObjectURL(file.compressedFile);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = file.compressedFile.name;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    downloadFileFromFile(file.compressedFile);
   };
 
   const downloadAllAsZip = async () => {
@@ -178,14 +172,7 @@ export function ImageCompressor() {
     });
 
     const blob = await zip.generateAsync({ type: 'blob' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'compressed-photos.zip';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    downloadFile(blob, 'compressed-photos.zip');
   };
 
   const clearAll = () => {
@@ -407,7 +394,7 @@ export function ImageCompressor() {
                         <Button
                           variant="outline"
                           size="sm"
-                          onClick={() => downloadFile(file)}
+                          onClick={() => handleDownloadFile(file)}
                           data-testid={`button-download-${file.id}`}
                         >
                           <Download className="w-4 h-4 mr-1" />

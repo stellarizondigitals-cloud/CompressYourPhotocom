@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import JSZip from 'jszip';
 import { Upload, Download, Loader2, CheckCircle, AlertCircle, Trash2, Archive, Shield, Maximize } from 'lucide-react';
+import { downloadFile, downloadFileFromFile } from '@/lib/download';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -216,16 +217,9 @@ export default function Resize() {
     setCurrentIndex(0);
   };
 
-  const downloadFile = (file: ImageFile) => {
+  const handleDownloadFile = (file: ImageFile) => {
     if (!file.resizedFile) return;
-    const url = URL.createObjectURL(file.resizedFile);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = file.resizedFile.name;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    downloadFileFromFile(file.resizedFile);
   };
 
   const downloadAllAsZip = async () => {
@@ -236,14 +230,7 @@ export default function Resize() {
       if (file.resizedFile) zip.file(file.resizedFile.name, file.resizedFile);
     });
     const blob = await zip.generateAsync({ type: 'blob' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'resized-photos.zip';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    downloadFile(blob, 'resized-photos.zip');
   };
 
   const clearAll = () => setFiles([]);
@@ -393,7 +380,7 @@ export default function Resize() {
                               </div>
                             </div>
                             <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                              {file.status === 'done' && (<Button variant="outline" size="sm" onClick={() => downloadFile(file)} data-testid={`button-download-resize-${file.id}`}><Download className="w-4 h-4 mr-1" />{t('compression.download', 'Download')}</Button>)}
+                              {file.status === 'done' && (<Button variant="outline" size="sm" onClick={() => handleDownloadFile(file)} data-testid={`button-download-resize-${file.id}`}><Download className="w-4 h-4 mr-1" />{t('compression.download', 'Download')}</Button>)}
                               <Button variant="ghost" size="icon" onClick={() => removeFile(file.id)} className="text-muted-foreground" data-testid={`button-remove-resize-${file.id}`}><Trash2 className="w-4 h-4" /></Button>
                             </div>
                           </div>
