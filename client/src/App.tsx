@@ -90,6 +90,7 @@ function AppRoutes() {
       <Route path="/how-it-works" element={<Layout><HowItWorks /></Layout>} />
       <Route path="/languages" element={<Layout><Languages /></Layout>} />
       <Route path="/terms" element={<Layout><Terms /></Layout>} />
+      <Route path="/terms-of-service" element={<Layout><Terms /></Layout>} />
       <Route path="/cookie-policy" element={<Layout><CookiePolicy /></Layout>} />
       <Route path="/disclaimer" element={<Layout><Disclaimer /></Layout>} />
       <Route path="/contact" element={<Layout><Contact /></Layout>} />
