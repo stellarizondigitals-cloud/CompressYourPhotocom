@@ -22,14 +22,14 @@ export function Footer() {
   return (
     <footer className="border-t bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8 ${isRTL ? 'text-right' : ''}`}>
-          <div className="space-y-3">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-x-6 gap-y-8 ${isRTL ? 'text-right' : ''}`}>
+          <div className="space-y-3 xl:col-span-1 xl:pr-4">
             <Link to="/" className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
               <img src="/brand/logo-mark.svg" alt="CompressYourPhoto" className="h-8 w-8" />
-              <span className="font-semibold">{t('app.title')}</span>
+              <span className="font-semibold text-sm whitespace-nowrap">{t('app.title')}</span>
             </Link>
-            <p className="text-sm text-muted-foreground">
-              {t('app.tagline')}
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {t('footer.tagline')}
             </p>
             <p className="text-xs text-muted-foreground mt-4">
               <a href="https://stellarizondigitals.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
