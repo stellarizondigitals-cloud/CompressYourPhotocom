@@ -1,7 +1,19 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Image, Shield, Zap, Smartphone, FileImage, Lock } from 'lucide-react';
+import { Image, Shield, Zap, Smartphone, FileImage, Lock, Globe } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
+
+const supportedLanguages = [
+  { code: 'en', name: 'English', path: '/' },
+  { code: 'es', name: 'Español', path: '/es' },
+  { code: 'pt', name: 'Português', path: '/pt' },
+  { code: 'fr', name: 'Français', path: '/fr' },
+  { code: 'de', name: 'Deutsch', path: '/de' },
+  { code: 'hi', name: 'हिन्दी', path: '/hi' },
+  { code: 'zh-cn', name: '中文', path: '/zh-cn' },
+  { code: 'ar', name: 'العربية', path: '/ar' },
+  { code: 'id', name: 'Bahasa Indonesia', path: '/id' },
+];
 
 export function Footer() {
   const { t } = useTranslation();
@@ -10,7 +22,7 @@ export function Footer() {
   return (
     <footer className="border-t bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 ${isRTL ? 'text-right' : ''}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8 ${isRTL ? 'text-right' : ''}`}>
           <div className="space-y-3">
             <Link to="/" className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
               <img src="/brand/logo-mark.svg" alt="CompressYourPhoto" className="h-8 w-8" />
@@ -166,6 +178,23 @@ export function Footer() {
               >
                 {t('footer.disclaimer')}
               </Link>
+            </nav>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="font-medium text-sm">{t('footer.globalSupport', 'Global Support')}</h4>
+            <nav className="flex flex-col gap-2">
+              {supportedLanguages.map((lang) => (
+                <Link 
+                  key={lang.code}
+                  to={lang.path}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  data-testid={`link-lang-${lang.code}`}
+                  hrefLang={lang.code}
+                >
+                  {lang.name}
+                </Link>
+              ))}
             </nav>
           </div>
 

@@ -186,6 +186,94 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-12 md:py-16 bg-muted/30 px-4 md:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className={`flex items-center justify-center gap-2 mb-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
+            <Globe className="w-5 h-5 text-primary" />
+            <h2 className="text-xl md:text-2xl font-semibold">
+              {t('home.supportedLanguages', 'Available in 9 Languages')}
+            </h2>
+          </div>
+          <p className="text-muted-foreground mb-6 text-sm md:text-base">
+            {t('home.languagesDescription', 'Use CompressYourPhoto in your preferred language. All tools available worldwide.')}
+          </p>
+          <div className={`flex flex-wrap items-center justify-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+            <Link 
+              to="/" 
+              className="px-4 py-2 rounded-lg bg-background border hover:bg-muted transition-colors text-sm font-medium"
+              data-testid="link-home-lang-en"
+              hrefLang="en"
+            >
+              English
+            </Link>
+            <Link 
+              to="/es" 
+              className="px-4 py-2 rounded-lg bg-background border hover:bg-muted transition-colors text-sm font-medium"
+              data-testid="link-home-lang-es"
+              hrefLang="es"
+            >
+              Español
+            </Link>
+            <Link 
+              to="/pt" 
+              className="px-4 py-2 rounded-lg bg-background border hover:bg-muted transition-colors text-sm font-medium"
+              data-testid="link-home-lang-pt"
+              hrefLang="pt"
+            >
+              Português
+            </Link>
+            <Link 
+              to="/fr" 
+              className="px-4 py-2 rounded-lg bg-background border hover:bg-muted transition-colors text-sm font-medium"
+              data-testid="link-home-lang-fr"
+              hrefLang="fr"
+            >
+              Français
+            </Link>
+            <Link 
+              to="/de" 
+              className="px-4 py-2 rounded-lg bg-background border hover:bg-muted transition-colors text-sm font-medium"
+              data-testid="link-home-lang-de"
+              hrefLang="de"
+            >
+              Deutsch
+            </Link>
+            <Link 
+              to="/hi" 
+              className="px-4 py-2 rounded-lg bg-background border hover:bg-muted transition-colors text-sm font-medium"
+              data-testid="link-home-lang-hi"
+              hrefLang="hi"
+            >
+              हिन्दी
+            </Link>
+            <Link 
+              to="/zh-cn" 
+              className="px-4 py-2 rounded-lg bg-background border hover:bg-muted transition-colors text-sm font-medium"
+              data-testid="link-home-lang-zh"
+              hrefLang="zh-CN"
+            >
+              中文
+            </Link>
+            <Link 
+              to="/ar" 
+              className="px-4 py-2 rounded-lg bg-background border hover:bg-muted transition-colors text-sm font-medium"
+              data-testid="link-home-lang-ar"
+              hrefLang="ar"
+            >
+              العربية
+            </Link>
+            <Link 
+              to="/id" 
+              className="px-4 py-2 rounded-lg bg-background border hover:bg-muted transition-colors text-sm font-medium"
+              data-testid="link-home-lang-id"
+              hrefLang="id"
+            >
+              Bahasa Indonesia
+            </Link>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
