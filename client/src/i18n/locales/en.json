@@ -54,7 +54,8 @@
     "clearAll": "Clear All"
   },
   "footer": {
-    "product": "Tools",
+    "product": "Our Photo Tools",
+    "globalSupport": "Global Support",
     "legal": "Legal",
     "company": "Company",
     "trustPerformance": "Why Choose Us",
@@ -689,5 +690,22 @@
         {"question": "Will enhancing reduce image quality?", "answer": "Enhancement itself doesn't reduce quality. However, excessive adjustments can make images look unnatural. Use subtle adjustments for best results."}
       ]
     }
+  },
+  "compressFaq": {
+    "title": "Frequently Asked Questions About Image Compression",
+    "q1": "Does compressing an image reduce its quality?",
+    "a1": "Our smart compression algorithm reduces file size while preserving visual quality. At 80% quality setting, most images look identical to the original but are 50-70% smaller. You can adjust the quality slider to find the perfect balance for your needs.",
+    "q2": "What is the maximum file size I can compress?",
+    "a2": "Since all processing happens in your browser, there is no server limit. You can compress images up to 50MB or more, depending on your device's memory. Most photos from smartphones and cameras compress perfectly.",
+    "q3": "Can I compress multiple images at once?",
+    "a3": "Yes! You can upload and compress multiple images simultaneously. After compression, download them individually or all at once as a convenient ZIP file.",
+    "q4": "Are my photos uploaded to any server?",
+    "a4": "No, your photos never leave your device. All compression happens locally in your browser using JavaScript. We cannot see, access, or store any of your images. Your privacy is 100% protected.",
+    "q5": "What image formats are supported for compression?",
+    "a5": "We support JPG/JPEG, PNG, WebP, HEIC/HEIF (iPhone photos), GIF, and BMP formats. You can also convert between formats while compressing."
+  },
+  "home": {
+    "supportedLanguages": "Available in 9 Languages",
+    "languagesDescription": "Use CompressYourPhoto in your preferred language. All tools available worldwide."
   }
 }

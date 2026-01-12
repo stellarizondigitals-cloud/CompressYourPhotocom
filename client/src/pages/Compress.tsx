@@ -1,7 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { Shield } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { ImageCompressor } from '@/components/ImageCompressor';
 import { Badge } from '@/components/ui/badge';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
@@ -65,6 +67,108 @@ export default function Compress() {
       </div>
       <AboutTool tool="compress" />
       <PopularUseCases tool="compress" />
+      
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-muted/30">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            {t('compressFaq.title', 'Frequently Asked Questions About Image Compression')}
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="cq1">
+              <AccordionTrigger data-testid="compress-faq-q1">
+                {t('compressFaq.q1', 'Does compressing an image reduce its quality?')}
+              </AccordionTrigger>
+              <AccordionContent>
+                {t('compressFaq.a1', 'Our smart compression algorithm reduces file size while preserving visual quality. At 80% quality setting, most images look identical to the original but are 50-70% smaller. You can adjust the quality slider to find the perfect balance for your needs.')}
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="cq2">
+              <AccordionTrigger data-testid="compress-faq-q2">
+                {t('compressFaq.q2', 'What is the maximum file size I can compress?')}
+              </AccordionTrigger>
+              <AccordionContent>
+                {t('compressFaq.a2', 'Since all processing happens in your browser, there is no server limit. You can compress images up to 50MB or more, depending on your device\'s memory. Most photos from smartphones and cameras compress perfectly.')}
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="cq3">
+              <AccordionTrigger data-testid="compress-faq-q3">
+                {t('compressFaq.q3', 'Can I compress multiple images at once?')}
+              </AccordionTrigger>
+              <AccordionContent>
+                {t('compressFaq.a3', 'Yes! You can upload and compress multiple images simultaneously. After compression, download them individually or all at once as a convenient ZIP file.')}
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="cq4">
+              <AccordionTrigger data-testid="compress-faq-q4">
+                {t('compressFaq.q4', 'Are my photos uploaded to any server?')}
+              </AccordionTrigger>
+              <AccordionContent>
+                {t('compressFaq.a4', 'No, your photos never leave your device. All compression happens locally in your browser using JavaScript. We cannot see, access, or store any of your images. Your privacy is 100% protected.')}
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="cq5">
+              <AccordionTrigger data-testid="compress-faq-q5">
+                {t('compressFaq.q5', 'What image formats are supported for compression?')}
+              </AccordionTrigger>
+              <AccordionContent>
+                {t('compressFaq.a5', 'We support JPG/JPEG, PNG, WebP, HEIC/HEIF (iPhone photos), GIF, and BMP formats. You can also convert between formats while compressing.')}
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+      
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": t('compressFaq.q1', 'Does compressing an image reduce its quality?'),
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('compressFaq.a1', 'Our smart compression algorithm reduces file size while preserving visual quality. At 80% quality setting, most images look identical to the original but are 50-70% smaller. You can adjust the quality slider to find the perfect balance for your needs.')
+                }
+              },
+              {
+                "@type": "Question",
+                "name": t('compressFaq.q2', 'What is the maximum file size I can compress?'),
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('compressFaq.a2', 'Since all processing happens in your browser, there is no server limit. You can compress images up to 50MB or more, depending on your device\'s memory. Most photos from smartphones and cameras compress perfectly.')
+                }
+              },
+              {
+                "@type": "Question",
+                "name": t('compressFaq.q3', 'Can I compress multiple images at once?'),
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('compressFaq.a3', 'Yes! You can upload and compress multiple images simultaneously. After compression, download them individually or all at once as a convenient ZIP file.')
+                }
+              },
+              {
+                "@type": "Question",
+                "name": t('compressFaq.q4', 'Are my photos uploaded to any server?'),
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('compressFaq.a4', 'No, your photos never leave your device. All compression happens locally in your browser using JavaScript. We cannot see, access, or store any of your images. Your privacy is 100% protected.')
+                }
+              },
+              {
+                "@type": "Question",
+                "name": t('compressFaq.q5', 'What image formats are supported for compression?'),
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": t('compressFaq.a5', 'We support JPG/JPEG, PNG, WebP, HEIC/HEIF (iPhone photos), GIF, and BMP formats. You can also convert between formats while compressing.')
+                }
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
+      
       <RelatedTools currentTool="compress" />
     </>
   );
