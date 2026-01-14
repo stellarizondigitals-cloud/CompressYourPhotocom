@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import imageCompression from 'browser-image-compression';
 import JSZip from 'jszip';
-import { Upload, Download, Loader2, CheckCircle, AlertCircle, Trash2, Archive } from 'lucide-react';
+import { Upload, Download, Loader2, CheckCircle, AlertCircle, Trash2, Archive, Cloud } from 'lucide-react';
 import { triggerDownload } from '@/lib/download';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -416,6 +416,35 @@ export function ImageCompressor() {
               </div>
             </div>
           </Card>
+
+          {completedCount > 0 && (
+            <Card className="p-5 bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800">
+              <div className={`flex items-start gap-4 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center">
+                  <Cloud className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                </div>
+                <div className="flex-1 space-y-2">
+                  <h4 className="font-semibold text-sm text-foreground">Secure your photos forever</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Store your compressed images in pCloud's Lifetime storage. One-time payment, no monthly fees.
+                  </p>
+                  <div className={`flex items-center gap-3 flex-wrap ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <a
+                      href="https://partner.pcloud.com/r/153325"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      data-testid="link-pcloud-affiliate"
+                    >
+                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+                        Get Lifetime Storage
+                      </Button>
+                    </a>
+                    <span className="text-xs text-muted-foreground">(Affiliate Link)</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          )}
         </>
       )}
     </div>
