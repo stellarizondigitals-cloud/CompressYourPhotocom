@@ -661,5 +661,36 @@
         {"question": "Reduziert Verbesserung die Bildqualität?", "answer": "Verbesserung an sich reduziert die Qualität nicht. Übermäßige Anpassungen können Bilder jedoch unnatürlich aussehen lassen. Verwenden Sie subtile Anpassungen für beste Ergebnisse."}
       ]
     }
+  },
+  "auth": {
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "loginWith": "Anmelden mit {{provider}}"
+  },
+  "premium": {
+    "title": "Auf Pro Upgraden",
+    "description": "Alle Funktionen freischalten und ohne Limits komprimieren",
+    "proBadge": "Pro-Mitglied",
+    "features": {
+      "batchZip": "Stapel-ZIP-Download (bis zu 50 Bilder)",
+      "adFree": "Werbefreies Erlebnis",
+      "unlimited": "Unbegrenzte Komprimierungen",
+      "priority": "Prioritätsverarbeitung"
+    },
+    "monthly": {
+      "title": "Pro Monatlich",
+      "description": "Jederzeit kündbar"
+    },
+    "lifetime": {
+      "title": "Pro Lebenslang",
+      "description": "Einmalzahlung, für immer"
+    },
+    "perMonth": "/Monat",
+    "oneTime": "einmalig",
+    "bestValue": "Bester Wert",
+    "loginRequired": "Sie werden vor dem Bezahlen zur Anmeldung aufgefordert",
+    "maybeLater": "Vielleicht später",
+    "sessionUsage": "{{used}} von {{limit}} kostenlosen Komprimierungen in dieser Sitzung verwendet",
+    "upgradeLink": "Auf Pro upgraden für unbegrenzt"
   }
 }

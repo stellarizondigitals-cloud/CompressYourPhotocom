@@ -686,5 +686,36 @@
   },
   "relatedTools": {
     "title": "Outils Connexes"
+  },
+  "auth": {
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "loginWith": "Se connecter avec {{provider}}"
+  },
+  "premium": {
+    "title": "Passer à Pro",
+    "description": "Débloquez toutes les fonctionnalités et compressez sans limites",
+    "proBadge": "Membre Pro",
+    "features": {
+      "batchZip": "Téléchargement ZIP par lots (jusqu'à 50 images)",
+      "adFree": "Expérience sans publicité",
+      "unlimited": "Compressions illimitées",
+      "priority": "Traitement prioritaire"
+    },
+    "monthly": {
+      "title": "Pro Mensuel",
+      "description": "Annulez à tout moment"
+    },
+    "lifetime": {
+      "title": "Pro à Vie",
+      "description": "Paiement unique, pour toujours"
+    },
+    "perMonth": "/mois",
+    "oneTime": "paiement unique",
+    "bestValue": "Meilleure Valeur",
+    "loginRequired": "Vous devrez vous connecter avant de payer",
+    "maybeLater": "Peut-être plus tard",
+    "sessionUsage": "{{used}} sur {{limit}} compressions gratuites utilisées cette session",
+    "upgradeLink": "Passez à Pro pour illimité"
   }
 }

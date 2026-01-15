@@ -1,8 +1,8 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import imageCompression from 'browser-image-compression';
 import JSZip from 'jszip';
-import { Upload, Download, Loader2, CheckCircle, AlertCircle, Trash2, Archive, Cloud } from 'lucide-react';
+import { Upload, Download, Loader2, CheckCircle, AlertCircle, Trash2, Archive, Cloud, Crown } from 'lucide-react';
 import { triggerDownload } from '@/lib/download';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -13,6 +13,12 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useAuth } from '@/contexts/AuthContext';
+import { PremiumModal } from '@/components/PremiumModal';
+
+const FREE_COMPRESSION_LIMIT = 5;
+const FREE_FILE_LIMIT = 10;
+const PRO_FILE_LIMIT = 50;
 
 interface ImageFile {
   id: string;
@@ -54,6 +60,7 @@ function getFileExtension(format: OutputFormat, originalName: string): string {
 export function ImageCompressor() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
+  const { isPro } = useAuth();
   
   const [files, setFiles] = useState<ImageFile[]>([]);
   const [quality, setQuality] = useState(80);
@@ -62,6 +69,11 @@ export function ImageCompressor() {
   const [isCompressing, setIsCompressing] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [sessionCompressions, setSessionCompressions] = useState(0);
+  const [showPremiumModal, setShowPremiumModal] = useState(false);
+
+  const fileLimit = isPro ? PRO_FILE_LIMIT : FREE_FILE_LIMIT;
+  const hasReachedLimit = !isPro && sessionCompressions >= FREE_COMPRESSION_LIMIT;
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -75,7 +87,14 @@ export function ImageCompressor() {
 
   const addFiles = useCallback((newFiles: File[]) => {
     const imageFiles = newFiles.filter(file => file.type.startsWith('image/'));
-    const newImageFiles: ImageFile[] = imageFiles.map(file => ({
+    const remainingSlots = fileLimit - files.length;
+    const filesToAdd = imageFiles.slice(0, Math.max(0, remainingSlots));
+    
+    if (filesToAdd.length < imageFiles.length && !isPro) {
+      setShowPremiumModal(true);
+    }
+    
+    const newImageFiles: ImageFile[] = filesToAdd.map(file => ({
       id: `${file.name}-${Date.now()}-${Math.random()}`,
       originalFile: file,
       compressedFile: null,
@@ -84,7 +103,7 @@ export function ImageCompressor() {
       compressedSize: null,
     }));
     setFiles(prev => [...prev, ...newImageFiles]);
-  }, []);
+  }, [fileLimit, files.length, isPro]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -102,8 +121,14 @@ export function ImageCompressor() {
   const compressImages = async () => {
     if (files.length === 0) return;
     
+    if (hasReachedLimit) {
+      setShowPremiumModal(true);
+      return;
+    }
+    
     setIsCompressing(true);
     const pendingFiles = files.filter(f => f.status === 'pending' || f.status === 'error');
+    let successCount = 0;
     
     for (let i = 0; i < pendingFiles.length; i++) {
       setCurrentIndex(i + 1);
@@ -140,6 +165,7 @@ export function ImageCompressor() {
             compressedSize: compressedFile.size 
           } : f
         ));
+        successCount++;
       } catch (error) {
         setFiles(prev => prev.map(f => 
           f.id === file.id ? { 
@@ -148,6 +174,15 @@ export function ImageCompressor() {
             errorMessage: t('compression.compressionFailed')
           } : f
         ));
+      }
+    }
+    
+    if (!isPro) {
+      const newTotal = sessionCompressions + successCount;
+      setSessionCompressions(newTotal);
+      
+      if (newTotal >= FREE_COMPRESSION_LIMIT) {
+        setShowPremiumModal(true);
       }
     }
     
@@ -417,7 +452,7 @@ export function ImageCompressor() {
             </div>
           </Card>
 
-          {completedCount > 0 && (
+          {completedCount > 0 && !isPro && (
             <Card className="p-5 bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800">
               <div className={`flex items-start gap-4 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center">
@@ -445,8 +480,31 @@ export function ImageCompressor() {
               </div>
             </Card>
           )}
+          
+          {!isPro && (
+            <div className="text-center text-sm text-muted-foreground">
+              <p>
+                {t('premium.sessionUsage', '{{used}} of {{limit}} free compressions used this session', { 
+                  used: sessionCompressions, 
+                  limit: FREE_COMPRESSION_LIMIT 
+                })}
+              </p>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={() => setShowPremiumModal(true)}
+                className="text-primary hover:text-primary"
+                data-testid="button-upgrade-pro"
+              >
+                <Crown className="w-4 h-4 mr-1" />
+                {t('premium.upgradeLink', 'Upgrade to Pro for unlimited')}
+              </Button>
+            </div>
+          )}
         </>
       )}
+      
+      <PremiumModal open={showPremiumModal} onOpenChange={setShowPremiumModal} />
     </div>
   );
 }

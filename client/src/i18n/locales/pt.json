@@ -661,5 +661,36 @@
         {"question": "Melhorar vai reduzir a qualidade da imagem?", "answer": "A melhoria em si não reduz a qualidade. No entanto, ajustes excessivos podem fazer as imagens parecerem artificiais. Use ajustes sutis para melhores resultados."}
       ]
     }
+  },
+  "auth": {
+    "login": "Entrar",
+    "logout": "Sair",
+    "loginWith": "Entrar com {{provider}}"
+  },
+  "premium": {
+    "title": "Atualizar para Pro",
+    "description": "Desbloqueie todos os recursos e comprima sem limites",
+    "proBadge": "Membro Pro",
+    "features": {
+      "batchZip": "Download ZIP em lote (até 50 imagens)",
+      "adFree": "Experiência sem anúncios",
+      "unlimited": "Compressões ilimitadas",
+      "priority": "Processamento prioritário"
+    },
+    "monthly": {
+      "title": "Pro Mensal",
+      "description": "Cancele quando quiser"
+    },
+    "lifetime": {
+      "title": "Pro Vitalício",
+      "description": "Pagamento único, para sempre"
+    },
+    "perMonth": "/mês",
+    "oneTime": "pagamento único",
+    "bestValue": "Melhor Valor",
+    "loginRequired": "Você precisará fazer login antes de finalizar a compra",
+    "maybeLater": "Talvez mais tarde",
+    "sessionUsage": "{{used}} de {{limit}} compressões gratuitas usadas nesta sessão",
+    "upgradeLink": "Atualize para Pro para ilimitado"
   }
 }

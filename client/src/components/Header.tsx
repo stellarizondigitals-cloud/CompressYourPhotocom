@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles } from 'lucide-react';
+import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, LogIn, LogOut, Crown } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useAuth } from '@/contexts/AuthContext';
+import { isSupabaseConfigured } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 
 const navTools = [
   { key: 'compress', path: '/compress', icon: Minimize2 },
@@ -17,6 +20,7 @@ const navTools = [
 export function Header() {
   const { t } = useTranslation();
   const { currentLanguage, isRTL } = useLanguage();
+  const { user, isPro, isLoading, signIn, signOut } = useAuth();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -85,6 +89,49 @@ export function Header() {
 
           <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
             <LanguageSwitcher />
+            
+            {isSupabaseConfigured && !isLoading && (
+              <>
+                {user ? (
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="sm" className="gap-1.5" data-testid="button-user-menu">
+                        {isPro && <Crown className="w-4 h-4 text-yellow-500" />}
+                        <span className="hidden sm:inline max-w-[120px] truncate">{user.email}</span>
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem disabled className="text-xs text-muted-foreground">
+                        {user.email}
+                      </DropdownMenuItem>
+                      {isPro && (
+                        <DropdownMenuItem disabled className="text-xs">
+                          <Crown className="w-3 h-3 mr-1.5 text-yellow-500" />
+                          {t('premium.proBadge', 'Pro Member')}
+                        </DropdownMenuItem>
+                      )}
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem onClick={signOut} data-testid="button-logout">
+                        <LogOut className="w-4 h-4 mr-2" />
+                        {t('auth.logout', 'Logout')}
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={signIn}
+                    className="gap-1.5"
+                    data-testid="button-login"
+                  >
+                    <LogIn className="w-4 h-4" />
+                    <span className="hidden sm:inline">{t('auth.login', 'Login')}</span>
+                  </Button>
+                )}
+              </>
+            )}
+            
             <Button
               variant="ghost"
               size="icon"

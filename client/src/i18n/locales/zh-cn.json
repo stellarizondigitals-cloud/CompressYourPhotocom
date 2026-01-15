@@ -661,5 +661,36 @@
         {"question": "增强会降低图片质量吗？", "answer": "增强本身不会降低质量。但是，过度调整可能会使图片看起来不自然。建议使用微妙的调整以获得最佳效果。"}
       ]
     }
+  },
+  "auth": {
+    "login": "登录",
+    "logout": "退出",
+    "loginWith": "使用 {{provider}} 登录"
+  },
+  "premium": {
+    "title": "升级到 Pro",
+    "description": "解锁所有功能，无限制压缩",
+    "proBadge": "Pro 会员",
+    "features": {
+      "batchZip": "批量 ZIP 下载（最多 50 张图片）",
+      "adFree": "无广告体验",
+      "unlimited": "无限次压缩",
+      "priority": "优先处理"
+    },
+    "monthly": {
+      "title": "Pro 月度",
+      "description": "随时取消"
+    },
+    "lifetime": {
+      "title": "Pro 终身",
+      "description": "一次付款，永久使用"
+    },
+    "perMonth": "/月",
+    "oneTime": "一次性",
+    "bestValue": "最佳价值",
+    "loginRequired": "结账前需要登录",
+    "maybeLater": "以后再说",
+    "sessionUsage": "本次会话已使用 {{used}}/{{limit}} 次免费压缩",
+    "upgradeLink": "升级到 Pro 享受无限次数"
   }
 }

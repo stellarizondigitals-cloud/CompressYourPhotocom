@@ -687,5 +687,36 @@
         {"question": "Apakah peningkatan mengurangi kualitas gambar?", "answer": "Peningkatan itu sendiri tidak mengurangi kualitas. Namun, penyesuaian yang berlebihan dapat membuat gambar terlihat tidak alami. Gunakan penyesuaian yang halus untuk hasil terbaik."}
       ]
     }
+  },
+  "auth": {
+    "login": "Masuk",
+    "logout": "Keluar",
+    "loginWith": "Masuk dengan {{provider}}"
+  },
+  "premium": {
+    "title": "Upgrade ke Pro",
+    "description": "Buka semua fitur dan kompres tanpa batas",
+    "proBadge": "Anggota Pro",
+    "features": {
+      "batchZip": "Unduh ZIP batch (hingga 50 gambar)",
+      "adFree": "Pengalaman bebas iklan",
+      "unlimited": "Kompresi tanpa batas",
+      "priority": "Pemrosesan prioritas"
+    },
+    "monthly": {
+      "title": "Pro Bulanan",
+      "description": "Batalkan kapan saja"
+    },
+    "lifetime": {
+      "title": "Pro Seumur Hidup",
+      "description": "Pembayaran sekali, selamanya"
+    },
+    "perMonth": "/bulan",
+    "oneTime": "sekali bayar",
+    "bestValue": "Nilai Terbaik",
+    "loginRequired": "Anda akan diminta masuk sebelum checkout",
+    "maybeLater": "Mungkin nanti",
+    "sessionUsage": "{{used}} dari {{limit}} kompresi gratis digunakan sesi ini",
+    "upgradeLink": "Upgrade ke Pro untuk tanpa batas"
   }
 }

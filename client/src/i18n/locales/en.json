@@ -707,5 +707,36 @@
   "home": {
     "supportedLanguages": "Available in 9 Languages",
     "languagesDescription": "Use CompressYourPhoto in your preferred language. All tools available worldwide."
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "loginWith": "Login with {{provider}}"
+  },
+  "premium": {
+    "title": "Upgrade to Pro",
+    "description": "Unlock all features and compress without limits",
+    "proBadge": "Pro Member",
+    "features": {
+      "batchZip": "Batch ZIP download (up to 50 images)",
+      "adFree": "Ad-free experience",
+      "unlimited": "Unlimited compressions",
+      "priority": "Priority processing"
+    },
+    "monthly": {
+      "title": "Pro Monthly",
+      "description": "Cancel anytime"
+    },
+    "lifetime": {
+      "title": "Pro Lifetime",
+      "description": "One-time payment, forever"
+    },
+    "perMonth": "/month",
+    "oneTime": "one-time",
+    "bestValue": "Best Value",
+    "loginRequired": "You will be asked to login before checkout",
+    "maybeLater": "Maybe later",
+    "sessionUsage": "{{used}} of {{limit}} free compressions used this session",
+    "upgradeLink": "Upgrade to Pro for unlimited"
   }
 }
