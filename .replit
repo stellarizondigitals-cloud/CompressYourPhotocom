@@ -41,3 +41,5 @@ waitForPort = 5000
 [userenv]
 
 [userenv.shared]
+VITE_SUPABASE_URL = "https://nagvyehmewxbskgeorum.supabase.co"
+VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hZ3Z5ZWhtZXd4YnNrZ2VvcnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg0NzMxMTUsImV4cCI6MjA4NDA0OTExNX0.fKwiHqJ8VBfCTMNfgM7OHq2gIugrFcYtBe0Im_eNOGg"
