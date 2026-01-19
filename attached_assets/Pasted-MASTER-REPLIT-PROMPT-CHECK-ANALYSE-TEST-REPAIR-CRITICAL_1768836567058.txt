@@ -1,0 +1,80 @@
+MASTER REPLIT PROMPT — CHECK, ANALYSE, TEST & REPAIR
+CRITICAL TASK: FULL DIAGNOSTIC + REPAIR FOR AUTH & PAYMENTS (VITE + SUPABASE + STRIPE)
+
+This project is a Vite app deployed on Vercel. The Login/Auth and Stripe flow are not working correctly in production.
+
+Your job is to fully analyse, test, and repair the system end‑to‑end.
+
+1️⃣ Environment Variable Audit (CRITICAL)
+Assume this is a Vite frontend.
+Audit ALL frontend code and ensure NO usage of:
+process.env.*
+NEXT_PUBLIC_*
+Replace with:
+import.meta.env.VITE_SUPABASE_URL
+import.meta.env.VITE_SUPABASE_ANON_KEY
+import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY
+Server-only code (API routes / webhooks) must use:
+process.env.SUPABASE_SERVICE_ROLE_KEY
+process.env.STRIPE_SECRET_KEY
+Add explicit console errors if any required env var is missing.
+
+2️⃣ Supabase Auth Verification
+Verify Supabase client initialization uses:
+ts
+Copy
+createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_ANON_KEY
+)
+Implement Magic Link email login.
+Add a global Auth Context / Provider.
+Ensure auth state persists on refresh.
+3️⃣ UI: Login / Logout MUST RENDER
+Add a visible Login button in the header on all pages and all screen sizes.
+When logged in:
+Show user email
+Show Logout
+Do NOT hide Login silently if auth fails — show an error instead.
+4️⃣ Account & Subscription State
+Create /account page:
+Shows email
+Shows plan: Free, Pro Monthly, or Pro Lifetime
+Reads from Supabase profiles table (is_pro, subscription_type)
+5️⃣ Stripe Integration Verification
+Confirm Stripe Checkout uses TEST MODE keys only
+Use VITE_STRIPE_PUBLISHABLE_KEY in frontend
+Verify price IDs:
+Monthly: price_1SpnznA1YPAyGFWbKzbFWwJK
+Lifetime: price_1Spo0RA1YPAyGFWb0OcshWro
+Ensure checkout redirects correctly and returns to site
+6️⃣ Webhook & Pro Unlock
+Verify webhook endpoint updates Supabase:
+is_pro = true
+subscription_type = monthly | lifetime
+Add logging for webhook success/failure
+7️⃣ Premium Feature Gating
+After 5 compressions, show Premium modal
+If is_pro = true:
+Unlimited compressions
+Batch upload enabled
+ZIP download enabled
+Ads hidden
+8️⃣ Production Debug Mode
+Temporarily add:
+Console logs for auth state
+Console logs for env var presence
+Console logs for Stripe init
+Remove noisy logs after confirmation
+9️⃣ Final Actions
+Fix all identified issues
+Commit and push all changes
+Confirm ready for Vercel redeploy (no build cache)
+✅ EXPECTED RESULT
+Login button visible on https://www.compressyourphoto.com
+Magic link login works
+Auth persists on refresh
+Premium modal appears after 5 uses
+Stripe TEST checkout opens
+Pro features unlock after payment
+Do not stop until ALL of the above works.

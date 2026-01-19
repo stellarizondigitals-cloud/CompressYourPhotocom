@@ -7,25 +7,26 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLanguage } from '@/hooks/useLanguage';
+import { LoginModal } from './LoginModal';
 
 interface PremiumModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 
-const STRIPE_PUBLIC_KEY = 'pk_test_51SbhlkA1YPAyGFWb5ZQHDlelAgjQxT3DsNqmXHIOB4cONnsU3N5awmG6qpWKtQLwWcspLt0vBJa4tfelCVtajI7f00s3Ncxyxm';
 const MONTHLY_PRICE_ID = 'price_1SpnznA1YPAyGFWbKzbFWwJK';
 const LIFETIME_PRICE_ID = 'price_1Spo0RA1YPAyGFWb0OcshWro';
 
 export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-  const { user, signIn } = useAuth();
+  const { user } = useAuth();
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   const handleCheckout = async (priceId: string, mode: 'subscription' | 'payment') => {
     if (!user) {
-      signIn();
+      setShowLoginModal(true);
       return;
     }
 
@@ -151,6 +152,8 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
           {t('premium.maybeLater', 'Maybe later')}
         </Button>
       </DialogContent>
+
+      <LoginModal open={showLoginModal} onOpenChange={setShowLoginModal} />
     </Dialog>
   );
 }

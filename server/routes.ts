@@ -4,6 +4,8 @@ import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
 import { storage } from "./storage";
 
+const LIFETIME_PRICE_ID = 'price_1Spo0RA1YPAyGFWb0OcshWro';
+
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
 
 const supabaseAdmin = createClient(
@@ -83,16 +85,23 @@ export async function registerRoutes(
           case "checkout.session.completed": {
             const session = event.data.object as Stripe.Checkout.Session;
             const userId = session.metadata?.userId;
+            const priceId = session.metadata?.priceId;
 
             if (userId) {
+              const subscriptionType = priceId === LIFETIME_PRICE_ID ? 'lifetime' : 'monthly';
+              
               const { error } = await supabaseAdmin
                 .from("profiles")
-                .upsert({ id: userId, is_pro: true }, { onConflict: "id" });
+                .upsert({ 
+                  id: userId, 
+                  is_pro: true,
+                  subscription_type: subscriptionType
+                }, { onConflict: "id" });
 
               if (error) {
                 console.error("Error updating profile:", error);
               } else {
-                console.log(`User ${userId} upgraded to Pro`);
+                console.log(`User ${userId} upgraded to Pro (${subscriptionType})`);
               }
             }
             break;
