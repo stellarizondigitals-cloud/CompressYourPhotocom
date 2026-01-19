@@ -6,8 +6,15 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 const isConfigured = supabaseUrl && supabaseAnonKey && 
   supabaseUrl.startsWith('http') && supabaseAnonKey.length > 10;
 
+console.log('[Supabase] Environment check:', {
+  hasUrl: !!supabaseUrl,
+  hasAnonKey: !!supabaseAnonKey,
+  isConfigured,
+  urlPrefix: supabaseUrl ? supabaseUrl.substring(0, 30) + '...' : 'NOT SET',
+});
+
 if (!isConfigured) {
-  console.error('Missing Supabase environment variables. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in Vercel.');
+  console.error('[Supabase] Missing environment variables. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in Vercel.');
 }
 
 let supabaseInstance: SupabaseClient | null = null;

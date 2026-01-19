@@ -38,12 +38,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [user]);
 
   useEffect(() => {
+    console.log('[Auth] Initializing, supabase configured:', isSupabaseConfigured);
+    
     if (!isSupabaseConfigured || !supabase) {
+      console.log('[Auth] Supabase not configured, skipping auth init');
       setIsLoading(false);
       return;
     }
 
     supabase.auth.getSession().then(({ data: { session } }) => {
+      console.log('[Auth] Session retrieved:', session ? 'logged in' : 'no session');
       setSession(session);
       setUser(session?.user ?? null);
       setIsLoading(false);

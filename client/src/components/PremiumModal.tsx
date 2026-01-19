@@ -14,8 +14,8 @@ interface PremiumModalProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const MONTHLY_PRICE_ID = 'price_1SpnznA1YPAyGFWbKzbFWwJK';
-const LIFETIME_PRICE_ID = 'price_1Spo0RA1YPAyGFWb0OcshWro';
+const MONTHLY_PRICE_ID = import.meta.env.VITE_STRIPE_MONTHLY_PRICE_ID || 'price_1SpnznA1YPAyGFWbKzbFWwJK';
+const LIFETIME_PRICE_ID = import.meta.env.VITE_STRIPE_LIFETIME_PRICE_ID || 'price_1Spo0RA1YPAyGFWb0OcshWro';
 
 export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
   const { t } = useTranslation();
