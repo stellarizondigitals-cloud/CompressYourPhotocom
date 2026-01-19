@@ -691,7 +691,27 @@
   "auth": {
     "login": "Masuk",
     "logout": "Keluar",
-    "loginWith": "Masuk dengan {{provider}}"
+    "loginWith": "Masuk dengan {{provider}}",
+    "email": "Email",
+    "magicLinkDescription": "Masukkan email Anda untuk menerima tautan ajaib untuk login tanpa kata sandi.",
+    "sendMagicLink": "Kirim Tautan Ajaib",
+    "checkEmail": "Periksa email Anda untuk tautan login. Mungkin memerlukan waktu satu menit untuk tiba.",
+    "notConfigured": "Autentikasi saat ini tidak tersedia. Silakan coba lagi nanti."
+  },
+  "account": {
+    "title": "Akun Saya",
+    "emailSection": "Email",
+    "subscriptionSection": "Langganan",
+    "free": "Gratis",
+    "pro": "Pro",
+    "proMonthly": "Pro (Bulanan)",
+    "proLifetime": "Pro (Seumur Hidup)",
+    "proDescription": "Kompresi tanpa batas, pemrosesan batch hingga 50 gambar, pengalaman bebas iklan"
+  },
+  "common": {
+    "close": "Tutup",
+    "cancel": "Batal",
+    "done": "Selesai"
   },
   "premium": {
     "title": "Upgrade ke Pro",

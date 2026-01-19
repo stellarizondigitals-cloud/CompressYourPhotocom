@@ -665,7 +665,27 @@
   "auth": {
     "login": "登录",
     "logout": "退出",
-    "loginWith": "使用 {{provider}} 登录"
+    "loginWith": "使用 {{provider}} 登录",
+    "email": "电子邮件",
+    "magicLinkDescription": "输入您的电子邮件以接收无密码登录的魔法链接。",
+    "sendMagicLink": "发送魔法链接",
+    "checkEmail": "请检查您的邮箱获取登录链接。可能需要一分钟才能收到。",
+    "notConfigured": "认证功能暂时不可用。请稍后再试。"
+  },
+  "account": {
+    "title": "我的账户",
+    "emailSection": "电子邮件",
+    "subscriptionSection": "订阅",
+    "free": "免费",
+    "pro": "Pro",
+    "proMonthly": "Pro（月度）",
+    "proLifetime": "Pro（终身）",
+    "proDescription": "无限压缩、最多50张图片批量处理、无广告体验"
+  },
+  "common": {
+    "close": "关闭",
+    "cancel": "取消",
+    "done": "完成"
   },
   "premium": {
     "title": "升级到 Pro",

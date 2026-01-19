@@ -8,7 +8,8 @@ interface AuthContextType {
   profile: Profile | null;
   isPro: boolean;
   isLoading: boolean;
-  signIn: () => Promise<void>;
+  isConfigured: boolean;
+  signInWithEmail: (email: string) => Promise<{ error: Error | null }>;
   signOut: () => Promise<void>;
   refreshProfile: () => Promise<void>;
 }
@@ -67,18 +68,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, [user, refreshProfile]);
 
-  const signIn = async () => {
+  const signInWithEmail = async (email: string): Promise<{ error: Error | null }> => {
     if (!isSupabaseConfigured || !supabase) {
-      console.warn('Auth not configured');
-      return;
+      console.error('Auth not configured');
+      return { error: new Error('Authentication not configured') };
     }
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
       options: {
-        redirectTo: window.location.origin,
+        emailRedirectTo: window.location.origin,
       },
     });
-    if (error) console.error('Sign in error:', error);
+    if (error) {
+      console.error('Sign in error:', error);
+      return { error };
+    }
+    return { error: null };
   };
 
   const signOut = async () => {
@@ -100,7 +105,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         profile,
         isPro,
         isLoading,
-        signIn,
+        isConfigured: isSupabaseConfigured,
+        signInWithEmail,
         signOut,
         refreshProfile,
       }}

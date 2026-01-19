@@ -7,7 +7,7 @@ const isConfigured = supabaseUrl && supabaseAnonKey &&
   supabaseUrl.startsWith('http') && supabaseAnonKey.length > 10;
 
 if (!isConfigured) {
-  console.warn('Supabase credentials not configured. Auth features will be disabled.');
+  console.error('Missing Supabase environment variables. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in Vercel.');
 }
 
 let supabaseInstance: SupabaseClient | null = null;
@@ -22,6 +22,7 @@ export const isSupabaseConfigured = isConfigured;
 export interface Profile {
   id: string;
   is_pro: boolean;
+  subscription_type?: 'monthly' | 'lifetime' | null;
   created_at?: string;
 }
 

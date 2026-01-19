@@ -711,7 +711,27 @@
   "auth": {
     "login": "Login",
     "logout": "Logout",
-    "loginWith": "Login with {{provider}}"
+    "loginWith": "Login with {{provider}}",
+    "email": "Email",
+    "magicLinkDescription": "Enter your email to receive a magic link for passwordless login.",
+    "sendMagicLink": "Send Magic Link",
+    "checkEmail": "Check your email for a login link. It may take a minute to arrive.",
+    "notConfigured": "Authentication is currently unavailable. Please try again later."
+  },
+  "account": {
+    "title": "My Account",
+    "emailSection": "Email",
+    "subscriptionSection": "Subscription",
+    "free": "Free",
+    "pro": "Pro",
+    "proMonthly": "Pro (Monthly)",
+    "proLifetime": "Pro (Lifetime)",
+    "proDescription": "Unlimited compressions, batch processing up to 50 images, ad-free experience"
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "done": "Done"
   },
   "premium": {
     "title": "Upgrade to Pro",

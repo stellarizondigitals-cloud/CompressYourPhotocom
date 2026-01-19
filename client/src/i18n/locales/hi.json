@@ -665,7 +665,27 @@
   "auth": {
     "login": "लॉगिन",
     "logout": "लॉगआउट",
-    "loginWith": "{{provider}} से लॉगिन करें"
+    "loginWith": "{{provider}} से लॉगिन करें",
+    "email": "ईमेल",
+    "magicLinkDescription": "पासवर्ड रहित लॉगिन के लिए मैजिक लिंक प्राप्त करने के लिए अपना ईमेल दर्ज करें।",
+    "sendMagicLink": "मैजिक लिंक भेजें",
+    "checkEmail": "लॉगिन लिंक के लिए अपना ईमेल देखें। इसमें एक मिनट लग सकता है।",
+    "notConfigured": "प्रमाणीकरण वर्तमान में अनुपलब्ध है। कृपया बाद में पुनः प्रयास करें।"
+  },
+  "account": {
+    "title": "मेरा खाता",
+    "emailSection": "ईमेल",
+    "subscriptionSection": "सदस्यता",
+    "free": "मुफ्त",
+    "pro": "Pro",
+    "proMonthly": "Pro (मासिक)",
+    "proLifetime": "Pro (लाइफटाइम)",
+    "proDescription": "असीमित कंप्रेशन, 50 इमेज तक बैच प्रोसेसिंग, विज्ञापन-मुक्त अनुभव"
+  },
+  "common": {
+    "close": "बंद करें",
+    "cancel": "रद्द करें",
+    "done": "हो गया"
   },
   "premium": {
     "title": "Pro में अपग्रेड करें",

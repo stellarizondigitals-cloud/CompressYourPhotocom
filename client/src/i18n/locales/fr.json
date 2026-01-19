@@ -690,7 +690,27 @@
   "auth": {
     "login": "Connexion",
     "logout": "Déconnexion",
-    "loginWith": "Se connecter avec {{provider}}"
+    "loginWith": "Se connecter avec {{provider}}",
+    "email": "Email",
+    "magicLinkDescription": "Entrez votre email pour recevoir un lien magique de connexion sans mot de passe.",
+    "sendMagicLink": "Envoyer le Lien Magique",
+    "checkEmail": "Vérifiez votre email pour le lien de connexion. Cela peut prendre une minute.",
+    "notConfigured": "L'authentification n'est pas disponible actuellement. Veuillez réessayer plus tard."
+  },
+  "account": {
+    "title": "Mon Compte",
+    "emailSection": "Email",
+    "subscriptionSection": "Abonnement",
+    "free": "Gratuit",
+    "pro": "Pro",
+    "proMonthly": "Pro (Mensuel)",
+    "proLifetime": "Pro (À Vie)",
+    "proDescription": "Compressions illimitées, traitement par lots jusqu'à 50 images, expérience sans publicité"
+  },
+  "common": {
+    "close": "Fermer",
+    "cancel": "Annuler",
+    "done": "Terminé"
   },
   "premium": {
     "title": "Passer à Pro",

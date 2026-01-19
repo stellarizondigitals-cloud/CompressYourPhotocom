@@ -1,0 +1,40 @@
+CRITICAL FIX: Vite Environment Variables + Missing Login UI
+
+This project is deployed on Vercel using Vite. The Login button and Supabase Auth are not working because environment variables are incorrectly named.
+
+Tasks:
+
+Update all client-side environment variable usage:
+Replace any usage of process.env.SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_URL, or similar with: import.meta.env.VITE_SUPABASE_URL
+Replace any usage of process.env.SUPABASE_ANON_KEY, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY, or similar with: import.meta.env.VITE_SUPABASE_ANON_KEY
+Replace any usage of process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY or similar with: import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY
+Server-side code (webhooks, API routes) should continue using process.env.SUPABASE_SERVICE_ROLE_KEY and process.env.STRIPE_SECRET_KEY (no VITE_ prefix).
+Implement visible Login/Logout UI in the header:
+Add a Login button in the header/navbar that is visible on all pages and all screen sizes (desktop + mobile).
+When a user is logged out, show: "Login" button.
+When a user is logged in, show: user email + "Logout" button.
+Use Supabase Magic Link authentication (email-based, passwordless) for simplicity.
+Add error handling for missing env vars:
+If VITE_SUPABASE_URL or VITE_SUPABASE_ANON_KEY is undefined, log a clear error in the console: "Missing Supabase environment variables. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in Vercel."
+Do NOT silently hide the Login UI if env vars are missing—show a fallback message or disabled button.
+Create a simple /account page:
+Show the user's email.
+Show subscription status: "Free" or "Pro (Monthly)" or "Pro (Lifetime)" based on profiles.is_pro and profiles.subscription_type from Supabase.
+If not logged in, redirect to home with a "Please log in" message.
+Update the README:
+Document all required environment variables for Vercel deployment:
+VITE_SUPABASE_URL
+VITE_SUPABASE_ANON_KEY
+VITE_STRIPE_PUBLISHABLE_KEY
+SUPABASE_SERVICE_ROLE_KEY (server-only)
+STRIPE_SECRET_KEY (server-only)
+STRIPE_WEBHOOK_SECRET (server-only, added after webhook setup)
+Commit and push all changes so they are ready for Vercel redeployment.
+Expected result after deployment:
+
+Login button visible in header on all pages
+Magic link login works
+After login, header shows user email + Logout
+/account page shows subscription status
+Premium modal appears after 5 compressions
+Stripe Checkout works for Monthly and Lifetime plans

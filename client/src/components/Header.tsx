@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, LogIn, LogOut, Crown } from 'lucide-react';
+import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, LogIn, LogOut, Crown, User } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/contexts/AuthContext';
-import { isSupabaseConfigured } from '@/lib/supabase';
+import { LoginModal } from './LoginModal';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 
@@ -20,9 +20,10 @@ const navTools = [
 export function Header() {
   const { t } = useTranslation();
   const { currentLanguage, isRTL } = useLanguage();
-  const { user, isPro, isLoading, signIn, signOut } = useAuth();
+  const { user, isPro, isLoading, isConfigured, signOut } = useAuth();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
 
   const homeLink = currentLanguage.code === 'en' ? '/' : `/${currentLanguage.code}`;
   
@@ -90,7 +91,7 @@ export function Header() {
           <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
             <LanguageSwitcher />
             
-            {isSupabaseConfigured && !isLoading && (
+            {!isLoading && (
               <>
                 {user ? (
                   <DropdownMenu>
@@ -98,6 +99,7 @@ export function Header() {
                       <Button variant="ghost" size="sm" className="gap-1.5" data-testid="button-user-menu">
                         {isPro && <Crown className="w-4 h-4 text-yellow-500" />}
                         <span className="hidden sm:inline max-w-[120px] truncate">{user.email}</span>
+                        <User className="w-4 h-4 sm:hidden" />
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
@@ -111,6 +113,12 @@ export function Header() {
                         </DropdownMenuItem>
                       )}
                       <DropdownMenuSeparator />
+                      <Link to="/account">
+                        <DropdownMenuItem data-testid="link-account">
+                          <User className="w-4 h-4 mr-2" />
+                          {t('account.title', 'My Account')}
+                        </DropdownMenuItem>
+                      </Link>
                       <DropdownMenuItem onClick={signOut} data-testid="button-logout">
                         <LogOut className="w-4 h-4 mr-2" />
                         {t('auth.logout', 'Logout')}
@@ -121,8 +129,9 @@ export function Header() {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={signIn}
+                    onClick={() => setLoginModalOpen(true)}
                     className="gap-1.5"
+                    disabled={!isConfigured}
                     data-testid="button-login"
                   >
                     <LogIn className="w-4 h-4" />
@@ -131,6 +140,8 @@ export function Header() {
                 )}
               </>
             )}
+            
+            <LoginModal open={loginModalOpen} onOpenChange={setLoginModalOpen} />
             
             <Button
               variant="ghost"

@@ -665,7 +665,27 @@
   "auth": {
     "login": "Anmelden",
     "logout": "Abmelden",
-    "loginWith": "Anmelden mit {{provider}}"
+    "loginWith": "Anmelden mit {{provider}}",
+    "email": "E-Mail",
+    "magicLinkDescription": "Geben Sie Ihre E-Mail ein, um einen magischen Link für passwortlose Anmeldung zu erhalten.",
+    "sendMagicLink": "Magischen Link Senden",
+    "checkEmail": "Überprüfen Sie Ihre E-Mail für den Anmeldelink. Es kann eine Minute dauern.",
+    "notConfigured": "Authentifizierung ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut."
+  },
+  "account": {
+    "title": "Mein Konto",
+    "emailSection": "E-Mail",
+    "subscriptionSection": "Abonnement",
+    "free": "Kostenlos",
+    "pro": "Pro",
+    "proMonthly": "Pro (Monatlich)",
+    "proLifetime": "Pro (Lebenslang)",
+    "proDescription": "Unbegrenzte Komprimierungen, Stapelverarbeitung bis zu 50 Bilder, werbefreies Erlebnis"
+  },
+  "common": {
+    "close": "Schließen",
+    "cancel": "Abbrechen",
+    "done": "Fertig"
   },
   "premium": {
     "title": "Auf Pro Upgraden",

@@ -665,7 +665,27 @@
   "auth": {
     "login": "Iniciar Sesión",
     "logout": "Cerrar Sesión",
-    "loginWith": "Iniciar sesión con {{provider}}"
+    "loginWith": "Iniciar sesión con {{provider}}",
+    "email": "Email",
+    "magicLinkDescription": "Ingresa tu email para recibir un enlace mágico para iniciar sesión sin contraseña.",
+    "sendMagicLink": "Enviar Enlace Mágico",
+    "checkEmail": "Revisa tu email para el enlace de inicio de sesión. Puede tardar un minuto en llegar.",
+    "notConfigured": "La autenticación no está disponible actualmente. Por favor intenta más tarde."
+  },
+  "account": {
+    "title": "Mi Cuenta",
+    "emailSection": "Email",
+    "subscriptionSection": "Suscripción",
+    "free": "Gratis",
+    "pro": "Pro",
+    "proMonthly": "Pro (Mensual)",
+    "proLifetime": "Pro (Vitalicio)",
+    "proDescription": "Compresiones ilimitadas, procesamiento por lotes hasta 50 imágenes, experiencia sin anuncios"
+  },
+  "common": {
+    "close": "Cerrar",
+    "cancel": "Cancelar",
+    "done": "Listo"
   },
   "premium": {
     "title": "Actualizar a Pro",

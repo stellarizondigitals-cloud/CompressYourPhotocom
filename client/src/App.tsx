@@ -26,6 +26,7 @@ import NotFound from "@/pages/not-found";
 import { initAnalytics, trackPageView } from "@/lib/analytics";
 import { CookieConsent } from "@/components/CookieConsent";
 
+import Account from "@/pages/Account";
 import CompressJpg from "@/pages/seo/CompressJpg";
 import CompressPng from "@/pages/seo/CompressPng";
 import ConvertHeicToJpg from "@/pages/seo/ConvertHeicToJpg";
@@ -96,6 +97,7 @@ function AppRoutes() {
       <Route path="/disclaimer" element={<Layout><Disclaimer /></Layout>} />
       <Route path="/contact" element={<Layout><Contact /></Layout>} />
       <Route path="/about" element={<Layout><About /></Layout>} />
+      <Route path="/account" element={<Layout><Account /></Layout>} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
