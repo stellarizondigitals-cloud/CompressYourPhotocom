@@ -79,11 +79,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
     
     try {
-      console.log('[Auth] Attempting sign in for:', email);
+      const redirectTo = `${window.location.origin}/auth/callback`;
+      console.log('[Auth] Attempting sign in for:', email, 'redirect:', redirectTo);
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo: window.location.origin,
+          emailRedirectTo: redirectTo,
         },
       });
       

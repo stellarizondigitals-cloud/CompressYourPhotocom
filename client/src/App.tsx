@@ -27,6 +27,7 @@ import { initAnalytics, trackPageView } from "@/lib/analytics";
 import { CookieConsent } from "@/components/CookieConsent";
 
 import Account from "@/pages/Account";
+import AuthCallback from "@/pages/AuthCallback";
 import CompressJpg from "@/pages/seo/CompressJpg";
 import CompressPng from "@/pages/seo/CompressPng";
 import ConvertHeicToJpg from "@/pages/seo/ConvertHeicToJpg";
@@ -98,6 +99,7 @@ function AppRoutes() {
       <Route path="/contact" element={<Layout><Contact /></Layout>} />
       <Route path="/about" element={<Layout><About /></Layout>} />
       <Route path="/account" element={<Layout><Account /></Layout>} />
+      <Route path="/auth/callback" element={<AuthCallback />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
