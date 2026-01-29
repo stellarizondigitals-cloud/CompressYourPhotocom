@@ -1,31 +1,17 @@
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-const isConfigured = supabaseUrl && supabaseAnonKey && 
-  supabaseUrl.startsWith('http') && supabaseAnonKey.length > 10;
-
-console.log('[Supabase] Environment check:', {
-  hasUrl: !!supabaseUrl,
-  hasAnonKey: !!supabaseAnonKey,
-  isConfigured,
-  urlPrefix: supabaseUrl ? supabaseUrl.substring(0, 40) + '...' : 'NOT SET',
-  keyLength: supabaseAnonKey ? supabaseAnonKey.length : 0,
-});
-
-if (!isConfigured) {
-  console.error('[Supabase] Missing environment variables. Check VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in Vercel.');
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.error('[Supabase] Missing env vars:', { 
+    hasUrl: !!supabaseUrl, 
+    hasAnonKey: !!supabaseAnonKey 
+  });
 }
 
-let supabaseInstance: SupabaseClient | null = null;
-
-if (isConfigured) {
-  supabaseInstance = createClient(supabaseUrl, supabaseAnonKey);
-}
-
-export const supabase = supabaseInstance;
-export const isSupabaseConfigured = isConfigured;
+export const supabase = createClient(supabaseUrl || '', supabaseAnonKey || '');
+export const isSupabaseConfigured = !!(supabaseUrl && supabaseAnonKey);
 
 export interface Profile {
   id: string;
@@ -35,7 +21,7 @@ export interface Profile {
 }
 
 export async function getProfile(userId: string): Promise<Profile | null> {
-  if (!supabase) return null;
+  if (!isSupabaseConfigured) return null;
   
   const { data, error } = await supabase
     .from('profiles')
@@ -52,7 +38,7 @@ export async function getProfile(userId: string): Promise<Profile | null> {
 }
 
 export async function createProfile(userId: string): Promise<Profile | null> {
-  if (!supabase) return null;
+  if (!isSupabaseConfigured) return null;
   
   const { data, error } = await supabase
     .from('profiles')
