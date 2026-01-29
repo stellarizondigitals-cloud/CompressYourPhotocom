@@ -10,7 +10,8 @@ console.log('[Supabase] Environment check:', {
   hasUrl: !!supabaseUrl,
   hasAnonKey: !!supabaseAnonKey,
   isConfigured,
-  urlPrefix: supabaseUrl ? supabaseUrl.substring(0, 30) + '...' : 'NOT SET',
+  urlPrefix: supabaseUrl ? supabaseUrl.substring(0, 40) + '...' : 'NOT SET',
+  keyLength: supabaseAnonKey ? supabaseAnonKey.length : 0,
 });
 
 if (!isConfigured) {

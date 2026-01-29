@@ -74,20 +74,34 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signInWithEmail = async (email: string): Promise<{ error: Error | null }> => {
     if (!isSupabaseConfigured || !supabase) {
-      console.error('Auth not configured');
+      console.error('[Auth] Not configured');
       return { error: new Error('Authentication not configured') };
     }
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: window.location.origin,
-      },
-    });
-    if (error) {
-      console.error('Sign in error:', error);
-      return { error };
+    
+    try {
+      console.log('[Auth] Attempting sign in for:', email);
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: {
+          emailRedirectTo: window.location.origin,
+        },
+      });
+      
+      if (error) {
+        console.error('[Auth] Sign in error:', error.message, error);
+        return { error };
+      }
+      
+      console.log('[Auth] Magic link sent successfully');
+      return { error: null };
+    } catch (networkError: any) {
+      console.error('[Auth] Network error:', networkError);
+      // Provide more helpful error message
+      const message = networkError?.message === 'Failed to fetch' 
+        ? 'Unable to connect to authentication service. Please check your internet connection and try again.'
+        : networkError?.message || 'An unexpected error occurred';
+      return { error: new Error(message) };
     }
-    return { error: null };
   };
 
   const signOut = async () => {
