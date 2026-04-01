@@ -9,6 +9,8 @@ import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
 import { AboutTool } from '@/components/AboutTool';
 import { PopularUseCases } from '@/components/PopularUseCases';
+import { HowToUse } from '@/components/HowToUse';
+import { AdBanner } from '@/components/AdBanner';
 
 const formats = ['JPG', 'PNG', 'WebP', 'HEIC', 'GIF'];
 
@@ -67,7 +69,14 @@ export default function Compress() {
       </div>
       <AboutTool tool="compress" />
       <PopularUseCases tool="compress" />
-      
+      <HowToUse tool="compress" />
+
+      <div className="py-4 px-4 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <AdBanner slot="2847193056" format="horizontal" fullWidth />
+        </div>
+      </div>
+
       <section className="py-16 md:py-20 px-4 md:px-8 bg-muted/30">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">

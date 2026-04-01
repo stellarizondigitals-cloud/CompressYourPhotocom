@@ -28,6 +28,8 @@ import { CookieConsent } from "@/components/CookieConsent";
 
 import Account from "@/pages/Account";
 import AuthCallback from "@/pages/AuthCallback";
+import BlogIndex from "@/pages/blog/BlogIndex";
+import BlogPost from "@/pages/blog/BlogPost";
 import CompressJpg from "@/pages/seo/CompressJpg";
 import CompressPng from "@/pages/seo/CompressPng";
 import ConvertHeicToJpg from "@/pages/seo/ConvertHeicToJpg";
@@ -89,6 +91,8 @@ function AppRoutes() {
           <Route key={`${lang}-enhance-photo-quality`} path={`${prefix}/enhance-photo-quality`} element={<Layout><EnhancePhotoQuality /></Layout>} />,
         ];
       })}
+      <Route path="/blog" element={<Layout><BlogIndex /></Layout>} />
+      <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
       <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />
       <Route path="/how-it-works" element={<Layout><HowItWorks /></Layout>} />
       <Route path="/languages" element={<Layout><Languages /></Layout>} />

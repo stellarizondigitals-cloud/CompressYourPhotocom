@@ -144,6 +144,13 @@ export function Footer() {
               >
                 {t('footer.contact')}
               </Link>
+              <Link 
+                to="/blog" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-blog"
+              >
+                Blog
+              </Link>
             </nav>
           </div>
 

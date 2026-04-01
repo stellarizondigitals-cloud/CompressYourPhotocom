@@ -21,6 +21,13 @@ Preferred communication style: Simple, everyday language.
 - **Domain**: compressyourphoto.com (and www.compressyourphoto.com)
 - **Company**: Stellarizon Digitals Ltd (Company No. 16748429, England and Wales)
 
+## Key Features Added (April 2025)
+- **Blog section** (`/blog`, `/blog/:slug`) — 8 full articles on compression, resizing, converting, cropping, enhancing, image formats, social media sizing, and SEO/performance. Linked from header nav and footer.
+- **HowToUse component** — Step-by-step guides with Pro Tips added to all 5 tool pages (Compress, Resize, Convert, Crop, Enhance)
+- **AdBanner component** — AdSense `<ins>` wrapper (ca-pub-1318056567034683) placed on all tool pages, ready to serve ads when approved
+- **ads.txt** — Already correct at `client/public/ads.txt`
+- **Sitemap** — Blog URLs added for all 8 articles + blog index
+
 ## System Architecture
 
 ### Frontend Architecture

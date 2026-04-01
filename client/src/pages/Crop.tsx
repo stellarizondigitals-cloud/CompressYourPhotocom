@@ -14,6 +14,8 @@ import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
 import { AboutTool } from '@/components/AboutTool';
 import { PopularUseCases } from '@/components/PopularUseCases';
+import { HowToUse } from '@/components/HowToUse';
+import { AdBanner } from '@/components/AdBanner';
 
 type AspectPreset = 'free' | '1:1' | '16:9' | '9:16' | '4:3' | '3:4' | 'circle';
 
@@ -260,6 +262,14 @@ export default function CropPage() {
       </div>
       <AboutTool tool="crop" />
       <PopularUseCases tool="crop" />
+      <HowToUse tool="crop" />
+
+      <div className="py-4 px-4 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <AdBanner slot="2847193056" format="horizontal" fullWidth />
+        </div>
+      </div>
+
       <RelatedTools currentTool="crop" />
     </>
   );

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, LogIn, LogOut, Crown, User } from 'lucide-react';
+import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, LogIn, LogOut, Crown, User, BookOpen } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/contexts/AuthContext';
@@ -86,6 +86,16 @@ export function Header() {
                 </Link>
               );
             })}
+            <Link to="/blog" data-testid="nav-link-blog">
+              <Button
+                variant={location.pathname.startsWith('/blog') ? 'secondary' : 'ghost'}
+                size="sm"
+                className={`gap-1.5 ${location.pathname.startsWith('/blog') ? 'bg-primary/10' : ''}`}
+              >
+                <BookOpen className="w-4 h-4" />
+                Blog
+              </Button>
+            </Link>
           </nav>
 
           <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
@@ -179,6 +189,21 @@ export function Header() {
                 </Link>
               );
             })}
+            <Link
+              to="/blog"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full"
+              data-testid="mobile-nav-link-blog"
+            >
+              <Button
+                variant={location.pathname.startsWith('/blog') ? 'secondary' : 'ghost'}
+                size="sm"
+                className={`w-full justify-start gap-2 ${location.pathname.startsWith('/blog') ? 'bg-primary/10' : ''}`}
+              >
+                <BookOpen className="w-4 h-4" />
+                Blog
+              </Button>
+            </Link>
           </nav>
         )}
       </div>
