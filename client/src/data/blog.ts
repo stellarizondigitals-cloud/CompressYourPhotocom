@@ -736,6 +736,487 @@ Optimising your images is the single most impactful performance improvement for 
 Start by compressing your largest images. Even a basic pass at 80% quality will typically cut 60–70% of image file sizes with no visible quality difference.
     `.trim(),
   },
+  {
+    slug: 'compress-images-for-whatsapp',
+    title: 'How to Compress Images for WhatsApp Without Losing Quality',
+    description: 'WhatsApp compresses photos automatically — and often badly. Here\'s how to compress images yourself before sending, so they look sharp on any device.',
+    category: 'How-To',
+    date: 'April 1, 2026',
+    readTime: '5 min read',
+    coverEmoji: '💬',
+    content: `
+## Why WhatsApp Crushes Your Photos
+
+When you send a photo through WhatsApp, the app automatically compresses it before delivery. This reduces data usage — but the result is often a blurry, washed-out image that looks nothing like the original.
+
+WhatsApp typically compresses images to around 100–200 KB regardless of original quality. If your original photo is 5 MB, that's a 95% reduction — and the quality loss is very visible, especially on large screens.
+
+The fix? Compress the image yourself first, at a quality you control, so WhatsApp has less to destroy.
+
+## What Happens When WhatsApp Compresses Your Photo
+
+WhatsApp's compression is aggressive and automatic:
+
+- Reduces resolution to around 1600 × 1200 pixels
+- Applies heavy JPEG compression regardless of original format
+- Strips most image metadata (GPS, camera info, date)
+- Cannot be disabled in most versions of the app
+
+The result looks fine on small screens but poor on tablets, laptops, or when printed.
+
+## The Simple Fix: Pre-Compress Before Sending
+
+By compressing the image yourself at 75–85% quality, you get a file small enough that WhatsApp won't compress it further (or will compress it much less), and you control the result.
+
+**Step 1:** Go to the **[Compress tool](/compress)** on CompressYourPhoto
+
+**Step 2:** Upload your photo (JPG, PNG, HEIC — all supported)
+
+**Step 3:** Set quality to **80%** and reduce the max width to **1600px** if the original is larger
+
+**Step 4:** Download the compressed image — it should be under 500 KB
+
+**Step 5:** Send this version through WhatsApp
+
+The difference is immediately noticeable. Photos stay sharp, colours stay accurate, and text in screenshots remains readable.
+
+## Best Settings for WhatsApp Images
+
+| Image Type | Recommended Quality | Max Width |
+|---|---|---|
+| Photos | 80% | 1600px |
+| Screenshots | 90% | Original |
+| Documents/receipts | 85% | 1200px |
+| Product images | 80% | 1600px |
+
+## Sending High-Quality Photos Through WhatsApp
+
+If quality is critical — wedding photos, professional images, documents — use WhatsApp's **Send as Document** option instead:
+
+1. Tap the attachment icon
+2. Select **Document** instead of **Photo/Video**
+3. Browse to your image file
+
+This bypasses WhatsApp's photo compression entirely and sends the original file. The recipient downloads it as a file rather than seeing it in the chat preview.
+
+## Batch Compressing Multiple WhatsApp Photos
+
+If you need to send multiple images — a photo album, a set of product shots — compress them all at once:
+
+1. Go to the Compress tool
+2. Upload all photos (up to 50 at once with Pro)
+3. Set quality to 80%, max width to 1600px
+4. Download as a ZIP file
+5. Extract and send individually through WhatsApp
+
+This workflow saves time and ensures consistent quality across all images.
+
+## Does File Format Matter for WhatsApp?
+
+WhatsApp converts everything to JPEG on delivery regardless of what you send. So sending a PNG or HEIC doesn't give you better quality — it just gives WhatsApp more data to compress.
+
+Recommendation: **convert to JPG first** using the [Convert tool](/convert), then compress. This gives you full control and avoids any format conversion surprises.
+
+## Quick Summary
+
+- WhatsApp aggressively compresses photos automatically
+- Pre-compressing at 80% quality gives you control over the result
+- Keep images under 500 KB for minimal WhatsApp re-compression
+- Use "Send as Document" for full-quality delivery
+- Compress in batches using CompressYourPhoto for multiple images
+    `.trim(),
+  },
+  {
+    slug: 'convert-heic-to-jpg-windows-mac',
+    title: 'How to Convert HEIC to JPG on Windows, Mac and Online',
+    description: 'iPhone photos are saved as HEIC — a format Windows often can\'t open. Here\'s how to convert HEIC to JPG quickly on any device.',
+    category: 'How-To',
+    date: 'April 1, 2026',
+    readTime: '5 min read',
+    coverEmoji: '📱',
+    content: `
+## What is HEIC and Why is It a Problem?
+
+Since iOS 11, iPhones save photos in HEIC (High Efficiency Image Container) format by default. HEIC files are roughly half the size of equivalent JPEGs — great for storage, but a headache when you try to share or open them elsewhere.
+
+**Common HEIC problems:**
+- Windows Photo Viewer can't open them (without a paid codec)
+- Many websites reject .heic uploads
+- Email attachments sometimes fail or display as blank
+- Older Android phones can't view them
+- Photo editing software often doesn't support them
+
+The solution is simple: convert HEIC to JPG before sharing.
+
+## Method 1: Convert Online (Fastest — No Software Needed)
+
+The quickest method on any device:
+
+1. Go to the **[Convert tool](/convert)** on CompressYourPhoto
+2. Upload your HEIC file (or multiple files)
+3. Select **JPG** as the output format
+4. Click Convert and download your JPG
+
+Works on Windows, Mac, Android, and any browser. Files are processed entirely in your browser — nothing is uploaded to a server.
+
+## Method 2: Convert on iPhone Before Sending
+
+You can change your iPhone to save photos as JPG instead of HEIC permanently:
+
+1. Open **Settings**
+2. Tap **Camera** → **Formats**
+3. Select **Most Compatible** instead of "High Efficiency"
+
+From that point on, new photos will be saved as JPG. This doesn't convert existing HEIC photos — only new ones.
+
+**For sharing existing HEIC photos via email or Messages**, iPhones automatically convert to JPG when you share to incompatible apps. But this isn't reliable — use the online converter for guaranteed results.
+
+## Method 3: Convert on Windows 10/11
+
+**Option A — Free (Microsoft codec):**
+1. Open the Microsoft Store
+2. Search for **HEIC Image Extensions** — it's free from Microsoft
+3. Install it
+4. Windows Photos can now open .heic files
+5. Right-click the HEIC file → **Open with → Photos** → **Save a copy** (saves as JPG)
+
+**Option B — Without installing anything:**
+Use the online converter above — faster and no system changes required.
+
+## Method 4: Convert on Mac
+
+Macs natively support HEIC, so converting is straightforward:
+
+1. Open the HEIC file in **Preview**
+2. Go to **File → Export**
+3. Choose **JPEG** from the Format dropdown
+4. Adjust quality if needed
+5. Click **Save**
+
+For batch conversion on Mac:
+1. Select all HEIC files in Finder
+2. Right-click → **Open with → Preview** (opens all in one window)
+3. Select all thumbnails (Cmd+A)
+4. File → Export Selected Images
+5. Choose JPEG format and destination folder
+
+## Method 5: Convert on Android
+
+Android doesn't natively support HEIC either. Options:
+
+- **Google Photos** — if you back up your iPhone photos to Google Photos, it converts and makes them viewable on Android automatically
+- **Online converter** — transfer the file to your Android and use the web-based converter
+- **Third-party apps** — various apps on the Play Store convert HEIC, though quality varies
+
+## Batch Converting Many HEIC Files
+
+If you have dozens or hundreds of HEIC photos from an iPhone backup:
+
+1. Use the CompressYourPhoto Convert tool
+2. Upload multiple files at once
+3. Select JPG output
+4. Download as a ZIP
+
+This handles the conversion in your browser — no software, no uploads, no account.
+
+## HEIC vs JPG: Quality Comparison
+
+HEIC is technically superior to JPG:
+- Same visual quality at roughly half the file size
+- Better colour depth and dynamic range
+- Supports 16-bit colour (JPG is 8-bit)
+
+But JPG wins on **compatibility**. Until HEIC is widely supported everywhere, converting to JPG for sharing makes practical sense.
+
+## Summary
+
+| Situation | Best Method |
+|---|---|
+| One-off conversion, any device | Online converter |
+| Change iPhone going forward | iPhone Settings → Camera → Most Compatible |
+| Many files on Windows | Microsoft HEIC codec + Preview |
+| Batch conversion on Mac | Preview batch export |
+| Files on Android | Google Photos or online converter |
+    `.trim(),
+  },
+  {
+    slug: 'resize-photo-for-passport-id',
+    title: 'How to Resize a Photo for a Passport, Visa or ID Application',
+    description: 'Passport and ID photos have very specific size requirements. Here\'s exactly how to resize and crop your photo to meet official specifications.',
+    category: 'How-To',
+    date: 'April 1, 2026',
+    readTime: '6 min read',
+    coverEmoji: '🪪',
+    content: `
+## Why Passport Photo Dimensions Matter
+
+Government agencies and visa processors reject photos that don't meet precise specifications. Getting the dimensions wrong — even slightly — means a rejected application, wasted time, and restarting the process.
+
+The good news: with the right tools, you can create a perfectly sized passport photo from any clear headshot in minutes.
+
+## Standard Passport Photo Requirements by Country
+
+| Country | Size | Resolution | Background |
+|---|---|---|---|
+| UK (British passport) | 35 × 45 mm | Min 600 dpi | Plain cream or light grey |
+| US passport | 2 × 2 inches (51 × 51 mm) | 600 dpi | White or off-white |
+| EU (Schengen visa) | 35 × 45 mm | Min 600 dpi | White or light grey |
+| India | 35 × 45 mm | 200 dpi minimum | White |
+| Canada | 50 × 70 mm | 600 dpi | White |
+| Australia | 35 × 45 mm | 600 dpi | White or off-white |
+
+**Always check the official government website** for your specific application — requirements change and vary by visa type.
+
+## Step 1 — Take the Right Photo
+
+Before resizing, you need a good source photo:
+
+- **Plain background** — use a white wall, or hang a white sheet
+- **Good lighting** — even, shadow-free lighting on your face
+- **Neutral expression** — mouth closed, eyes open and looking at camera
+- **No glasses** — most countries now require glasses-free photos
+- **Head straight** — not tilted or turned
+- **Recent** — taken within the last 6 months
+
+Use portrait mode on your phone or have someone take it with a decent camera. The better your source photo, the better the final result.
+
+## Step 2 — Crop to the Right Head Ratio
+
+Passport photos require your head to take up a specific portion of the frame. For most countries:
+
+- Head height (top of hair to chin): **70–80% of the total image height**
+- Face (eyes to chin): **roughly 60–70% of the image height**
+
+Use the **[Crop tool](/crop)** to:
+1. Upload your photo
+2. Crop to a square or the required aspect ratio
+3. Make sure your head fills the right portion of the frame
+
+## Step 3 — Resize to Exact Pixel Dimensions
+
+Once cropped, resize to the exact dimensions required:
+
+**For a UK passport photo (35 × 45 mm at 600 dpi):**
+- 35 mm × 600/25.4 = **827 pixels wide**
+- 45 mm × 600/25.4 = **1063 pixels tall**
+
+**For a US passport photo (2 × 2 inches at 600 dpi):**
+- 2 × 600 = **1200 × 1200 pixels**
+
+Use the **[Resize tool](/resize)**:
+1. Upload your cropped photo
+2. Enter the exact pixel dimensions
+3. Download the resized image
+
+## Step 4 — Check File Size Requirements
+
+Many online application forms require:
+- File size under 10 MB (sometimes under 2 MB)
+- JPG or JPEG format only
+- Minimum 200 dpi
+
+Use the **[Compress tool](/compress)** if you need to reduce the file size while keeping the dimensions the same.
+
+## Step 5 — Convert Format if Needed
+
+Most government portals accept JPG only. If your photo is PNG, HEIC, or WebP, convert it first using the **[Convert tool](/convert)**.
+
+## Printing Passport Photos at Home
+
+If you need to print the photo rather than upload it:
+
+Most countries require photos printed at specific sizes (e.g., 35 × 45 mm). To print two photos on a 6 × 4 inch (15 × 10 cm) photo paper:
+
+1. Create a new image at 6 × 4 inches (1800 × 1200 pixels at 300 dpi)
+2. Place two copies of your passport photo side by side
+3. Print on glossy photo paper
+
+Many chemists and photo printing services (Boots, Snappy Snaps, Walgreens, CVS) can print from a digital file for a small fee.
+
+## Common Rejection Reasons — and How to Avoid Them
+
+| Rejection Reason | Prevention |
+|---|---|
+| Head too small or large | Check head-to-frame ratio before submitting |
+| Shadows on background | Better lighting setup or adjust in photo editor |
+| File size too large | Use Compress tool after resizing |
+| Wrong format (not JPG) | Convert to JPG before submitting |
+| Photo too dark or over-exposed | Retake or use Enhance tool to adjust brightness |
+| Glasses visible | Remove glasses, retake |
+
+## Quick Checklist Before Submitting
+
+- ✅ Plain white or light background
+- ✅ Full face visible, looking directly at camera  
+- ✅ No glasses, head coverings (unless religious)
+- ✅ Recent photo (within 6 months)
+- ✅ Correct pixel dimensions
+- ✅ File size within limits
+- ✅ JPG format
+- ✅ Mouth closed, neutral expression
+
+Following this checklist ensures your photo meets requirements the first time — no delays, no rejections.
+    `.trim(),
+  },
+  {
+    slug: 'best-image-format-for-websites',
+    title: 'Best Image Format for Websites in 2026: WebP, JPEG, PNG or AVIF?',
+    description: 'Choosing the wrong image format costs you page speed and Google rankings. Here\'s exactly which format to use for each type of image on your website.',
+    category: 'SEO & Performance',
+    date: 'April 1, 2026',
+    readTime: '7 min read',
+    coverEmoji: '🌐',
+    content: `
+## Why Image Format Choice Matters
+
+The format you choose for your website images directly affects:
+
+- **Page load speed** — different formats have very different file sizes at the same quality
+- **Google Core Web Vitals** — slow loading images hurt your LCP (Largest Contentful Paint) score
+- **Search rankings** — Google's PageSpeed signals influence ranking
+- **User experience** — images that load slowly cause users to leave
+- **Bandwidth costs** — smaller files cost less to serve
+
+Choosing the right format can reduce image file sizes by 30–80% compared to the wrong choice — with no visible quality difference.
+
+## The Four Main Web Image Formats
+
+### JPEG (JPG)
+
+**Best for:** Photographs, complex images with many colours, hero images
+
+JPEG uses lossy compression — it removes image data that's hard for the eye to detect. At 80% quality, JPEG images are typically 60–80% smaller than the original with minimal visible quality loss.
+
+**Pros:**
+- Universal browser support
+- Excellent for photos
+- Good file size at 75–85% quality
+
+**Cons:**
+- Not suitable for text, logos, or line art
+- Each re-save degrades quality slightly
+- No transparency support
+
+**Use JPEG when:** You're displaying photographs, background images, or any complex real-world image.
+
+### PNG
+
+**Best for:** Logos, icons, screenshots, images with text, transparent backgrounds
+
+PNG uses lossless compression — no data is removed. This means larger files but pixel-perfect quality regardless of how many times you save.
+
+**Pros:**
+- Lossless — no quality loss
+- Supports transparency (alpha channel)
+- Perfect for logos, icons, and graphics
+
+**Cons:**
+- Much larger than JPEG for photographs
+- Not suitable as a photo format for web use
+
+**Use PNG when:** You need transparency, or the image contains text, sharp lines, or flat colours (logos, UI screenshots, infographics).
+
+### WebP
+
+**Best for:** Almost everything on modern websites
+
+WebP was developed by Google specifically for web use. It supports both lossy and lossless compression, transparency, and animation — all at better compression than JPEG or PNG.
+
+**WebP at 80% quality is typically:**
+- 25–35% smaller than equivalent JPEG
+- 25–45% smaller than equivalent PNG
+
+**Pros:**
+- Significantly smaller than JPEG and PNG
+- Supports transparency (replaces PNG)
+- Supports animation (replaces GIF)
+- Universal browser support (all modern browsers since 2020)
+
+**Cons:**
+- Slightly more processing time to encode
+- Some very old browsers don't support it (IE11, old Safari)
+
+**Use WebP when:** You want the best balance of quality and file size for any image type. This should be your default format for new web projects.
+
+### AVIF
+
+**Best for:** Cutting-edge performance where file size is critical**
+
+AVIF is the newest format, based on the AV1 video codec. It offers even better compression than WebP — typically 20–50% smaller at the same quality.
+
+**Pros:**
+- Best compression of all formats
+- Excellent quality at low file sizes
+- Supports transparency and HDR
+
+**Cons:**
+- Browser support is still growing (Chrome, Firefox yes; Safari partial; Edge yes)
+- Encoding is significantly slower
+- Older devices may not support it
+
+**Use AVIF when:** You're targeting modern browsers, have the technical setup to serve it with JPEG/WebP fallbacks, and file size is the top priority.
+
+## Format Decision Guide
+
+| Image Type | Recommended Format | Why |
+|---|---|---|
+| Photographs | WebP (JPEG fallback) | Best size/quality ratio |
+| Logo with transparency | WebP or PNG | Need transparency |
+| Icon / UI element | WebP or SVG | Sharp at any size |
+| Screenshot with text | WebP or PNG | Preserves sharpness |
+| Animation | WebP or GIF | WebP smaller |
+| Background image | WebP (JPEG fallback) | Largest image, most impact |
+| Product photo | WebP (JPEG fallback) | E-commerce standard |
+
+## How to Convert Your Images to WebP
+
+You don't need to recreate images from scratch. Convert existing JPEGs and PNGs:
+
+1. Go to the **[Convert tool](/convert)** on CompressYourPhoto
+2. Upload your JPG or PNG
+3. Select **WebP** as the output format
+4. Download and replace the original on your website
+
+This typically reduces file size by 25–40% instantly.
+
+## Should You Serve Different Formats to Different Browsers?
+
+If you need to support older browsers (IE11, old Safari), you can serve different formats using HTML's picture element:
+
+\`\`\`html
+<picture>
+  <source srcset="image.avif" type="image/avif">
+  <source srcset="image.webp" type="image/webp">
+  <img src="image.jpg" alt="Description">
+</picture>
+\`\`\`
+
+This serves AVIF to browsers that support it, WebP to others, and JPEG as a universal fallback. Most modern frameworks (Next.js, Nuxt, Astro) handle this automatically.
+
+## Impact on Google PageSpeed and Rankings
+
+Google's Core Web Vitals — specifically LCP (Largest Contentful Paint) — heavily weights image loading performance. Switching from JPEG to WebP can meaningfully improve your PageSpeed score:
+
+- A typical hero image: 800 KB JPEG → 550 KB WebP → same visual quality
+- Faster LCP → better Core Web Vitals → potential ranking improvement
+
+For e-commerce sites with hundreds of product images, converting all to WebP can be transformative.
+
+## Quick Summary
+
+| Format | Best For | Browser Support |
+|---|---|---|
+| JPEG | Legacy photos, maximum compatibility | Universal |
+| PNG | Transparency, lossless graphics | Universal |
+| WebP | Everything — best default choice | 96%+ of users |
+| AVIF | Maximum compression, modern sites | 90%+ of users |
+| SVG | Logos, icons, illustrations | Universal |
+
+**Start with WebP.** It's the right default for almost every web image in 2026, supported by all modern browsers, and meaningfully smaller than JPEG or PNG.
+
+Convert your existing images using the **[Convert tool](/convert)** — free, instant, no account needed.
+    `.trim(),
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

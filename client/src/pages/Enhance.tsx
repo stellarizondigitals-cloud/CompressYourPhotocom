@@ -502,6 +502,12 @@ export default function EnhancePage() {
         })}</script>
       </Helmet>
 
+      <div className="py-4 px-4 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <AdBanner slot="6391827450" format="horizontal" fullWidth />
+        </div>
+      </div>
+
       <RelatedTools currentTool="enhance" />
     </>
   );

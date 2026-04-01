@@ -4,6 +4,7 @@ import { Calendar, Clock, ArrowRight, BookOpen, Rss } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { blogPosts } from '@/data/blog';
+import { AdBanner } from '@/components/AdBanner';
 
 const categoryColors: Record<string, string> = {
   Guide: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
@@ -73,6 +74,10 @@ export default function BlogIndex() {
                 </div>
               </Card>
             </Link>
+
+            <div className="mb-8">
+              <AdBanner slot="5812934760" format="horizontal" fullWidth />
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {rest.map((post) => (
