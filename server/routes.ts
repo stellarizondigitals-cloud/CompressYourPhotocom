@@ -4,8 +4,8 @@ import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
 import { storage } from "./storage";
 
-const MONTHLY_PRICE_ID = process.env.STRIPE_MONTHLY_PRICE_ID || 'price_1SpnznA1YPAyGFWbKzbFWwJK';
-const LIFETIME_PRICE_ID = process.env.STRIPE_LIFETIME_PRICE_ID || 'price_1Spo0RA1YPAyGFWb0OcshWro';
+const MONTHLY_PRICE_ID = process.env.STRIPE_MONTHLY_PRICE_ID || 'price_1THNBOA1YPAyGFWbw3FewHiI';
+const LIFETIME_PRICE_ID = process.env.STRIPE_LIFETIME_PRICE_ID || 'price_1THNNnA1YPAyGFWbJs3kmtST';
 const ALLOWED_PRICE_IDS = [MONTHLY_PRICE_ID, LIFETIME_PRICE_ID];
 
 console.log('[Server] Environment check:', {
@@ -139,8 +139,9 @@ export async function registerRoutes(
 
       try {
         if (webhookSecret && sig) {
+          const rawBody = (req as any).rawBody as Buffer;
           event = stripe.webhooks.constructEvent(
-            req.body,
+            rawBody,
             sig,
             webhookSecret
           );

@@ -170,7 +170,7 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
             <button
               onClick={() => {
                 if (prices.tier === 1) {
-                  handleCheckoutFixed(import.meta.env.VITE_STRIPE_LIFETIME_PRICE_ID || 'price_1Spo0RA1YPAyGFWb0OcshWro', 'payment');
+                  handleCheckoutFixed(import.meta.env.VITE_STRIPE_LIFETIME_PRICE_ID || 'price_1THNNnA1YPAyGFWbJs3kmtST', 'payment');
                 } else {
                   handleCheckoutGeo('lifetime_geo', prices.lifetime.amount, 'Lifetime Pro Access', 'payment');
                 }
@@ -191,7 +191,7 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
                   </p>
                 </div>
                 <div className={`${isRTL ? 'text-left' : 'text-right'} flex-shrink-0 ml-3`}>
-                  {isLoading('price_1Spo0RA1YPAyGFWb0OcshWro') || isLoading('lifetime_geo') ? (
+                  {isLoading(import.meta.env.VITE_STRIPE_LIFETIME_PRICE_ID || 'price_1THNNnA1YPAyGFWbJs3kmtST') || isLoading('lifetime_geo') ? (
                     <Loader2 className="w-4 h-4 animate-spin ml-auto" />
                   ) : (
                     <>

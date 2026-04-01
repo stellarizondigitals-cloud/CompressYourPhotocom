@@ -45,7 +45,7 @@ const COUNTRY_NAME: Record<string, string> = {
   PH:'Philippines',VN:'Vietnam',BD:'Bangladesh',PK:'Pakistan',NG:'Nigeria',GH:'Ghana',KE:'Kenya',
 };
 
-const MONTHLY_PRICE_ID = import.meta.env.VITE_STRIPE_MONTHLY_PRICE_ID || 'price_1SpnznA1YPAyGFWbKzbFWwJK';
+const MONTHLY_PRICE_ID = import.meta.env.VITE_STRIPE_MONTHLY_PRICE_ID || 'price_1THNBOA1YPAyGFWbw3FewHiI';
 
 function getTier(countryCode: string): PriceTier {
   if (TIER_1.has(countryCode)) return 1;
