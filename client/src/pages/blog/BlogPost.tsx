@@ -117,8 +117,9 @@ function renderMarkdown(content: string) {
 }
 
 function renderInline(text: string): React.ReactNode {
-  const parts = text.split(/(\*\*[^*]+\*\*|\[([^\]]+)\]\(([^)]+)\))/g);
-  return parts.map((part, idx) => {
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+  return parts.filter((part) => part !== undefined && part !== null).map((part, idx) => {
+    if (!part) return null;
     if (part.startsWith('**') && part.endsWith('**')) {
       return <strong key={idx}>{part.slice(2, -2)}</strong>;
     }
