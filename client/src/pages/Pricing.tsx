@@ -202,7 +202,11 @@ export default function Pricing() {
             <AccordionItem value="q2">
               <AccordionTrigger data-testid="pricing-faq-q2">How do I cancel my monthly subscription?</AccordionTrigger>
               <AccordionContent>
-                You can cancel any time by visiting your Account page (sign in → Account) or by contacting us at <a href="mailto:contact@compressyourphoto.com" className="text-primary underline">contact@compressyourphoto.com</a>. Cancellation takes effect at the end of your current billing period — you keep Pro access until then.
+                <div className="space-y-2">
+                  <p><strong>Fastest way (instant, self-service):</strong> Sign in → go to your <Link to="/account" className="text-primary underline">Account page</Link> → click "Manage Subscription". This opens the Stripe billing portal where you cancel in one click — no waiting, no emails, fully automatic.</p>
+                  <p className="text-sm text-muted-foreground">Cancellation takes effect at the end of your current billing period. You keep full Pro access until then, and no further charges are made.</p>
+                  <p className="text-sm text-muted-foreground">Alternatively, email <a href="mailto:contact@compressyourphoto.com" className="text-primary underline">contact@compressyourphoto.com</a> and we'll cancel it for you within 1 business day.</p>
+                </div>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="q3">

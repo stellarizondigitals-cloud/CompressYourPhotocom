@@ -1,14 +1,14 @@
 {
   "app": {
     "title": "CompressYourPhoto",
-    "tagline": "Free Online Image Compressor, Resizer, Converter, Cropper & Enhancer",
-    "homePageTitle": "Compress, Resize, Convert, Crop & Enhance Images Free Online | CompressYourPhoto",
-    "homeMetaDescription": "Free online photo tools. Compress, resize, convert, crop, and enhance images instantly in your browser. 100% private—your photos never leave your device. Supports JPG, PNG, WebP, HEIC, GIF."
+    "tagline": "Free Online Image Tools — Compress, Resize, Convert, Crop, Enhance & Remove Background",
+    "homePageTitle": "Free Online Image Tools: Compress, Resize, Remove Background & More | CompressYourPhoto",
+    "homeMetaDescription": "Free online image tools. Compress photos, resize images, remove backgrounds, convert formats, crop & enhance — 100% private, instant, no account needed. Works on any device. JPG, PNG, WebP, HEIC, GIF."
   },
   "hero": {
     "headline": "Free Online Photo Tools",
-    "subheadline": "Compress, resize, convert, crop, and enhance images instantly",
-    "subheadlineExpanded": "Compress, resize, convert, crop, and enhance your photos—100% free, private, and works on any device. No signup required.",
+    "subheadline": "Compress, resize, convert, crop, enhance & remove backgrounds — instantly, free",
+    "subheadlineExpanded": "Compress, resize, convert, crop, enhance, and remove backgrounds from any photo — 100% free, 100% private, works on any device. No account needed.",
     "dropzone": "Drop photos here or click to upload",
     "supportedFormats": "Supports JPG, PNG, WebP, HEIC, GIF",
     "clientSide": "100% Browser-Based",
@@ -73,7 +73,7 @@
     "mobileDesktop": "Works on any device",
     "supportedFormats": "JPG, PNG, WebP, HEIC, GIF support",
     "allRightsReserved": "All rights reserved.",
-    "tagline": "Free online image tools. Compress, resize, convert, and crop photos privately in your browser.",
+    "tagline": "Free online photo tools — compress, resize, convert, crop, enhance and remove backgrounds privately in your browser.",
     "popularTools": "Popular Tools",
     "links": {
       "compressJpg": "Compress JPG",

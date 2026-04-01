@@ -74,13 +74,26 @@ export default function Home() {
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "CompressYourPhoto",
+          "url": "https://www.compressyourphoto.com",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Any (web browser)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "description": "Free online image tools. Compress, resize, convert, crop, enhance and remove backgrounds from photos — 100% private, no account needed.",
+          "featureList": "Compress images, Resize images, Convert image formats, Crop images, Enhance images, Remove image background",
+          "screenshot": "https://www.compressyourphoto.com/og-image-v4.png"
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
-            { "@type": "Question", "name": "Is CompressYourPhoto really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CompressYourPhoto is 100% free with no hidden fees, no signup required, and no watermarks." } },
-            { "@type": "Question", "name": "Are my photos uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No, your photos never leave your device. All processing happens locally in your browser." } },
+            { "@type": "Question", "name": "Is CompressYourPhoto really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, all 6 tools — compress, resize, convert, crop, enhance, and remove backgrounds — are 100% free with no hidden fees, no signup required, and no watermarks." } },
+            { "@type": "Question", "name": "Can I remove the background from an image for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our AI background remover is free with 3 removals per session. Upgrade to Pro for unlimited background removals." } },
+            { "@type": "Question", "name": "Are my photos uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No, your photos never leave your device. All processing — including AI background removal — happens locally in your browser." } },
             { "@type": "Question", "name": "What image formats are supported?", "acceptedAnswer": { "@type": "Answer", "text": "We support JPG/JPEG, PNG, WebP, HEIC/HEIF (iPhone photos), GIF, and BMP formats." } },
-            { "@type": "Question", "name": "How much can I reduce my image size?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 50-90% reduction while maintaining good visual quality." } },
-            { "@type": "Question", "name": "Can I process multiple images at once?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Upload multiple images and process them all together. Download individually or as a ZIP file." } },
+            { "@type": "Question", "name": "How much can I reduce my image file size?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 50–90% reduction while maintaining good visual quality, depending on your quality settings." } },
+            { "@type": "Question", "name": "Can I process multiple images at once?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Upload multiple images and process them all together. Download individually or as a ZIP file (ZIP download available on Pro)." } },
             { "@type": "Question", "name": "Does it work on mobile phones?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CompressYourPhoto works on all modern mobile browsers including iPhone Safari and Android Chrome." } }
           ]
         })}</script>
