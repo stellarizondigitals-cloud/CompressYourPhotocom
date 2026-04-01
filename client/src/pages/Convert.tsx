@@ -10,6 +10,7 @@ import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Progress } from '@/components/ui/progress';
+import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
@@ -17,6 +18,7 @@ import { AboutTool } from '@/components/AboutTool';
 import { PopularUseCases } from '@/components/PopularUseCases';
 import { HowToUse } from '@/components/HowToUse';
 import { AdBanner } from '@/components/AdBanner';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface ImageFile {
   id: string;
@@ -330,6 +332,56 @@ export default function Convert() {
           <AdBanner slot="2847193056" format="horizontal" fullWidth />
         </div>
       </div>
+
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-muted/30">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="q1">
+              <AccordionTrigger data-testid="convert-faq-q1">Can I convert JPG to PNG for free?</AccordionTrigger>
+              <AccordionContent>Yes, our image converter is completely free with no limits. Upload your JPG, choose PNG as the output, and download the converted file instantly — no account needed.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q2">
+              <AccordionTrigger data-testid="convert-faq-q2">What's the difference between JPG and PNG?</AccordionTrigger>
+              <AccordionContent>JPG uses lossy compression, making it ideal for photos — smaller file sizes with minimal visible quality loss. PNG uses lossless compression and supports transparency, making it better for logos, screenshots, and graphics with sharp edges.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q3">
+              <AccordionTrigger data-testid="convert-faq-q3">Will converting an image change its quality?</AccordionTrigger>
+              <AccordionContent>Converting from a lossless format (PNG) to JPG can slightly reduce quality since JPG is lossy. Converting from JPG to PNG won't improve quality beyond the original, but it won't degrade it further either. WebP offers the best of both — excellent quality with small file sizes.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q4">
+              <AccordionTrigger data-testid="convert-faq-q4">Can I convert HEIC iPhone photos to JPG?</AccordionTrigger>
+              <AccordionContent>Yes! Upload your HEIC/HEIF photos taken on iPhone and convert them to JPG, PNG, or WebP instantly. The conversion happens entirely in your browser — no upload to any server.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q5">
+              <AccordionTrigger data-testid="convert-faq-q5">Can I convert multiple images at once?</AccordionTrigger>
+              <AccordionContent>Yes, you can upload and convert multiple images simultaneously. Once converted, download them one by one or as a ZIP archive.</AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressyourphoto.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Convert Image Format", "item": "https://www.compressyourphoto.com/convert" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Can I convert JPG to PNG for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, our image converter is completely free with no limits. Upload your JPG, choose PNG as the output, and download the converted file instantly — no account needed." } },
+            { "@type": "Question", "name": "What's the difference between JPG and PNG?", "acceptedAnswer": { "@type": "Answer", "text": "JPG uses lossy compression, ideal for photos with smaller file sizes. PNG uses lossless compression and supports transparency, better for logos and graphics with sharp edges." } },
+            { "@type": "Question", "name": "Will converting an image change its quality?", "acceptedAnswer": { "@type": "Answer", "text": "Converting from PNG to JPG can slightly reduce quality since JPG is lossy. Converting from JPG to PNG won't improve quality but won't degrade it further. WebP offers excellent quality with small file sizes." } },
+            { "@type": "Question", "name": "Can I convert HEIC iPhone photos to JPG?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Upload your HEIC/HEIF photos taken on iPhone and convert them to JPG, PNG, or WebP instantly. The conversion happens entirely in your browser." } },
+            { "@type": "Question", "name": "Can I convert multiple images at once?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can upload and convert multiple images simultaneously. Once converted, download them one by one or as a ZIP archive." } }
+          ]
+        })}</script>
+      </Helmet>
 
       <RelatedTools currentTool="convert" />
     </>

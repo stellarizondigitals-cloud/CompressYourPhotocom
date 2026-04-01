@@ -128,6 +128,14 @@ export default function Compress() {
       </section>
       
       <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressyourphoto.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Compress Images", "item": "https://www.compressyourphoto.com/compress" }
+          ]
+        })}</script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -11,6 +11,7 @@ import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Progress } from '@/components/ui/progress';
+import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
@@ -18,6 +19,7 @@ import { AboutTool } from '@/components/AboutTool';
 import { PopularUseCases } from '@/components/PopularUseCases';
 import { HowToUse } from '@/components/HowToUse';
 import { AdBanner } from '@/components/AdBanner';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface ImageFile {
   id: string;
@@ -416,6 +418,56 @@ export default function Resize() {
           <AdBanner slot="2847193056" format="horizontal" fullWidth />
         </div>
       </div>
+
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-muted/30">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="q1">
+              <AccordionTrigger data-testid="resize-faq-q1">Can I resize an image without losing quality?</AccordionTrigger>
+              <AccordionContent>Reducing an image's dimensions generally maintains visual quality because you're removing pixels. Enlarging beyond the original size can reduce sharpness — for best results, keep the new size at or below the original dimensions.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q2">
+              <AccordionTrigger data-testid="resize-faq-q2">What dimensions should I use for social media?</AccordionTrigger>
+              <AccordionContent>Common sizes: Instagram post 1080×1080px, Instagram Story 1080×1920px, YouTube thumbnail 1280×720px, LinkedIn post 1200×627px, Twitter/X 1200×675px. Use our built-in presets to resize instantly.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q3">
+              <AccordionTrigger data-testid="resize-faq-q3">Can I resize multiple photos at once?</AccordionTrigger>
+              <AccordionContent>Yes! Upload multiple images together and resize them all to the same dimensions in one go. Download individually or as a single ZIP file.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q4">
+              <AccordionTrigger data-testid="resize-faq-q4">What's the difference between resizing and cropping?</AccordionTrigger>
+              <AccordionContent>Resizing changes the overall dimensions of an image while keeping the full picture. Cropping removes parts of the image to change its shape or focus. Use our Crop tool if you need to remove edges or change the aspect ratio.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q5">
+              <AccordionTrigger data-testid="resize-faq-q5">Does resizing reduce file size?</AccordionTrigger>
+              <AccordionContent>Yes, smaller dimensions mean fewer pixels, which directly reduces file size. You can also use our Compress tool after resizing to further reduce file size without changing the dimensions.</AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressyourphoto.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Resize Photos", "item": "https://www.compressyourphoto.com/resize" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Can I resize an image without losing quality?", "acceptedAnswer": { "@type": "Answer", "text": "Reducing an image's dimensions generally maintains visual quality because you're removing pixels. Enlarging beyond the original size can reduce sharpness — for best results, keep the new size at or below the original dimensions." } },
+            { "@type": "Question", "name": "What dimensions should I use for social media?", "acceptedAnswer": { "@type": "Answer", "text": "Common sizes: Instagram post 1080×1080px, Instagram Story 1080×1920px, YouTube thumbnail 1280×720px, LinkedIn post 1200×627px, Twitter/X 1200×675px. Use our built-in presets to resize instantly." } },
+            { "@type": "Question", "name": "Can I resize multiple photos at once?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Upload multiple images together and resize them all to the same dimensions in one go. Download individually or as a single ZIP file." } },
+            { "@type": "Question", "name": "What's the difference between resizing and cropping?", "acceptedAnswer": { "@type": "Answer", "text": "Resizing changes the overall dimensions of an image while keeping the full picture. Cropping removes parts of the image to change its shape or focus." } },
+            { "@type": "Question", "name": "Does resizing reduce file size?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, smaller dimensions mean fewer pixels, which directly reduces file size. You can also use our Compress tool after resizing to further reduce file size without changing the dimensions." } }
+          ]
+        })}</script>
+      </Helmet>
 
       <RelatedTools currentTool="resize" />
     </>

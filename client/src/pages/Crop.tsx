@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
@@ -16,6 +17,7 @@ import { AboutTool } from '@/components/AboutTool';
 import { PopularUseCases } from '@/components/PopularUseCases';
 import { HowToUse } from '@/components/HowToUse';
 import { AdBanner } from '@/components/AdBanner';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 type AspectPreset = 'free' | '1:1' | '16:9' | '9:16' | '4:3' | '3:4' | 'circle';
 
@@ -269,6 +271,56 @@ export default function CropPage() {
           <AdBanner slot="2847193056" format="horizontal" fullWidth />
         </div>
       </div>
+
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-muted/30">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="q1">
+              <AccordionTrigger data-testid="crop-faq-q1">How do I crop an image to an exact size?</AccordionTrigger>
+              <AccordionContent>Use our pixel-based crop tool: select your area, then set the exact width and height you need. For social media, use our aspect ratio presets — 1:1 for Instagram posts, 16:9 for YouTube thumbnails, 9:16 for stories.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q2">
+              <AccordionTrigger data-testid="crop-faq-q2">What's the best aspect ratio for Instagram?</AccordionTrigger>
+              <AccordionContent>Instagram supports multiple ratios: 1:1 (square) for standard posts, 4:5 (portrait) for maximum feed space, and 9:16 for Stories and Reels. Our crop tool has presets for all of these.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q3">
+              <AccordionTrigger data-testid="crop-faq-q3">Will cropping reduce my image quality?</AccordionTrigger>
+              <AccordionContent>No — cropping removes edges of the image but doesn't touch the pixels in the kept area. The cropped portion will be exactly as sharp and detailed as the original. File size will be smaller since the image is physically smaller.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q4">
+              <AccordionTrigger data-testid="crop-faq-q4">Can I crop to a circle?</AccordionTrigger>
+              <AccordionContent>Yes! Our crop tool supports circle crop, which is perfect for profile pictures on social media and websites. The circular crop is saved as PNG with a transparent background to preserve the round shape.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q5">
+              <AccordionTrigger data-testid="crop-faq-q5">What's the difference between crop and resize?</AccordionTrigger>
+              <AccordionContent>Cropping removes portions of the image — you're cutting away edges to focus on a specific area. Resizing scales the whole image up or down without cutting anything. Use our Resize tool if you want to change the overall dimensions while keeping the full picture.</AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressyourphoto.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Crop Images", "item": "https://www.compressyourphoto.com/crop" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "How do I crop an image to an exact size?", "acceptedAnswer": { "@type": "Answer", "text": "Use our pixel-based crop tool: select your area, then set the exact width and height you need. For social media, use our aspect ratio presets — 1:1 for Instagram posts, 16:9 for YouTube thumbnails, 9:16 for stories." } },
+            { "@type": "Question", "name": "What's the best aspect ratio for Instagram?", "acceptedAnswer": { "@type": "Answer", "text": "Instagram supports multiple ratios: 1:1 (square) for standard posts, 4:5 (portrait) for maximum feed space, and 9:16 for Stories and Reels." } },
+            { "@type": "Question", "name": "Will cropping reduce my image quality?", "acceptedAnswer": { "@type": "Answer", "text": "No — cropping removes edges of the image but doesn't touch the pixels in the kept area. The cropped portion will be exactly as sharp and detailed as the original." } },
+            { "@type": "Question", "name": "Can I crop to a circle?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Our crop tool supports circle crop, perfect for profile pictures on social media. The circular crop is saved as PNG with a transparent background." } },
+            { "@type": "Question", "name": "What's the difference between crop and resize?", "acceptedAnswer": { "@type": "Answer", "text": "Cropping removes portions of the image — cutting away edges to focus on a specific area. Resizing scales the whole image up or down without cutting anything." } }
+          ]
+        })}</script>
+      </Helmet>
 
       <RelatedTools currentTool="crop" />
     </>

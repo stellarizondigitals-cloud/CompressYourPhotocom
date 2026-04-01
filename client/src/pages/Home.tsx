@@ -62,6 +62,23 @@ export default function Home() {
         <title>{t('app.homePageTitle', 'Compress, Resize, Convert, Crop & Enhance Images Free Online | CompressYourPhoto')}</title>
         <meta name="description" content={t('app.homeMetaDescription', 'Free online photo tools. Compress, resize, convert, crop, and enhance images instantly in your browser. 100% private—your photos never leave your device.')} />
         <link rel="canonical" href={canonicalUrl} />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Is CompressYourPhoto really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CompressYourPhoto is 100% free with no hidden fees, no signup required, and no watermarks." } },
+            { "@type": "Question", "name": "Are my photos uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No, your photos never leave your device. All processing happens locally in your browser." } },
+            { "@type": "Question", "name": "What image formats are supported?", "acceptedAnswer": { "@type": "Answer", "text": "We support JPG/JPEG, PNG, WebP, HEIC/HEIF (iPhone photos), GIF, and BMP formats." } },
+            { "@type": "Question", "name": "How much can I reduce my image size?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 50-90% reduction while maintaining good visual quality." } },
+            { "@type": "Question", "name": "Can I process multiple images at once?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Upload multiple images and process them all together. Download individually or as a ZIP file." } },
+            { "@type": "Question", "name": "Does it work on mobile phones?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CompressYourPhoto works on all modern mobile browsers including iPhone Safari and Android Chrome." } }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressyourphoto.com/" }]
+        })}</script>
       </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">

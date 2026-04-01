@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ToolPageSEO } from '@/components/ToolPageSEO';
 import { RelatedTools } from '@/components/RelatedTools';
@@ -14,6 +15,7 @@ import { AboutTool } from '@/components/AboutTool';
 import { PopularUseCases } from '@/components/PopularUseCases';
 import { HowToUse } from '@/components/HowToUse';
 import { AdBanner } from '@/components/AdBanner';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface EnhanceSettings {
@@ -449,6 +451,56 @@ export default function EnhancePage() {
           <AdBanner slot="2847193056" format="horizontal" fullWidth />
         </div>
       </div>
+
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-muted/30">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="q1">
+              <AccordionTrigger data-testid="enhance-faq-q1">Can I fix a dark or underexposed photo?</AccordionTrigger>
+              <AccordionContent>Yes! Use the Brightness and Exposure sliders to lighten underexposed photos. The Highlights and Shadows sliders give you more fine-grained control — recovering detail in dark areas without blowing out bright areas.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q2">
+              <AccordionTrigger data-testid="enhance-faq-q2">How do I make colours more vivid in my photo?</AccordionTrigger>
+              <AccordionContent>Increase the Saturation or Vibrance slider. Saturation boosts all colours equally, while Vibrance is more subtle — it selectively increases the intensity of less-saturated colours, which is better for photos with skin tones.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q3">
+              <AccordionTrigger data-testid="enhance-faq-q3">What does the Sharpen slider do?</AccordionTrigger>
+              <AccordionContent>The Sharpen slider increases edge contrast in the image, making it appear crisper and more detailed. It's useful for photos that look slightly soft from camera shake or compression. Avoid over-sharpening as it can create artificial-looking halos around edges.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q4">
+              <AccordionTrigger data-testid="enhance-faq-q4">Will enhancing my photo reduce its quality?</AccordionTrigger>
+              <AccordionContent>Our enhancement tool processes the image locally in your browser and re-exports it. To preserve quality, set the output quality slider to 90-100% before downloading. Moderate adjustments have minimal impact on visual quality.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q5">
+              <AccordionTrigger data-testid="enhance-faq-q5">Can I enhance multiple photos at once?</AccordionTrigger>
+              <AccordionContent>You can process multiple photos, but each is enhanced individually with its own settings. Upload your images one at a time to apply precise adjustments, then download each enhanced version.</AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressyourphoto.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Enhance Photos", "item": "https://www.compressyourphoto.com/enhance" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Can I fix a dark or underexposed photo?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Use the Brightness and Exposure sliders to lighten underexposed photos. The Highlights and Shadows sliders give you more fine-grained control — recovering detail in dark areas without blowing out bright areas." } },
+            { "@type": "Question", "name": "How do I make colours more vivid in my photo?", "acceptedAnswer": { "@type": "Answer", "text": "Increase the Saturation or Vibrance slider. Saturation boosts all colours equally, while Vibrance selectively increases intensity of less-saturated colours, better for photos with skin tones." } },
+            { "@type": "Question", "name": "What does the Sharpen slider do?", "acceptedAnswer": { "@type": "Answer", "text": "The Sharpen slider increases edge contrast in the image, making it appear crisper and more detailed. It's useful for photos that look slightly soft from camera shake or compression." } },
+            { "@type": "Question", "name": "Will enhancing my photo reduce its quality?", "acceptedAnswer": { "@type": "Answer", "text": "Our enhancement tool processes the image locally in your browser and re-exports it. To preserve quality, set the output quality slider to 90-100% before downloading." } },
+            { "@type": "Question", "name": "Can I enhance multiple photos at once?", "acceptedAnswer": { "@type": "Answer", "text": "You can process multiple photos, but each is enhanced individually with its own settings. Upload your images one at a time to apply precise adjustments, then download each enhanced version." } }
+          ]
+        })}</script>
+      </Helmet>
 
       <RelatedTools currentTool="enhance" />
     </>
