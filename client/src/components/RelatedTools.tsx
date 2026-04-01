@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Minimize2, Maximize2, RefreshCw, Crop, Sparkles } from 'lucide-react';
+import { Minimize2, Maximize2, RefreshCw, Crop, Sparkles, Eraser } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const tools = [
@@ -10,10 +10,11 @@ const tools = [
   { id: 'convert', icon: RefreshCw },
   { id: 'crop', icon: Crop },
   { id: 'enhance', icon: Sparkles },
+  { id: 'remove-background', icon: Eraser },
 ] as const;
 
 interface RelatedToolsProps {
-  currentTool: 'compress' | 'resize' | 'convert' | 'crop' | 'enhance';
+  currentTool: 'compress' | 'resize' | 'convert' | 'crop' | 'enhance' | 'remove-background';
 }
 
 export function RelatedTools({ currentTool }: RelatedToolsProps) {

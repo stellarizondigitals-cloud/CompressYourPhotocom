@@ -77,6 +77,13 @@ export function Footer() {
                 {t('tools.enhance.navLabel', 'Enhance Photos')}
               </Link>
               <Link 
+                to="/remove-background" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-remove-background"
+              >
+                Remove Background
+              </Link>
+              <Link 
                 to="/how-it-works" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-how-it-works"

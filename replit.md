@@ -21,6 +21,10 @@ Preferred communication style: Simple, everyday language.
 - **Domain**: compressyourphoto.com (and www.compressyourphoto.com)
 - **Company**: Stellarizon Digitals Ltd (Company No. 16748429, England and Wales)
 
+## Key Features Added (April 2026)
+- **Background Remover** (`/remove-background`) — AI-powered client-side background removal using @imgly/background-removal (WebAssembly). 3 free removals per session, unlimited for Pro. Transparent PNG output. Added to homepage, header nav ("Remove BG"), footer, sitemap.
+- **Stripe Customer Portal** — `/api/create-portal-session` endpoint looks up customer by email and creates a Stripe Billing Portal session. "Manage Subscription / Cancel" button shown on Account page for monthly Pro subscribers.
+
 ## Key Features Added (April 2025)
 - **Blog section** (`/blog`, `/blog/:slug`) — 8 full articles on compression, resizing, converting, cropping, enhancing, image formats, social media sizing, and SEO/performance. Linked from header nav and footer.
 - **HowToUse component** — Step-by-step guides with Pro Tips added to all 5 tool pages (Compress, Resize, Convert, Crop, Enhance)

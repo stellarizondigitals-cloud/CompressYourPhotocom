@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Check, Crown, ArrowRight } from 'lucide-react';
+import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Check, Crown, ArrowRight, Eraser } from 'lucide-react';
 import { FeatureCard } from '@/components/FeatureCard';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -41,6 +41,12 @@ const tools = [
     icon: Sparkles,
     path: '/enhance',
     color: 'bg-pink-500/10 text-pink-600 dark:text-pink-400',
+  },
+  {
+    key: 'remove-background',
+    icon: Eraser,
+    path: '/remove-background',
+    color: 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
   },
 ];
 

@@ -41,6 +41,7 @@ import ResizeForLinkedin from "@/pages/seo/ResizeForLinkedin";
 import CompressForEmail from "@/pages/seo/CompressForEmail";
 import EnhancePhotoQuality from "@/pages/seo/EnhancePhotoQuality";
 import Pricing from "@/pages/Pricing";
+import RemoveBackground from "@/pages/RemoveBackground";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -90,6 +91,7 @@ function AppRoutes() {
           <Route key={`${lang}-resize-for-linkedin`} path={`${prefix}/resize-for-linkedin`} element={<Layout><ResizeForLinkedin /></Layout>} />,
           <Route key={`${lang}-compress-for-email`} path={`${prefix}/compress-for-email`} element={<Layout><CompressForEmail /></Layout>} />,
           <Route key={`${lang}-enhance-photo-quality`} path={`${prefix}/enhance-photo-quality`} element={<Layout><EnhancePhotoQuality /></Layout>} />,
+          <Route key={`${lang}-remove-background`} path={`${prefix}/remove-background`} element={<Layout><RemoveBackground /></Layout>} />,
         ];
       })}
       <Route path="/blog" element={<Layout><BlogIndex /></Layout>} />

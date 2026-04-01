@@ -502,6 +502,11 @@
       "processing": "Processing",
       "download": "Download Enhanced Photo",
       "supportedFormats": "Supports JPG, PNG, WebP"
+    },
+    "remove-background": {
+      "navLabel": "Remove BG",
+      "cardTitle": "Remove Background",
+      "cardDescription": "AI-powered background removal. Transparent PNG in seconds."
     }
   },
   "faq": {

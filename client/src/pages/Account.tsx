@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
@@ -6,12 +6,14 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Crown, Mail, LogOut, Loader2 } from 'lucide-react';
+import { Crown, Mail, LogOut, Loader2, Settings } from 'lucide-react';
 
 export default function Account() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { user, profile, isPro, isLoading, isConfigured, signOut } = useAuth();
+  const [portalLoading, setPortalLoading] = useState(false);
+  const [portalError, setPortalError] = useState('');
 
   useEffect(() => {
     if (!isLoading && !user) {
@@ -32,16 +34,38 @@ export default function Account() {
   }
 
   const getSubscriptionLabel = () => {
-    if (!isPro) {
-      return t('account.free', 'Free');
-    }
-    if (profile?.subscription_type === 'lifetime') {
-      return t('account.proLifetime', 'Pro (Lifetime)');
-    }
-    if (profile?.subscription_type === 'monthly') {
-      return t('account.proMonthly', 'Pro (Monthly)');
-    }
+    if (!isPro) return t('account.free', 'Free');
+    if (profile?.subscription_type === 'lifetime') return t('account.proLifetime', 'Pro (Lifetime)');
+    if (profile?.subscription_type === 'monthly') return t('account.proMonthly', 'Pro (Monthly)');
     return t('account.pro', 'Pro');
+  };
+
+  const isMonthlySubscriber = isPro && profile?.subscription_type === 'monthly';
+
+  const handleManageSubscription = async () => {
+    if (!user?.email) return;
+    setPortalLoading(true);
+    setPortalError('');
+    try {
+      const res = await fetch('/api/create-portal-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userEmail: user.email,
+          returnUrl: window.location.href,
+        }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        setPortalError(data.error || 'Could not open billing portal. Please contact contact@compressyourphoto.com');
+      }
+    } catch {
+      setPortalError('Something went wrong. Please try again or email contact@compressyourphoto.com');
+    } finally {
+      setPortalLoading(false);
+    }
   };
 
   const handleLogout = async () => {
@@ -82,7 +106,7 @@ export default function Account() {
                   {t('account.subscriptionSection', 'Subscription')}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Badge 
                     variant={isPro ? 'default' : 'secondary'}
@@ -97,6 +121,32 @@ export default function Account() {
                     </span>
                   )}
                 </div>
+
+                {isMonthlySubscriber && (
+                  <div className="pt-2 space-y-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleManageSubscription}
+                      disabled={portalLoading}
+                      className="gap-2"
+                      data-testid="button-manage-subscription"
+                    >
+                      {portalLoading ? (
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                      ) : (
+                        <Settings className="w-4 h-4" />
+                      )}
+                      Manage Subscription / Cancel
+                    </Button>
+                    <p className="text-xs text-muted-foreground">
+                      Cancel any time. You keep Pro access until the end of your billing period.
+                    </p>
+                    {portalError && (
+                      <p className="text-xs text-destructive" data-testid="text-portal-error">{portalError}</p>
+                    )}
+                  </div>
+                )}
               </CardContent>
             </Card>
 
