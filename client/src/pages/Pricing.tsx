@@ -11,11 +11,11 @@ import { useAuth } from '@/contexts/AuthContext';
 import { LoginModal } from '@/components/LoginModal';
 
 const freeFeatures = [
-  'Compress, resize, convert, crop & enhance images',
+  'Compress, resize, convert, crop, enhance & remove backgrounds',
   'Supports JPG, PNG, WebP, HEIC, GIF',
   '100% private — files never leave your browser',
   'No account required',
-  'Up to 5 images per session',
+  'Up to 5 images per session (3 background removals)',
 ];
 
 const proFeatures = [
@@ -51,7 +51,7 @@ export default function Pricing() {
             Free for everyone.<br className="hidden md:block" /> Pro for power users.
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            All 5 tools — Compress, Resize, Convert, Crop & Enhance — are free with no sign-up.
+            All 6 tools — Compress, Resize, Convert, Crop, Enhance & Remove Background — are free with no sign-up.
             Upgrade to Pro to remove limits and ads.
           </p>
         </div>
@@ -125,7 +125,7 @@ export default function Pricing() {
             </Button>
             {!user && (
               <p className="text-xs text-muted-foreground text-center mt-2">
-                You'll be asked to sign in before checkout
+                You'll sign in with a magic link — no password needed. This ties your Pro access to your email so you can use it on any device.
               </p>
             )}
           </Card>
@@ -150,10 +150,12 @@ export default function Pricing() {
                   ['Convert formats (WebP, PNG, JPG…)', true, true],
                   ['Crop images', true, true],
                   ['Enhance brightness, contrast, saturation', true, true],
+                  ['Remove image background (AI)', true, true],
                   ['HEIC support (iPhone photos)', true, true],
                   ['Files stay on your device (100% private)', true, true],
                   ['No account required', true, false],
                   ['Images per session', '5', 'Unlimited'],
+                  ['Background removals per session', '3', 'Unlimited'],
                   ['Batch ZIP download', false, true],
                   ['Ad-free experience', false, true],
                   ['Priority processing speed', false, true],
@@ -218,13 +220,42 @@ export default function Pricing() {
             <AccordionItem value="q5">
               <AccordionTrigger data-testid="pricing-faq-q5">Can I get a refund?</AccordionTrigger>
               <AccordionContent>
-                If you're unsatisfied, contact us within 7 days of purchase at <a href="mailto:contact@compressyourphoto.com" className="text-primary underline">contact@compressyourphoto.com</a> and we'll sort it out. We want you to be happy.
+                <div className="space-y-3">
+                  <p>Yes — we offer a <strong>7-day money-back guarantee</strong>, no questions asked.</p>
+                  <div>
+                    <p className="font-medium mb-2">How to request a refund:</p>
+                    <ol className="list-decimal list-inside space-y-1.5 text-sm">
+                      <li>Email <a href="mailto:contact@compressyourphoto.com" className="text-primary underline">contact@compressyourphoto.com</a> from the address you used to purchase</li>
+                      <li>Include the subject line: <strong>"Refund Request"</strong></li>
+                      <li>Optionally include your Stripe receipt number (helps us find your order faster)</li>
+                      <li>We'll confirm and process your refund within <strong>3–5 business days</strong></li>
+                    </ol>
+                  </div>
+                  <p className="text-sm text-muted-foreground">The refund returns to your original payment method. Monthly subscriptions cancelled after 7 days are not eligible for a partial refund but you keep access until the period ends. 7-Day Passes must be requested before expiry.</p>
+                </div>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="q6">
               <AccordionTrigger data-testid="pricing-faq-q6">How do I sign in? There's no password.</AccordionTrigger>
               <AccordionContent>
-                We use <strong>magic link</strong> sign-in — enter your email, click the link we send you, and you're in. No password to remember, no account setup form. It's secure and fast.
+                <div className="space-y-2">
+                  <p>We use <strong>magic link</strong> sign-in — enter your email, click the link we send you, and you're in. No password to remember, no account setup form. It's secure and fast.</p>
+                  <p className="text-sm text-muted-foreground">The link expires after 1 hour for security. Just request a new one if it expires.</p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q6b">
+              <AccordionTrigger data-testid="pricing-faq-q6b">Why do I need to sign in for Pro?</AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-2">
+                  <p>Signing in with your email is the only thing we need to do three important things:</p>
+                  <ul className="list-disc list-inside space-y-1 text-sm">
+                    <li><strong>Verify your subscription</strong> — proves you're a paying customer, not someone else using your Pro access</li>
+                    <li><strong>Work on any device</strong> — sign in on your phone, laptop, or tablet and your Pro access follows you</li>
+                    <li><strong>Manage your plan</strong> — cancel, check status, or get a refund easily from your Account page</li>
+                  </ul>
+                  <p className="text-sm text-muted-foreground">We don't store any passwords, card numbers, or personal data beyond your email. See our <Link to="/privacy-policy" className="text-primary underline">Privacy Policy</Link> for full details.</p>
+                </div>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="q7">

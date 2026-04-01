@@ -25,7 +25,7 @@ export default function HowItWorks() {
     <div className="flex-1">
       <Helmet>
         <title>{t('howItWorks.title')} | CompressYourPhoto</title>
-        <meta name="description" content={t('howItWorks.metaDescription', 'Learn how to compress, resize, convert, crop, and enhance your photos in 4 simple steps. 100% browser-based, private, and free.')} />
+        <meta name="description" content={t('howItWorks.metaDescription', 'Learn how to compress, resize, convert, crop, enhance, and remove backgrounds from photos in 4 simple steps. 100% browser-based, private, and free.')} />
         <link rel="canonical" href={`https://www.compressyourphoto.com${currentLanguage.code === 'en' ? '' : `/${currentLanguage.code}`}/how-it-works`} />
       </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">

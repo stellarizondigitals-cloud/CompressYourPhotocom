@@ -69,8 +69,8 @@ export default function Home() {
   return (
     <div className="flex-1">
       <Helmet>
-        <title>{t('app.homePageTitle', 'Compress, Resize, Convert, Crop & Enhance Images Free Online | CompressYourPhoto')}</title>
-        <meta name="description" content={t('app.homeMetaDescription', 'Free online photo tools. Compress, resize, convert, crop, and enhance images instantly in your browser. 100% private—your photos never leave your device.')} />
+        <title>{t('app.homePageTitle', 'Compress, Resize, Convert, Crop, Enhance & Remove Background Free | CompressYourPhoto')}</title>
+        <meta name="description" content={t('app.homeMetaDescription', 'Free online photo tools. Compress, resize, convert, crop, enhance, and remove image backgrounds instantly in your browser. 100% private—your photos never leave your device.')} />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -186,14 +186,14 @@ export default function Home() {
             Free tools. Optional Pro upgrade.
           </h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-sm md:text-base">
-            All 5 tools are completely free — no account needed. Upgrade to Pro to remove limits and ads.
+            All 6 tools are completely free — no account needed. Upgrade to Pro to remove limits and ads.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-6">
             <Card className="p-5 text-left">
               <p className="font-semibold mb-1">Free</p>
               <p className="text-2xl font-bold mb-3">£0 <span className="text-sm font-normal text-muted-foreground">/ forever</span></p>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                {['All 5 tools', 'Up to 5 images/session', 'No sign-up required', '100% private processing'].map(f => (
+                {['All 6 tools', 'Up to 5 images/session', 'No sign-up required', '100% private processing'].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}</li>
                 ))}
               </ul>
