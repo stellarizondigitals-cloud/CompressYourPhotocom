@@ -264,6 +264,7 @@ export default function BlogPost() {
                     { label: '🔄 Convert', href: '/convert' },
                     { label: '✂️ Crop', href: '/crop' },
                     { label: '✨ Enhance', href: '/enhance' },
+                    { label: '🖼️ Remove BG', href: '/remove-background' },
                   ].map((t) => (
                     <Link
                       key={t.href}

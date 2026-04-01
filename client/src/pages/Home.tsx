@@ -97,11 +97,11 @@ export default function Home() {
               {t('hero.headline', 'Compress Your Photo')}
             </h1>
             <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('hero.subheadlineExpanded', 'Compress, resize, convert, and crop your photos—fast, private, and free.')}
+              {t('hero.subheadlineExpanded', 'Compress, resize, convert, crop, and remove backgrounds—fast, private, and free.')}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto mb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto mb-10">
             {tools.map((tool) => {
               const Icon = tool.icon;
               return (
@@ -233,7 +233,7 @@ export default function Home() {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="q1">
               <AccordionTrigger data-testid="faq-q1">{t('faq.q1', 'Is CompressYourPhoto really free?')}</AccordionTrigger>
-              <AccordionContent>All 5 tools are completely free to use with no sign-up required and no watermarks. There is also an optional Pro upgrade (from £0.99) for users who need unlimited batch processing and an ad-free experience.</AccordionContent>
+              <AccordionContent>All 6 tools are completely free to use with no sign-up required and no watermarks. There is also an optional Pro upgrade (from £0.99) for users who need unlimited usage and an ad-free experience.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q2">
               <AccordionTrigger data-testid="faq-q2">{t('faq.q2', 'Are my photos uploaded to a server?')}</AccordionTrigger>
@@ -254,6 +254,14 @@ export default function Home() {
             <AccordionItem value="q6">
               <AccordionTrigger data-testid="faq-q6">{t('faq.q6', 'Does it work on mobile phones?')}</AccordionTrigger>
               <AccordionContent>{t('faq.a6', 'Yes, CompressYourPhoto works on all modern mobile browsers including iPhone Safari and Android Chrome.')}</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q7">
+              <AccordionTrigger data-testid="faq-q7">Can I get a refund on a Pro purchase?</AccordionTrigger>
+              <AccordionContent>Yes. If you're not satisfied, email us at <a href="mailto:contact@compressyourphoto.com" className="text-primary underline">contact@compressyourphoto.com</a> within 7 days of purchase and we'll issue a full refund — no questions asked.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q8">
+              <AccordionTrigger data-testid="faq-q8">How do I cancel my monthly subscription?</AccordionTrigger>
+              <AccordionContent>Sign in to your account and click "Manage Subscription" to cancel any time via our self-service portal. Your Pro access continues until the end of your billing period. No hidden fees, no penalties.</AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>

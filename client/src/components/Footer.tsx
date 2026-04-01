@@ -199,6 +199,13 @@ export function Footer() {
               >
                 {t('footer.disclaimer')}
               </Link>
+              <Link 
+                to="/pricing#faq" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-refund-policy"
+              >
+                Refund Policy
+              </Link>
             </nav>
           </div>
 

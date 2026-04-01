@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Eraser, LogIn, LogOut, Crown, User, BookOpen, Tag } from 'lucide-react';
+import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Eraser, LogIn, LogOut, Crown, User, BookOpen, Tag, ChevronDown, Wrench } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/contexts/AuthContext';
@@ -38,6 +38,8 @@ export function Header() {
     return location.pathname === localizedPath || location.pathname === path;
   };
 
+  const isAnyToolActive = navTools.some(tool => isActivePath(tool.path));
+
   return (
     <header className="sticky top-0 z-50 w-full bg-white dark:bg-background border-b">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -47,13 +49,11 @@ export function Header() {
             className={`flex items-center gap-2.5 font-semibold text-lg ${isRTL ? 'flex-row-reverse' : ''}`}
             data-testid="link-home"
           >
-            {/* Mobile: icon only */}
             <img 
               src="/brand/logo-mark.svg" 
               alt="CompressYourPhoto" 
               className="h-10 w-10 sm:hidden" 
             />
-            {/* Desktop: horizontal logo with wordmark */}
             <img 
               src="/brand/logo-horizontal.svg" 
               alt="CompressYourPhoto" 
@@ -67,26 +67,36 @@ export function Header() {
           </Link>
 
           <nav className={`hidden md:flex items-center gap-1 ${isRTL ? 'flex-row-reverse' : ''}`}>
-            {navTools.map((tool) => {
-              const Icon = tool.icon;
-              const isActive = isActivePath(tool.path);
-              return (
-                <Link
-                  key={tool.key}
-                  to={getLocalizedPath(tool.path)}
-                  data-testid={`nav-link-${tool.key}`}
+            {/* Tools dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant={isAnyToolActive ? 'secondary' : 'ghost'}
+                  size="sm"
+                  className={`gap-1.5 ${isAnyToolActive ? 'bg-primary/10' : ''}`}
+                  data-testid="nav-dropdown-tools"
                 >
-                  <Button
-                    variant={isActive ? 'secondary' : 'ghost'}
-                    size="sm"
-                    className={`gap-1.5 ${isActive ? 'bg-primary/10' : ''}`}
-                  >
-                    <Icon className="w-4 h-4" />
-                    {t(`tools.${tool.key}.navLabel`, tool.key.charAt(0).toUpperCase() + tool.key.slice(1))}
-                  </Button>
-                </Link>
-              );
-            })}
+                  <Wrench className="w-4 h-4" />
+                  Tools
+                  <ChevronDown className="w-3 h-3 opacity-60" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-56">
+                {navTools.map((tool) => {
+                  const Icon = tool.icon;
+                  const isActive = isActivePath(tool.path);
+                  return (
+                    <Link key={tool.key} to={getLocalizedPath(tool.path)} data-testid={`nav-link-${tool.key}`}>
+                      <DropdownMenuItem className={`gap-2 cursor-pointer ${isActive ? 'bg-primary/10 text-primary' : ''}`}>
+                        <Icon className="w-4 h-4" />
+                        {t(`tools.${tool.key}.navLabel`, tool.key.charAt(0).toUpperCase() + tool.key.slice(1))}
+                      </DropdownMenuItem>
+                    </Link>
+                  );
+                })}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link to="/blog" data-testid="nav-link-blog">
               <Button
                 variant={location.pathname.startsWith('/blog') ? 'secondary' : 'ghost'}
@@ -176,6 +186,7 @@ export function Header() {
           </div>
         </div>
 
+        {/* Mobile menu — full list */}
         {mobileMenuOpen && (
           <nav className={`md:hidden py-4 border-t flex flex-col gap-1 ${isRTL ? 'items-end' : 'items-start'}`}>
             {navTools.map((tool) => {
