@@ -232,7 +232,7 @@ export default function Pricing() {
                       <li>Email <a href="mailto:contact@compressyourphoto.com" className="text-primary underline">contact@compressyourphoto.com</a> from the address you used to purchase</li>
                       <li>Include the subject line: <strong>"Refund Request"</strong></li>
                       <li>Optionally include your Stripe receipt number (helps us find your order faster)</li>
-                      <li>We'll confirm and process your refund within <strong>3–5 business days</strong></li>
+                      <li>We'll process your refund in Stripe within 1 business day — the money typically appears on your card within <strong>5–10 business days</strong> (this is your bank's timeline, not ours)</li>
                     </ol>
                   </div>
                   <p className="text-sm text-muted-foreground">The refund returns to your original payment method. Monthly subscriptions cancelled after 7 days are not eligible for a partial refund but you keep access until the period ends. 7-Day Passes must be requested before expiry.</p>
