@@ -200,7 +200,7 @@ export default function Pricing() {
             <AccordionItem value="q2">
               <AccordionTrigger data-testid="pricing-faq-q2">How do I cancel my monthly subscription?</AccordionTrigger>
               <AccordionContent>
-                You can cancel any time by visiting your Account page (sign in → Account) or by contacting us at <a href="mailto:support@compressyourphoto.com" className="text-primary underline">support@compressyourphoto.com</a>. Cancellation takes effect at the end of your current billing period — you keep Pro access until then.
+                You can cancel any time by visiting your Account page (sign in → Account) or by contacting us at <a href="mailto:contact@compressyourphoto.com" className="text-primary underline">contact@compressyourphoto.com</a>. Cancellation takes effect at the end of your current billing period — you keep Pro access until then.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="q3">
@@ -218,7 +218,7 @@ export default function Pricing() {
             <AccordionItem value="q5">
               <AccordionTrigger data-testid="pricing-faq-q5">Can I get a refund?</AccordionTrigger>
               <AccordionContent>
-                If you're unsatisfied, contact us within 7 days of purchase at <a href="mailto:support@compressyourphoto.com" className="text-primary underline">support@compressyourphoto.com</a> and we'll sort it out. We want you to be happy.
+                If you're unsatisfied, contact us within 7 days of purchase at <a href="mailto:contact@compressyourphoto.com" className="text-primary underline">contact@compressyourphoto.com</a> and we'll sort it out. We want you to be happy.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="q6">
