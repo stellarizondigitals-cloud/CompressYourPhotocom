@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, LogIn, LogOut, Crown, User, BookOpen } from 'lucide-react';
+import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, LogIn, LogOut, Crown, User, BookOpen, Tag } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/contexts/AuthContext';
@@ -94,6 +94,16 @@ export function Header() {
               >
                 <BookOpen className="w-4 h-4" />
                 Blog
+              </Button>
+            </Link>
+            <Link to="/pricing" data-testid="nav-link-pricing">
+              <Button
+                variant={location.pathname === '/pricing' ? 'secondary' : 'ghost'}
+                size="sm"
+                className={`gap-1.5 ${location.pathname === '/pricing' ? 'bg-primary/10' : ''}`}
+              >
+                <Tag className="w-4 h-4" />
+                Pricing
               </Button>
             </Link>
           </nav>
@@ -202,6 +212,21 @@ export function Header() {
               >
                 <BookOpen className="w-4 h-4" />
                 Blog
+              </Button>
+            </Link>
+            <Link
+              to="/pricing"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full"
+              data-testid="mobile-nav-link-pricing"
+            >
+              <Button
+                variant={location.pathname === '/pricing' ? 'secondary' : 'ghost'}
+                size="sm"
+                className={`w-full justify-start gap-2 ${location.pathname === '/pricing' ? 'bg-primary/10' : ''}`}
+              >
+                <Tag className="w-4 h-4" />
+                Pricing
               </Button>
             </Link>
           </nav>

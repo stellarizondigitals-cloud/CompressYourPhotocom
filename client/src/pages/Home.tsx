@@ -1,12 +1,15 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, Sparkles } from 'lucide-react';
+import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Check, Crown, ArrowRight } from 'lucide-react';
 import { FeatureCard } from '@/components/FeatureCard';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { PremiumModal } from '@/components/PremiumModal';
 
 const tools = [
   { 
@@ -46,6 +49,7 @@ const formats = ['JPG', 'PNG', 'WebP', 'HEIC', 'GIF'];
 export default function Home() {
   const { t } = useTranslation();
   const { isRTL, currentLanguage } = useLanguage();
+  const [showPremiumModal, setShowPremiumModal] = useState(false);
 
   const getLocalizedPath = (path: string) => {
     if (currentLanguage.code === 'en') return path;
@@ -169,6 +173,52 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-gradient-to-br from-primary/5 via-background to-yellow-500/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <Badge variant="secondary" className="mb-4 text-xs">Simple, transparent pricing</Badge>
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+            Free tools. Optional Pro upgrade.
+          </h2>
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-sm md:text-base">
+            All 5 tools are completely free — no account needed. Upgrade to Pro to remove limits and ads.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-6">
+            <Card className="p-5 text-left">
+              <p className="font-semibold mb-1">Free</p>
+              <p className="text-2xl font-bold mb-3">£0 <span className="text-sm font-normal text-muted-foreground">/ forever</span></p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {['All 5 tools', 'Up to 5 images/session', 'No sign-up required', '100% private processing'].map(f => (
+                  <li key={f} className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}</li>
+                ))}
+              </ul>
+              <Link to="/compress">
+                <Button variant="outline" size="sm" className="w-full mt-4" data-testid="btn-home-start-free">Start free</Button>
+              </Link>
+            </Card>
+            <Card className="p-5 text-left border-primary/30 bg-primary/[0.02]">
+              <div className="flex items-center gap-2 mb-1">
+                <Crown className="w-4 h-4 text-yellow-500" />
+                <p className="font-semibold">Pro</p>
+              </div>
+              <p className="text-2xl font-bold mb-1 text-primary">from £0.99 <span className="text-sm font-normal text-muted-foreground">/ 7 days</span></p>
+              <p className="text-xs text-muted-foreground mb-3">or £1.99/month · £24.99 lifetime</p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {['Up to 50 images at once', 'Completely ad-free', 'Unlimited sessions', 'Priority speed'].map(f => (
+                  <li key={f} className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-primary flex-shrink-0" />{f}</li>
+                ))}
+              </ul>
+              <Button size="sm" className="w-full mt-4" onClick={() => setShowPremiumModal(true)} data-testid="btn-home-get-pro">
+                <Crown className="w-3.5 h-3.5 mr-1.5" />Get Pro
+              </Button>
+            </Card>
+          </div>
+          <Link to="/pricing" className="inline-flex items-center text-sm text-primary hover:underline" data-testid="link-home-see-pricing">
+            See full pricing & plan comparison
+            <ArrowRight className="w-3.5 h-3.5 ml-1" />
+          </Link>
+        </div>
+      </section>
+
       <section className="py-16 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
@@ -177,7 +227,7 @@ export default function Home() {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="q1">
               <AccordionTrigger data-testid="faq-q1">{t('faq.q1', 'Is CompressYourPhoto really free?')}</AccordionTrigger>
-              <AccordionContent>{t('faq.a1', 'Yes, CompressYourPhoto is 100% free with no hidden fees, no signup required, and no watermarks.')}</AccordionContent>
+              <AccordionContent>All 5 tools are completely free to use with no sign-up required and no watermarks. There is also an optional Pro upgrade (from £0.99) for users who need unlimited batch processing and an ad-free experience.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q2">
               <AccordionTrigger data-testid="faq-q2">{t('faq.q2', 'Are my photos uploaded to a server?')}</AccordionTrigger>
@@ -291,6 +341,7 @@ export default function Home() {
         </div>
       </section>
 
+      <PremiumModal open={showPremiumModal} onOpenChange={setShowPremiumModal} />
     </div>
   );
 }

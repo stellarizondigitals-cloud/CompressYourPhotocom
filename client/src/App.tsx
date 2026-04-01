@@ -40,6 +40,7 @@ import ConvertWebpToJpg from "@/pages/seo/ConvertWebpToJpg";
 import ResizeForLinkedin from "@/pages/seo/ResizeForLinkedin";
 import CompressForEmail from "@/pages/seo/CompressForEmail";
 import EnhancePhotoQuality from "@/pages/seo/EnhancePhotoQuality";
+import Pricing from "@/pages/Pricing";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -93,6 +94,7 @@ function AppRoutes() {
       })}
       <Route path="/blog" element={<Layout><BlogIndex /></Layout>} />
       <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
+      <Route path="/pricing" element={<Layout><Pricing /></Layout>} />
       <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />
       <Route path="/how-it-works" element={<Layout><HowItWorks /></Layout>} />
       <Route path="/languages" element={<Layout><Languages /></Layout>} />

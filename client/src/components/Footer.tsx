@@ -83,6 +83,13 @@ export function Footer() {
               >
                 {t('footer.howItWorks')}
               </Link>
+              <Link 
+                to="/pricing" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-pricing"
+              >
+                Pricing
+              </Link>
             </nav>
           </div>
 
