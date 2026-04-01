@@ -73,6 +73,62 @@ export async function registerRoutes(
     }
   });
 
+  app.post("/api/create-checkout-geo", async (req: Request, res: Response) => {
+    try {
+      const { planType, amount, productName, mode, userId, userEmail, successUrl, cancelUrl } = req.body;
+
+      if (!planType || !amount || !mode || !userId) {
+        return res.status(400).json({ error: "Missing required fields" });
+      }
+
+      const MIN_AMOUNT = 49;
+      const MAX_AMOUNT = 9999;
+      const numAmount = parseInt(amount, 10);
+      if (isNaN(numAmount) || numAmount < MIN_AMOUNT || numAmount > MAX_AMOUNT) {
+        return res.status(400).json({ error: "Invalid amount" });
+      }
+
+      const ALLOWED_PLAN_TYPES = ['week_pass', 'lifetime_geo'];
+      if (!ALLOWED_PLAN_TYPES.includes(planType)) {
+        return res.status(400).json({ error: "Invalid plan type" });
+      }
+
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        line_items: [
+          {
+            price_data: {
+              currency: 'gbp',
+              unit_amount: numAmount,
+              product_data: {
+                name: productName || 'Pro Access',
+                description: planType === 'week_pass'
+                  ? '7-day full access to all Pro features'
+                  : 'Lifetime access to all Pro features — pay once, use forever',
+              },
+              ...(mode === 'subscription' ? { recurring: { interval: 'month' } } : {}),
+            },
+            quantity: 1,
+          },
+        ],
+        mode: mode as "subscription" | "payment",
+        success_url: successUrl || `${req.headers.origin}?checkout=success`,
+        cancel_url: cancelUrl || `${req.headers.origin}?checkout=cancelled`,
+        customer_email: userEmail,
+        metadata: {
+          userId,
+          planType,
+          amount: numAmount.toString(),
+        },
+      });
+
+      res.json({ url: session.url });
+    } catch (error: any) {
+      console.error("Geo checkout session error:", error);
+      res.status(500).json({ error: error.message });
+    }
+  });
+
   app.post(
     "/api/webhook",
     async (req: Request, res: Response) => {
@@ -105,6 +161,18 @@ export async function registerRoutes(
 
             if (!userId) {
               console.error("[Webhook] Missing userId in session metadata");
+              break;
+            }
+
+            const planType = session.metadata?.planType;
+
+            if (planType) {
+              const subscriptionType = planType === 'week_pass' ? 'weekly' : 'lifetime';
+              const { error } = await supabaseAdmin
+                .from("profiles")
+                .upsert({ id: userId, is_pro: true, subscription_type: subscriptionType }, { onConflict: "id" });
+              if (error) console.error("[Webhook] Error updating profile (geo):", error);
+              else console.log(`[Webhook] User ${userId} upgraded via geo plan (${planType})`);
               break;
             }
 
