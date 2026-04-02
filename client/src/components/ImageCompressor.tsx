@@ -28,6 +28,7 @@ interface ImageFile {
   originalSize: number;
   compressedSize: number | null;
   errorMessage?: string;
+  previewUrl: string;
 }
 
 type OutputFormat = 'keep' | 'jpeg' | 'png' | 'webp';
@@ -101,6 +102,7 @@ export function ImageCompressor() {
       status: 'pending',
       originalSize: file.size,
       compressedSize: null,
+      previewUrl: URL.createObjectURL(file),
     }));
     setFiles(prev => [...prev, ...newImageFiles]);
   }, [fileLimit, files.length, isPro]);
@@ -215,7 +217,11 @@ export function ImageCompressor() {
   };
 
   const removeFile = (id: string) => {
-    setFiles(prev => prev.filter(f => f.id !== id));
+    setFiles(prev => {
+      const file = prev.find(f => f.id === id);
+      if (file?.previewUrl) URL.revokeObjectURL(file.previewUrl);
+      return prev.filter(f => f.id !== id);
+    });
   };
 
   const pendingCount = files.filter(f => f.status === 'pending' || f.status === 'error').length;
@@ -380,27 +386,29 @@ export function ImageCompressor() {
                     className={`flex items-center gap-4 p-4 rounded-lg bg-muted/50 ${isRTL ? 'flex-row-reverse' : ''}`}
                     data-testid={`file-item-${file.id}`}
                   >
-                    <div className="flex-shrink-0">
-                      {file.status === 'pending' && (
-                        <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
-                          <Upload className="w-4 h-4 text-muted-foreground" />
-                        </div>
-                      )}
-                      {file.status === 'compressing' && (
-                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Loader2 className="w-4 h-4 text-primary animate-spin" />
-                        </div>
-                      )}
-                      {file.status === 'done' && (
-                        <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-                          <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
-                        </div>
-                      )}
-                      {file.status === 'error' && (
-                        <div className="w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
-                          <AlertCircle className="w-4 h-4 text-red-600 dark:text-red-400" />
-                        </div>
-                      )}
+                    <div className="flex-shrink-0 relative w-12 h-12">
+                      <img
+                        src={file.previewUrl}
+                        alt={file.originalFile.name}
+                        className="w-12 h-12 object-cover rounded-md border border-border"
+                      />
+                      <div className="absolute -bottom-1 -right-1">
+                        {file.status === 'compressing' && (
+                          <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center shadow-sm">
+                            <Loader2 className="w-3 h-3 text-white animate-spin" />
+                          </div>
+                        )}
+                        {file.status === 'done' && (
+                          <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center shadow-sm">
+                            <CheckCircle className="w-3 h-3 text-white" />
+                          </div>
+                        )}
+                        {file.status === 'error' && (
+                          <div className="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center shadow-sm">
+                            <AlertCircle className="w-3 h-3 text-white" />
+                          </div>
+                        )}
+                      </div>
                     </div>
 
                     <div className={`flex-1 min-w-0 ${isRTL ? 'text-right' : ''}`}>

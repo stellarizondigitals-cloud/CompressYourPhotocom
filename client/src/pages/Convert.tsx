@@ -29,6 +29,7 @@ interface ImageFile {
   convertedSize: number | null;
   originalFormat: string;
   errorMessage?: string;
+  previewUrl: string;
 }
 
 type OutputFormat = 'jpeg' | 'png' | 'webp';
@@ -125,6 +126,7 @@ export default function Convert() {
       originalSize: file.size,
       convertedSize: null,
       originalFormat: getFormatFromMime(file.type) || file.name.split('.').pop()?.toUpperCase() || 'Unknown',
+      previewUrl: URL.createObjectURL(file),
     }));
     setFiles(prev => [...prev, ...newImageFiles]);
   }, []);
@@ -181,8 +183,14 @@ export default function Convert() {
     triggerDownload(blob, 'converted-photos.zip');
   };
 
-  const clearAll = () => setFiles([]);
-  const removeFile = (id: string) => setFiles(prev => prev.filter(f => f.id !== id));
+  const clearAll = () => {
+    setFiles(prev => { prev.forEach(f => URL.revokeObjectURL(f.previewUrl)); return []; });
+  };
+  const removeFile = (id: string) => setFiles(prev => {
+    const f = prev.find(f => f.id === id);
+    if (f?.previewUrl) URL.revokeObjectURL(f.previewUrl);
+    return prev.filter(f => f.id !== id);
+  });
 
   const pendingCount = files.filter(f => f.status === 'pending' || f.status === 'error').length;
   const completedCount = files.filter(f => f.status === 'done').length;
@@ -284,11 +292,13 @@ export default function Convert() {
                       <div className="space-y-3">
                         {files.map((file) => (
                           <div key={file.id} className={`flex items-center gap-4 p-4 rounded-lg bg-muted/50 ${isRTL ? 'flex-row-reverse' : ''}`} data-testid={`file-item-convert-${file.id}`}>
-                            <div className="flex-shrink-0">
-                              {file.status === 'pending' && <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center"><Upload className="w-4 h-4 text-muted-foreground" /></div>}
-                              {file.status === 'processing' && <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"><Loader2 className="w-4 h-4 text-primary animate-spin" /></div>}
-                              {file.status === 'done' && <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center"><CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" /></div>}
-                              {file.status === 'error' && <div className="w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center"><AlertCircle className="w-4 h-4 text-red-600 dark:text-red-400" /></div>}
+                            <div className="flex-shrink-0 relative w-12 h-12">
+                              <img src={file.previewUrl} alt={file.originalFile.name} className="w-12 h-12 object-cover rounded-md border border-border" />
+                              <div className="absolute -bottom-1 -right-1">
+                                {file.status === 'processing' && <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center shadow-sm"><Loader2 className="w-3 h-3 text-white animate-spin" /></div>}
+                                {file.status === 'done' && <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center shadow-sm"><CheckCircle className="w-3 h-3 text-white" /></div>}
+                                {file.status === 'error' && <div className="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center shadow-sm"><AlertCircle className="w-3 h-3 text-white" /></div>}
+                              </div>
                             </div>
                             <div className={`flex-1 min-w-0 ${isRTL ? 'text-right' : ''}`}>
                               <p className="font-medium truncate text-sm">{file.originalFile.name}</p>
