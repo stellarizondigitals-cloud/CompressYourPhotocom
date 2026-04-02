@@ -165,6 +165,13 @@ export function Footer() {
               >
                 Blog
               </Link>
+              <Link 
+                to="/recommended-tools" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-recommended-tools"
+              >
+                Recommended Tools
+              </Link>
             </nav>
           </div>
 

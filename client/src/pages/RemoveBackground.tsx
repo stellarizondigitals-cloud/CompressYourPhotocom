@@ -279,7 +279,10 @@ export default function RemoveBackground() {
             </div>
 
             <div className="max-w-4xl mx-auto mt-8">
-              <AdBanner slot="1234567890" />
+              <AdBanner slot="1234567890" format="horizontal" fullWidth />
+            </div>
+            <div className="max-w-4xl mx-auto mt-6">
+              <AdBanner slot="6391827450" format="horizontal" fullWidth />
             </div>
 
             <div className="max-w-4xl mx-auto mt-12">

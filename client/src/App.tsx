@@ -42,6 +42,7 @@ import CompressForEmail from "@/pages/seo/CompressForEmail";
 import EnhancePhotoQuality from "@/pages/seo/EnhancePhotoQuality";
 import Pricing from "@/pages/Pricing";
 import RemoveBackground from "@/pages/RemoveBackground";
+import RecommendedTools from "@/pages/RecommendedTools";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -97,6 +98,7 @@ function AppRoutes() {
       <Route path="/blog" element={<Layout><BlogIndex /></Layout>} />
       <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
       <Route path="/pricing" element={<Layout><Pricing /></Layout>} />
+      <Route path="/recommended-tools" element={<Layout><RecommendedTools /></Layout>} />
       <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />
       <Route path="/how-it-works" element={<Layout><HowItWorks /></Layout>} />
       <Route path="/languages" element={<Layout><Languages /></Layout>} />

@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { PremiumModal } from '@/components/PremiumModal';
+import { AdBanner } from '@/components/AdBanner';
 
 const tools = [
   { 
@@ -169,6 +170,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="max-w-4xl mx-auto px-4 md:px-8 py-4">
+        <AdBanner slot="9182736450" format="horizontal" fullWidth />
+      </div>
 
       <section className="py-16 md:py-20 bg-[#f7f7f7] dark:bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
