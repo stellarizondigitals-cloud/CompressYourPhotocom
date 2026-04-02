@@ -287,7 +287,7 @@ Respond ONLY with valid JSON in this exact format (no markdown, no extra text):
         generationConfig: { temperature: 0.3, maxOutputTokens: 2048 }
       };
 
-      const geminiModels = ['gemini-2.0-flash', 'gemini-2.5-flash', 'gemini-2.0-flash-lite'];
+      const geminiModels = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.0-flash-lite'];
       let response: Response | null = null;
       let lastStatus = 0;
 

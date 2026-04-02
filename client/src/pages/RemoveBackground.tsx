@@ -48,7 +48,7 @@ export default function RemoveBackground() {
       const { removeBackground } = await import('@imgly/background-removal');
       setStatusMsg('Analysing image…');
       const resultBlob = await removeBackground(file, {
-        publicPath: 'https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.7.0/dist/',
+        publicPath: 'https://staticimgly.com/@imgly/background-removal-data/1.7.0/dist/',
         model: 'medium',
         output: { format: 'image/png', quality: 1 },
         progress: (key: string, current: number, total: number) => {

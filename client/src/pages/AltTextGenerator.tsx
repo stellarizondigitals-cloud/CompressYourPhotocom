@@ -117,16 +117,36 @@ export default function AltTextGenerator() {
 
     try {
       const { base64, mimeType } = await resizeImageToBase64(selectedFile);
-      const res = await fetch('/api/generate-alt-text', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ imageBase64: base64, mimeType }),
-      });
+
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 45_000);
+
+      let res: Response;
+      try {
+        res = await fetch('/api/generate-alt-text', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ imageBase64: base64, mimeType }),
+          signal: controller.signal,
+        });
+      } catch (fetchErr: any) {
+        clearTimeout(timeout);
+        if (fetchErr?.name === 'AbortError') throw new Error('Request timed out. Please try again.');
+        throw new Error('Network error. Please check your connection and try again.');
+      }
+      clearTimeout(timeout);
+
+      const text = await res.text();
       let data: any = {};
       try {
-        data = await res.json();
+        data = JSON.parse(text);
       } catch {
-        throw new Error(res.status === 413 ? 'Image is too large. Please try a smaller image.' : 'Server error. Please try again.');
+        console.error('[AltText] Non-JSON response:', res.status, text.substring(0, 300));
+        throw new Error(
+          res.status === 413 ? 'Image is too large. Please try a smaller image.' :
+          res.status === 429 ? 'AI service is busy. Please wait a moment and try again.' :
+          'Server error. Please try again.'
+        );
       }
       if (!res.ok) throw new Error(data.error || 'Generation failed. Please try again.');
       setResult(data);
