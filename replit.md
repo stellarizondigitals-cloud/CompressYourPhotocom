@@ -24,6 +24,7 @@ Preferred communication style: Simple, everyday language.
 ## Key Features Added (April 2026)
 - **Background Remover** (`/remove-background`) — AI-powered client-side background removal using @imgly/background-removal (WebAssembly). 3 free removals per session, unlimited for Pro. Transparent PNG output. Added to homepage, header nav ("Remove BG"), footer, sitemap.
 - **Stripe Customer Portal** — `/api/create-portal-session` endpoint looks up customer by email and creates a Stripe Billing Portal session. "Manage Subscription / Cancel" button shown on Account page for monthly Pro subscribers.
+- **AI Alt Text Generator** (`/alt-text-generator`) — Pro feature (1 free try per session). Uploads image to server → Gemini 1.5 Flash Vision API generates 3 SEO-optimised alt text variants + expert tips. Client-side canvas resize to max 1024px before sending. Privacy disclosure shown. Server endpoint: `POST /api/generate-alt-text` (requires `GEMINI_API_KEY` secret). 2 AdBanner slots. Added to homepage (7th tool card, indigo), header Tools dropdown ("AI Alt Text"), footer, sitemap, RelatedTools component.
 
 ## Key Features Added (April 2025)
 - **Blog section** (`/blog`, `/blog/:slug`) — 8 full articles on compression, resizing, converting, cropping, enhancing, image formats, social media sizing, and SEO/performance. Linked from header nav and footer.

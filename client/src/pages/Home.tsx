@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Check, Crown, ArrowRight, Eraser } from 'lucide-react';
+import { Shield, Zap, Globe, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Check, Crown, ArrowRight, Eraser, Type } from 'lucide-react';
 import { FeatureCard } from '@/components/FeatureCard';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -49,6 +49,12 @@ const tools = [
     path: '/remove-background',
     color: 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
   },
+  {
+    key: 'alt-text',
+    icon: Type,
+    path: '/alt-text-generator',
+    color: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400',
+  },
 ];
 
 const formats = ['JPG', 'PNG', 'WebP', 'HEIC', 'GIF'];
@@ -89,7 +95,7 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
-            { "@type": "Question", "name": "Is CompressYourPhoto really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, all 6 tools — compress, resize, convert, crop, enhance, and remove backgrounds — are 100% free with no hidden fees, no signup required, and no watermarks." } },
+            { "@type": "Question", "name": "Is CompressYourPhoto really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, all 6 core tools — compress, resize, convert, crop, enhance, and remove backgrounds — are 100% free with no hidden fees, no signup required, and no watermarks. The AI Alt Text Generator is a Pro feature with 1 free try." } },
             { "@type": "Question", "name": "Can I remove the background from an image for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our AI background remover is free with 3 removals per session. Upgrade to Pro for unlimited background removals." } },
             { "@type": "Question", "name": "Are my photos uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No, your photos never leave your device. All processing — including AI background removal — happens locally in your browser." } },
             { "@type": "Question", "name": "What image formats are supported?", "acceptedAnswer": { "@type": "Answer", "text": "We support JPG/JPEG, PNG, WebP, HEIC/HEIF (iPhone photos), GIF, and BMP formats." } },
@@ -204,14 +210,14 @@ export default function Home() {
             Free tools. Optional Pro upgrade.
           </h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-sm md:text-base">
-            All 6 tools are completely free — no account needed. Upgrade to Pro to remove limits and ads.
+            All 6 core tools are completely free — no account needed. Upgrade to Pro for unlimited use, AI Alt Text Generator, and an ad-free experience.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-6">
             <Card className="p-5 text-left">
               <p className="font-semibold mb-1">Free</p>
               <p className="text-2xl font-bold mb-3">£0 <span className="text-sm font-normal text-muted-foreground">/ forever</span></p>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                {['All 6 tools', 'Up to 5 images/session', 'No sign-up required', '100% private processing'].map(f => (
+                {['All 6 core tools free', 'Up to 5 images/session', 'No sign-up required', '100% private processing'].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}</li>
                 ))}
               </ul>
@@ -251,7 +257,7 @@ export default function Home() {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="q1">
               <AccordionTrigger data-testid="faq-q1">{t('faq.q1', 'Is CompressYourPhoto really free?')}</AccordionTrigger>
-              <AccordionContent>All 6 tools are completely free to use with no sign-up required and no watermarks. There is also an optional Pro upgrade (from £0.99) for users who need unlimited usage and an ad-free experience.</AccordionContent>
+              <AccordionContent>All 6 core tools are completely free to use with no sign-up required and no watermarks. The AI Alt Text Generator is a Pro feature with 1 free trial use. There is also an optional Pro upgrade (from £0.99) for unlimited usage, AI Alt Text, and an ad-free experience.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q2">
               <AccordionTrigger data-testid="faq-q2">{t('faq.q2', 'Are my photos uploaded to a server?')}</AccordionTrigger>

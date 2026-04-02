@@ -51,7 +51,7 @@ export default function Pricing() {
             Free for everyone.<br className="hidden md:block" /> Pro for power users.
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            All 6 tools — Compress, Resize, Convert, Crop, Enhance & Remove Background — are free with no sign-up.
+            All 6 core tools — Compress, Resize, Convert, Crop, Enhance & Remove Background — are free with no sign-up. AI Alt Text Generator is a Pro feature with 1 free try.
             Upgrade to Pro to remove limits and ads.
           </p>
         </div>

@@ -507,6 +507,11 @@
       "navLabel": "Remove BG",
       "cardTitle": "Remove Background",
       "cardDescription": "AI-powered background removal. Transparent PNG in seconds."
+    },
+    "alt-text": {
+      "navLabel": "AI Alt Text",
+      "cardTitle": "AI Alt Text Generator",
+      "cardDescription": "Generate SEO-optimised alt text for any image instantly using AI. Pro feature."
     }
   },
   "faq": {

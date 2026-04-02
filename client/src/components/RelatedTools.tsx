@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Minimize2, Maximize2, RefreshCw, Crop, Sparkles, Eraser } from 'lucide-react';
+import { Minimize2, Maximize2, RefreshCw, Crop, Sparkles, Eraser, Type } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const tools = [
@@ -11,19 +11,22 @@ const tools = [
   { id: 'crop', icon: Crop },
   { id: 'enhance', icon: Sparkles },
   { id: 'remove-background', icon: Eraser },
+  { id: 'alt-text', icon: Type, path: 'alt-text-generator' },
 ] as const;
 
+type ToolId = typeof tools[number]['id'];
+
 interface RelatedToolsProps {
-  currentTool: 'compress' | 'resize' | 'convert' | 'crop' | 'enhance' | 'remove-background';
+  currentTool: ToolId;
 }
 
 export function RelatedTools({ currentTool }: RelatedToolsProps) {
   const { t } = useTranslation();
   const { currentLanguage, isRTL } = useLanguage();
-  
-  const getToolPath = (toolId: string) => {
+
+  const getToolPath = (tool: { id: string; path?: string }) => {
     const langPrefix = currentLanguage.code === 'en' ? '' : `/${currentLanguage.code}`;
-    return `${langPrefix}/${toolId}`;
+    return `${langPrefix}/${tool.path ?? tool.id}`;
   };
 
   const relatedTools = tools.filter(tool => tool.id !== currentTool);
@@ -40,7 +43,7 @@ export function RelatedTools({ currentTool }: RelatedToolsProps) {
             return (
               <Link
                 key={tool.id}
-                to={getToolPath(tool.id)}
+                to={getToolPath(tool)}
                 data-testid={`link-related-${tool.id}`}
               >
                 <Card className="hover-elevate h-full">

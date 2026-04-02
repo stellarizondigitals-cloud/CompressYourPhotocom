@@ -42,6 +42,7 @@ import CompressForEmail from "@/pages/seo/CompressForEmail";
 import EnhancePhotoQuality from "@/pages/seo/EnhancePhotoQuality";
 import Pricing from "@/pages/Pricing";
 import RemoveBackground from "@/pages/RemoveBackground";
+import AltTextGenerator from "@/pages/AltTextGenerator";
 import RecommendedTools from "@/pages/RecommendedTools";
 
 function Layout({ children }: { children: React.ReactNode }) {
@@ -93,6 +94,7 @@ function AppRoutes() {
           <Route key={`${lang}-compress-for-email`} path={`${prefix}/compress-for-email`} element={<Layout><CompressForEmail /></Layout>} />,
           <Route key={`${lang}-enhance-photo-quality`} path={`${prefix}/enhance-photo-quality`} element={<Layout><EnhancePhotoQuality /></Layout>} />,
           <Route key={`${lang}-remove-background`} path={`${prefix}/remove-background`} element={<Layout><RemoveBackground /></Layout>} />,
+          <Route key={`${lang}-alt-text-generator`} path={`${prefix}/alt-text-generator`} element={<Layout><AltTextGenerator /></Layout>} />,
         ];
       })}
       <Route path="/blog" element={<Layout><BlogIndex /></Layout>} />

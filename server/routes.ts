@@ -250,5 +250,68 @@ export async function registerRoutes(
     }
   );
 
+  app.post("/api/generate-alt-text", async (req: Request, res: Response) => {
+    try {
+      const { imageBase64, mimeType } = req.body;
+      if (!imageBase64 || !mimeType) {
+        return res.status(400).json({ error: "Missing image data" });
+      }
+
+      const apiKey = process.env.GEMINI_API_KEY;
+      if (!apiKey) {
+        return res.status(500).json({ error: "AI service not configured" });
+      }
+
+      const payload = {
+        contents: [{
+          parts: [
+            { inline_data: { mime_type: mimeType, data: imageBase64 } },
+            {
+              text: `You are an SEO expert. Analyze this image and generate professional, SEO-optimized alt text for web use.
+
+Respond ONLY with valid JSON in this exact format (no markdown, no extra text):
+{
+  "primary": "concise alt text under 125 chars describing what is in the image for accessibility and SEO",
+  "alternative1": "keyword-rich version optimized for search engines, under 125 chars",
+  "alternative2": "detailed descriptive version with more context, under 150 chars",
+  "tips": [
+    "specific actionable tip 1 for this image",
+    "specific actionable tip 2 for this image",
+    "specific actionable tip 3 for this image"
+  ]
+}`
+            }
+          ]
+        }],
+        generationConfig: { temperature: 0.3, maxOutputTokens: 512 }
+      };
+
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+        { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }
+      );
+
+      if (!response.ok) {
+        const errText = await response.text();
+        console.error('[Gemini] API error:', response.status, errText);
+        return res.status(502).json({ error: "AI generation failed. Please try again." });
+      }
+
+      const data: any = await response.json();
+      const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) {
+        console.error('[Gemini] No JSON in response:', text);
+        return res.status(500).json({ error: "Unexpected AI response. Please try again." });
+      }
+
+      const result = JSON.parse(jsonMatch[0]);
+      res.json(result);
+    } catch (error: any) {
+      console.error('[Alt Text] Error:', error);
+      res.status(500).json({ error: error.message || "Generation failed" });
+    }
+  });
+
   return httpServer;
 }

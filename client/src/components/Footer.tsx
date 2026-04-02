@@ -84,6 +84,13 @@ export function Footer() {
                 Remove Background
               </Link>
               <Link 
+                to="/alt-text-generator" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-alt-text"
+              >
+                AI Alt Text Generator
+              </Link>
+              <Link 
                 to="/how-it-works" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-how-it-works"

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Eraser, LogIn, LogOut, Crown, User, BookOpen, Tag, ChevronDown, Wrench } from 'lucide-react';
+import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Eraser, Type, LogIn, LogOut, Crown, User, BookOpen, Tag, ChevronDown, Wrench } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/contexts/AuthContext';
@@ -16,6 +16,7 @@ const navTools = [
   { key: 'crop', path: '/crop', icon: Crop },
   { key: 'enhance', path: '/enhance', icon: Sparkles },
   { key: 'remove-background', path: '/remove-background', icon: Eraser },
+  { key: 'alt-text', path: '/alt-text-generator', icon: Type },
 ];
 
 export function Header() {
