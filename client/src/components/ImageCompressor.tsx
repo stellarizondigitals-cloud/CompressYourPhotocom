@@ -258,21 +258,39 @@ export function ImageCompressor() {
           data-testid="input-file-upload"
         />
         
-        <div className="flex flex-col items-center gap-4 text-center">
-          <div className={`
-            flex items-center justify-center
-            w-16 h-16 rounded-full
-            bg-primary/10
-            transition-transform duration-200
-            ${isDragging ? 'scale-105' : ''}
-          `}>
-            <Upload className="w-8 h-8 text-primary" />
+        {hasFiles ? (
+          <div className="w-full">
+            <div className={`grid gap-2 ${
+              files.length === 1 ? 'grid-cols-1 max-w-xs mx-auto' :
+              files.length <= 4 ? 'grid-cols-2' :
+              'grid-cols-3'
+            }`}>
+              {files.slice(0, 9).map(f => (
+                <div key={f.id} className="relative aspect-square overflow-hidden rounded-md bg-muted border border-border">
+                  <img src={f.previewUrl} alt={f.originalFile.name} className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-muted-foreground text-center mt-3">
+              {files.length} photo{files.length !== 1 ? 's' : ''} selected · Click or drop to add more
+            </p>
           </div>
-          
-          <p className="text-lg font-medium">
-            {t('hero.dropzone')}
-          </p>
-        </div>
+        ) : (
+          <div className="flex flex-col items-center gap-4 text-center">
+            <div className={`
+              flex items-center justify-center
+              w-16 h-16 rounded-full
+              bg-primary/10
+              transition-transform duration-200
+              ${isDragging ? 'scale-105' : ''}
+            `}>
+              <Upload className="w-8 h-8 text-primary" />
+            </div>
+            <p className="text-lg font-medium">
+              {t('hero.dropzone')}
+            </p>
+          </div>
+        )}
       </label>
 
       {hasFiles && (

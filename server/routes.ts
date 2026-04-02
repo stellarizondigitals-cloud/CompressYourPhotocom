@@ -284,7 +284,7 @@ Respond ONLY with valid JSON in this exact format (no markdown, no extra text):
             }
           ]
         }],
-        generationConfig: { temperature: 0.3, maxOutputTokens: 512 }
+        generationConfig: { temperature: 0.3, maxOutputTokens: 2048 }
       };
 
       const geminiModels = ['gemini-2.0-flash', 'gemini-2.5-flash', 'gemini-2.0-flash-lite'];
@@ -311,10 +311,15 @@ Respond ONLY with valid JSON in this exact format (no markdown, no extra text):
       }
 
       const data: any = await response.json();
-      const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+      // gemini-2.5-flash is a thinking model — combine all non-thought text parts
+      const parts: any[] = data.candidates?.[0]?.content?.parts || [];
+      let text = parts.filter(p => !p.thought).map(p => p.text || '').join('\n').trim();
+      if (!text) text = parts.map(p => p.text || '').join('\n').trim();
+      // Strip markdown code fences (```json ... ```) if present
+      text = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/, '').trim();
       const jsonMatch = text.match(/\{[\s\S]*\}/);
       if (!jsonMatch) {
-        console.error('[Gemini] No JSON in response:', text);
+        console.error('[Gemini] No JSON in response:', text.substring(0, 300));
         return res.status(500).json({ error: "Unexpected AI response. Please try again." });
       }
 
