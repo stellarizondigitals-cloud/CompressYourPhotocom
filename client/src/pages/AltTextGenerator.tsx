@@ -38,7 +38,7 @@ async function resizeImageToBase64(file: File, maxPx = 900): Promise<{ base64: s
       const dataUrl = canvas.toDataURL('image/jpeg', 0.82);
       resolve({ base64: dataUrl.split(',')[1], mimeType: 'image/jpeg' });
     };
-    img.onerror = reject;
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('Could not read image. Please try a different file.')); };
     img.src = url;
   });
 }

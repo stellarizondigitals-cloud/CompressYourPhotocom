@@ -284,17 +284,21 @@ Respond ONLY with valid JSON in this exact format (no markdown, no extra text):
             }
           ]
         }],
-        generationConfig: { temperature: 0.3, maxOutputTokens: 2048 }
+        generationConfig: { temperature: 0.3, maxOutputTokens: 8192 }
       };
 
-      const geminiModels = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.0-flash-lite'];
+      const geminiModels = ['gemini-2.5-flash', 'gemini-2.0-flash-lite', 'gemini-2.0-flash'];
       let response: Response | null = null;
       let lastStatus = 0;
 
       for (const model of geminiModels) {
+        // gemini-2.5-flash is a thinking model — disable thinking to avoid token budget issues
+        const modelPayload = model === 'gemini-2.5-flash'
+          ? { ...payload, generationConfig: { ...payload.generationConfig, thinkingConfig: { thinkingBudget: 0 } } }
+          : payload;
         response = await fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
-          { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }
+          { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(modelPayload) }
         );
         lastStatus = response.status;
         if (response.ok) break;
