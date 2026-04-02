@@ -52,7 +52,10 @@ export default function RemoveBackground() {
         model: 'medium',
         output: { format: 'image/png', quality: 1 },
         progress: (key: string, current: number, total: number) => {
-          if (key === 'compute:inference') {
+          if (key.startsWith('fetch:')) {
+            const pct = total > 0 ? Math.round((current / total) * 100) : 0;
+            setStatusMsg(`Downloading AI model… ${pct}%`);
+          } else if (key === 'compute:inference') {
             const pct = Math.round((current / total) * 100);
             setStatusMsg(`Removing background… ${pct}%`);
           }
@@ -62,9 +65,10 @@ export default function RemoveBackground() {
       setResultUrl(url);
       incrementSessionCount();
       setStatusMsg('');
-    } catch (err) {
-      console.error(err);
-      setErrorMsg('Background removal failed. Please try again or use a different image.');
+    } catch (err: unknown) {
+      console.error('Background removal error:', err);
+      const msg = err instanceof Error ? err.message : String(err);
+      setErrorMsg(`Background removal failed: ${msg}`);
     } finally {
       setIsProcessing(false);
     }
