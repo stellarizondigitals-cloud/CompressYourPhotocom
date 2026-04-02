@@ -33,21 +33,14 @@ export default function RemoveBackground() {
   const [originalFile, setOriginalFile] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [statusMsg, setStatusMsg] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
   const [showPremium, setShowPremium] = useState(false);
   const [darkBg, setDarkBg] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleFile = useCallback(async (file: File) => {
-    if (!file.type.startsWith('image/')) return;
-
-    if (!isPro && getSessionCount() >= FREE_LIMIT) {
-      setShowPremium(true);
-      return;
-    }
-
-    setOriginalFile(file);
-    setOriginalUrl(URL.createObjectURL(file));
+  const processFile = useCallback(async (file: File) => {
     setResultUrl(null);
+    setErrorMsg('');
     setIsProcessing(true);
     setStatusMsg('Loading AI model (first run may take ~15s)…');
 
@@ -71,11 +64,24 @@ export default function RemoveBackground() {
       setStatusMsg('');
     } catch (err) {
       console.error(err);
-      setStatusMsg('Something went wrong. Please try a different image.');
+      setErrorMsg('Background removal failed. Please try again or use a different image.');
     } finally {
       setIsProcessing(false);
     }
-  }, [isPro]);
+  }, []);
+
+  const handleFile = useCallback(async (file: File) => {
+    if (!file.type.startsWith('image/')) return;
+
+    if (!isPro && getSessionCount() >= FREE_LIMIT) {
+      setShowPremium(true);
+      return;
+    }
+
+    setOriginalFile(file);
+    setOriginalUrl(URL.createObjectURL(file));
+    processFile(file);
+  }, [isPro, processFile]);
 
   const onDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -94,6 +100,7 @@ export default function RemoveBackground() {
     setResultUrl(null);
     setOriginalFile(null);
     setStatusMsg('');
+    setErrorMsg('');
     if (inputRef.current) inputRef.current.value = '';
   };
 
@@ -188,10 +195,28 @@ export default function RemoveBackground() {
 
                   {!isProcessing && (
                     <>
+                      {errorMsg && (
+                        <div className="p-4 rounded-lg bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 flex items-start gap-3" data-testid="error-remove-bg">
+                          <span className="text-red-500 mt-0.5">⚠</span>
+                          <div className="flex-1">
+                            <p className="text-sm text-red-700 dark:text-red-400">{errorMsg}</p>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="mt-2 border-red-300 text-red-700 hover:bg-red-50"
+                              onClick={() => originalFile && processFile(originalFile)}
+                              data-testid="button-retry-remove-bg"
+                            >
+                              <RotateCcw className="w-3.5 h-3.5 mr-1.5" /> Try Again
+                            </Button>
+                          </div>
+                        </div>
+                      )}
+
                       <div className="flex items-center justify-between flex-wrap gap-3">
                         <div className="flex items-center gap-2">
                           {resultUrl && <CheckCircle className="w-5 h-5 text-green-500" />}
-                          <span className="font-semibold">{resultUrl ? 'Background removed!' : 'Original'}</span>
+                          <span className="font-semibold">{resultUrl ? 'Background removed!' : errorMsg ? 'Error' : 'Original'}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           {resultUrl && (
@@ -202,6 +227,17 @@ export default function RemoveBackground() {
                               data-testid="button-toggle-bg"
                             >
                               {darkBg ? '☀️ Light BG' : '🌑 Dark BG'}
+                            </Button>
+                          )}
+                          {!resultUrl && !errorMsg && (
+                            <Button
+                              size="sm"
+                              className="gap-2"
+                              onClick={() => originalFile && processFile(originalFile)}
+                              data-testid="button-remove-bg-action"
+                            >
+                              <Eraser className="w-4 h-4" />
+                              Remove Background
                             </Button>
                           )}
                           <Button variant="outline" size="sm" onClick={handleReset} className="gap-2" data-testid="button-reset-remove-bg">
@@ -312,7 +348,7 @@ export default function RemoveBackground() {
         </section>
       </div>
 
-      {showPremium && <PremiumModal onClose={() => setShowPremium(false)} />}
+      <PremiumModal open={showPremium} onOpenChange={setShowPremium} />
     </>
   );
 }

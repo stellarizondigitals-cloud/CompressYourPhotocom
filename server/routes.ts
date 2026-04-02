@@ -287,15 +287,27 @@ Respond ONLY with valid JSON in this exact format (no markdown, no extra text):
         generationConfig: { temperature: 0.3, maxOutputTokens: 512 }
       };
 
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
-        { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }
-      );
+      const geminiModels = ['gemini-2.0-flash', 'gemini-2.5-flash', 'gemini-2.0-flash-lite'];
+      let response: Response | null = null;
+      let lastStatus = 0;
 
-      if (!response.ok) {
+      for (const model of geminiModels) {
+        response = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+          { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }
+        );
+        lastStatus = response.status;
+        if (response.ok) break;
         const errText = await response.text();
-        console.error('[Gemini] API error:', response.status, errText);
-        return res.status(502).json({ error: "AI generation failed. Please try again." });
+        console.error(`[Gemini] ${model} error:`, response.status, errText.substring(0, 200));
+        if (response.status === 400 || response.status === 403) break;
+      }
+
+      if (!response || !response.ok) {
+        const msg = lastStatus === 429
+          ? "AI quota temporarily reached. Please try again in a moment."
+          : "AI generation failed. Please try again.";
+        return res.status(502).json({ error: msg });
       }
 
       const data: any = await response.json();
