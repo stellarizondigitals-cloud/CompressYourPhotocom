@@ -9,6 +9,7 @@ const LIFETIME_PRICE_ID = process.env.STRIPE_LIFETIME_PRICE_ID || 'price_1THNNnA
 const ALLOWED_PRICE_IDS = [MONTHLY_PRICE_ID, LIFETIME_PRICE_ID];
 
 console.log('[Server] Environment check:', {
+  hasGeminiKey: !!process.env.GEMINI_API_KEY,
   hasStripeKey: !!process.env.STRIPE_SECRET_KEY,
   hasSupabaseUrl: !!process.env.SUPABASE_URL,
   hasSupabaseServiceKey: !!process.env.SUPABASE_SERVICE_ROLE_KEY,

@@ -22,7 +22,7 @@ interface AltTextResult {
   tips: string[];
 }
 
-async function resizeImageToBase64(file: File, maxPx = 1024): Promise<{ base64: string; mimeType: string }> {
+async function resizeImageToBase64(file: File, maxPx = 900): Promise<{ base64: string; mimeType: string }> {
   return new Promise((resolve, reject) => {
     const img = new Image();
     const url = URL.createObjectURL(file);
@@ -35,9 +35,8 @@ async function resizeImageToBase64(file: File, maxPx = 1024): Promise<{ base64: 
       canvas.height = h;
       canvas.getContext('2d')!.drawImage(img, 0, 0, w, h);
       URL.revokeObjectURL(url);
-      const mimeType = file.type === 'image/png' ? 'image/png' : 'image/jpeg';
-      const dataUrl = canvas.toDataURL(mimeType, 0.85);
-      resolve({ base64: dataUrl.split(',')[1], mimeType });
+      const dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+      resolve({ base64: dataUrl.split(',')[1], mimeType: 'image/jpeg' });
     };
     img.onerror = reject;
     img.src = url;
@@ -123,8 +122,13 @@ export default function AltTextGenerator() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ imageBase64: base64, mimeType }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Generation failed');
+      let data: any = {};
+      try {
+        data = await res.json();
+      } catch {
+        throw new Error(res.status === 413 ? 'Image is too large. Please try a smaller image.' : 'Server error. Please try again.');
+      }
+      if (!res.ok) throw new Error(data.error || 'Generation failed. Please try again.');
       setResult(data);
       if (!isPro) incrementSessionCount();
     } catch (err: any) {
