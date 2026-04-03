@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Eraser, Type, LogIn, LogOut, Crown, User, BookOpen, Tag, ChevronDown, Wrench } from 'lucide-react';
+import { Menu, X, Minimize2, Maximize, RefreshCw, Crop, Sparkles, Eraser, Type, LogIn, LogOut, Crown, User, BookOpen, Tag, ChevronDown, Wrench, ZoomIn, FileText } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/contexts/AuthContext';
@@ -17,6 +17,8 @@ const navTools = [
   { key: 'enhance', path: '/enhance', icon: Sparkles },
   { key: 'remove-background', path: '/remove-background', icon: Eraser },
   { key: 'alt-text', path: '/alt-text-generator', icon: Type },
+  { key: 'image-upscaler', path: '/image-upscaler', icon: ZoomIn },
+  { key: 'image-to-pdf', path: '/image-to-pdf', icon: FileText },
 ];
 
 export function Header() {
@@ -90,7 +92,7 @@ export function Header() {
                     <Link key={tool.key} to={getLocalizedPath(tool.path)} data-testid={`nav-link-${tool.key}`}>
                       <DropdownMenuItem className={`gap-2 cursor-pointer ${isActive ? 'bg-primary/10 text-primary' : ''}`}>
                         <Icon className="w-4 h-4" />
-                        {t(`tools.${tool.key}.navLabel`, tool.key.charAt(0).toUpperCase() + tool.key.slice(1))}
+                        {t(`tools.${tool.key}.navLabel`, tool.key.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '))}
                       </DropdownMenuItem>
                     </Link>
                   );
@@ -207,7 +209,7 @@ export function Header() {
                     className={`w-full justify-start gap-2 ${isActive ? 'bg-primary/10' : ''} ${isRTL ? 'flex-row-reverse justify-end' : ''}`}
                   >
                     <Icon className="w-4 h-4" />
-                    {t(`tools.${tool.key}.navLabel`, tool.key.charAt(0).toUpperCase() + tool.key.slice(1))}
+                    {t(`tools.${tool.key}.navLabel`, tool.key.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '))}
                   </Button>
                 </Link>
               );

@@ -44,6 +44,8 @@ import Pricing from "@/pages/Pricing";
 import RemoveBackground from "@/pages/RemoveBackground";
 import AltTextGenerator from "@/pages/AltTextGenerator";
 import RecommendedTools from "@/pages/RecommendedTools";
+import ImageUpscaler from "@/pages/ImageUpscaler";
+import ImageToPdf from "@/pages/ImageToPdf";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -95,6 +97,8 @@ function AppRoutes() {
           <Route key={`${lang}-enhance-photo-quality`} path={`${prefix}/enhance-photo-quality`} element={<Layout><EnhancePhotoQuality /></Layout>} />,
           <Route key={`${lang}-remove-background`} path={`${prefix}/remove-background`} element={<Layout><RemoveBackground /></Layout>} />,
           <Route key={`${lang}-alt-text-generator`} path={`${prefix}/alt-text-generator`} element={<Layout><AltTextGenerator /></Layout>} />,
+          <Route key={`${lang}-image-upscaler`} path={`${prefix}/image-upscaler`} element={<Layout><ImageUpscaler /></Layout>} />,
+          <Route key={`${lang}-image-to-pdf`} path={`${prefix}/image-to-pdf`} element={<Layout><ImageToPdf /></Layout>} />,
         ];
       })}
       <Route path="/blog" element={<Layout><BlogIndex /></Layout>} />

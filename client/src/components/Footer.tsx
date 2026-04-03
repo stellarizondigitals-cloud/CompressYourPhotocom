@@ -91,6 +91,20 @@ export function Footer() {
                 AI Alt Text Generator
               </Link>
               <Link 
+                to="/image-upscaler" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-image-upscaler"
+              >
+                Image Upscaler
+              </Link>
+              <Link 
+                to="/image-to-pdf" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-footer-image-to-pdf"
+              >
+                Image to PDF
+              </Link>
+              <Link 
                 to="/how-it-works" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-how-it-works"

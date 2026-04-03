@@ -144,15 +144,15 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
 
           <div className="space-y-2.5 pt-1">
             <button
-              onClick={() => handleCheckoutGeo('week_pass', prices.weekPass.amount, '7-Day Pro Pass', 'payment')}
+              onClick={() => handleCheckoutGeo('week_pass', prices.weekPass.amount, '7-Day Pro Trial', 'subscription')}
               disabled={!!loadingPlan}
               className="w-full p-3.5 rounded-xl border-2 border-border hover:border-primary/40 bg-background hover:bg-muted/30 transition-all text-left disabled:opacity-60 disabled:cursor-not-allowed"
               data-testid="btn-week-pass"
             >
               <div className={`flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <div>
-                  <p className="font-semibold text-sm">7-Day Pro Pass</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">Try Pro risk-free for a week</p>
+                  <p className="font-semibold text-sm">7-Day Trial</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">Then £1.99/month · Cancel any time</p>
                 </div>
                 <div className={`${isRTL ? 'text-left' : 'text-right'} flex-shrink-0 ml-3`}>
                   {isLoading('week_pass') ? (
@@ -160,7 +160,7 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
                   ) : (
                     <>
                       <p className="text-xl font-bold">{prices.weekPass.display}</p>
-                      <p className="text-xs text-muted-foreground">one-time</p>
+                      <p className="text-xs text-muted-foreground">for 7 days</p>
                     </>
                   )}
                 </div>
