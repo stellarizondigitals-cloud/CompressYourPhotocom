@@ -22,7 +22,7 @@ export function LoginModal({ open, onOpenChange }: LoginModalProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !isConfigured) return;
+    if (!email) return;
 
     setIsLoading(true);
     setError(null);

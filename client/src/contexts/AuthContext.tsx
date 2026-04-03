@@ -73,33 +73,29 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [user, refreshProfile]);
 
   const signInWithEmail = async (email: string): Promise<{ error: Error | null }> => {
-    if (!isSupabaseConfigured || !supabase) {
-      console.error('[Auth] Not configured');
-      return { error: new Error('Authentication not configured') };
-    }
-    
     try {
       const redirectTo = `${window.location.origin}/auth/callback`;
-      console.log('[Auth] Attempting sign in for:', email, 'redirect:', redirectTo);
-      const { error } = await supabase.auth.signInWithOtp({
-        email,
-        options: {
-          emailRedirectTo: redirectTo,
-        },
+      console.log('[Auth] Requesting magic link for:', email);
+
+      const res = await fetch('/api/auth/magic-link', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, redirectTo }),
       });
-      
-      if (error) {
-        console.error('[Auth] Sign in error:', error.message, error);
-        return { error };
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        console.error('[Auth] Magic link error:', data.error);
+        return { error: new Error(data.error || 'Failed to send login link') };
       }
-      
+
       console.log('[Auth] Magic link sent successfully');
       return { error: null };
     } catch (networkError: any) {
       console.error('[Auth] Network error:', networkError);
-      // Provide more helpful error message
-      const message = networkError?.message === 'Failed to fetch' 
-        ? 'Unable to connect to authentication service. Please check your internet connection and try again.'
+      const message = networkError?.message === 'Failed to fetch'
+        ? 'Unable to connect. Please check your internet connection and try again.'
         : networkError?.message || 'An unexpected error occurred';
       return { error: new Error(message) };
     }
