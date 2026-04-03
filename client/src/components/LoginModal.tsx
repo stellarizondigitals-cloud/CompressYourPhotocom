@@ -32,7 +32,16 @@ export function LoginModal({ open, onOpenChange }: LoginModalProps) {
     setIsLoading(false);
     
     if (result.error) {
-      setError(result.error.message);
+      const raw = result.error.message || '';
+      let friendly = raw;
+      if (raw.toLowerCase().includes('sending') || raw.toLowerCase().includes('smtp') || raw.toLowerCase().includes('email service')) {
+        friendly = 'Email delivery is temporarily unavailable. Please try again in a few minutes or contact support.';
+      } else if (raw.toLowerCase().includes('rate limit') || raw.toLowerCase().includes('too many')) {
+        friendly = 'Too many requests. Please wait a few minutes before trying again.';
+      } else if (raw.toLowerCase().includes('invalid email') || raw.toLowerCase().includes('invalid_email')) {
+        friendly = 'Please enter a valid email address.';
+      }
+      setError(friendly);
     } else {
       setEmailSent(true);
     }

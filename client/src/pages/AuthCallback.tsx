@@ -17,23 +17,37 @@ export default function AuthCallback() {
       }
 
       try {
-        const { data, error } = await supabase.auth.getSession();
-        
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+
+        let session = null;
+        let error = null;
+
+        if (code) {
+          const result = await supabase.auth.exchangeCodeForSession(code);
+          session = result.data?.session;
+          error = result.error;
+        } else {
+          const result = await supabase.auth.getSession();
+          session = result.data?.session;
+          error = result.error;
+        }
+
         if (error) {
           console.error('[AuthCallback] Error:', error);
           setStatus('error');
-          setMessage(error.message || 'Failed to verify login');
+          setMessage(error.message || 'Failed to verify login. Please try again.');
           return;
         }
 
-        if (data.session) {
+        if (session) {
           console.log('[AuthCallback] Session verified');
           setStatus('success');
           setMessage('Login successful! Redirecting...');
           setTimeout(() => navigate('/'), 1500);
         } else {
           setStatus('error');
-          setMessage('No session found. Please try logging in again.');
+          setMessage('Login link expired or already used. Please request a new one.');
         }
       } catch (err: any) {
         console.error('[AuthCallback] Exception:', err);
@@ -47,7 +61,7 @@ export default function AuthCallback() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center space-y-4">
+      <div className="text-center space-y-4 max-w-sm px-4">
         {status === 'loading' && (
           <Loader2 className="w-12 h-12 animate-spin mx-auto text-primary" />
         )}
