@@ -290,18 +290,34 @@ export async function registerRoutes(
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "CompressYourPhoto <noreply@compressyourphoto.com>",
+            from: "CompressYourPhoto <hello@compressyourphoto.com>",
+            reply_to: "hello@compressyourphoto.com",
             to: email,
-            subject: "Your login link for CompressYourPhoto",
-            html: `
-              <div style="font-family:sans-serif;max-width:520px;margin:0 auto;padding:32px 24px;background:#fff">
-                <h2 style="margin:0 0 8px;font-size:22px;color:#1a1a1a">Log in to CompressYourPhoto</h2>
-                <p style="color:#555;margin:0 0 24px;font-size:15px">Click the button below to sign in instantly. This link expires in 1 hour and can only be used once.</p>
-                <a href="${magicLink}" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;padding:13px 28px;border-radius:7px;font-weight:600;font-size:15px">Sign in to CompressYourPhoto</a>
-                <p style="color:#888;margin:28px 0 0;font-size:13px">If you didn't request this email, you can safely ignore it.</p>
-                <hr style="border:none;border-top:1px solid #eee;margin:24px 0">
-                <p style="color:#aaa;font-size:12px;margin:0">CompressYourPhoto &middot; <a href="https://www.compressyourphoto.com" style="color:#aaa">compressyourphoto.com</a></p>
-              </div>`,
+            subject: "Your sign-in link for CompressYourPhoto",
+            text: `Sign in to CompressYourPhoto\n\nClick the link below to sign in. This link expires in 1 hour and can only be used once.\n\n${magicLink}\n\nIf you didn't request this, you can safely ignore this email.\n\n-- CompressYourPhoto\nhttps://www.compressyourphoto.com`,
+            html: `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sign in to CompressYourPhoto</title></head><body style="margin:0;padding:0;background:#f5f5f5;font-family:Arial,Helvetica,sans-serif">
+              <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:32px 16px">
+                <tr><td align="center">
+                  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:520px;background:#ffffff;border-radius:10px;overflow:hidden;border:1px solid #e8e8e8">
+                    <tr><td style="background:#7c3aed;padding:24px 32px">
+                      <p style="margin:0;color:#ffffff;font-size:20px;font-weight:700;letter-spacing:-0.3px">CompressYourPhoto</p>
+                    </td></tr>
+                    <tr><td style="padding:36px 32px">
+                      <h1 style="margin:0 0 12px;font-size:22px;color:#111111;font-weight:700">Your sign-in link</h1>
+                      <p style="margin:0 0 28px;font-size:15px;color:#555555;line-height:1.6">Click the button below to sign in to your account. This link expires in <strong>1 hour</strong> and can only be used once.</p>
+                      <table cellpadding="0" cellspacing="0"><tr><td style="border-radius:7px;background:#7c3aed">
+                        <a href="${magicLink}" style="display:inline-block;padding:14px 30px;color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;border-radius:7px">Sign in to CompressYourPhoto</a>
+                      </td></tr></table>
+                      <p style="margin:28px 0 0;font-size:13px;color:#999999;line-height:1.5">If the button doesn't work, copy and paste this link into your browser:<br><a href="${magicLink}" style="color:#7c3aed;word-break:break-all;font-size:12px">${magicLink}</a></p>
+                    </td></tr>
+                    <tr><td style="padding:20px 32px;border-top:1px solid #eeeeee;background:#fafafa">
+                      <p style="margin:0;font-size:12px;color:#aaaaaa;line-height:1.6">If you didn't request this email, you can safely ignore it — no action is needed.<br>
+                      &copy; ${new Date().getFullYear()} CompressYourPhoto &middot; Stellarizon Digitals Ltd &middot; <a href="https://www.compressyourphoto.com" style="color:#aaaaaa">compressyourphoto.com</a></p>
+                    </td></tr>
+                  </table>
+                </td></tr>
+              </table>
+            </body></html>`,
           }),
         });
 
