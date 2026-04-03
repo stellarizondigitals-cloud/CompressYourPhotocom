@@ -90,6 +90,9 @@ export function LoginModal({ open, onOpenChange }: LoginModalProps) {
             <p className="text-center text-sm text-muted-foreground">
               {t('auth.checkEmail', 'Check your email for a login link. It may take a minute to arrive.')}
             </p>
+            <p className="text-center text-xs text-muted-foreground/70">
+              {t('auth.checkSpam', "Can't find it? Check your spam, junk or deleted folder.")}
+            </p>
             <Button variant="outline" onClick={handleClose} data-testid="button-done-login">
               {t('common.done', 'Done')}
             </Button>
