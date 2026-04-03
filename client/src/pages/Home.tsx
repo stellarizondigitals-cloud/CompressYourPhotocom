@@ -63,9 +63,9 @@ export default function Home() {
           "@type": "FAQPage",
           "mainEntity": [
             { "@type": "Question", "name": "Is CompressYourPhoto really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All 7 core tools — compress, resize, convert, crop, enhance, remove backgrounds, upscale images, and convert images to PDF — are free with no hidden fees, no signup required, and no watermarks." } },
-            { "@type": "Question", "name": "Can I upscale an image online for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our Image Upscaler is free with 3 uses per session at 2× scale. Upgrade to Pro for unlimited upscales at 2×, 4×, and 8×." } },
-            { "@type": "Question", "name": "Can I convert images to PDF for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Free users can combine up to 5 images into a PDF and convert the first 3 pages of a PDF to images. Pro users get unlimited pages." } },
-            { "@type": "Question", "name": "Can I remove the background from an image for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our AI background remover is free with 3 removals per session. Upgrade to Pro for unlimited background removals." } },
+            { "@type": "Question", "name": "Can I upscale an image online for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Free users get 3 shared uses across all tools, including the Image Upscaler at 2× scale. Pro users get unlimited upscales at 2×, 4×, and 8×." } },
+            { "@type": "Question", "name": "Can I convert images to PDF for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Free users can use the Image to PDF tool within the shared 3-use allowance. Pro users get unlimited images per PDF and unlimited page extraction." } },
+            { "@type": "Question", "name": "Can I remove the background from an image for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Background removal is free within the shared 3-use allowance. Upgrade to Pro for unlimited background removals." } },
             { "@type": "Question", "name": "Are my photos uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your photos never leave your device. All processing — including upscaling, PDF conversion, and background removal — happens locally in your browser." } },
             { "@type": "Question", "name": "What image formats are supported?", "acceptedAnswer": { "@type": "Answer", "text": "We support JPG/JPEG, PNG, WebP, HEIC/HEIF (iPhone photos), GIF, and BMP formats across all tools." } },
             { "@type": "Question", "name": "Does it work on mobile phones?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CompressYourPhoto works on all modern mobile browsers including iPhone Safari and Android Chrome." } },
@@ -180,14 +180,14 @@ export default function Home() {
             Free tools. Optional Pro upgrade.
           </h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-sm md:text-base">
-            All 9 tools are completely free to start — no account needed. Upgrade to Pro for unlimited use, all scales, unlimited PDF pages, and a fully ad-free experience.
+            Get 3 free uses across all 9 tools — no account needed. Upgrade to Pro for unlimited use, bigger batches, and a completely ad-free experience.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-6">
             <Card className="p-5 text-left">
               <p className="font-semibold mb-1">Free</p>
               <p className="text-2xl font-bold mb-3">£0 <span className="text-sm font-normal text-muted-foreground">/ forever</span></p>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                {['All 9 tools — free to start', 'Up to 5 images/session', '3 background removals', 'No sign-up required', '100% private processing'].map(f => (
+                {['3 free uses across all 9 tools', 'No account needed', '100% private processing', 'No watermarks', 'No hidden fees'].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}</li>
                 ))}
               </ul>
@@ -203,7 +203,7 @@ export default function Home() {
               <p className="text-2xl font-bold mb-1 text-primary">£0.99 <span className="text-sm font-normal text-muted-foreground">/ 7-day trial</span></p>
               <p className="text-xs text-muted-foreground mb-3">Then £1.99/month · Cancel any time · £24.99 lifetime</p>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                {['50 images at once', 'Completely ad-free', 'Unlimited all tools', 'Image Upscaler 4× & 8×', 'Unlimited PDF pages'].map(f => (
+                {['Unlimited all 9 tools', 'Completely ad-free', '50 images at once', 'Image Upscaler 4× & 8×', 'Unlimited PDF pages'].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-primary flex-shrink-0" />{f}</li>
                 ))}
               </ul>
@@ -231,15 +231,15 @@ export default function Home() {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="q1">
               <AccordionTrigger data-testid="faq-q1">Is CompressYourPhoto really free?</AccordionTrigger>
-              <AccordionContent>Yes. All 9 tools are free to start — compress, resize, convert, crop, enhance, remove backgrounds, upscale images, convert to PDF, and AI alt text. No sign-up, no watermarks. Upgrade to Pro for unlimited use and 4×/8× upscaling.</AccordionContent>
+              <AccordionContent>Yes. You get 3 free uses across all 9 tools — compress, resize, convert, crop, enhance, remove backgrounds, upscale, convert to PDF, and AI alt text. No sign-up, no watermarks. Upgrade to Pro for unlimited use and 4×/8× upscaling.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q1b">
               <AccordionTrigger data-testid="faq-q1b">Can I upscale images for free?</AccordionTrigger>
-              <AccordionContent>Yes — free users get 3 upscales per session at 2× scale. Pro users get unlimited upscales at 2×, 4×, and 8× with smart sharpening for crisp, clear results.</AccordionContent>
+              <AccordionContent>Yes — free users can upscale using the shared 3-use allowance at 2× scale. Pro users get unlimited upscales at 2×, 4×, and 8× with smart sharpening for crisp, clear results.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q1c">
               <AccordionTrigger data-testid="faq-q1c">Can I convert images to PDF for free?</AccordionTrigger>
-              <AccordionContent>Yes. Free users can combine up to 5 images into one PDF, and convert the first 3 pages of any PDF to images. Pro users get unlimited images per PDF and unlimited page extraction.</AccordionContent>
+              <AccordionContent>Yes. Free users can use the Image to PDF tool within the shared 3-use allowance. Pro users get unlimited images per PDF and unlimited page extraction.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q2">
               <AccordionTrigger data-testid="faq-q2">{t('faq.q2', 'Are my photos uploaded to a server?')}</AccordionTrigger>

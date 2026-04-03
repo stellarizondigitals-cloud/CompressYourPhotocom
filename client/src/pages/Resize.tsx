@@ -20,6 +20,8 @@ import { PopularUseCases } from '@/components/PopularUseCases';
 import { HowToUse } from '@/components/HowToUse';
 import { AdBanner } from '@/components/AdBanner';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { PremiumModal } from '@/components/PremiumModal';
+import { useGlobalUsage } from '@/hooks/useGlobalUsage';
 
 interface ImageFile {
   id: string;
@@ -105,7 +107,9 @@ async function resizeImage(file: File, targetWidth: number, targetHeight: number
 export default function Resize() {
   const { t } = useTranslation();
   const { isRTL, currentLanguage } = useLanguage();
+  const { canUse, usesRemaining, recordUse } = useGlobalUsage();
 
+  const [showPremiumModal, setShowPremiumModal] = useState(false);
   const [files, setFiles] = useState<ImageFile[]>([]);
   const [resizeMode, setResizeMode] = useState<ResizeMode>('dimensions');
   const [targetWidth, setTargetWidth] = useState<string>('');
@@ -192,6 +196,7 @@ export default function Resize() {
 
   const resizeImages = async () => {
     if (files.length === 0) return;
+    if (!canUse) { setShowPremiumModal(true); return; }
     setIsProcessing(true);
     const pendingFiles = files.filter(f => f.status === 'pending' || f.status === 'error');
 
@@ -219,6 +224,7 @@ export default function Resize() {
         ));
       }
     }
+    recordUse();
     setIsProcessing(false);
     setCurrentIndex(0);
   };
@@ -501,6 +507,7 @@ export default function Resize() {
       </div>
 
       <RelatedTools currentTool="resize" />
+      <PremiumModal open={showPremiumModal} onOpenChange={setShowPremiumModal} />
     </>
   );
 }

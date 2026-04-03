@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface AdBannerProps {
   slot: string;
@@ -14,11 +15,12 @@ declare global {
 }
 
 export function AdBanner({ slot, format = 'auto', className = '', fullWidth = false }: AdBannerProps) {
+  const { isPro } = useAuth();
   const adRef = useRef<HTMLModElement>(null);
   const pushed = useRef(false);
 
   useEffect(() => {
-    if (pushed.current) return;
+    if (isPro || pushed.current) return;
     try {
       if (typeof window !== 'undefined') {
         window.adsbygoogle = window.adsbygoogle || [];
@@ -26,7 +28,9 @@ export function AdBanner({ slot, format = 'auto', className = '', fullWidth = fa
         pushed.current = true;
       }
     } catch {}
-  }, []);
+  }, [isPro]);
+
+  if (isPro) return null;
 
   const isInArticle = format === 'in-article';
 
@@ -36,7 +40,7 @@ export function AdBanner({ slot, format = 'auto', className = '', fullWidth = fa
       <ins
         ref={adRef}
         className="adsbygoogle"
-        style={{ display: isInArticle ? 'block' : 'block', textAlign: 'center' }}
+        style={{ display: 'block', textAlign: 'center' }}
         data-ad-client="ca-pub-1318056567034683"
         data-ad-slot={slot}
         data-ad-format={isInArticle ? 'fluid' : format}

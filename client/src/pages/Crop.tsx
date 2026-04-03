@@ -18,6 +18,8 @@ import { PopularUseCases } from '@/components/PopularUseCases';
 import { HowToUse } from '@/components/HowToUse';
 import { AdBanner } from '@/components/AdBanner';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { PremiumModal } from '@/components/PremiumModal';
+import { useGlobalUsage } from '@/hooks/useGlobalUsage';
 
 type AspectPreset = 'free' | '1:1' | '16:9' | '9:16' | '4:3' | '3:4' | 'circle';
 
@@ -83,7 +85,9 @@ async function getCroppedImage(imageSrc: string, pixelCrop: Area, isCircle: bool
 export default function CropPage() {
   const { t } = useTranslation();
   const { isRTL, currentLanguage } = useLanguage();
+  const { canUse, recordUse } = useGlobalUsage();
 
+  const [showPremiumModal, setShowPremiumModal] = useState(false);
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [originalFile, setOriginalFile] = useState<File | null>(null);
   const [crop, setCrop] = useState<Point>({ x: 0, y: 0 });
@@ -138,6 +142,7 @@ export default function CropPage() {
 
   const handleCropAndDownload = async () => {
     if (!imageSrc || !croppedAreaPixels || !originalFile) return;
+    if (!canUse) { setShowPremiumModal(true); return; }
     setIsProcessing(true);
 
     try {
@@ -145,6 +150,7 @@ export default function CropPage() {
       const ext = isCircle ? 'png' : 'jpg';
       const newName = originalFile.name.replace(/\.[^/.]+$/, '') + `_cropped.${ext}`;
       triggerDownload(croppedBlob, newName);
+      recordUse();
     } catch (error) {
       console.error('Crop failed:', error);
     }
@@ -329,6 +335,7 @@ export default function CropPage() {
       </div>
 
       <RelatedTools currentTool="crop" />
+      <PremiumModal open={showPremiumModal} onOpenChange={setShowPremiumModal} />
     </>
   );
 }

@@ -11,21 +11,13 @@ import { PremiumModal } from '@/components/PremiumModal';
 import { AdBanner } from '@/components/AdBanner';
 import { HowToUse } from '@/components/HowToUse';
 import { RelatedTools } from '@/components/RelatedTools';
-
-const FREE_LIMIT = 3;
-const SESSION_KEY = 'bgRemoveCount';
-
-function getSessionCount(): number {
-  return parseInt(sessionStorage.getItem(SESSION_KEY) || '0', 10);
-}
-function incrementSessionCount() {
-  sessionStorage.setItem(SESSION_KEY, String(getSessionCount() + 1));
-}
+import { useGlobalUsage } from '@/hooks/useGlobalUsage';
 
 export default function RemoveBackground() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   const { isPro } = useAuth();
+  const { canUse, usesRemaining, recordUse } = useGlobalUsage();
 
   const [isDragging, setIsDragging] = useState(false);
   const [originalUrl, setOriginalUrl] = useState<string | null>(null);
@@ -63,7 +55,7 @@ export default function RemoveBackground() {
       });
       const url = URL.createObjectURL(resultBlob);
       setResultUrl(url);
-      incrementSessionCount();
+      recordUse();
       setStatusMsg('');
     } catch (err: unknown) {
       console.error('Background removal error:', err);
@@ -72,12 +64,12 @@ export default function RemoveBackground() {
     } finally {
       setIsProcessing(false);
     }
-  }, []);
+  }, [recordUse]);
 
   const handleFile = useCallback(async (file: File) => {
     if (!file.type.startsWith('image/')) return;
 
-    if (!isPro && getSessionCount() >= FREE_LIMIT) {
+    if (!canUse) {
       setShowPremium(true);
       return;
     }
@@ -85,7 +77,7 @@ export default function RemoveBackground() {
     setOriginalFile(file);
     setOriginalUrl(URL.createObjectURL(file));
     processFile(file);
-  }, [isPro, processFile]);
+  }, [canUse, processFile]);
 
   const onDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -117,7 +109,7 @@ export default function RemoveBackground() {
     a.click();
   };
 
-  const usesLeft = isPro ? Infinity : Math.max(0, FREE_LIMIT - getSessionCount());
+  const usesLeft = usesRemaining;
 
   const howToSteps = [
     { step: 1, title: 'Upload your image', description: 'Drag & drop or click to upload any JPG, PNG, or WebP photo.' },

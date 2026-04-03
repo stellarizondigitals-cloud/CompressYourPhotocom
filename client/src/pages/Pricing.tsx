@@ -11,19 +11,20 @@ import { useAuth } from '@/contexts/AuthContext';
 import { LoginModal } from '@/components/LoginModal';
 
 const freeFeatures = [
-  'Compress, resize, convert, crop, enhance & remove backgrounds',
+  '3 free uses across all 9 tools — no account needed',
+  'Compress, resize, convert, crop, enhance, remove backgrounds & more',
   'Supports JPG, PNG, WebP, HEIC, GIF',
   '100% private — files never leave your browser',
-  'No account required',
-  'Up to 5 images per session (3 background removals)',
+  'No watermarks, no hidden fees',
 ];
 
 const proFeatures = [
   'Everything in Free',
+  'Unlimited uses across all 9 tools',
   'Batch process up to 50 images at once',
   'Completely ad-free experience',
-  'Unlimited compressions — no session limits',
-  'Priority processing speed',
+  'Image Upscaler at 4× & 8× scale',
+  'Unlimited PDF pages & exports',
   '100% private — files never leave your device',
 ];
 
@@ -51,8 +52,7 @@ export default function Pricing() {
             Free for everyone.<br className="hidden md:block" /> Pro for power users.
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            All 6 core tools — Compress, Resize, Convert, Crop, Enhance & Remove Background — are free with no sign-up. AI Alt Text Generator is a Pro feature with 1 free try.
-            Upgrade to Pro to remove limits and ads.
+            Get 3 free uses across all 9 tools — no account needed. Upgrade to Pro for unlimited use, bigger batches, and a completely ad-free experience.
           </p>
         </div>
 
@@ -154,8 +154,8 @@ export default function Pricing() {
                   ['HEIC support (iPhone photos)', true, true],
                   ['Files stay on your device (100% private)', true, true],
                   ['No account required', true, false],
-                  ['Images per session', '5', 'Unlimited'],
-                  ['Background removals per session', '3', 'Unlimited'],
+                  ['Free uses across all tools', '3', 'Unlimited'],
+                  ['Images per batch', '10', '50'],
                   ['Batch ZIP download', false, true],
                   ['Ad-free experience', false, true],
                   ['Priority processing speed', false, true],

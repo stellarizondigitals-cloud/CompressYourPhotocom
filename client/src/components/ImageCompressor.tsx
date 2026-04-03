@@ -15,8 +15,8 @@ import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useAuth } from '@/contexts/AuthContext';
 import { PremiumModal } from '@/components/PremiumModal';
+import { useGlobalUsage } from '@/hooks/useGlobalUsage';
 
-const FREE_COMPRESSION_LIMIT = 5;
 const FREE_FILE_LIMIT = 10;
 const PRO_FILE_LIMIT = 50;
 
@@ -62,6 +62,7 @@ export function ImageCompressor() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   const { isPro } = useAuth();
+  const { canUse, usesRemaining, recordUse } = useGlobalUsage();
   
   const [files, setFiles] = useState<ImageFile[]>([]);
   const [quality, setQuality] = useState(80);
@@ -70,11 +71,9 @@ export function ImageCompressor() {
   const [isCompressing, setIsCompressing] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
-  const [sessionCompressions, setSessionCompressions] = useState(0);
   const [showPremiumModal, setShowPremiumModal] = useState(false);
 
   const fileLimit = isPro ? PRO_FILE_LIMIT : FREE_FILE_LIMIT;
-  const hasReachedLimit = !isPro && sessionCompressions >= FREE_COMPRESSION_LIMIT;
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -123,7 +122,7 @@ export function ImageCompressor() {
   const compressImages = async () => {
     if (files.length === 0) return;
     
-    if (hasReachedLimit) {
+    if (!canUse) {
       setShowPremiumModal(true);
       return;
     }
@@ -179,14 +178,7 @@ export function ImageCompressor() {
       }
     }
     
-    if (!isPro) {
-      const newTotal = sessionCompressions + successCount;
-      setSessionCompressions(newTotal);
-      
-      if (newTotal >= FREE_COMPRESSION_LIMIT) {
-        setShowPremiumModal(true);
-      }
-    }
+    if (successCount > 0) recordUse();
     
     setIsCompressing(false);
     setCurrentIndex(0);
@@ -510,10 +502,9 @@ export function ImageCompressor() {
           {!isPro && (
             <div className="text-center text-sm text-muted-foreground">
               <p>
-                {t('premium.sessionUsage', '{{used}} of {{limit}} free compressions used this session', { 
-                  used: sessionCompressions, 
-                  limit: FREE_COMPRESSION_LIMIT 
-                })}
+                {usesRemaining === 0
+                  ? 'You\'ve used all 3 free operations. Upgrade to Pro to continue.'
+                  : `${usesRemaining} of 3 free uses remaining across all tools`}
               </p>
               <Button 
                 variant="ghost" 

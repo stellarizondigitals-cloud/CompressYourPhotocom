@@ -19,6 +19,8 @@ import { PopularUseCases } from '@/components/PopularUseCases';
 import { HowToUse } from '@/components/HowToUse';
 import { AdBanner } from '@/components/AdBanner';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { PremiumModal } from '@/components/PremiumModal';
+import { useGlobalUsage } from '@/hooks/useGlobalUsage';
 
 interface ImageFile {
   id: string;
@@ -98,7 +100,9 @@ async function convertImage(file: File, outputFormat: OutputFormat, quality: num
 export default function Convert() {
   const { t } = useTranslation();
   const { isRTL, currentLanguage } = useLanguage();
+  const { canUse, recordUse } = useGlobalUsage();
 
+  const [showPremiumModal, setShowPremiumModal] = useState(false);
   const [files, setFiles] = useState<ImageFile[]>([]);
   const [outputFormat, setOutputFormat] = useState<OutputFormat>('jpeg');
   const [quality, setQuality] = useState(90);
@@ -144,6 +148,7 @@ export default function Convert() {
 
   const convertImages = async () => {
     if (files.length === 0) return;
+    if (!canUse) { setShowPremiumModal(true); return; }
     setIsProcessing(true);
     const pendingFiles = files.filter(f => f.status === 'pending' || f.status === 'error');
 
@@ -163,6 +168,7 @@ export default function Convert() {
         ));
       }
     }
+    recordUse();
     setIsProcessing(false);
     setCurrentIndex(0);
   };
@@ -415,6 +421,7 @@ export default function Convert() {
       </div>
 
       <RelatedTools currentTool="convert" />
+      <PremiumModal open={showPremiumModal} onOpenChange={setShowPremiumModal} />
     </>
   );
 }

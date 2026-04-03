@@ -17,6 +17,8 @@ import { HowToUse } from '@/components/HowToUse';
 import { AdBanner } from '@/components/AdBanner';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { PremiumModal } from '@/components/PremiumModal';
+import { useGlobalUsage } from '@/hooks/useGlobalUsage';
 
 interface EnhanceSettings {
   brightness: number;
@@ -77,7 +79,9 @@ function applySharpness(ctx: CanvasRenderingContext2D, width: number, height: nu
 export default function EnhancePage() {
   const { t } = useTranslation();
   const { isRTL, currentLanguage } = useLanguage();
+  const { canUse, recordUse } = useGlobalUsage();
 
+  const [showPremiumModal, setShowPremiumModal] = useState(false);
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [originalFile, setOriginalFile] = useState<File | null>(null);
   const [settings, setSettings] = useState<EnhanceSettings>(defaultSettings);
@@ -205,6 +209,7 @@ export default function EnhancePage() {
 
   const handleDownload = async () => {
     if (!previewCanvasRef.current || !originalFile) return;
+    if (!canUse) { setShowPremiumModal(true); return; }
     setIsProcessing(true);
 
     try {
@@ -218,6 +223,7 @@ export default function EnhancePage() {
             const ext = outputFormat === 'png' ? 'png' : 'jpg';
             const newName = originalFile.name.replace(/\.[^/.]+$/, '') + `_enhanced.${ext}`;
             triggerDownload(blob, newName);
+            recordUse();
           }
           setIsProcessing(false);
         },
@@ -509,6 +515,7 @@ export default function EnhancePage() {
       </div>
 
       <RelatedTools currentTool="enhance" />
+      <PremiumModal open={showPremiumModal} onOpenChange={setShowPremiumModal} />
     </>
   );
 }

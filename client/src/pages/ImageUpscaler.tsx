@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Upload, Download, ZoomIn, Sparkles, Crown, Check, X, ArrowLeftRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -7,8 +7,8 @@ import { Card } from '@/components/ui/card';
 import { AdBanner } from '@/components/AdBanner';
 import { PremiumModal } from '@/components/PremiumModal';
 import { useAuth } from '@/contexts/AuthContext';
+import { useGlobalUsage } from '@/hooks/useGlobalUsage';
 
-const FREE_LIMIT = 3;
 const SCALE_OPTIONS = [
   { value: 2, label: '2×', description: 'Double the size', free: true },
   { value: 4, label: '4×', description: '4× larger', free: false },
@@ -86,24 +86,19 @@ async function upscaleImageCanvas(file: File, scale: number): Promise<{ blob: Bl
 
 export default function ImageUpscaler() {
   const { isPro } = useAuth();
+  const { canUse, usesRemaining, recordUse } = useGlobalUsage();
   const [file, setFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
   const [resultDimensions, setResultDimensions] = useState<{ w: number; h: number } | null>(null);
   const [scale, setScale] = useState(2);
   const [processing, setProcessing] = useState(false);
-  const [freeUsed, setFreeUsed] = useState(0);
   const [showPremiumModal, setShowPremiumModal] = useState(false);
   const [sliderPos, setSliderPos] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const saved = parseInt(sessionStorage.getItem('upscaler_used') || '0', 10);
-    setFreeUsed(saved);
-  }, []);
 
   const handleFileChange = useCallback((f: File) => {
     if (!f.type.startsWith('image/')) { setError('Please upload an image file.'); return; }
@@ -127,10 +122,8 @@ export default function ImageUpscaler() {
   const handleUpscale = async () => {
     if (!file) return;
 
-    const atLimit = !isPro && freeUsed >= FREE_LIMIT;
     const needsPro = !isPro && scale > 2;
-
-    if (atLimit || needsPro) { setShowPremiumModal(true); return; }
+    if (!canUse || needsPro) { setShowPremiumModal(true); return; }
 
     setProcessing(true);
     setError(null);
@@ -140,12 +133,7 @@ export default function ImageUpscaler() {
       setResultUrl(result.objectUrl);
       setResultDimensions({ w: result.width, h: result.height });
       setSliderPos(50);
-
-      if (!isPro) {
-        const newCount = freeUsed + 1;
-        setFreeUsed(newCount);
-        sessionStorage.setItem('upscaler_used', newCount.toString());
-      }
+      recordUse();
     } catch (err: any) {
       setError(err.message || 'Failed to upscale. Please try again.');
     } finally {
@@ -185,7 +173,7 @@ export default function ImageUpscaler() {
     };
   }, [isDragging, handleSliderMove]);
 
-  const remainingFree = Math.max(0, FREE_LIMIT - freeUsed);
+  const remainingFree = usesRemaining;
   const canUpscale = !!file && !processing;
   const originalDims = file ? { w: 0, h: 0 } : null;
 

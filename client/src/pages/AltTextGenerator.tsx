@@ -8,12 +8,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { PremiumModal } from '@/components/PremiumModal';
 import { AdBanner } from '@/components/AdBanner';
 import { RelatedTools } from '@/components/RelatedTools';
-
-const FREE_LIMIT = 1;
-const SESSION_KEY = 'altTextCount';
-
-function getSessionCount() { return parseInt(sessionStorage.getItem(SESSION_KEY) || '0', 10); }
-function incrementSessionCount() { sessionStorage.setItem(SESSION_KEY, String(getSessionCount() + 1)); }
+import { useGlobalUsage } from '@/hooks/useGlobalUsage';
 
 interface AltTextResult {
   primary: string;
@@ -69,6 +64,7 @@ function CharCount({ text }: { text: string }) {
 
 export default function AltTextGenerator() {
   const { isPro } = useAuth();
+  const { canUse, usesRemaining, recordUse } = useGlobalUsage();
   const [isDragging, setIsDragging] = useState(false);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -77,8 +73,6 @@ export default function AltTextGenerator() {
   const [error, setError] = useState<string | null>(null);
   const [showPremium, setShowPremium] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const sessionUsed = getSessionCount();
-  const canGenerate = isPro || sessionUsed < FREE_LIMIT;
 
   const handleFile = useCallback((file: File) => {
     if (!file.type.startsWith('image/')) {
@@ -109,7 +103,7 @@ export default function AltTextGenerator() {
 
   const generate = async () => {
     if (!selectedFile) return;
-    if (!canGenerate) { setShowPremium(true); return; }
+    if (!canUse) { setShowPremium(true); return; }
 
     setIsGenerating(true);
     setError(null);
@@ -150,7 +144,7 @@ export default function AltTextGenerator() {
       }
       if (!res.ok) throw new Error(data.error || 'Generation failed. Please try again.');
       setResult(data);
-      if (!isPro) incrementSessionCount();
+      recordUse();
     } catch (err: any) {
       setError(err.message || 'Something went wrong. Please try again.');
     } finally {
@@ -166,7 +160,7 @@ export default function AltTextGenerator() {
     if (inputRef.current) inputRef.current.value = '';
   };
 
-  const remaining = Math.max(0, FREE_LIMIT - sessionUsed);
+  const remaining = usesRemaining;
 
   return (
     <div className="flex-1">

@@ -7,9 +7,9 @@ import { Card } from '@/components/ui/card';
 import { AdBanner } from '@/components/AdBanner';
 import { PremiumModal } from '@/components/PremiumModal';
 import { useAuth } from '@/contexts/AuthContext';
+import { useGlobalUsage } from '@/hooks/useGlobalUsage';
 import { PDFDocument } from 'pdf-lib';
 
-const FREE_IMAGE_LIMIT = 5;
 const PAGE_SIZES: Record<string, [number, number]> = {
   A4: [595, 842],
   Letter: [612, 792],
@@ -23,13 +23,13 @@ interface ImageItem {
 }
 
 // PDF → Images via canvas (pdfjs)
-async function pdfToImages(file: File, maxPages: number, isPro: boolean): Promise<string[]> {
+async function pdfToImages(file: File, isPro: boolean): Promise<string[]> {
   const pdfjsLib = await import('pdfjs-dist');
-  pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+  pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-  const totalPages = isPro ? pdf.numPages : Math.min(pdf.numPages, maxPages);
+  const totalPages = pdf.numPages;
   const urls: string[] = [];
 
   for (let i = 1; i <= totalPages; i++) {
@@ -47,6 +47,7 @@ async function pdfToImages(file: File, maxPages: number, isPro: boolean): Promis
 
 export default function ImageToPdf() {
   const { isPro } = useAuth();
+  const { canUse, usesRemaining, recordUse } = useGlobalUsage();
   const [activeTab, setActiveTab] = useState<'images-to-pdf' | 'pdf-to-images'>('images-to-pdf');
 
   // Images → PDF state
@@ -66,25 +67,16 @@ export default function ImageToPdf() {
   const pdfInputRef = useRef<HTMLInputElement>(null);
 
   const addImages = useCallback((files: File[]) => {
-    const limit = isPro ? Infinity : FREE_IMAGE_LIMIT;
     const imageFiles = files.filter(f => f.type.startsWith('image/'));
     const newItems: ImageItem[] = imageFiles.map(f => ({
       id: Math.random().toString(36).slice(2),
       file: f,
       previewUrl: URL.createObjectURL(f),
     }));
-
-    setImages(prev => {
-      const combined = [...prev, ...newItems];
-      if (!isPro && combined.length > FREE_IMAGE_LIMIT) {
-        setShowPremiumModal(true);
-        return prev;
-      }
-      return combined.slice(0, limit);
-    });
+    setImages(prev => [...prev, ...newItems]);
     setPdfResult(null);
     setImgError(null);
-  }, [isPro]);
+  }, []);
 
   const removeImage = (id: string) => {
     setImages(prev => {
@@ -107,7 +99,7 @@ export default function ImageToPdf() {
 
   const handleConvertToPdf = async () => {
     if (images.length === 0) return;
-    if (!isPro && images.length > FREE_IMAGE_LIMIT) { setShowPremiumModal(true); return; }
+    if (!canUse) { setShowPremiumModal(true); return; }
 
     setConverting(true);
     setImgError(null);
@@ -148,6 +140,7 @@ export default function ImageToPdf() {
       const blob = new Blob([pdfBytes], { type: 'application/pdf' });
       if (pdfResult) URL.revokeObjectURL(pdfResult);
       setPdfResult(URL.createObjectURL(blob));
+      recordUse();
     } catch (err: any) {
       setImgError(err.message || 'Failed to create PDF. Please try again.');
     } finally {
@@ -165,18 +158,14 @@ export default function ImageToPdf() {
 
   const handlePdfToImages = async () => {
     if (!pdfFile) return;
+    if (!canUse) { setShowPremiumModal(true); return; }
     setPdfConverting(true);
     setPdfError(null);
     setPdfImages([]);
     try {
-      const freePageLimit = 3;
-      const urls = await pdfToImages(pdfFile, freePageLimit, isPro);
-      if (!isPro && urls.length >= freePageLimit) {
-        setPdfImages(urls);
-        setPdfError(`Free plan: showing first ${freePageLimit} pages. Upgrade to Pro to convert all pages.`);
-      } else {
-        setPdfImages(urls);
-      }
+      const urls = await pdfToImages(pdfFile, isPro);
+      setPdfImages(urls);
+      recordUse();
     } catch (err: any) {
       setPdfError(err.message || 'Failed to convert PDF. Please ensure it is a valid PDF file.');
     } finally {
