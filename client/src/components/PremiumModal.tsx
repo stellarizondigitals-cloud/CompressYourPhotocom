@@ -21,10 +21,18 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
   const { prices, loading: geoLoading } = useGeoPrice();
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  const openLogin = () => {
+    onOpenChange(false);
+    setTimeout(() => setShowLoginModal(true), 150);
+  };
 
   const handleCheckoutFixed = async (priceId: string, mode: 'subscription' | 'payment') => {
-    if (!user) { setShowLoginModal(true); return; }
+    if (!user) { openLogin(); return; }
+    setErrorMsg(null);
     setLoadingPlan(priceId);
+    const pending = window.self !== window.top ? window.open('', '_blank') : null;
     try {
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
@@ -38,17 +46,27 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
         }),
       });
       const data = await response.json();
-      if (data.url) window.location.href = data.url;
+      if (data.url) {
+        if (pending) { pending.location.href = data.url; }
+        else { window.location.href = data.url; }
+      } else {
+        if (pending) pending.close();
+        setErrorMsg(data.error || 'Could not start checkout. Please try again.');
+      }
     } catch (error) {
       console.error('Checkout error:', error);
+      if (pending) pending.close();
+      setErrorMsg('Network error. Please check your connection and try again.');
     } finally {
       setLoadingPlan(null);
     }
   };
 
   const handleCheckoutGeo = async (planType: string, amount: number, productName: string, mode: 'payment' | 'subscription') => {
-    if (!user) { setShowLoginModal(true); return; }
+    if (!user) { openLogin(); return; }
+    setErrorMsg(null);
     setLoadingPlan(planType);
+    const pending = window.self !== window.top ? window.open('', '_blank') : null;
     try {
       const response = await fetch('/api/create-checkout-geo', {
         method: 'POST',
@@ -62,9 +80,17 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
         }),
       });
       const data = await response.json();
-      if (data.url) window.location.href = data.url;
+      if (data.url) {
+        if (pending) { pending.location.href = data.url; }
+        else { window.location.href = data.url; }
+      } else {
+        if (pending) pending.close();
+        setErrorMsg(data.error || 'Could not start checkout. Please try again.');
+      }
     } catch (error) {
       console.error('Checkout error:', error);
+      if (pending) pending.close();
+      setErrorMsg('Network error. Please check your connection and try again.');
     } finally {
       setLoadingPlan(null);
     }
@@ -207,6 +233,13 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
             </button>
           </div>
 
+          {errorMsg && (
+            <div className="flex items-start gap-2 p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-sm text-red-700 dark:text-red-400" data-testid="checkout-error">
+              <span className="flex-shrink-0">⚠️</span>
+              <span>{errorMsg}</span>
+            </div>
+          )}
+
           <div className="text-center space-y-2 pt-1">
             <div className="flex items-center justify-center gap-3 text-xs text-muted-foreground">
               <span className="flex items-center gap-1"><Shield className="w-3 h-3" /> Secure checkout</span>
@@ -217,7 +250,7 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
             </div>
             {!user && (
               <p className="text-xs text-muted-foreground">
-                You will be asked to sign in before checkout
+                Sign in required — we'll ask you to log in first
               </p>
             )}
           </div>
