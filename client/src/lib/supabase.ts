@@ -16,7 +16,7 @@ export const isSupabaseConfigured = !!(supabaseUrl && supabaseAnonKey);
 export interface Profile {
   id: string;
   is_pro: boolean;
-  subscription_type?: 'monthly' | 'lifetime' | null;
+  subscription_type?: 'monthly' | 'lifetime' | 'weekly' | null;
   created_at?: string;
 }
 
