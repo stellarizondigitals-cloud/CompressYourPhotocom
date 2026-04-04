@@ -117,7 +117,7 @@ export default function Account() {
                   </Badge>
                   {isPro && (
                     <span className="text-sm text-muted-foreground">
-                      {t('account.proDescription', 'Unlimited compressions, batch processing up to 50 images, ad-free experience')}
+                      {t('account.proDescription', 'Unlimited uses across all 9 tools, batch processing up to 50 images')}
                     </span>
                   )}
                 </div>

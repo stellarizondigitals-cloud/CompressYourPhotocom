@@ -452,7 +452,7 @@ export default function ImageToPdf() {
                 <Badge variant="secondary" className="text-xs ml-auto">from £0.99 trial</Badge>
               </div>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                {['Unlimited images per PDF', 'All PDF pages to images', 'All page sizes', 'Ad-free experience', 'All 9 Pro tools included'].map(f => (
+                {['Unlimited images per PDF', 'All PDF pages to images', 'All page sizes', 'All 9 Pro tools included', '100% private processing'].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-primary flex-shrink-0" />{f}</li>
                 ))}
               </ul>

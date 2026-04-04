@@ -22,7 +22,6 @@ const proFeatures = [
   'Everything in Free',
   'Unlimited uses across all 9 tools',
   'Batch process up to 50 images at once',
-  'Completely ad-free experience',
   'Image Upscaler at 4× & 8× scale',
   'Unlimited PDF pages & exports',
   '100% private — files never leave your device',
@@ -52,7 +51,7 @@ export default function Pricing() {
             Free for everyone.<br className="hidden md:block" /> Pro for power users.
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Get 3 free uses across all 9 tools — no account needed. Upgrade to Pro for unlimited use, bigger batches, and a completely ad-free experience.
+            Get 3 free uses across all 9 tools — no account needed. Upgrade to Pro for unlimited use and bigger batches.
           </p>
         </div>
 
@@ -157,8 +156,8 @@ export default function Pricing() {
                   ['Free uses across all tools', '3', 'Unlimited'],
                   ['Images per batch', '10', '50'],
                   ['Batch ZIP download', false, true],
-                  ['Ad-free experience', false, true],
-                  ['Priority processing speed', false, true],
+                  ['Image Upscaler scale', '2×', '2×, 4×, 8×'],
+                  ['PDF pages per export', 'Unlimited', 'Unlimited'],
                 ].map(([feature, free, pro], i) => (
                   <tr key={i} className="hover:bg-muted/20 transition-colors">
                     <td className="py-3 pr-4">{feature}</td>

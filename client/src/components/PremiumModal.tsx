@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Crown, Zap, Archive, Ban, Infinity, Check, Loader2, Star, Shield, Sparkles } from 'lucide-react';
+import { Crown, Zap, Archive, Infinity, Check, Loader2, Star, Shield } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -97,10 +97,10 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
   };
 
   const features = [
-    { icon: Archive, label: t('premium.features.batchZip', 'Upload & process up to 50 images at once') },
-    { icon: Ban, label: t('premium.features.adFree', 'Completely ad-free experience') },
-    { icon: Infinity, label: t('premium.features.unlimited', 'Unlimited compressions with no session limits') },
-    { icon: Zap, label: t('premium.features.priority', 'Priority processing speed') },
+    { icon: Infinity, label: t('premium.features.unlimited', 'Unlimited uses across all 9 tools') },
+    { icon: Archive, label: t('premium.features.batchZip', 'Batch process up to 50 images at once') },
+    { icon: Zap, label: t('premium.features.upscaler', 'Image Upscaler at 4× & 8× scale') },
+    { icon: Zap, label: t('premium.features.pdf', 'Unlimited PDF pages & exports') },
     { icon: Shield, label: t('premium.features.privacy', '100% private — files never leave your device') },
   ];
 
