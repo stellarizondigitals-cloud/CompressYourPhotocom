@@ -210,7 +210,7 @@ export default function ImageUpscaler() {
           </p>
           {!isPro && (
             <p className="text-xs text-muted-foreground mt-3">
-              Free: {remainingFree} of {FREE_LIMIT} uses remaining (2× only) ·{' '}
+              Free: {remainingFree} of 3 uses remaining (2× only) ·{' '}
               <button onClick={() => setShowPremiumModal(true)} className="text-primary underline">Upgrade for 4× & 8× unlimited</button>
             </p>
           )}

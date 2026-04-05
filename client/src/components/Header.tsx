@@ -89,12 +89,12 @@ export function Header() {
                   const Icon = tool.icon;
                   const isActive = isActivePath(tool.path);
                   return (
-                    <Link key={tool.key} to={getLocalizedPath(tool.path)} data-testid={`nav-link-${tool.key}`}>
-                      <DropdownMenuItem className={`gap-2 cursor-pointer ${isActive ? 'bg-primary/10 text-primary' : ''}`}>
+                    <DropdownMenuItem key={tool.key} asChild className={`gap-2 cursor-pointer ${isActive ? 'bg-primary/10 text-primary' : ''}`}>
+                      <Link to={getLocalizedPath(tool.path)} data-testid={`nav-link-${tool.key}`} className="flex items-center gap-2">
                         <Icon className="w-4 h-4" />
                         {t(`tools.${tool.key}.navLabel`, tool.key.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '))}
-                      </DropdownMenuItem>
-                    </Link>
+                      </Link>
+                    </DropdownMenuItem>
                   );
                 })}
               </DropdownMenuContent>
@@ -191,7 +191,7 @@ export function Header() {
 
         {/* Mobile menu — full list */}
         {mobileMenuOpen && (
-          <nav className={`md:hidden py-4 border-t flex flex-col gap-1 ${isRTL ? 'items-end' : 'items-start'}`}>
+          <nav className={`md:hidden py-4 border-t flex flex-col gap-1 max-h-[80vh] overflow-y-auto ${isRTL ? 'items-end' : 'items-start'}`}>
             {navTools.map((tool) => {
               const Icon = tool.icon;
               const isActive = isActivePath(tool.path);

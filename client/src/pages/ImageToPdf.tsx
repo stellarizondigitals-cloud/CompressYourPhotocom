@@ -219,7 +219,7 @@ export default function ImageToPdf() {
           </p>
           {!isPro && (
             <p className="text-xs text-muted-foreground mt-3">
-              Free: up to {FREE_IMAGE_LIMIT} images per PDF ·{' '}
+              Free: {usesRemaining} of 3 uses remaining across all tools ·{' '}
               <button onClick={() => setShowPremiumModal(true)} className="text-primary underline">Upgrade for unlimited</button>
             </p>
           )}
@@ -278,7 +278,7 @@ export default function ImageToPdf() {
               >
                 <Upload className="w-8 h-8 mx-auto text-muted-foreground mb-3" />
                 <p className="font-semibold text-sm mb-1">Drop images here or click to select</p>
-                <p className="text-xs text-muted-foreground">JPG, PNG, WebP, GIF · {isPro ? 'Unlimited images' : `Up to ${FREE_IMAGE_LIMIT} free`}</p>
+                <p className="text-xs text-muted-foreground">JPG, PNG, WebP, GIF · {isPro ? 'Unlimited images' : `${usesRemaining} free use${usesRemaining !== 1 ? 's' : ''} remaining`}</p>
                 <input ref={imgInputRef} type="file" accept="image/*" multiple className="hidden"
                   onChange={(e) => e.target.files && addImages(Array.from(e.target.files))}
                   data-testid="input-images" />
