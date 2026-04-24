@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Upload, Download, FileText, Trash2, Crown, Check, GripVertical, ChevronUp, ChevronDown, Image as ImageIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -45,9 +46,13 @@ async function pdfToImages(file: File, isPro: boolean): Promise<string[]> {
   return urls;
 }
 
+const nonEnglishLangs = ['es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id'];
+
 export default function ImageToPdf() {
   const { isPro } = useAuth();
   const { canUse, usesRemaining, recordUse } = useGlobalUsage();
+  const { pathname } = useLocation();
+  const langPrefix = nonEnglishLangs.includes(pathname.split('/')[1]) ? `/${pathname.split('/')[1]}` : '';
   const [activeTab, setActiveTab] = useState<'images-to-pdf' | 'pdf-to-images'>('images-to-pdf');
 
   // Images → PDF state
@@ -191,7 +196,7 @@ export default function ImageToPdf() {
       <Helmet>
         <title>Image to PDF & PDF to Images — Free Online Converter | CompressYourPhoto</title>
         <meta name="description" content="Convert images to PDF or PDF pages to images online for free. Supports JPG, PNG, WebP. 100% private — files never leave your browser. Free up to 5 images, unlimited with Pro." />
-        <link rel="canonical" href="https://www.compressyourphoto.com/image-to-pdf" />
+        <link rel="canonical" href={`https://www.compressyourphoto.com${langPrefix}/image-to-pdf`} />
         <meta property="og:title" content="Image to PDF & PDF to Images — Free Online Converter" />
         <meta property="og:description" content="Free JPG to PDF converter and PDF to JPG converter. 100% client-side, private and fast." />
         <script type="application/ld+json">{JSON.stringify({

@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Upload, Download, ZoomIn, Sparkles, Crown, Check, X, ArrowLeftRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -84,9 +85,13 @@ async function upscaleImageCanvas(file: File, scale: number): Promise<{ blob: Bl
   });
 }
 
+const nonEnglishLangs = ['es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id'];
+
 export default function ImageUpscaler() {
   const { isPro } = useAuth();
   const { canUse, usesRemaining, recordUse } = useGlobalUsage();
+  const { pathname } = useLocation();
+  const langPrefix = nonEnglishLangs.includes(pathname.split('/')[1]) ? `/${pathname.split('/')[1]}` : '';
   const [file, setFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
@@ -182,7 +187,7 @@ export default function ImageUpscaler() {
       <Helmet>
         <title>Image Upscaler — Enlarge Photos Without Losing Quality | CompressYourPhoto</title>
         <meta name="description" content="Free online image upscaler. Enlarge photos 2x, 4x or 8x with smart sharpening technology. No quality loss, 100% private — files never leave your browser. Free 3 uses." />
-        <link rel="canonical" href="https://www.compressyourphoto.com/image-upscaler" />
+        <link rel="canonical" href={`https://www.compressyourphoto.com${langPrefix}/image-upscaler`} />
         <meta property="og:title" content="Image Upscaler — Enlarge Photos Without Losing Quality" />
         <meta property="og:description" content="Upscale images 2x, 4x or 8x online for free. Smart sharpening keeps your photos crisp. 100% private, no upload needed." />
         <script type="application/ld+json">{JSON.stringify({

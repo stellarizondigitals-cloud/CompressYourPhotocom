@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useLocation } from 'react-router-dom';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { PremiumModal } from '@/components/PremiumModal';
 import { AdBanner } from '@/components/AdBanner';
@@ -29,6 +30,7 @@ const formats = ['JPG', 'PNG', 'WebP', 'HEIC', 'GIF'];
 export default function Home() {
   const { t } = useTranslation();
   const { isRTL, currentLanguage } = useLanguage();
+  const { pathname } = useLocation();
   const [showPremiumModal, setShowPremiumModal] = useState(false);
 
   const getLocalizedPath = (path: string) => {
@@ -36,9 +38,14 @@ export default function Home() {
     return `/${currentLanguage.code}${path}`;
   };
 
-  const canonicalUrl = currentLanguage.code === 'en' 
-    ? 'https://www.compressyourphoto.com/' 
-    : `https://www.compressyourphoto.com/${currentLanguage.code}`;
+  // Derive canonical from URL path, not i18n state, to avoid browser-language
+  // detection causing /fr to appear as canonical for the English home page.
+  const pathSegment = pathname.split('/')[1];
+  const nonEnglishLangs = ['es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id'];
+  const langFromPath = nonEnglishLangs.includes(pathSegment) ? pathSegment : 'en';
+  const canonicalUrl = langFromPath === 'en'
+    ? 'https://www.compressyourphoto.com/'
+    : `https://www.compressyourphoto.com/${langFromPath}`;
 
   return (
     <div className="flex-1">

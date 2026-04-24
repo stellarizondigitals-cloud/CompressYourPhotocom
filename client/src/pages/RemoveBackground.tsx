@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Upload, Download, RotateCcw, Eraser, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,11 +14,15 @@ import { HowToUse } from '@/components/HowToUse';
 import { RelatedTools } from '@/components/RelatedTools';
 import { useGlobalUsage } from '@/hooks/useGlobalUsage';
 
+const nonEnglishLangs = ['es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id'];
+
 export default function RemoveBackground() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   const { isPro } = useAuth();
   const { canUse, usesRemaining, recordUse } = useGlobalUsage();
+  const { pathname } = useLocation();
+  const langPrefix = nonEnglishLangs.includes(pathname.split('/')[1]) ? `/${pathname.split('/')[1]}` : '';
 
   const [isDragging, setIsDragging] = useState(false);
   const [originalUrl, setOriginalUrl] = useState<string | null>(null);
@@ -128,7 +133,7 @@ export default function RemoveBackground() {
       <Helmet>
         <title>Remove Image Background Free Online | CompressYourPhoto</title>
         <meta name="description" content="Remove background from any image instantly. AI-powered, 100% private — processed in your browser. No upload. Free online background remover." />
-        <link rel="canonical" href="https://www.compressyourphoto.com/remove-background" />
+        <link rel="canonical" href={`https://www.compressyourphoto.com${langPrefix}/remove-background`} />
       </Helmet>
 
       <div className="flex-1">

@@ -1,14 +1,21 @@
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useLocation } from 'react-router-dom';
 import { Upload, Settings, Download, Zap, Shield, FileImage } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
+const nonEnglishLangs = ['es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id'];
+
 export default function HowItWorks() {
   const { t } = useTranslation();
-  const { isRTL, currentLanguage } = useLanguage();
+  const { isRTL } = useLanguage();
+  const { pathname } = useLocation();
+  const pathSegment = pathname.split('/')[1];
+  const langFromPath = nonEnglishLangs.includes(pathSegment) ? pathSegment : 'en';
+  const langPrefix = langFromPath === 'en' ? '' : `/${langFromPath}`;
 
   useEffect(() => {
     document.title = `${t('howItWorks.title')} | CompressYourPhoto`;
@@ -26,7 +33,7 @@ export default function HowItWorks() {
       <Helmet>
         <title>{t('howItWorks.title')} | CompressYourPhoto</title>
         <meta name="description" content={t('howItWorks.metaDescription', 'Learn how to compress, resize, convert, crop, enhance, and remove backgrounds from photos in 4 simple steps. 100% browser-based, private, and free.')} />
-        <link rel="canonical" href={`https://www.compressyourphoto.com${currentLanguage.code === 'en' ? '' : `/${currentLanguage.code}`}/how-it-works`} />
+        <link rel="canonical" href={`https://www.compressyourphoto.com${langPrefix}/how-it-works`} />
       </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">

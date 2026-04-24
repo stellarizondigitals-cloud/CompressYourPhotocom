@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Type, Upload, Copy, Check, RefreshCw, Crown, Lightbulb, AlertCircle, Shield, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -62,9 +63,13 @@ function CharCount({ text }: { text: string }) {
   );
 }
 
+const nonEnglishLangs = ['es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id'];
+
 export default function AltTextGenerator() {
   const { isPro } = useAuth();
   const { canUse, usesRemaining, recordUse } = useGlobalUsage();
+  const { pathname } = useLocation();
+  const langPrefix = nonEnglishLangs.includes(pathname.split('/')[1]) ? `/${pathname.split('/')[1]}` : '';
   const [isDragging, setIsDragging] = useState(false);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -167,7 +172,7 @@ export default function AltTextGenerator() {
       <Helmet>
         <title>AI Alt Text Generator — Free SEO Alt Text for Images | CompressYourPhoto</title>
         <meta name="description" content="Generate SEO-optimised alt text for any image instantly using AI. Get 3 alt text variations plus expert SEO tips. Free to try, Pro for unlimited." />
-        <link rel="canonical" href="https://www.compressyourphoto.com/alt-text-generator" />
+        <link rel="canonical" href={`https://www.compressyourphoto.com${langPrefix}/alt-text-generator`} />
       </Helmet>
 
       <section className="py-10 md:py-16 px-4 md:px-8">
