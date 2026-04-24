@@ -31,8 +31,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     if (planType === 'week_pass') {
       // 7-day trial subscription: charge £0.99 upfront, then auto-bills monthly at £1.99
+      // Cast to any: Stripe v20 TS types omit add_invoice_items from SessionCreateParams
+      // but the REST API fully supports it — this is a type definition gap, not a bug.
       const session = await stripe.checkout.sessions.create({
-        payment_method_types: ['card'],
         mode: 'subscription',
         line_items: [{ price: MONTHLY_PRICE_ID, quantity: 1 }],
         subscription_data: {
@@ -55,14 +56,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         metadata: { userId, planType: 'week_pass' },
         success_url: successUrl || 'https://www.compressyourphoto.com?checkout=success',
         cancel_url: cancelUrl || 'https://www.compressyourphoto.com?checkout=cancelled',
-      });
+      } as any);
 
       return res.status(200).json({ url: session.url });
     }
 
     // Lifetime geo plan — one-time payment
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
       line_items: [
         {
           price_data: {
