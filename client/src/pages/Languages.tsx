@@ -41,6 +41,7 @@ export default function Languages() {
         <title>{t('languages.title')} | CompressYourPhoto</title>
         <meta name="description" content={t('languages.metaDescription', 'CompressYourPhoto is available in 9 languages: English, Spanish, Portuguese, French, German, Hindi, Chinese, Arabic, and Indonesian. Choose your preferred language.')} />
         <link rel="canonical" href={`https://www.compressyourphoto.com${langPrefix}/languages`} />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
