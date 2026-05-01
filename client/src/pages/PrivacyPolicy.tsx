@@ -2,15 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Shield, Lock, BarChart3, Megaphone, Link2, Cookie, Scale, Building } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function PrivacyPolicy() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-
-  useEffect(() => {
-    document.title = `${t('privacy.title')} | CompressYourPhoto`;
-  }, [t]);
 
   const sections = [
     { icon: Building, key: 'operator', showCompany: true },
@@ -24,6 +20,11 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="flex-1">
+      <Helmet>
+        <title>Privacy Policy | CompressYourPhoto</title>
+        <meta name="description" content="CompressYourPhoto's privacy policy. All image compression happens entirely in your browser — your photos never leave your device. No server uploads, ever." />
+        <link rel="canonical" href="https://www.compressyourphoto.com/privacy-policy" />
+      </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
           <div className={`mb-10 ${isRTL ? 'text-right' : ''}`}>

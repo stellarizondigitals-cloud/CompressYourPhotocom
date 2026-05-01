@@ -2,18 +2,19 @@ import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/hooks/useLanguage';
 import { FileText } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function Terms() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
-  useEffect(() => {
-    document.title = `${t('terms.title')} | CompressYourPhoto`;
-  }, [t]);
-
   return (
     <div className="flex-1">
+      <Helmet>
+        <title>Terms of Service | CompressYourPhoto</title>
+        <meta name="description" content="Read the Terms of Service for CompressYourPhoto. Understand our usage policies, your rights, and our obligations as a free, privacy-first image compression tool." />
+        <link rel="canonical" href="https://www.compressyourphoto.com/terms" />
+      </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
           <div className={`mb-10 ${isRTL ? 'text-right' : ''}`}>

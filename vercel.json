@@ -37,6 +37,9 @@
       "headers": [{ "key": "Content-Type", "value": "text/plain" }]
     }
   ],
+  "redirects": [
+    { "source": "/terms-of-service", "destination": "/terms", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]

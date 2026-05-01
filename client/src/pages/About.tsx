@@ -3,19 +3,20 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { Building, Target, Lightbulb, Zap, Mail } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function About() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
-  useEffect(() => {
-    document.title = `${t('about.title')} | CompressYourPhoto`;
-  }, [t]);
-
   return (
     <div className="flex-1">
+      <Helmet>
+        <title>About CompressYourPhoto | Free Browser-Based Image Tools</title>
+        <meta name="description" content="Learn about CompressYourPhoto — the free, privacy-first image tool suite. Compress, resize, convert, crop, enhance, and remove backgrounds entirely in your browser." />
+        <link rel="canonical" href="https://www.compressyourphoto.com/about" />
+      </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
           <div className={`text-center mb-12 ${isRTL ? 'text-right md:text-center' : ''}`}>

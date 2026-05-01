@@ -2,18 +2,19 @@ import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Cookie, Info, Settings, BarChart3, Megaphone, Globe, Sliders, CheckCircle } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function CookiePolicy() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
-  useEffect(() => {
-    document.title = `${t('cookies.title')} | CompressYourPhoto`;
-  }, [t]);
-
   return (
     <div className="flex-1">
+      <Helmet>
+        <title>Cookie Policy | CompressYourPhoto</title>
+        <meta name="description" content="Learn how CompressYourPhoto uses cookies and local storage. We use minimal cookies to remember your language and theme preferences — your images never leave your device." />
+        <link rel="canonical" href="https://www.compressyourphoto.com/cookie-policy" />
+      </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
           <div className={`mb-10 ${isRTL ? 'text-right' : ''}`}>

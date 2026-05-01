@@ -3,18 +3,19 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { Mail, MessageSquare, HelpCircle } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function Contact() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
-  useEffect(() => {
-    document.title = `${t('contact.title')} | CompressYourPhoto`;
-  }, [t]);
-
   return (
     <div className="flex-1">
+      <Helmet>
+        <title>Contact Us | CompressYourPhoto</title>
+        <meta name="description" content="Get in touch with the CompressYourPhoto team. We're here to help with support questions, partnership enquiries, or feedback about our free image tools." />
+        <link rel="canonical" href="https://www.compressyourphoto.com/contact" />
+      </Helmet>
       <section className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
           <div className={`text-center mb-12 ${isRTL ? 'text-right md:text-center' : ''}`}>
