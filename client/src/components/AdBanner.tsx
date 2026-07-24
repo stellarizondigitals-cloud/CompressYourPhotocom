@@ -37,7 +37,7 @@ export function AdBanner({ slot, format = 'auto', className = '', fullWidth = fa
         ref={adRef}
         className="adsbygoogle"
         style={{ display: 'block', textAlign: 'center' }}
-        data-ad-client="ca-pub-1318056567034683"
+        data-ad-client="ca-pub-3885315824835339"
         data-ad-slot={slot}
         data-ad-format={isInArticle ? 'fluid' : format}
         data-ad-layout={isInArticle ? 'in-article' : undefined}
