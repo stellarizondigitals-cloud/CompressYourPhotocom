@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { HreflangLinks } from '@/components/HreflangLinks';
 import { Upload, Download, ZoomIn, Sparkles, Crown, Check, X, ArrowLeftRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -201,6 +202,7 @@ export default function ImageUpscaler() {
           "description": "Enlarge images 2x, 4x or 8x with smart sharpening. 100% client-side, no upload."
         })}</script>
       </Helmet>
+      <HreflangLinks pagePath="/image-upscaler" />
 
       {/* Hero */}
       <section className="py-10 md:py-14 px-4 md:px-8 text-center">

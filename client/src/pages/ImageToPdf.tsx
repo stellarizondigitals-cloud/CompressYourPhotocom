@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { HreflangLinks } from '@/components/HreflangLinks';
 import { Upload, Download, FileText, Trash2, Crown, Check, GripVertical, ChevronUp, ChevronDown, Image as ImageIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -210,6 +211,7 @@ export default function ImageToPdf() {
           "description": "Convert images to PDF or PDF pages to JPG/PNG. 100% client-side, free to use."
         })}</script>
       </Helmet>
+      <HreflangLinks pagePath="/image-to-pdf" />
 
       {/* Hero */}
       <section className="py-10 md:py-14 px-4 md:px-8 text-center">

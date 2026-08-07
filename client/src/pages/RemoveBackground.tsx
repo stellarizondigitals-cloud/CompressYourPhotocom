@@ -2,6 +2,7 @@ import { useState, useCallback, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { HreflangLinks } from '@/components/HreflangLinks';
 import { Shield, Upload, Download, RotateCcw, Eraser, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -135,6 +136,7 @@ export default function RemoveBackground() {
         <meta name="description" content="Remove background from any image instantly. AI-powered, 100% private — processed in your browser. No upload. Free online background remover." />
         <link rel="canonical" href={`https://www.compressyourphoto.com${langPrefix}/remove-background`} />
       </Helmet>
+      <HreflangLinks pagePath="/remove-background" />
 
       <div className="flex-1">
         <section className="py-12 md:py-20 px-4 md:px-8">

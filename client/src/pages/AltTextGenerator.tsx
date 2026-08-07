@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { HreflangLinks } from '@/components/HreflangLinks';
 import { Type, Upload, Copy, Check, RefreshCw, Crown, Lightbulb, AlertCircle, Shield, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -175,6 +176,7 @@ export default function AltTextGenerator() {
         <meta name="description" content="Generate SEO-optimised alt text for any image instantly using AI. Get 3 alt text variations plus expert SEO tips. Free to try, Pro for unlimited." />
         <link rel="canonical" href={`https://www.compressyourphoto.com${langPrefix}/alt-text-generator`} />
       </Helmet>
+      <HreflangLinks pagePath="/alt-text-generator" />
 
       <section className="py-10 md:py-16 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
