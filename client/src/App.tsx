@@ -11,6 +11,10 @@ import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
 import { initAnalytics, trackPageView } from "@/lib/analytics";
 import { CookieConsent } from "@/components/CookieConsent";
+// Single source of truth for public routes — also drives scripts/generate-sitemap.mjs,
+// so adding a page there automatically lands it in the sitemap on the next build.
+// @ts-ignore - plain .mjs data module shared with the sitemap script
+import { MULTILINGUAL_PAGES, SINGLE_PAGES } from "@shared/routes.mjs";
 
 // Route-level code splitting: each page loads its own JS chunk on demand,
 // keeping the initial bundle small (faster first paint = better SEO + UX).
@@ -83,48 +87,82 @@ function AnalyticsTracker() {
 
 const languages = ['', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id'];
 
+// Map each shared route path to its page component. When you add a page to
+// shared/routes.mjs it MUST be registered here (the check below throws in dev
+// if it's missing), and the sitemap picks it up automatically at build time.
+const multilingualComponents: Record<string, React.ComponentType> = {
+  '': Home,
+  '/compress': Compress,
+  '/resize': Resize,
+  '/convert': Convert,
+  '/crop': CropPage,
+  '/enhance': EnhancePage,
+  '/compress-jpg': CompressJpg,
+  '/compress-png': CompressPng,
+  '/convert-heic-to-jpg': ConvertHeicToJpg,
+  '/resize-for-instagram': ResizeForInstagram,
+  '/resize-for-facebook': ResizeForFacebook,
+  '/crop-circle': CropCircle,
+  '/convert-webp-to-jpg': ConvertWebpToJpg,
+  '/resize-for-linkedin': ResizeForLinkedin,
+  '/compress-for-email': CompressForEmail,
+  '/enhance-photo-quality': EnhancePhotoQuality,
+  '/remove-background': RemoveBackground,
+  '/alt-text-generator': AltTextGenerator,
+  '/image-upscaler': ImageUpscaler,
+  '/image-to-pdf': ImageToPdf,
+};
+
+const singleComponents: Record<string, React.ComponentType> = {
+  '/pricing': Pricing,
+  '/recommended-tools': RecommendedTools,
+  '/languages': Languages,
+  '/how-it-works': HowItWorks,
+  '/about': About,
+  '/contact': Contact,
+  '/privacy-policy': PrivacyPolicy,
+  '/terms': Terms,
+  '/cookie-policy': CookiePolicy,
+  '/disclaimer': Disclaimer,
+};
+
+// Fail loudly (in dev console) if the shared route list and the component maps drift.
+for (const { path } of MULTILINGUAL_PAGES as { path: string }[]) {
+  if (!multilingualComponents[path]) {
+    throw new Error(`shared/routes.mjs lists multilingual page "${path}" but App.tsx has no component for it`);
+  }
+}
+for (const { path } of SINGLE_PAGES as { path: string }[]) {
+  if (!singleComponents[path]) {
+    throw new Error(`shared/routes.mjs lists single page "${path}" but App.tsx has no component for it`);
+  }
+}
+
 function AppRoutes() {
   return (
     <Suspense fallback={<PageLoader />}>
     <Routes>
       {languages.map((lang) => {
         const prefix = lang ? `/${lang}` : '';
-        return [
-          <Route key={`${lang}-home`} path={prefix || '/'} element={<Layout><Home /></Layout>} />,
-          <Route key={`${lang}-compress`} path={`${prefix}/compress`} element={<Layout><Compress /></Layout>} />,
-          <Route key={`${lang}-resize`} path={`${prefix}/resize`} element={<Layout><Resize /></Layout>} />,
-          <Route key={`${lang}-convert`} path={`${prefix}/convert`} element={<Layout><Convert /></Layout>} />,
-          <Route key={`${lang}-crop`} path={`${prefix}/crop`} element={<Layout><CropPage /></Layout>} />,
-          <Route key={`${lang}-enhance`} path={`${prefix}/enhance`} element={<Layout><EnhancePage /></Layout>} />,
-          <Route key={`${lang}-compress-jpg`} path={`${prefix}/compress-jpg`} element={<Layout><CompressJpg /></Layout>} />,
-          <Route key={`${lang}-compress-png`} path={`${prefix}/compress-png`} element={<Layout><CompressPng /></Layout>} />,
-          <Route key={`${lang}-convert-heic-to-jpg`} path={`${prefix}/convert-heic-to-jpg`} element={<Layout><ConvertHeicToJpg /></Layout>} />,
-          <Route key={`${lang}-resize-for-instagram`} path={`${prefix}/resize-for-instagram`} element={<Layout><ResizeForInstagram /></Layout>} />,
-          <Route key={`${lang}-resize-for-facebook`} path={`${prefix}/resize-for-facebook`} element={<Layout><ResizeForFacebook /></Layout>} />,
-          <Route key={`${lang}-crop-circle`} path={`${prefix}/crop-circle`} element={<Layout><CropCircle /></Layout>} />,
-          <Route key={`${lang}-convert-webp-to-jpg`} path={`${prefix}/convert-webp-to-jpg`} element={<Layout><ConvertWebpToJpg /></Layout>} />,
-          <Route key={`${lang}-resize-for-linkedin`} path={`${prefix}/resize-for-linkedin`} element={<Layout><ResizeForLinkedin /></Layout>} />,
-          <Route key={`${lang}-compress-for-email`} path={`${prefix}/compress-for-email`} element={<Layout><CompressForEmail /></Layout>} />,
-          <Route key={`${lang}-enhance-photo-quality`} path={`${prefix}/enhance-photo-quality`} element={<Layout><EnhancePhotoQuality /></Layout>} />,
-          <Route key={`${lang}-remove-background`} path={`${prefix}/remove-background`} element={<Layout><RemoveBackground /></Layout>} />,
-          <Route key={`${lang}-alt-text-generator`} path={`${prefix}/alt-text-generator`} element={<Layout><AltTextGenerator /></Layout>} />,
-          <Route key={`${lang}-image-upscaler`} path={`${prefix}/image-upscaler`} element={<Layout><ImageUpscaler /></Layout>} />,
-          <Route key={`${lang}-image-to-pdf`} path={`${prefix}/image-to-pdf`} element={<Layout><ImageToPdf /></Layout>} />,
-        ];
+        return (MULTILINGUAL_PAGES as { path: string }[]).map(({ path }) => {
+          const Page = multilingualComponents[path];
+          const routePath = path === '' ? (prefix || '/') : `${prefix}${path}`;
+          return (
+            <Route
+              key={`${lang}-${path || 'home'}`}
+              path={routePath}
+              element={<Layout><Page /></Layout>}
+            />
+          );
+        });
+      })}
+      {(SINGLE_PAGES as { path: string }[]).map(({ path }) => {
+        const Page = singleComponents[path];
+        return <Route key={path} path={path} element={<Layout><Page /></Layout>} />;
       })}
       <Route path="/blog" element={<Layout><BlogIndex /></Layout>} />
       <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
-      <Route path="/pricing" element={<Layout><Pricing /></Layout>} />
-      <Route path="/recommended-tools" element={<Layout><RecommendedTools /></Layout>} />
-      <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />
-      <Route path="/how-it-works" element={<Layout><HowItWorks /></Layout>} />
-      <Route path="/languages" element={<Layout><Languages /></Layout>} />
-      <Route path="/terms" element={<Layout><Terms /></Layout>} />
       <Route path="/terms-of-service" element={<Layout><Terms /></Layout>} />
-      <Route path="/cookie-policy" element={<Layout><CookiePolicy /></Layout>} />
-      <Route path="/disclaimer" element={<Layout><Disclaimer /></Layout>} />
-      <Route path="/contact" element={<Layout><Contact /></Layout>} />
-      <Route path="/about" element={<Layout><About /></Layout>} />
       <Route path="/account" element={<Layout><Account /></Layout>} />
       <Route path="/auth/callback" element={<AuthCallback />} />
       <Route path="*" element={<NotFound />} />
