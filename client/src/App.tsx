@@ -46,6 +46,13 @@ const ConvertWebpToJpg = lazy(() => import("@/pages/seo/ConvertWebpToJpg"));
 const ResizeForLinkedin = lazy(() => import("@/pages/seo/ResizeForLinkedin"));
 const CompressForEmail = lazy(() => import("@/pages/seo/CompressForEmail"));
 const EnhancePhotoQuality = lazy(() => import("@/pages/seo/EnhancePhotoQuality"));
+
+const CompressForWhatsapp = lazy(() => import("@/pages/seo/CompressForWhatsapp"));
+const ConvertPngToWebp = lazy(() => import("@/pages/seo/ConvertPngToWebp"));
+const ConvertJpgToPng = lazy(() => import("@/pages/seo/ConvertJpgToPng"));
+const ResizeForYoutube = lazy(() => import("@/pages/seo/ResizeForYoutube"));
+const ResizeForTiktok = lazy(() => import("@/pages/seo/ResizeForTiktok"));
+const ResizePassportPhoto = lazy(() => import("@/pages/seo/ResizePassportPhoto"));
 const Pricing = lazy(() => import("@/pages/Pricing"));
 const RemoveBackground = lazy(() => import("@/pages/RemoveBackground"));
 const AltTextGenerator = lazy(() => import("@/pages/AltTextGenerator"));
@@ -107,6 +114,12 @@ const multilingualComponents: Record<string, React.ComponentType> = {
   '/resize-for-linkedin': ResizeForLinkedin,
   '/compress-for-email': CompressForEmail,
   '/enhance-photo-quality': EnhancePhotoQuality,
+  '/compress-for-whatsapp': CompressForWhatsapp,
+  '/convert-png-to-webp': ConvertPngToWebp,
+  '/convert-jpg-to-png': ConvertJpgToPng,
+  '/resize-for-youtube': ResizeForYoutube,
+  '/resize-for-tiktok': ResizeForTiktok,
+  '/resize-passport-photo': ResizePassportPhoto,
   '/remove-background': RemoveBackground,
   '/alt-text-generator': AltTextGenerator,
   '/image-upscaler': ImageUpscaler,

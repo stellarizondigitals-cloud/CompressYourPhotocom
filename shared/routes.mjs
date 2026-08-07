@@ -43,6 +43,12 @@ export const MULTILINGUAL_PAGES = [
   { path: '/resize-for-facebook', lastmod: '2026-08-07', changefreq: 'monthly', enPriority: '0.7', localizedPriority: '0.6' },
   { path: '/resize-for-linkedin', lastmod: '2026-08-07', changefreq: 'monthly', enPriority: '0.7', localizedPriority: '0.6' },
   { path: '/enhance-photo-quality', lastmod: '2026-08-07', changefreq: 'monthly', enPriority: '0.7', localizedPriority: '0.6' },
+  { path: '/compress-for-whatsapp', lastmod: '2026-08-07', changefreq: 'monthly', enPriority: '0.7', localizedPriority: '0.6' },
+  { path: '/convert-png-to-webp', lastmod: '2026-08-07', changefreq: 'monthly', enPriority: '0.7', localizedPriority: '0.6' },
+  { path: '/convert-jpg-to-png', lastmod: '2026-08-07', changefreq: 'monthly', enPriority: '0.7', localizedPriority: '0.6' },
+  { path: '/resize-for-youtube', lastmod: '2026-08-07', changefreq: 'monthly', enPriority: '0.7', localizedPriority: '0.6' },
+  { path: '/resize-for-tiktok', lastmod: '2026-08-07', changefreq: 'monthly', enPriority: '0.7', localizedPriority: '0.6' },
+  { path: '/resize-passport-photo', lastmod: '2026-08-07', changefreq: 'monthly', enPriority: '0.7', localizedPriority: '0.6' },
 ];
 
 // English-only public pages included in the sitemap.

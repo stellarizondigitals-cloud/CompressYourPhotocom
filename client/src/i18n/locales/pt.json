@@ -514,7 +514,9 @@
     }
   },
   "common": {
-    "faq": "Perguntas Frequentes"
+    "close": "Fechar",
+    "cancel": "Cancelar",
+    "done": "Concluído"
   },
   "seoPages": {
     "compressJpg": {
@@ -525,9 +527,18 @@
       "contentTitle": "Como Comprimir Imagens JPG",
       "content": "JPG (JPEG) é o formato de imagem mais popular para fotografias e imagens da web. Nosso compressor JPG gratuito ajuda você a reduzir significativamente o tamanho dos arquivos mantendo excelente qualidade visual. Seja para comprimir fotos para email, otimizar imagens para seu site ou reduzir espaço de armazenamento, nossa ferramenta processa tudo localmente no seu navegador.\n\nNosso algoritmo avançado de compressão analisa cada imagem JPG e remove dados desnecessários preservando os detalhes visuais importantes. Você pode ajustar o controle de qualidade para encontrar o equilíbrio perfeito entre tamanho de arquivo e qualidade de imagem. A maioria dos usuários consegue 50-80% de redução de tamanho sem perda perceptível de qualidade.\n\nDiferente de outros compressores online, suas fotos nunca saem do seu dispositivo. Todo o processamento acontece no seu navegador usando JavaScript, garantindo privacidade e segurança completas. Isso também significa processamento mais rápido já que não há tempo de upload ou download para um servidor.\n\nNosso compressor JPG funciona em todos os dispositivos incluindo Windows, Mac, Linux, Android e iOS. Processe imagens individuais ou comprima múltiplos JPGs de uma vez. Baixe arquivos comprimidos individualmente ou como um arquivo ZIP conveniente.",
       "faqs": [
-        {"question": "Quanto posso reduzir o tamanho do meu arquivo JPG?", "answer": "Tipicamente 50-90% de redução dependendo da imagem original e configurações de qualidade. Fotos com muitos detalhes comprimem menos que imagens mais simples."},
-        {"question": "Comprimir JPG vai reduzir a qualidade da imagem?", "answer": "JPG usa compressão com perdas, então alguma perda de qualidade ocorre. No entanto, com configurações de 80-90% de qualidade, a diferença geralmente é imperceptível ao olho humano."},
-        {"question": "Minha imagem JPG é enviada para seu servidor?", "answer": "Não, absolutamente não. Toda a compressão acontece localmente no seu navegador. Suas imagens nunca saem do seu dispositivo, garantindo 100% de privacidade."}
+        {
+          "question": "Quanto posso reduzir o tamanho do meu arquivo JPG?",
+          "answer": "Tipicamente 50-90% de redução dependendo da imagem original e configurações de qualidade. Fotos com muitos detalhes comprimem menos que imagens mais simples."
+        },
+        {
+          "question": "Comprimir JPG vai reduzir a qualidade da imagem?",
+          "answer": "JPG usa compressão com perdas, então alguma perda de qualidade ocorre. No entanto, com configurações de 80-90% de qualidade, a diferença geralmente é imperceptível ao olho humano."
+        },
+        {
+          "question": "Minha imagem JPG é enviada para seu servidor?",
+          "answer": "Não, absolutamente não. Toda a compressão acontece localmente no seu navegador. Suas imagens nunca saem do seu dispositivo, garantindo 100% de privacidade."
+        }
       ]
     },
     "compressPng": {
@@ -538,9 +549,18 @@
       "contentTitle": "Como Comprimir Imagens PNG",
       "content": "Imagens PNG são essenciais para gráficos com transparência, logotipos e imagens que requerem qualidade sem perdas. No entanto, arquivos PNG podem ser bastante grandes. Nosso compressor PNG gratuito ajuda você a reduzir significativamente o tamanho dos arquivos mantendo a transparência e qualidade visual.\n\nA compressão PNG funciona de forma diferente do JPG. Nossa ferramenta usa algoritmos avançados para reduzir a profundidade de cores e otimizar os dados da imagem sem afetar as áreas transparentes. Você pode conseguir reduções substanciais de tamanho, especialmente para imagens com cores sólidas ou paletas de cores limitadas.\n\nPara máxima compressão, considere converter PNG para formato WebP que oferece melhor compressão com suporte a transparência. Nossa ferramenta pode ajudá-lo a escolher o melhor formato para suas necessidades mantendo as configurações de qualidade ajustáveis.\n\nTodo o processamento acontece localmente no seu navegador—suas imagens PNG nunca saem do seu dispositivo. Isso garante privacidade completa e processamento mais rápido comparado a ferramentas baseadas em servidor. Comprima múltiplos arquivos PNG em lote e baixe individualmente ou como arquivo ZIP.",
       "faqs": [
-        {"question": "A compressão PNG afeta a transparência?", "answer": "Não, nosso compressor PNG preserva a transparência completamente. O canal alfa permanece intacto após a compressão."},
-        {"question": "Quanto posso reduzir o tamanho do meu arquivo PNG?", "answer": "A compressão PNG varia muito—gráficos simples com poucas cores podem reduzir 70-90%, enquanto imagens complexas podem reduzir apenas 10-30%."},
-        {"question": "Devo converter PNG para JPG para melhor compressão?", "answer": "Somente se você não precisar de transparência. JPG não suporta transparência. Para imagens transparentes, considere WebP que oferece melhor compressão que PNG."}
+        {
+          "question": "A compressão PNG afeta a transparência?",
+          "answer": "Não, nosso compressor PNG preserva a transparência completamente. O canal alfa permanece intacto após a compressão."
+        },
+        {
+          "question": "Quanto posso reduzir o tamanho do meu arquivo PNG?",
+          "answer": "A compressão PNG varia muito—gráficos simples com poucas cores podem reduzir 70-90%, enquanto imagens complexas podem reduzir apenas 10-30%."
+        },
+        {
+          "question": "Devo converter PNG para JPG para melhor compressão?",
+          "answer": "Somente se você não precisar de transparência. JPG não suporta transparência. Para imagens transparentes, considere WebP que oferece melhor compressão que PNG."
+        }
       ]
     },
     "convertHeicToJpg": {
@@ -553,9 +573,18 @@
       "contentTitle": "Como Converter HEIC para JPG",
       "content": "HEIC (High Efficiency Image Container) é o formato de imagem moderno da Apple usado em iPhones e iPads. Embora HEIC ofereça melhor compressão que JPG, muitos sites, aplicativos e dispositivos mais antigos não o suportam. Nosso conversor gratuito de HEIC para JPG resolve esse problema de compatibilidade instantaneamente.\n\nBasta fazer upload das suas fotos HEIC e nosso conversor as transforma em formato JPG universalmente compatível. Você pode ajustar a qualidade de saída para equilibrar tamanho de arquivo e qualidade de imagem. A conversão preserva detalhes importantes das fotos criando arquivos que funcionam em qualquer lugar.\n\nNosso conversor HEIC processa tudo localmente no seu navegador. Suas fotos do iPhone nunca saem do seu dispositivo, garantindo privacidade completa. Isso é especialmente importante para fotos pessoais que você não quer enviar para servidores desconhecidos.\n\nConverta múltiplos arquivos HEIC em lote de uma vez—perfeito para quando você transferiu várias fotos do iPhone para seu computador. Baixe JPGs convertidos individualmente ou como arquivo ZIP conveniente. Funciona em Windows, Mac, Linux e até outros dispositivos móveis.",
       "faqs": [
-        {"question": "O que é o formato HEIC?", "answer": "HEIC (High Efficiency Image Container) é o formato de imagem moderno da Apple. Oferece melhor compressão que JPG mantendo a qualidade, mas não é universalmente suportado."},
-        {"question": "Por que devo converter HEIC para JPG?", "answer": "JPG é universalmente compatível com todos os dispositivos, sites e aplicativos. Converta HEIC para JPG quando precisar compartilhar fotos em plataformas não-Apple ou softwares mais antigos."},
-        {"question": "A conversão de HEIC para JPG perde qualidade?", "answer": "Há mínima perda de qualidade ao converter com configurações de alta qualidade (90%+). A diferença geralmente é imperceptível para a maioria dos usos."}
+        {
+          "question": "O que é o formato HEIC?",
+          "answer": "HEIC (High Efficiency Image Container) é o formato de imagem moderno da Apple. Oferece melhor compressão que JPG mantendo a qualidade, mas não é universalmente suportado."
+        },
+        {
+          "question": "Por que devo converter HEIC para JPG?",
+          "answer": "JPG é universalmente compatível com todos os dispositivos, sites e aplicativos. Converta HEIC para JPG quando precisar compartilhar fotos em plataformas não-Apple ou softwares mais antigos."
+        },
+        {
+          "question": "A conversão de HEIC para JPG perde qualidade?",
+          "answer": "Há mínima perda de qualidade ao converter com configurações de alta qualidade (90%+). A diferença geralmente é imperceptível para a maioria dos usos."
+        }
       ]
     },
     "resizeForInstagram": {
@@ -568,9 +597,18 @@
       "contentTitle": "Guia de Tamanhos de Imagem para Instagram",
       "content": "O Instagram tem requisitos específicos de dimensões de imagem para diferentes tipos de posts. Usar imagens com tamanho incorreto pode resultar em cortes estranhos ou qualidade reduzida. Nosso redimensionador gratuito de imagens para Instagram garante que suas fotos fiquem perfeitas sempre.\n\nPara posts do feed do Instagram, o tamanho quadrado ideal é 1080x1080 pixels (proporção 1:1). Posts em retrato funcionam melhor com 1080x1350 pixels (proporção 4:5), enquanto posts em paisagem devem ter 1080x608 pixels (proporção 1.91:1). Stories e Reels do Instagram requerem 1080x1920 pixels (formato vertical 9:16).\n\nNosso redimensionador inclui dimensões predefinidas para todos os formatos do Instagram. Simplesmente selecione o formato desejado, faça upload da sua imagem e obtenha resultados com tamanho perfeito. A ferramenta mantém a qualidade da imagem enquanto redimensiona para suas especificações exatas.\n\nTodo o processamento acontece no seu navegador—suas fotos nunca saem do seu dispositivo. Isso é especialmente importante para conteúdo pessoal ou de marca que você quer manter privado antes de postar. Redimensione múltiplas imagens em lote para fluxo de trabalho eficiente ao preparar calendários de conteúdo.",
       "faqs": [
-        {"question": "Qual tamanho as fotos do Instagram devem ter?", "answer": "Posts quadrados: 1080x1080px. Retrato: 1080x1350px. Paisagem: 1080x608px. Stories/Reels: 1080x1920px."},
-        {"question": "O Instagram comprime minhas fotos?", "answer": "Sim, o Instagram comprime imagens enviadas. Começar com imagens de maior qualidade e tamanho correto ajuda a manter melhor qualidade após a compressão do Instagram."},
-        {"question": "Posso redimensionar sem perder qualidade?", "answer": "Ampliar imagens perde qualidade. Para melhores resultados, comece com imagens maiores que o tamanho desejado e redimensione para menor."}
+        {
+          "question": "Qual tamanho as fotos do Instagram devem ter?",
+          "answer": "Posts quadrados: 1080x1080px. Retrato: 1080x1350px. Paisagem: 1080x608px. Stories/Reels: 1080x1920px."
+        },
+        {
+          "question": "O Instagram comprime minhas fotos?",
+          "answer": "Sim, o Instagram comprime imagens enviadas. Começar com imagens de maior qualidade e tamanho correto ajuda a manter melhor qualidade após a compressão do Instagram."
+        },
+        {
+          "question": "Posso redimensionar sem perder qualidade?",
+          "answer": "Ampliar imagens perde qualidade. Para melhores resultados, comece com imagens maiores que o tamanho desejado e redimensione para menor."
+        }
       ]
     },
     "resizeForFacebook": {
@@ -583,9 +621,18 @@
       "contentTitle": "Guia de Tamanhos de Imagem para Facebook",
       "content": "O Facebook tem requisitos específicos de dimensões de imagem para diferentes usos. Usar imagens com tamanho correto garante que suas fotos sejam exibidas lindamente sem cortes estranhos ou perda de qualidade. Nosso redimensionador gratuito de imagens para Facebook ajuda você a obter resultados perfeitos sempre.\n\nPara fotos de perfil do Facebook, use 170x170 pixels (exibidas em 170px no desktop, 128px no celular). Fotos de capa devem ter 820x312 pixels para exibição ideal. Imagens compartilhadas em posts funcionam melhor com 1200x630 pixels para máximo engajamento.\n\nCapas de eventos requerem 1920x1005 pixels, enquanto capas de grupos precisam de 1640x922 pixels. Imagens para anúncios do Facebook têm seus próprios requisitos dependendo do formato do anúncio—nossa ferramenta lida com todas essas dimensões predefinidas.\n\nNosso redimensionador processa tudo localmente no seu navegador. Suas fotos nunca saem do seu dispositivo, garantindo privacidade para imagens pessoais e empresariais. Redimensione múltiplas imagens de uma vez para gerenciamento eficiente de redes sociais.",
       "faqs": [
-        {"question": "Qual tamanho as fotos de perfil do Facebook devem ter?", "answer": "Fotos de perfil devem ter pelo menos 170x170 pixels. O Facebook as exibe em 170px no desktop e 128px em smartphones."},
-        {"question": "Qual é o tamanho da foto de capa do Facebook?", "answer": "Fotos de capa do Facebook devem ter 820x312 pixels. São exibidas em 820x312 no desktop e 640x360 no celular."},
-        {"question": "O Facebook comprime imagens enviadas?", "answer": "Sim, o Facebook comprime imagens. Envie imagens de maior qualidade nas dimensões corretas para melhores resultados após a compressão."}
+        {
+          "question": "Qual tamanho as fotos de perfil do Facebook devem ter?",
+          "answer": "Fotos de perfil devem ter pelo menos 170x170 pixels. O Facebook as exibe em 170px no desktop e 128px em smartphones."
+        },
+        {
+          "question": "Qual é o tamanho da foto de capa do Facebook?",
+          "answer": "Fotos de capa do Facebook devem ter 820x312 pixels. São exibidas em 820x312 no desktop e 640x360 no celular."
+        },
+        {
+          "question": "O Facebook comprime imagens enviadas?",
+          "answer": "Sim, o Facebook comprime imagens. Envie imagens de maior qualidade nas dimensões corretas para melhores resultados após a compressão."
+        }
       ]
     },
     "cropCircle": {
@@ -598,9 +645,18 @@
       "contentTitle": "Como Criar Fotos de Perfil Circulares",
       "content": "Fotos de perfil redondas são essenciais para plataformas de redes sociais, aplicativos de mensagens e perfis profissionais. Nossa ferramenta gratuita de corte circular facilita a criação de imagens perfeitamente redondas a partir de qualquer foto retangular.\n\nBasta fazer upload da sua imagem e selecionar a opção de corte circular. Posicione e amplie para enquadrar seu assunto perfeitamente, depois corte para criar uma imagem redonda. A ferramenta mantém alta qualidade enquanto cria um círculo perfeito com fundo transparente.\n\nAvatares circulares funcionam muito bem para LinkedIn, Slack, Discord, WhatsApp e inúmeras outras plataformas. Mesmo que uma plataforma não exija imagens redondas, fotos de perfil circulares frequentemente parecem mais profissionais e atraentes.\n\nNosso cortador circular processa tudo no seu navegador—suas fotos nunca saem do seu dispositivo. Isso é especialmente importante para fotos profissionais e pessoais. Baixe sua imagem circular em formato PNG para preservar o fundo transparente, ou JPG com fundo branco.",
       "faqs": [
-        {"question": "Qual formato devo usar para imagens circulares?", "answer": "O formato PNG preserva o fundo transparente ao redor do círculo. JPG terá um fundo branco ou colorido."},
-        {"question": "Qual tamanho as fotos de perfil devem ter?", "answer": "A maioria das plataformas recomenda pelo menos 400x400 pixels para fotos de perfil. Nossa ferramenta mantém a qualidade em qualquer tamanho que você escolher."},
-        {"question": "Posso cortar qualquer forma em círculo?", "answer": "Sim! Faça upload de qualquer imagem retangular e nossa ferramenta permitirá que você posicione e corte em um círculo perfeito."}
+        {
+          "question": "Qual formato devo usar para imagens circulares?",
+          "answer": "O formato PNG preserva o fundo transparente ao redor do círculo. JPG terá um fundo branco ou colorido."
+        },
+        {
+          "question": "Qual tamanho as fotos de perfil devem ter?",
+          "answer": "A maioria das plataformas recomenda pelo menos 400x400 pixels para fotos de perfil. Nossa ferramenta mantém a qualidade em qualquer tamanho que você escolher."
+        },
+        {
+          "question": "Posso cortar qualquer forma em círculo?",
+          "answer": "Sim! Faça upload de qualquer imagem retangular e nossa ferramenta permitirá que você posicione e corte em um círculo perfeito."
+        }
       ]
     },
     "convertWebpToJpg": {
@@ -613,9 +669,18 @@
       "contentTitle": "Como Converter WebP para JPG",
       "content": "WebP é um formato de imagem moderno desenvolvido pelo Google que oferece excelente compressão. No entanto, alguns softwares, dispositivos e sites mais antigos não suportam WebP. Nosso conversor gratuito de WebP para JPG resolve esse problema de compatibilidade instantaneamente.\n\nBasta fazer upload das suas imagens WebP e convertê-las para formato JPG universalmente compatível. Ajuste a qualidade de saída para equilibrar tamanho de arquivo e qualidade de imagem baseado nas suas necessidades. A conversão preserva os detalhes da imagem criando arquivos que funcionam em qualquer lugar.\n\nA conversão de WebP para JPG é especialmente útil quando você salvou imagens de sites (muitos agora usam WebP) e precisa usá-las em aplicativos mais antigos. Também é útil para compartilhar imagens com pessoas usando dispositivos ou softwares mais antigos.\n\nTodo o processamento acontece localmente no seu navegador. Suas imagens nunca saem do seu dispositivo, garantindo privacidade completa e processamento mais rápido que ferramentas baseadas em servidor. Converta múltiplos arquivos WebP em lote e baixe individualmente ou como arquivo ZIP.",
       "faqs": [
-        {"question": "O que é o formato WebP?", "answer": "WebP é um formato de imagem moderno desenvolvido pelo Google. Oferece melhor compressão que JPG e PNG enquanto suporta transparência e animação."},
-        {"question": "Por que converter WebP para JPG?", "answer": "Embora WebP ofereça melhor compressão, JPG é universalmente compatível. Converta quando precisar usar imagens em softwares mais antigos ou compartilhar com pessoas usando dispositivos mais antigos."},
-        {"question": "A conversão de WebP para JPG perde qualidade?", "answer": "Há mínima perda de qualidade em configurações de alta qualidade. Como WebP já é comprimido, converter para JPG pode aumentar ligeiramente o tamanho do arquivo."}
+        {
+          "question": "O que é o formato WebP?",
+          "answer": "WebP é um formato de imagem moderno desenvolvido pelo Google. Oferece melhor compressão que JPG e PNG enquanto suporta transparência e animação."
+        },
+        {
+          "question": "Por que converter WebP para JPG?",
+          "answer": "Embora WebP ofereça melhor compressão, JPG é universalmente compatível. Converta quando precisar usar imagens em softwares mais antigos ou compartilhar com pessoas usando dispositivos mais antigos."
+        },
+        {
+          "question": "A conversão de WebP para JPG perde qualidade?",
+          "answer": "Há mínima perda de qualidade em configurações de alta qualidade. Como WebP já é comprimido, converter para JPG pode aumentar ligeiramente o tamanho do arquivo."
+        }
       ]
     },
     "resizeForLinkedin": {
@@ -628,9 +693,18 @@
       "contentTitle": "Guia de Tamanhos de Imagem para LinkedIn",
       "content": "O LinkedIn é a maior rede profissional do mundo, e sua presença visual importa. Usar imagens com tamanho correto garante que seu perfil pareça polido e profissional. Nosso redimensionador gratuito de imagens para LinkedIn ajuda você a criar imagens perfeitas para cada formato do LinkedIn.\n\nFotos de perfil do LinkedIn devem ter no mínimo 400x400 pixels, exibidas como círculo. Imagens de fundo/banner precisam ter 1584x396 pixels para exibição ideal. Imagens compartilhadas em posts funcionam melhor com 1200x627 pixels para maximizar o engajamento.\n\nLogotipos de páginas de empresa devem ter 300x300 pixels, enquanto capas de empresa requerem 1128x191 pixels. Para artigos do LinkedIn, o tamanho recomendado da imagem de capa é 1280x720 pixels.\n\nUma presença profissional no LinkedIn pode impactar significativamente suas oportunidades de carreira. Nosso redimensionador garante que sua foto, banner e conteúdo compartilhado sempre pareçam no seu melhor. Todo o processamento acontece no seu navegador—suas fotos profissionais nunca saem do seu dispositivo.",
       "faqs": [
-        {"question": "Qual tamanho as fotos de perfil do LinkedIn devem ter?", "answer": "Fotos de perfil do LinkedIn devem ter pelo menos 400x400 pixels. São exibidas como círculo, então centralize seu rosto no enquadramento."},
-        {"question": "Qual é o tamanho do banner do LinkedIn?", "answer": "Imagens de fundo/banner do LinkedIn devem ter 1584x396 pixels para exibição ideal no desktop e celular."},
-        {"question": "Qual tamanho de imagem funciona melhor para posts do LinkedIn?", "answer": "Para máximo engajamento, use 1200x627 pixels para imagens compartilhadas em posts do LinkedIn."}
+        {
+          "question": "Qual tamanho as fotos de perfil do LinkedIn devem ter?",
+          "answer": "Fotos de perfil do LinkedIn devem ter pelo menos 400x400 pixels. São exibidas como círculo, então centralize seu rosto no enquadramento."
+        },
+        {
+          "question": "Qual é o tamanho do banner do LinkedIn?",
+          "answer": "Imagens de fundo/banner do LinkedIn devem ter 1584x396 pixels para exibição ideal no desktop e celular."
+        },
+        {
+          "question": "Qual tamanho de imagem funciona melhor para posts do LinkedIn?",
+          "answer": "Para máximo engajamento, use 1200x627 pixels para imagens compartilhadas em posts do LinkedIn."
+        }
       ]
     },
     "compressForEmail": {
@@ -641,9 +715,18 @@
       "contentTitle": "Como Comprimir Imagens para Email",
       "content": "Limites de tamanho de anexos de email são uma frustração comum ao compartilhar fotos. Gmail, Outlook, Yahoo e outros serviços de email tipicamente limitam anexos a 25MB, e muitos servidores de email corporativos têm limites ainda mais rigorosos. Nosso compressor gratuito de imagens para email ajuda você a ficar dentro desses limites.\n\nNossa ferramenta pode reduzir o tamanho de arquivos de imagem em 50-90% mantendo boa qualidade visual. Isso significa que você pode anexar mais fotos por email ou enviar imagens de alta resolução que de outra forma seriam muito grandes. O controle de qualidade permite encontrar o equilíbrio perfeito.\n\nPara anexos de email, recomendamos comprimir imagens em torno de 70-80% de qualidade. Isso proporciona redução significativa de tamanho mantendo as imagens com ótima aparência na tela. Os destinatários não notarão a diferença, mas o email será enviado com sucesso.\n\nToda a compressão acontece no seu navegador—suas fotos nunca saem do seu dispositivo. Isso é especialmente importante para imagens pessoais ou empresariais sensíveis. Comprima múltiplas imagens em lote e baixe prontas para anexar no email.",
       "faqs": [
-        {"question": "Qual é o limite de tamanho de anexo de email?", "answer": "A maioria dos serviços de email limita anexos a 25MB no total. Servidores de email corporativos frequentemente têm limites mais rigorosos de 10-20MB."},
-        {"question": "Quanto devo comprimir imagens para email?", "answer": "Recomendamos 70-80% de qualidade para email. Isso reduz significativamente o tamanho do arquivo mantendo boa qualidade visual para visualização na tela."},
-        {"question": "Posso comprimir múltiplas imagens para um email?", "answer": "Sim! Comprima todas as suas imagens de uma vez em lote. Nossa ferramenta reduzirá o tamanho de cada arquivo para que caibam dentro dos limites de email juntas."}
+        {
+          "question": "Qual é o limite de tamanho de anexo de email?",
+          "answer": "A maioria dos serviços de email limita anexos a 25MB no total. Servidores de email corporativos frequentemente têm limites mais rigorosos de 10-20MB."
+        },
+        {
+          "question": "Quanto devo comprimir imagens para email?",
+          "answer": "Recomendamos 70-80% de qualidade para email. Isso reduz significativamente o tamanho do arquivo mantendo boa qualidade visual para visualização na tela."
+        },
+        {
+          "question": "Posso comprimir múltiplas imagens para um email?",
+          "answer": "Sim! Comprima todas as suas imagens de uma vez em lote. Nossa ferramenta reduzirá o tamanho de cada arquivo para que caibam dentro dos limites de email juntas."
+        }
       ]
     },
     "enhancePhotoQuality": {
@@ -656,9 +739,184 @@
       "contentTitle": "Como Melhorar a Qualidade de Fotos",
       "content": "Nem toda foto sai perfeita, mas nosso melhorador de fotos gratuito pode ajudar a aprimorar suas imagens com apenas alguns ajustes. Seja porque suas fotos estão escuras demais, sem contraste ou precisam de cores mais vibrantes, nossa ferramenta oferece opções de melhoria fáceis de usar.\n\nNosso melhorador de fotos inclui controles ajustáveis para brilho, contraste, saturação e nitidez. O recurso Auto-Melhoria com um clique aplica automaticamente melhorias equilibradas para fazer suas fotos ficarem no seu melhor. Filtros rápidos como preto e branco, sépia e vívido proporcionam efeitos criativos instantâneos.\n\nO ajuste de nitidez é particularmente útil para fotos levemente desfocadas ou imagens que precisam de mais definição de detalhes. Aumentar o contraste faz as imagens se destacarem, enquanto ajustes de saturação podem tornar as cores mais vibrantes ou criar visuais suaves e sofisticados.\n\nTodo o processamento de melhoria acontece localmente no seu navegador. Suas fotos nunca saem do seu dispositivo, garantindo privacidade completa. Isso é especialmente importante ao melhorar fotos pessoais ou trabalho profissional. Baixe imagens melhoradas no seu formato e nível de qualidade preferidos.",
       "faqs": [
-        {"question": "A melhoria de foto pode corrigir imagens desfocadas?", "answer": "O ajuste de nitidez pode melhorar imagens levemente suaves, mas não pode recuperar completamente fotos significativamente desfocadas ou fora de foco."},
-        {"question": "O que o Auto-Melhoria faz?", "answer": "Auto-Melhoria ajusta automaticamente brilho (+10%), contraste (+15%), saturação (+10%) e nitidez (+20%) para uma melhoria equilibrada."},
-        {"question": "Melhorar vai reduzir a qualidade da imagem?", "answer": "A melhoria em si não reduz a qualidade. No entanto, ajustes excessivos podem fazer as imagens parecerem artificiais. Use ajustes sutis para melhores resultados."}
+        {
+          "question": "A melhoria de foto pode corrigir imagens desfocadas?",
+          "answer": "O ajuste de nitidez pode melhorar imagens levemente suaves, mas não pode recuperar completamente fotos significativamente desfocadas ou fora de foco."
+        },
+        {
+          "question": "O que o Auto-Melhoria faz?",
+          "answer": "Auto-Melhoria ajusta automaticamente brilho (+10%), contraste (+15%), saturação (+10%) e nitidez (+20%) para uma melhoria equilibrada."
+        },
+        {
+          "question": "Melhorar vai reduzir a qualidade da imagem?",
+          "answer": "A melhoria em si não reduz a qualidade. No entanto, ajustes excessivos podem fazer as imagens parecerem artificiais. Use ajustes sutis para melhores resultados."
+        }
+      ]
+    },
+    "compressForWhatsapp": {
+      "title": "Comprimir Imagens para WhatsApp Online Grátis - Reduzir Tamanho de Foto",
+      "metaDescription": "Comprima imagens para o WhatsApp online grátis. Reduza fotos para que sejam enviadas rápido e mantenham a qualidade nas conversas e no status do WhatsApp. Processamento 100% privado no navegador.",
+      "h1": "Comprimir Imagens para WhatsApp",
+      "subtitle": "Reduza fotos para que sejam enviadas instantaneamente no WhatsApp sem estragar a qualidade. Grátis e privado.",
+      "contentTitle": "Como Comprimir Imagens para WhatsApp",
+      "content": "O WhatsApp comprime automaticamente cada foto que você envia, muitas vezes deixando as imagens borradas ou pixeladas. Ao comprimir suas imagens você mesmo antes de enviar, você mantém o controle: você escolhe o equilíbrio entre tamanho de arquivo e qualidade, para que as fotos continuem nítidas depois do processamento do WhatsApp.\n\nNosso compressor gratuito reduz o tamanho do arquivo de imagem em 50-90% direto no seu navegador. Arquivos menores são enviados mais rápido em conexões móveis lentas, usam menos dados móveis e ocupam menos armazenamento no seu celular e no celular de quem recebe. Funciona muito bem para fotos de conversas, imagens do Status do WhatsApp e mídias de grupos.\n\nTudo acontece localmente no seu dispositivo - suas fotos nunca são enviadas para nenhum servidor. Basta soltar suas imagens, ajustar o controle de qualidade e baixar as versões comprimidas prontas para compartilhar. Você pode comprimir várias fotos de uma vez e baixá-las todas juntas.\n\nA ferramenta funciona em qualquer dispositivo: Android, iPhone, Windows, Mac e Linux. Sem instalar aplicativo, sem cadastro, sem marca d'água.",
+      "faqs": [
+        {
+          "question": "Qual é o melhor tamanho de imagem para o WhatsApp?",
+          "answer": "Manter as fotos abaixo de 1 MB e em torno de 1600 pixels no lado mais longo garante envio rápido e boa qualidade. O WhatsApp recomprime de qualquer forma, então uma imagem pré-otimizada resiste melhor ao seu processamento."
+        },
+        {
+          "question": "Por que minhas fotos do WhatsApp ficam borradas?",
+          "answer": "O WhatsApp comprime de forma agressiva fotos grandes. Se você comprimir e redimensionar a imagem você mesmo antes, o WhatsApp aplica muito menos compressão adicional, deixando o resultado mais nítido."
+        },
+        {
+          "question": "Posso comprimir várias fotos de uma vez?",
+          "answer": "Sim. Você pode comprimir várias imagens em lote ao mesmo tempo e baixá-las individualmente ou como um arquivo ZIP."
+        },
+        {
+          "question": "Minhas fotos são enviadas para um servidor?",
+          "answer": "Não. Toda a compressão acontece localmente no seu navegador. Suas fotos nunca saem do seu dispositivo."
+        }
+      ]
+    },
+    "convertPngToWebp": {
+      "title": "Converter PNG para WebP Online Grátis - Imagens Menores, Mesma Qualidade",
+      "metaDescription": "Converta imagens PNG para WebP online grátis. Reduza o tamanho do arquivo em até 80% sem perda de qualidade visível. Privado, no navegador, sem cadastro.",
+      "h1": "Converter PNG para WebP Online",
+      "subtitle": "Transforme arquivos PNG pesados em imagens WebP leves com a transparência preservada. Grátis e privado.",
+      "contentTitle": "Por Que Converter PNG para WebP",
+      "content": "WebP é um formato de imagem moderno desenvolvido pelo Google que produz arquivos drasticamente menores que o PNG - normalmente 60-80% menores - mantendo a mesma qualidade visual e suporte total a transparência. Isso faz do WebP o formato ideal para sites, lojas online e aplicativos em que a velocidade da página importa.\n\nImagens menores significam carregamento de página mais rápido, melhores pontuações no Core Web Vitals e melhor posicionamento no SEO. Se você está otimizando um site que ainda usa gráficos em PNG, convertê-los para WebP é uma das formas mais rápidas de ganhar desempenho.\n\nNosso conversor roda inteiramente no seu navegador: selecione seus arquivos PNG e eles são convertidos para WebP localmente no seu dispositivo. Nada é enviado para um servidor, então suas imagens permanecem completamente privadas. Você pode converter arquivos individuais ou lotes inteiros e baixar tudo como um arquivo ZIP.\n\nO WebP é suportado por todos os navegadores modernos, incluindo Chrome, Firefox, Safari e Edge, então você pode usar as imagens convertidas em qualquer lugar com confiança.",
+      "ctaLabel": "Converter PNG para WebP",
+      "ctaDescription": "Use nosso conversor gratuito para transformar imagens PNG em arquivos WebP leves - privado, rápido e direto no seu navegador.",
+      "faqs": [
+        {
+          "question": "O WebP suporta transparência como o PNG?",
+          "answer": "Sim. O WebP suporta totalmente a transparência alfa, então logotipos e gráficos com fundo transparente são convertidos perfeitamente."
+        },
+        {
+          "question": "Quanto o WebP é menor que o PNG?",
+          "answer": "Normalmente 60-80% menor para a mesma qualidade visual, dependendo do conteúdo da imagem."
+        },
+        {
+          "question": "Todos os navegadores suportam WebP?",
+          "answer": "Sim. Todos os navegadores modernos - Chrome, Firefox, Safari, Edge e navegadores móveis - exibem imagens WebP nativamente."
+        },
+        {
+          "question": "A conversão é privada?",
+          "answer": "Completamente. A conversão acontece no seu navegador usando JavaScript. Suas imagens nunca são enviadas para lugar nenhum."
+        }
+      ]
+    },
+    "convertJpgToPng": {
+      "title": "Converter JPG para PNG Online Grátis - Conversão de Imagem Sem Perdas",
+      "metaDescription": "Converta imagens JPG para PNG online grátis. Qualidade sem perdas, conversão instantânea, sem cadastro. 100% privado - os arquivos nunca saem do seu navegador.",
+      "h1": "Converter JPG para PNG Online",
+      "subtitle": "Converta fotos JPEG para o formato PNG sem perdas em segundos. Grátis, privado, sem cadastro.",
+      "contentTitle": "Como Converter JPG para PNG",
+      "content": "PNG é um formato de imagem sem perdas, o que significa que ele nunca introduz artefatos de compressão quando você edita e salva um arquivo novamente. Converter um JPG para PNG é útil quando você planeja editar uma imagem repetidamente, precisa de um formato que as ferramentas de design gráfico lidam de forma limpa, ou quando um site ou formulário exige especificamente uploads em PNG.\n\nNosso conversor muda o formato instantaneamente no seu navegador. Basta soltar seus arquivos JPG ou JPEG e baixar as versões em PNG - sem cadastro, sem marca d'água, sem upload para servidor. Você pode converter uma foto ou um lote inteiro de uma vez.\n\nTenha em mente que converter JPG para PNG não pode restaurar detalhes que a compressão JPG já removeu, mas evita qualquer perda de qualidade adicional em edições futuras. Arquivos PNG são maiores que JPGs, e essa é a contrapartida do armazenamento sem perdas.\n\nA ferramenta funciona em todos os dispositivos e sistemas operacionais - Windows, Mac, Linux, Android e iOS - diretamente no seu navegador.",
+      "ctaLabel": "Converter JPG para PNG",
+      "ctaDescription": "Use nosso conversor gratuito para transformar fotos JPG em arquivos PNG sem perdas - privado, rápido e direto no seu navegador.",
+      "faqs": [
+        {
+          "question": "Converter JPG para PNG vai melhorar a qualidade?",
+          "answer": "Não é possível recuperar detalhes já perdidos pela compressão JPG, mas evita perda de qualidade adicional quando você edita e salva a imagem novamente."
+        },
+        {
+          "question": "Por que os arquivos PNG são maiores que os JPG?",
+          "answer": "O PNG usa compressão sem perdas que preserva cada pixel com exatidão, o que exige mais dados do que a compressão com perdas do JPG."
+        },
+        {
+          "question": "Posso converter vários JPGs de uma vez?",
+          "answer": "Sim. A conversão em lote é suportada - solte vários arquivos e baixe-os individualmente ou como um arquivo ZIP."
+        },
+        {
+          "question": "Minhas fotos são mantidas privadas?",
+          "answer": "Sim. A conversão acontece inteiramente no seu navegador. Seus arquivos nunca são enviados para um servidor."
+        }
+      ]
+    },
+    "resizeForYoutube": {
+      "title": "Redimensionar Imagem para Miniatura do YouTube - Ferramenta Grátis 1280x720",
+      "metaDescription": "Redimensione imagens para miniaturas do YouTube (1280x720) e arte do canal online grátis. Obtenha as dimensões exatas exigidas pelo YouTube. Ferramenta privada no navegador.",
+      "h1": "Redimensionar Imagens para YouTube",
+      "subtitle": "Obtenha as dimensões perfeitas de miniatura 1280x720 e arte do canal em segundos. Grátis e privado.",
+      "contentTitle": "Tamanhos de Imagem do YouTube Explicados",
+      "content": "Uma boa miniatura é o maior fator individual para que os espectadores cliquem no seu vídeo. O YouTube recomenda miniaturas de 1280x720 pixels (proporção 16:9) com largura mínima de 640 pixels, e os arquivos devem ficar abaixo de 2 MB.\n\nOutros tamanhos importantes do YouTube: foto de perfil do canal 800x800 pixels, banner do canal 2560x1440 pixels (com a área segura para texto em 1546x423) e imagens de posts da comunidade em 1080x1080 pixels. Enviar imagens no tamanho exato recomendado as mantém nítidas em todos os dispositivos, de celulares a smart TVs.\n\nNosso redimensionador gratuito permite inserir dimensões exatas em pixels e visualizar o resultado antes de baixar. Se a sua miniatura redimensionada ficar acima do limite de 2 MB do YouTube, você pode comprimi-la com nossa ferramenta de compressão sem perda de qualidade visível.\n\nTudo roda localmente no seu navegador - suas imagens nunca são enviadas para um servidor, e não há cadastro nem marca d'água.",
+      "ctaLabel": "Redimensionar para YouTube",
+      "ctaDescription": "Use nossa ferramenta gratuita de redimensionamento para acertar as dimensões exatas do YouTube - miniaturas, banners e fotos de perfil.",
+      "faqs": [
+        {
+          "question": "Qual deve ser o tamanho de uma miniatura do YouTube?",
+          "answer": "1280x720 pixels com proporção 16:9, pelo menos 640 pixels de largura e abaixo de 2 MB nos formatos JPG, PNG ou GIF."
+        },
+        {
+          "question": "Qual é o tamanho da arte do canal do YouTube?",
+          "answer": "2560x1440 pixels, com a área segura de texto e logotipo em 1546x423 pixels no centro para que seja exibida corretamente em todos os dispositivos."
+        },
+        {
+          "question": "Minha miniatura passa de 2 MB - o que eu faço?",
+          "answer": "Redimensione-a para 1280x720 primeiro e depois passe-a pelo nosso compressor de imagens para ficar abaixo de 2 MB sem perda de qualidade visível."
+        },
+        {
+          "question": "Qual formato é o melhor para miniaturas?",
+          "answer": "O JPG oferece a melhor relação entre tamanho e qualidade para miniaturas baseadas em fotos; o PNG é melhor para gráficos com texto nítido."
+        }
+      ]
+    },
+    "resizeForTiktok": {
+      "title": "Redimensionar Imagem para TikTok - Ferramenta Online Grátis 1080x1920",
+      "metaDescription": "Redimensione imagens para o TikTok online grátis. Obtenha o tamanho perfeito 1080x1920 (9:16) para fotos, carrosséis e fotos de perfil do TikTok. Privado e grátis.",
+      "h1": "Redimensionar Imagens para TikTok",
+      "subtitle": "Obtenha o formato vertical 9:16 perfeito para posts e carrosséis do TikTok. Grátis e privado.",
+      "contentTitle": "Tamanhos de Imagem do TikTok Explicados",
+      "content": "O TikTok foi feito para conteúdo vertical. O tamanho ideal para posts de foto e imagens de carrossel do TikTok é 1080x1920 pixels - uma proporção 9:16 que preenche a tela inteira. Imagens em outros formatos ficam com bordas pretas ou cortadas, o que parece pouco profissional e prejudica o engajamento.\n\nOutras dimensões úteis do TikTok: fotos de perfil são exibidas em 200x200 pixels (envie pelo menos 400x400 para nitidez), e imagens quadradas de 1080x1080 funcionam em carrosséis, mas deixam barras na parte superior e inferior.\n\nNosso redimensionador gratuito permite definir dimensões exatas em pixels para que suas fotos preencham a tela do TikTok de ponta a ponta. Se você precisar cortar para o formato 9:16 em vez de esticar, use nossa ferramenta de corte primeiro e depois redimensione.\n\nTodo o processamento acontece localmente no seu navegador. Suas imagens nunca são enviadas para nenhum servidor, e não há cadastro, marca d'água ou taxa.",
+      "ctaLabel": "Redimensionar para TikTok",
+      "ctaDescription": "Use nossa ferramenta gratuita de redimensionamento para obter o formato vertical perfeito 1080x1920 para o TikTok.",
+      "faqs": [
+        {
+          "question": "Qual é o melhor tamanho de imagem para o TikTok?",
+          "answer": "1080x1920 pixels (proporção 9:16). Preenche toda a tela em posts de foto e carrosséis do TikTok."
+        },
+        {
+          "question": "Qual deve ser o tamanho da minha foto de perfil do TikTok?",
+          "answer": "Envie pelo menos 400x400 pixels. O TikTok a exibe em tamanho pequeno, mas um upload maior mantém a nitidez em telas de alta resolução."
+        },
+        {
+          "question": "Posso usar fotos horizontais no TikTok?",
+          "answer": "Você pode, mas elas ficam com grandes barras pretas. Cortar para o vertical 9:16 quase sempre fica melhor e tem melhor desempenho."
+        },
+        {
+          "question": "Esta ferramenta é realmente grátis e privada?",
+          "answer": "Sim. É completamente grátis, e todo o redimensionamento acontece no seu navegador - suas fotos nunca saem do seu dispositivo."
+        }
+      ]
+    },
+    "resizePassportPhoto": {
+      "title": "Redimensionar Foto de Passaporte Online Grátis - Tamanhos 2x2 Polegadas e 35x45mm",
+      "metaDescription": "Redimensione fotos para passaportes, vistos e documentos de identidade online grátis. Obtenha tamanhos exatos como 2x2 polegadas (EUA) ou 35x45mm (UE/Reino Unido). Ferramenta privada no navegador.",
+      "h1": "Redimensionar Fotos de Passaporte e Identidade",
+      "subtitle": "Obtenha as dimensões exatas de foto de passaporte, visto e identidade em segundos. Grátis e privado.",
+      "contentTitle": "Tamanhos de Foto de Passaporte por País",
+      "content": "Cada país tem requisitos rígidos para fotos de passaporte, e as solicitações são rejeitadas quando as dimensões estão erradas. Os EUA exigem 2x2 polegadas (600x600 pixels a 300 DPI para envio digital). A maior parte da Europa, o Reino Unido, a Índia e a Austrália usam 35x45 mm. O Canadá exige 50x70 mm, e a China usa 33x48 mm.\n\nNossa ferramenta gratuita de redimensionamento permite inserir dimensões exatas em pixels para atender à especificação de qualquer país. Para uma foto de 35x45 mm a 300 DPI, redimensione para 413x531 pixels; para uma foto americana de 2x2 polegadas, use 600x600 pixels. Se a sua foto precisar de corte para centralizar o rosto primeiro, use nossa ferramenta de corte antes de redimensionar.\n\nAlém do tamanho, a maioria das autoridades exige um fundo claro e liso, expressão neutra, iluminação uniforme e sem sombras. Nossa ferramenta de remoção de fundo pode ajudar você a obter um fundo branco limpo, se necessário.\n\nTudo roda de forma privada no seu navegador - a foto de um documento sensível nunca sai do seu dispositivo. Sem cadastro, sem marca d'água, completamente grátis.",
+      "ctaLabel": "Redimensionar Foto de Passaporte",
+      "ctaDescription": "Use nossa ferramenta gratuita de redimensionamento para obter as dimensões exatas de foto de passaporte e identidade de qualquer país.",
+      "faqs": [
+        {
+          "question": "Qual é o tamanho de uma foto de passaporte dos EUA?",
+          "answer": "2x2 polegadas (51x51 mm). Para envio digital, isso equivale a 600x600 pixels a 300 DPI."
+        },
+        {
+          "question": "Qual é o tamanho de uma foto de passaporte do Reino Unido ou da UE?",
+          "answer": "35x45 mm, o que equivale a 413x531 pixels a 300 DPI. Esse tamanho também é usado pela Índia, Austrália e muitos outros países."
+        },
+        {
+          "question": "Como converto mm em pixels?",
+          "answer": "Multiplique os milímetros pelo DPI e divida por 25,4. A 300 DPI, 35x45 mm se torna 413x531 pixels."
+        },
+        {
+          "question": "É seguro processar fotos de identidade aqui?",
+          "answer": "Sim. Todo o processamento acontece localmente no seu navegador - sua foto nunca é enviada para nenhum servidor, o que a torna mais segura do que a maioria das ferramentas de passaporte online."
+        }
       ]
     }
   },
@@ -681,11 +939,6 @@
     "proMonthly": "Pro (Mensal)",
     "proLifetime": "Pro (Vitalício)",
     "proDescription": "Compressões ilimitadas, processamento em lote até 50 imagens, experiência sem anúncios"
-  },
-  "common": {
-    "close": "Fechar",
-    "cancel": "Cancelar",
-    "done": "Concluído"
   },
   "premium": {
     "title": "Atualizar para Pro",

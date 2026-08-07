@@ -553,7 +553,9 @@
     }
   },
   "common": {
-    "faq": "Frequently Asked Questions"
+    "close": "Close",
+    "cancel": "Cancel",
+    "done": "Done"
   },
   "seoPages": {
     "compressJpg": {
@@ -564,9 +566,18 @@
       "contentTitle": "How to Compress JPG Images",
       "content": "JPG (JPEG) is the most popular image format for photographs and web images. Our free JPG compressor helps you reduce file sizes significantly while maintaining excellent visual quality. Whether you need to compress photos for email, optimize images for your website, or reduce storage space, our tool processes everything locally in your browser.\n\nOur advanced compression algorithm analyzes each JPG image and removes unnecessary data while preserving the important visual details. You can adjust the quality slider to find the perfect balance between file size and image quality. Most users achieve 50-80% file size reduction without noticeable quality loss.\n\nUnlike other online compressors, your photos never leave your device. All processing happens in your web browser using JavaScript, ensuring complete privacy and security. This also means faster processing since there's no upload or download time to a server.\n\nOur JPG compressor works on all devices including Windows, Mac, Linux, Android, and iOS. Process single images or batch compress multiple JPGs at once. Download compressed files individually or as a convenient ZIP archive.",
       "faqs": [
-        {"question": "How much can I reduce my JPG file size?", "answer": "Typically 50-90% reduction depending on the original image and quality settings. Photos with lots of detail compress less than simpler images."},
-        {"question": "Will compressing JPG reduce image quality?", "answer": "JPG uses lossy compression, so some quality loss occurs. However, at 80-90% quality settings, the difference is usually imperceptible to the human eye."},
-        {"question": "Is my JPG image uploaded to your server?", "answer": "No, absolutely not. All compression happens locally in your browser. Your images never leave your device, guaranteeing 100% privacy."}
+        {
+          "question": "How much can I reduce my JPG file size?",
+          "answer": "Typically 50-90% reduction depending on the original image and quality settings. Photos with lots of detail compress less than simpler images."
+        },
+        {
+          "question": "Will compressing JPG reduce image quality?",
+          "answer": "JPG uses lossy compression, so some quality loss occurs. However, at 80-90% quality settings, the difference is usually imperceptible to the human eye."
+        },
+        {
+          "question": "Is my JPG image uploaded to your server?",
+          "answer": "No, absolutely not. All compression happens locally in your browser. Your images never leave your device, guaranteeing 100% privacy."
+        }
       ]
     },
     "compressPng": {
@@ -577,9 +588,18 @@
       "contentTitle": "How to Compress PNG Images",
       "content": "PNG images are essential for graphics with transparency, logos, and images requiring lossless quality. However, PNG files can be quite large. Our free PNG compressor helps you reduce file sizes significantly while maintaining transparency and visual quality.\n\nPNG compression works differently from JPG. Our tool uses advanced algorithms to reduce color depth and optimize the image data without affecting transparent areas. You can achieve substantial file size reductions, especially for images with solid colors or limited color palettes.\n\nFor maximum compression, consider converting PNG to WebP format which offers better compression with transparency support. Our tool can help you choose the best format for your needs while keeping quality settings adjustable.\n\nAll processing happens locally in your web browser—your PNG images never leave your device. This ensures complete privacy and faster processing compared to server-based tools. Batch compress multiple PNG files and download them individually or as a ZIP archive.",
       "faqs": [
-        {"question": "Does PNG compression affect transparency?", "answer": "No, our PNG compressor preserves transparency completely. The alpha channel remains intact after compression."},
-        {"question": "How much can I reduce my PNG file size?", "answer": "PNG compression varies widely—simple graphics with few colors can reduce 70-90%, while complex images may only reduce 10-30%."},
-        {"question": "Should I convert PNG to JPG for better compression?", "answer": "Only if you don't need transparency. JPG doesn't support transparency. For transparent images, consider WebP which offers better compression than PNG."}
+        {
+          "question": "Does PNG compression affect transparency?",
+          "answer": "No, our PNG compressor preserves transparency completely. The alpha channel remains intact after compression."
+        },
+        {
+          "question": "How much can I reduce my PNG file size?",
+          "answer": "PNG compression varies widely—simple graphics with few colors can reduce 70-90%, while complex images may only reduce 10-30%."
+        },
+        {
+          "question": "Should I convert PNG to JPG for better compression?",
+          "answer": "Only if you don't need transparency. JPG doesn't support transparency. For transparent images, consider WebP which offers better compression than PNG."
+        }
       ]
     },
     "convertHeicToJpg": {
@@ -592,9 +612,18 @@
       "contentTitle": "How to Convert HEIC to JPG",
       "content": "HEIC (High Efficiency Image Container) is Apple's modern image format used on iPhones and iPads. While HEIC offers better compression than JPG, many websites, apps, and older devices don't support it. Our free HEIC to JPG converter solves this compatibility problem instantly.\n\nSimply upload your HEIC photos and our converter transforms them to universally compatible JPG format. You can adjust the output quality to balance file size and image quality. The conversion preserves important photo details while creating files that work everywhere.\n\nOur HEIC converter processes everything locally in your browser. Your iPhone photos never leave your device, ensuring complete privacy. This is especially important for personal photos that you don't want uploaded to unknown servers.\n\nBatch convert multiple HEIC files at once—perfect for when you've transferred a bunch of iPhone photos to your computer. Download converted JPGs individually or as a convenient ZIP archive. Works on Windows, Mac, Linux, and even other mobile devices.",
       "faqs": [
-        {"question": "What is HEIC format?", "answer": "HEIC (High Efficiency Image Container) is Apple's modern image format. It offers better compression than JPG while maintaining quality, but isn't universally supported."},
-        {"question": "Why should I convert HEIC to JPG?", "answer": "JPG is universally compatible with all devices, websites, and apps. Convert HEIC to JPG when you need to share photos on non-Apple platforms or older software."},
-        {"question": "Does HEIC to JPG conversion lose quality?", "answer": "There's minimal quality loss when converting at high quality settings (90%+). The difference is usually imperceptible for most uses."}
+        {
+          "question": "What is HEIC format?",
+          "answer": "HEIC (High Efficiency Image Container) is Apple's modern image format. It offers better compression than JPG while maintaining quality, but isn't universally supported."
+        },
+        {
+          "question": "Why should I convert HEIC to JPG?",
+          "answer": "JPG is universally compatible with all devices, websites, and apps. Convert HEIC to JPG when you need to share photos on non-Apple platforms or older software."
+        },
+        {
+          "question": "Does HEIC to JPG conversion lose quality?",
+          "answer": "There's minimal quality loss when converting at high quality settings (90%+). The difference is usually imperceptible for most uses."
+        }
       ]
     },
     "resizeForInstagram": {
@@ -607,9 +636,18 @@
       "contentTitle": "Instagram Image Size Guide",
       "content": "Instagram has specific image dimension requirements for different post types. Using incorrectly sized images can result in awkward cropping or reduced quality. Our free Instagram image resizer ensures your photos look perfect every time.\n\nFor Instagram feed posts, the ideal square size is 1080x1080 pixels (1:1 aspect ratio). Portrait posts work best at 1080x1350 pixels (4:5 ratio), while landscape posts should be 1080x608 pixels (1.91:1 ratio). Instagram Stories and Reels require 1080x1920 pixels (9:16 vertical format).\n\nOur resizer includes preset dimensions for all Instagram formats. Simply select your desired format, upload your image, and get perfectly sized results. The tool maintains image quality while resizing to your exact specifications.\n\nAll processing happens in your browser—your photos never leave your device. This is especially important for personal or brand content that you want to keep private before posting. Batch resize multiple images for efficient workflow when preparing content calendars.",
       "faqs": [
-        {"question": "What size should Instagram photos be?", "answer": "Square posts: 1080x1080px. Portrait: 1080x1350px. Landscape: 1080x608px. Stories/Reels: 1080x1920px."},
-        {"question": "Does Instagram compress my photos?", "answer": "Yes, Instagram compresses uploaded images. Starting with higher quality, correctly sized images helps maintain better quality after Instagram's compression."},
-        {"question": "Can I resize without losing quality?", "answer": "Enlarging images loses quality. For best results, start with images larger than your target size and resize down."}
+        {
+          "question": "What size should Instagram photos be?",
+          "answer": "Square posts: 1080x1080px. Portrait: 1080x1350px. Landscape: 1080x608px. Stories/Reels: 1080x1920px."
+        },
+        {
+          "question": "Does Instagram compress my photos?",
+          "answer": "Yes, Instagram compresses uploaded images. Starting with higher quality, correctly sized images helps maintain better quality after Instagram's compression."
+        },
+        {
+          "question": "Can I resize without losing quality?",
+          "answer": "Enlarging images loses quality. For best results, start with images larger than your target size and resize down."
+        }
       ]
     },
     "resizeForFacebook": {
@@ -622,9 +660,18 @@
       "contentTitle": "Facebook Image Size Guide",
       "content": "Facebook has specific image dimension requirements for different uses. Using correctly sized images ensures your photos display beautifully without awkward cropping or quality loss. Our free Facebook image resizer helps you get perfect results every time.\n\nFor Facebook profile pictures, use 170x170 pixels (displays at 170px on desktop, 128px on mobile). Cover photos should be 820x312 pixels for optimal display. Shared images in posts work best at 1200x630 pixels for maximum engagement.\n\nEvent cover photos require 1920x1005 pixels, while group cover photos need 1640x922 pixels. Facebook ad images have their own requirements depending on the ad format—our tool handles all these preset dimensions.\n\nOur resizer processes everything locally in your browser. Your photos never leave your device, ensuring privacy for personal and business images. Batch resize multiple images at once for efficient social media management.",
       "faqs": [
-        {"question": "What size should Facebook profile pictures be?", "answer": "Profile pictures should be at least 170x170 pixels. Facebook displays them at 170px on desktop and 128px on smartphones."},
-        {"question": "What size is a Facebook cover photo?", "answer": "Facebook cover photos should be 820x312 pixels. They display at 820x312 on desktop and 640x360 on mobile."},
-        {"question": "Does Facebook compress uploaded images?", "answer": "Yes, Facebook compresses images. Upload higher quality images at the correct dimensions for best results after compression."}
+        {
+          "question": "What size should Facebook profile pictures be?",
+          "answer": "Profile pictures should be at least 170x170 pixels. Facebook displays them at 170px on desktop and 128px on smartphones."
+        },
+        {
+          "question": "What size is a Facebook cover photo?",
+          "answer": "Facebook cover photos should be 820x312 pixels. They display at 820x312 on desktop and 640x360 on mobile."
+        },
+        {
+          "question": "Does Facebook compress uploaded images?",
+          "answer": "Yes, Facebook compresses images. Upload higher quality images at the correct dimensions for best results after compression."
+        }
       ]
     },
     "cropCircle": {
@@ -637,9 +684,18 @@
       "contentTitle": "How to Create Circle Profile Pictures",
       "content": "Round profile pictures are essential for social media platforms, messaging apps, and professional profiles. Our free circle crop tool makes it easy to create perfectly round images from any rectangular photo.\n\nSimply upload your image and select the circle crop option. Position and zoom to frame your subject perfectly, then crop to create a round image. The tool maintains high quality while creating a perfect circle with transparent background.\n\nCircle avatars work great for LinkedIn, Slack, Discord, WhatsApp, and countless other platforms. Even if a platform doesn't require round images, circular profile pictures often look more professional and engaging.\n\nOur circle cropper processes everything in your browser—your photos never leave your device. This is especially important for professional headshots and personal photos. Download your circular image in PNG format to preserve the transparent background, or JPG with a white background.",
       "faqs": [
-        {"question": "What format should I use for circle images?", "answer": "PNG format preserves the transparent background around the circle. JPG will have a white or colored background."},
-        {"question": "What size should profile pictures be?", "answer": "Most platforms recommend at least 400x400 pixels for profile pictures. Our tool maintains quality at any size you choose."},
-        {"question": "Can I crop any shape to a circle?", "answer": "Yes! Upload any rectangular image and our tool will let you position and crop it into a perfect circle."}
+        {
+          "question": "What format should I use for circle images?",
+          "answer": "PNG format preserves the transparent background around the circle. JPG will have a white or colored background."
+        },
+        {
+          "question": "What size should profile pictures be?",
+          "answer": "Most platforms recommend at least 400x400 pixels for profile pictures. Our tool maintains quality at any size you choose."
+        },
+        {
+          "question": "Can I crop any shape to a circle?",
+          "answer": "Yes! Upload any rectangular image and our tool will let you position and crop it into a perfect circle."
+        }
       ]
     },
     "convertWebpToJpg": {
@@ -652,9 +708,18 @@
       "contentTitle": "How to Convert WebP to JPG",
       "content": "WebP is a modern image format developed by Google that offers excellent compression. However, some older software, devices, and websites don't support WebP. Our free WebP to JPG converter solves this compatibility issue instantly.\n\nSimply upload your WebP images and convert them to universally compatible JPG format. Adjust the output quality to balance file size and image quality based on your needs. The conversion preserves image details while creating files that work everywhere.\n\nWebP to JPG conversion is especially useful when you've saved images from websites (many now use WebP) and need to use them in older applications. It's also helpful for sharing images with people using older devices or software.\n\nAll processing happens locally in your browser. Your images never leave your device, ensuring complete privacy and faster processing than server-based tools. Batch convert multiple WebP files and download them individually or as a ZIP archive.",
       "faqs": [
-        {"question": "What is WebP format?", "answer": "WebP is a modern image format developed by Google. It offers better compression than JPG and PNG while supporting transparency and animation."},
-        {"question": "Why convert WebP to JPG?", "answer": "While WebP offers better compression, JPG is universally compatible. Convert when you need to use images in older software or share with people using older devices."},
-        {"question": "Does WebP to JPG conversion lose quality?", "answer": "There's minimal quality loss at high quality settings. Since WebP is already compressed, converting to JPG may slightly increase file size."}
+        {
+          "question": "What is WebP format?",
+          "answer": "WebP is a modern image format developed by Google. It offers better compression than JPG and PNG while supporting transparency and animation."
+        },
+        {
+          "question": "Why convert WebP to JPG?",
+          "answer": "While WebP offers better compression, JPG is universally compatible. Convert when you need to use images in older software or share with people using older devices."
+        },
+        {
+          "question": "Does WebP to JPG conversion lose quality?",
+          "answer": "There's minimal quality loss at high quality settings. Since WebP is already compressed, converting to JPG may slightly increase file size."
+        }
       ]
     },
     "resizeForLinkedin": {
@@ -667,9 +732,18 @@
       "contentTitle": "LinkedIn Image Size Guide",
       "content": "LinkedIn is the world's largest professional network, and your visual presence matters. Using correctly sized images ensures your profile looks polished and professional. Our free LinkedIn image resizer helps you create perfect images for every LinkedIn format.\n\nLinkedIn profile photos should be 400x400 pixels minimum, displayed as a circle. Background/banner images need to be 1584x396 pixels for optimal display. Shared images in posts perform best at 1200x627 pixels to maximize engagement.\n\nCompany page logos should be 300x300 pixels, while company cover images require 1128x191 pixels. For LinkedIn articles, the recommended cover image size is 1280x720 pixels.\n\nA professional LinkedIn presence can significantly impact your career opportunities. Our resizer ensures your headshot, banner, and shared content always look their best. All processing happens in your browser—your professional photos never leave your device.",
       "faqs": [
-        {"question": "What size should LinkedIn profile photos be?", "answer": "LinkedIn profile photos should be at least 400x400 pixels. They're displayed as a circle, so center your face in the frame."},
-        {"question": "What size is a LinkedIn banner?", "answer": "LinkedIn background/banner images should be 1584x396 pixels for optimal display on desktop and mobile."},
-        {"question": "What size images work best for LinkedIn posts?", "answer": "For maximum engagement, use 1200x627 pixels for shared images in LinkedIn posts."}
+        {
+          "question": "What size should LinkedIn profile photos be?",
+          "answer": "LinkedIn profile photos should be at least 400x400 pixels. They're displayed as a circle, so center your face in the frame."
+        },
+        {
+          "question": "What size is a LinkedIn banner?",
+          "answer": "LinkedIn background/banner images should be 1584x396 pixels for optimal display on desktop and mobile."
+        },
+        {
+          "question": "What size images work best for LinkedIn posts?",
+          "answer": "For maximum engagement, use 1200x627 pixels for shared images in LinkedIn posts."
+        }
       ]
     },
     "compressForEmail": {
@@ -680,9 +754,18 @@
       "contentTitle": "How to Compress Images for Email",
       "content": "Email attachment size limits are a common frustration when sharing photos. Gmail, Outlook, Yahoo, and other email services typically limit attachments to 25MB, and many corporate email servers have even stricter limits. Our free email image compressor helps you stay under these limits.\n\nOur tool can reduce image file sizes by 50-90% while maintaining good visual quality. This means you can attach more photos per email or send high-resolution images that would otherwise be too large. The quality slider lets you find the perfect balance.\n\nFor email attachments, we recommend compressing images to around 70-80% quality. This provides significant file size reduction while keeping images looking great on screen. Recipients won't notice the difference, but the email will send successfully.\n\nAll compression happens in your browser—your photos never leave your device. This is especially important for sensitive personal or business images. Batch compress multiple images and download them ready for email attachment.",
       "faqs": [
-        {"question": "What is the email attachment size limit?", "answer": "Most email services limit attachments to 25MB total. Corporate email servers often have stricter limits of 10-20MB."},
-        {"question": "How much should I compress images for email?", "answer": "We recommend 70-80% quality for email. This significantly reduces file size while maintaining good visual quality for on-screen viewing."},
-        {"question": "Can I compress multiple images for one email?", "answer": "Yes! Batch compress all your images at once. Our tool will reduce each file size so they fit within email limits together."}
+        {
+          "question": "What is the email attachment size limit?",
+          "answer": "Most email services limit attachments to 25MB total. Corporate email servers often have stricter limits of 10-20MB."
+        },
+        {
+          "question": "How much should I compress images for email?",
+          "answer": "We recommend 70-80% quality for email. This significantly reduces file size while maintaining good visual quality for on-screen viewing."
+        },
+        {
+          "question": "Can I compress multiple images for one email?",
+          "answer": "Yes! Batch compress all your images at once. Our tool will reduce each file size so they fit within email limits together."
+        }
       ]
     },
     "enhancePhotoQuality": {
@@ -695,9 +778,184 @@
       "contentTitle": "How to Enhance Photo Quality",
       "content": "Not every photo comes out perfect, but our free photo enhancer can help improve your images with just a few adjustments. Whether your photos are too dark, lack contrast, or need more vibrant colors, our tool provides easy-to-use enhancement options.\n\nOur photo enhancer includes adjustable sliders for brightness, contrast, saturation, and sharpness. The one-click Auto-Enhance feature automatically applies balanced improvements to make your photos look their best. Quick filters like black & white, sepia, and vivid provide instant creative effects.\n\nSharpness adjustment is particularly useful for slightly blurry photos or images that need more detail definition. Increasing contrast makes images pop, while saturation adjustments can make colors more vibrant or create muted, sophisticated looks.\n\nAll enhancement processing happens locally in your browser. Your photos never leave your device, ensuring complete privacy. This is especially important when enhancing personal photos or professional work. Download enhanced images in your preferred format and quality level.",
       "faqs": [
-        {"question": "Can photo enhancement fix blurry images?", "answer": "Sharpness adjustment can improve slightly soft images, but it cannot fully recover significantly blurry or out-of-focus photos."},
-        {"question": "What does Auto-Enhance do?", "answer": "Auto-Enhance automatically adjusts brightness (+10%), contrast (+15%), saturation (+10%), and sharpness (+20%) for a balanced improvement."},
-        {"question": "Will enhancing reduce image quality?", "answer": "Enhancement itself doesn't reduce quality. However, excessive adjustments can make images look unnatural. Use subtle adjustments for best results."}
+        {
+          "question": "Can photo enhancement fix blurry images?",
+          "answer": "Sharpness adjustment can improve slightly soft images, but it cannot fully recover significantly blurry or out-of-focus photos."
+        },
+        {
+          "question": "What does Auto-Enhance do?",
+          "answer": "Auto-Enhance automatically adjusts brightness (+10%), contrast (+15%), saturation (+10%), and sharpness (+20%) for a balanced improvement."
+        },
+        {
+          "question": "Will enhancing reduce image quality?",
+          "answer": "Enhancement itself doesn't reduce quality. However, excessive adjustments can make images look unnatural. Use subtle adjustments for best results."
+        }
+      ]
+    },
+    "compressForWhatsapp": {
+      "title": "Compress Images for WhatsApp Online Free - Reduce Photo Size",
+      "metaDescription": "Compress images for WhatsApp online free. Shrink photos so they send fast and keep quality on WhatsApp chats and status. 100% private browser processing.",
+      "h1": "Compress Images for WhatsApp",
+      "subtitle": "Shrink photos so they send instantly on WhatsApp without ruining quality. Free and private.",
+      "contentTitle": "How to Compress Images for WhatsApp",
+      "content": "WhatsApp automatically compresses every photo you send, often making pictures look blurry or pixelated. By compressing your images yourself before sending, you stay in control: you pick the balance between file size and quality, so photos still look sharp after WhatsApp processes them.\n\nOur free compressor reduces image file size by 50-90% right in your browser. Smaller files upload faster on slow mobile connections, use less mobile data, and take up less storage on your phone and your recipient's phone. It works great for chat photos, WhatsApp Status images, and group media.\n\nEverything happens locally on your device - your photos are never uploaded to any server. Simply drop your images, adjust the quality slider, and download the compressed versions ready to share. You can compress multiple photos at once and download them all together.\n\nThe tool works on any device: Android, iPhone, Windows, Mac, and Linux. No app install, no signup, no watermarks.",
+      "faqs": [
+        {
+          "question": "What image size is best for WhatsApp?",
+          "answer": "Keeping photos under 1 MB and around 1600 pixels on the longest side gives fast sending and good quality. WhatsApp re-compresses anyway, so a pre-optimized image survives its processing better."
+        },
+        {
+          "question": "Why do my WhatsApp photos look blurry?",
+          "answer": "WhatsApp aggressively compresses large photos. If you compress and resize the image yourself first, WhatsApp applies far less additional compression, so the result looks sharper."
+        },
+        {
+          "question": "Can I compress many photos at once?",
+          "answer": "Yes. You can batch compress multiple images at the same time and download them individually or as a ZIP file."
+        },
+        {
+          "question": "Are my photos uploaded to a server?",
+          "answer": "No. All compression happens locally in your browser. Your photos never leave your device."
+        }
+      ]
+    },
+    "convertPngToWebp": {
+      "title": "Convert PNG to WebP Online Free - Smaller Images, Same Quality",
+      "metaDescription": "Convert PNG images to WebP online for free. Cut file size by up to 80% with no visible quality loss. Private, browser-based, no signup needed.",
+      "h1": "Convert PNG to WebP Online",
+      "subtitle": "Turn heavy PNG files into lightweight WebP images with transparency preserved. Free and private.",
+      "contentTitle": "Why Convert PNG to WebP",
+      "content": "WebP is a modern image format developed by Google that produces dramatically smaller files than PNG - typically 60-80% smaller - while keeping the same visual quality and full transparency support. That makes WebP the go-to format for websites, online stores, and apps where page speed matters.\n\nSmaller images mean faster page loads, better Core Web Vitals scores, and improved SEO rankings. If you are optimizing a website that still serves PNG graphics, converting them to WebP is one of the quickest performance wins available.\n\nOur converter runs entirely in your browser: select your PNG files, and they are converted to WebP locally on your device. Nothing is uploaded to a server, so your images stay completely private. You can convert single files or whole batches and download everything as a ZIP.\n\nWebP is supported by every modern browser including Chrome, Firefox, Safari, and Edge, so you can use converted images anywhere with confidence.",
+      "ctaLabel": "Convert PNG to WebP",
+      "ctaDescription": "Use our free converter to turn PNG images into lightweight WebP files - private, fast, and right in your browser.",
+      "faqs": [
+        {
+          "question": "Does WebP support transparency like PNG?",
+          "answer": "Yes. WebP fully supports alpha transparency, so logos and graphics with transparent backgrounds convert perfectly."
+        },
+        {
+          "question": "How much smaller is WebP than PNG?",
+          "answer": "Typically 60-80% smaller for the same visual quality, depending on the image content."
+        },
+        {
+          "question": "Do all browsers support WebP?",
+          "answer": "Yes. All modern browsers - Chrome, Firefox, Safari, Edge, and mobile browsers - display WebP images natively."
+        },
+        {
+          "question": "Is the conversion private?",
+          "answer": "Completely. The conversion happens in your browser using JavaScript. Your images are never uploaded anywhere."
+        }
+      ]
+    },
+    "convertJpgToPng": {
+      "title": "Convert JPG to PNG Online Free - Lossless Image Conversion",
+      "metaDescription": "Convert JPG images to PNG online for free. Lossless quality, instant conversion, no signup. 100% private - files never leave your browser.",
+      "h1": "Convert JPG to PNG Online",
+      "subtitle": "Convert JPEG photos to lossless PNG format in seconds. Free, private, no signup.",
+      "contentTitle": "How to Convert JPG to PNG",
+      "content": "PNG is a lossless image format, which means it never introduces compression artifacts when you edit and re-save a file. Converting a JPG to PNG is useful when you plan to edit an image repeatedly, need a format that graphic design tools handle cleanly, or a website or form specifically requires PNG uploads.\n\nOur converter changes the format instantly in your browser. Just drop in your JPG or JPEG files and download the PNG versions - no signup, no watermark, no server upload. You can convert one photo or a whole batch at once.\n\nKeep in mind that converting JPG to PNG cannot restore detail that JPG compression already removed, but it does prevent any further quality loss in future edits. PNG files are larger than JPGs, which is the trade-off for lossless storage.\n\nThe tool works on all devices and operating systems - Windows, Mac, Linux, Android, and iOS - directly in your web browser.",
+      "ctaLabel": "Convert JPG to PNG",
+      "ctaDescription": "Use our free converter to turn JPG photos into lossless PNG files - private, fast, and right in your browser.",
+      "faqs": [
+        {
+          "question": "Will converting JPG to PNG improve quality?",
+          "answer": "It cannot recover detail already lost to JPG compression, but it prevents further quality loss when you edit and re-save the image."
+        },
+        {
+          "question": "Why are PNG files bigger than JPG?",
+          "answer": "PNG uses lossless compression that preserves every pixel exactly, which requires more data than JPG's lossy compression."
+        },
+        {
+          "question": "Can I convert multiple JPGs at once?",
+          "answer": "Yes. Batch conversion is supported - drop in several files and download them individually or as a ZIP."
+        },
+        {
+          "question": "Are my photos kept private?",
+          "answer": "Yes. Conversion happens entirely in your browser. Your files are never uploaded to a server."
+        }
+      ]
+    },
+    "resizeForYoutube": {
+      "title": "Resize Image for YouTube Thumbnail - 1280x720 Free Tool",
+      "metaDescription": "Resize images for YouTube thumbnails (1280x720) and channel art online free. Get the exact dimensions YouTube requires. Private browser-based tool.",
+      "h1": "Resize Images for YouTube",
+      "subtitle": "Get the perfect 1280x720 thumbnail and channel art dimensions in seconds. Free and private.",
+      "contentTitle": "YouTube Image Sizes Explained",
+      "content": "A great thumbnail is the single biggest factor in whether viewers click your video. YouTube recommends thumbnails at 1280x720 pixels (16:9 aspect ratio) with a minimum width of 640 pixels, and files must stay under 2 MB.\n\nOther key YouTube sizes: channel profile picture 800x800 pixels, channel banner 2560x1440 pixels (with the safe area for text at 1546x423), and community post images at 1080x1080 pixels. Uploading images at the exact recommended size keeps them sharp on every device from phones to smart TVs.\n\nOur free resizer lets you enter exact pixel dimensions and preview the result before downloading. If your resized thumbnail comes out over YouTube's 2 MB limit, you can compress it with our compression tool without visible quality loss.\n\nEverything runs locally in your browser - your images are never uploaded to a server, and there is no signup or watermark.",
+      "ctaLabel": "Resize for YouTube",
+      "ctaDescription": "Use our free resize tool to hit YouTube's exact dimensions - thumbnails, banners, and profile pictures.",
+      "faqs": [
+        {
+          "question": "What size should a YouTube thumbnail be?",
+          "answer": "1280x720 pixels with a 16:9 aspect ratio, at least 640 pixels wide, and under 2 MB in JPG, PNG, or GIF format."
+        },
+        {
+          "question": "What size is YouTube channel art?",
+          "answer": "2560x1440 pixels, with the text-and-logo safe area at 1546x423 pixels in the center so it displays correctly on all devices."
+        },
+        {
+          "question": "My thumbnail is over 2 MB - what do I do?",
+          "answer": "Resize it to 1280x720 first, then run it through our image compressor to get under 2 MB without visible quality loss."
+        },
+        {
+          "question": "Which format is best for thumbnails?",
+          "answer": "JPG offers the best size-to-quality ratio for photo-based thumbnails; PNG is better for graphics with sharp text."
+        }
+      ]
+    },
+    "resizeForTiktok": {
+      "title": "Resize Image for TikTok - 1080x1920 Free Online Tool",
+      "metaDescription": "Resize images for TikTok online free. Get the perfect 1080x1920 (9:16) size for TikTok photos, carousels, and profile pictures. Private and free.",
+      "h1": "Resize Images for TikTok",
+      "subtitle": "Get the perfect 9:16 vertical format for TikTok posts and carousels. Free and private.",
+      "contentTitle": "TikTok Image Sizes Explained",
+      "content": "TikTok is built for vertical content. The ideal size for TikTok photo posts and carousel images is 1080x1920 pixels - a 9:16 aspect ratio that fills the entire screen. Images in other shapes get letterboxed or cropped, which looks unprofessional and hurts engagement.\n\nOther useful TikTok dimensions: profile pictures display at 200x200 pixels (upload at least 400x400 for sharpness), and square 1080x1080 images work in carousels but leave bars at the top and bottom.\n\nOur free resizer lets you set exact pixel dimensions so your photos fill the TikTok screen edge to edge. If you need to crop to the 9:16 shape rather than stretch, use our crop tool first, then resize.\n\nAll processing happens locally in your browser. Your images are never uploaded to any server, and there is no signup, watermark, or fee.",
+      "ctaLabel": "Resize for TikTok",
+      "ctaDescription": "Use our free resize tool to get the perfect 1080x1920 vertical format for TikTok.",
+      "faqs": [
+        {
+          "question": "What is the best image size for TikTok?",
+          "answer": "1080x1920 pixels (9:16 aspect ratio). It fills the whole screen on TikTok photo posts and carousels."
+        },
+        {
+          "question": "What size should my TikTok profile picture be?",
+          "answer": "Upload at least 400x400 pixels. TikTok displays it small, but a larger upload stays sharp on high-resolution screens."
+        },
+        {
+          "question": "Can I use horizontal photos on TikTok?",
+          "answer": "You can, but they get letterboxed with large bars. Cropping to 9:16 vertical almost always looks better and performs better."
+        },
+        {
+          "question": "Is this tool really free and private?",
+          "answer": "Yes. It is completely free, and all resizing happens in your browser - your photos never leave your device."
+        }
+      ]
+    },
+    "resizePassportPhoto": {
+      "title": "Resize Passport Photo Online Free - 2x2 Inch & 35x45mm Sizes",
+      "metaDescription": "Resize photos for passports, visas, and ID documents online free. Get exact sizes like 2x2 inch (US) or 35x45mm (EU/UK). Private browser-based tool.",
+      "h1": "Resize Passport & ID Photos",
+      "subtitle": "Get exact passport, visa, and ID photo dimensions in seconds. Free and private.",
+      "contentTitle": "Passport Photo Sizes by Country",
+      "content": "Every country has strict passport photo requirements, and applications get rejected when the dimensions are wrong. The US requires 2x2 inches (600x600 pixels at 300 DPI for digital submission). Most of Europe, the UK, India, and Australia use 35x45 mm. Canada requires 50x70 mm, and China uses 33x48 mm.\n\nOur free resize tool lets you enter exact pixel dimensions to match any country's specification. For a 35x45 mm photo at 300 DPI, resize to 413x531 pixels; for a US 2x2 inch photo, use 600x600 pixels. If your photo needs cropping to center your face first, use our crop tool before resizing.\n\nBeyond size, most authorities require a plain light background, neutral expression, even lighting, and no shadows. Our background removal tool can help you get a clean white background if needed.\n\nEverything runs privately in your browser - a sensitive document photo never leaves your device. No signup, no watermark, completely free.",
+      "ctaLabel": "Resize Passport Photo",
+      "ctaDescription": "Use our free resize tool to get exact passport and ID photo dimensions for any country.",
+      "faqs": [
+        {
+          "question": "What size is a US passport photo?",
+          "answer": "2x2 inches (51x51 mm). For digital submission, that is 600x600 pixels at 300 DPI."
+        },
+        {
+          "question": "What size is a UK or EU passport photo?",
+          "answer": "35x45 mm, which equals 413x531 pixels at 300 DPI. This size is also used by India, Australia, and many other countries."
+        },
+        {
+          "question": "How do I convert mm to pixels?",
+          "answer": "Multiply millimeters by the DPI and divide by 25.4. At 300 DPI, 35x45 mm becomes 413x531 pixels."
+        },
+        {
+          "question": "Is it safe to process ID photos here?",
+          "answer": "Yes. All processing happens locally in your browser - your photo is never uploaded to any server, which makes it safer than most online passport tools."
+        }
       ]
     }
   },
@@ -737,11 +995,6 @@
     "proMonthly": "Pro (Monthly)",
     "proLifetime": "Pro (Lifetime)",
     "proDescription": "Unlimited compressions, batch processing up to 50 images, ad-free experience"
-  },
-  "common": {
-    "close": "Close",
-    "cancel": "Cancel",
-    "done": "Done"
   },
   "premium": {
     "title": "Upgrade to Pro",
