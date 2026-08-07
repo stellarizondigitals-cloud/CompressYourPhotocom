@@ -376,7 +376,7 @@ Respond ONLY with valid JSON in this exact format (no markdown, no extra text):
       };
 
       const geminiModels = ['gemini-2.5-flash', 'gemini-2.0-flash-lite', 'gemini-2.0-flash'];
-      let response: Response | null = null;
+      let response: globalThis.Response | null = null;
       let lastStatus = 0;
 
       for (const model of geminiModels) {
