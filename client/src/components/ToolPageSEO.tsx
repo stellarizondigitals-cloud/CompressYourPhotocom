@@ -16,13 +16,22 @@ const ogLocaleMap: Record<string, string> = {
   id: 'id_ID',
 };
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 interface ToolPageSEOProps {
   tool: 'compress' | 'resize' | 'convert' | 'crop' | 'enhance' | 'home';
   title: string;
   description: string;
+  /** URL slug for SEO landing pages (e.g. 'compress-jpg'). Overrides `tool` for canonical/hreflang URLs. */
+  slug?: string;
+  /** FAQ items rendered on the page — emitted as FAQPage JSON-LD for rich results. */
+  faqs?: FAQItem[];
 }
 
-export function ToolPageSEO({ tool, title, description }: ToolPageSEOProps) {
+export function ToolPageSEO({ tool, title, description, slug, faqs }: ToolPageSEOProps) {
   const location = useLocation();
 
   // Derive language directly from the URL path to avoid i18n state race conditions.
@@ -34,8 +43,8 @@ export function ToolPageSEO({ tool, title, description }: ToolPageSEOProps) {
 
   const getPath = (lang: string) => {
     const langPrefix = lang === 'en' ? '' : `/${lang}`;
-    const toolPath = tool === 'home' ? '' : `/${tool}`;
-    return `${langPrefix}${toolPath}`;
+    const pagePath = slug ? `/${slug}` : tool === 'home' ? '' : `/${tool}`;
+    return `${langPrefix}${pagePath}`;
   };
 
   const canonicalUrl = `https://www.compressyourphoto.com${getPath(langFromPath)}`;
@@ -55,10 +64,19 @@ export function ToolPageSEO({ tool, title, description }: ToolPageSEOProps) {
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph — locale + canonical URL so Google/social can identify language */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="CompressYourPhoto" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content="https://www.compressyourphoto.com/og-image-v4.png" />
       <meta property="og:locale" content={ogLocale} />
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content="https://www.compressyourphoto.com/og-image-v4.png" />
       {alternateLocales.map(locale => (
         <meta key={locale} property="og:locale:alternate" content={locale} />
       ))}
@@ -73,6 +91,21 @@ export function ToolPageSEO({ tool, title, description }: ToolPageSEOProps) {
         />
       ))}
       <link rel="alternate" hrefLang="x-default" href={getHreflangUrl('en')} />
+
+      {/* FAQPage structured data for rich results */}
+      {Array.isArray(faqs) && faqs.length > 0 && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          })}
+        </script>
+      )}
     </Helmet>
   );
 }

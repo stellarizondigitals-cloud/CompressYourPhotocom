@@ -5,8 +5,19 @@ interface Step {
   description: string;
 }
 
+interface CustomStep {
+  step?: number;
+  title: string;
+  description: string;
+}
+
 interface HowToUseProps {
-  tool: 'compress' | 'resize' | 'convert' | 'crop' | 'enhance';
+  tool?: 'compress' | 'resize' | 'convert' | 'crop' | 'enhance';
+  /** Custom steps override — for tools not in the built-in content map */
+  steps?: CustomStep[];
+  proTips?: string[];
+  heading?: string;
+  intro?: string;
 }
 
 const toolContent: Record<
@@ -200,8 +211,16 @@ const toolContent: Record<
   },
 };
 
-export function HowToUse({ tool }: HowToUseProps) {
-  const content = toolContent[tool];
+export function HowToUse({ tool, steps, proTips, heading, intro }: HowToUseProps) {
+  const builtin = tool ? toolContent[tool] : undefined;
+  const content = steps
+    ? {
+        heading: heading ?? 'How to Use',
+        intro: intro ?? '',
+        steps,
+        tips: proTips ?? [],
+      }
+    : builtin;
   if (!content) return null;
 
   return (

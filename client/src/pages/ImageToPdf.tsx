@@ -40,7 +40,7 @@ async function pdfToImages(file: File, isPro: boolean): Promise<string[]> {
     canvas.width = viewport.width;
     canvas.height = viewport.height;
     const ctx = canvas.getContext('2d')!;
-    await page.render({ canvasContext: ctx, viewport }).promise;
+    await page.render({ canvas, canvasContext: ctx, viewport }).promise;
     urls.push(canvas.toDataURL('image/jpeg', 0.92));
   }
   return urls;

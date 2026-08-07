@@ -46,7 +46,7 @@ export default function RemoveBackground() {
       setStatusMsg('Analysing image…');
       const resultBlob = await removeBackground(file, {
         publicPath: 'https://staticimgly.com/@imgly/background-removal-data/1.7.0/dist/',
-        model: 'medium',
+        model: 'isnet_fp16',
         output: { format: 'image/png', quality: 1 },
         progress: (key: string, current: number, total: number) => {
           if (key.startsWith('fetch:')) {

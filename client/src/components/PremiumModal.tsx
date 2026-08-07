@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Crown, Zap, Archive, Infinity, Check, Loader2, Star, Shield } from 'lucide-react';
+import { Crown, Zap, Archive, Infinity, Check, Loader2, Star, Shield, Sparkles } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';

@@ -166,6 +166,7 @@ export default function AltTextGenerator() {
   };
 
   const remaining = usesRemaining;
+  const canGenerate = isPro || canUse;
 
   return (
     <div className="flex-1">

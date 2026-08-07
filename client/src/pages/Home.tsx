@@ -198,7 +198,7 @@ export default function Home() {
                   <li key={f} className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />{f}</li>
                 ))}
               </ul>
-              <Link to="/compress">
+              <Link to={getLocalizedPath('/compress')}>
                 <Button variant="outline" size="sm" className="w-full mt-4" data-testid="btn-home-start-free">Start free</Button>
               </Link>
             </Card>
@@ -219,7 +219,7 @@ export default function Home() {
               </Button>
             </Card>
           </div>
-          <Link to="/pricing" className="inline-flex items-center text-sm text-primary hover:underline" data-testid="link-home-see-pricing">
+          <Link to={getLocalizedPath('/pricing')} className="inline-flex items-center text-sm text-primary hover:underline" data-testid="link-home-see-pricing">
             See full pricing & plan comparison
             <ArrowRight className="w-3.5 h-3.5 ml-1" />
           </Link>

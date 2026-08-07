@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -9,43 +9,53 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
-import Compress from "@/pages/Compress";
-import Resize from "@/pages/Resize";
-import Convert from "@/pages/Convert";
-import CropPage from "@/pages/Crop";
-import EnhancePage from "@/pages/Enhance";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
-import HowItWorks from "@/pages/HowItWorks";
-import Languages from "@/pages/Languages";
-import Terms from "@/pages/Terms";
-import CookiePolicy from "@/pages/CookiePolicy";
-import Disclaimer from "@/pages/Disclaimer";
-import Contact from "@/pages/Contact";
-import About from "@/pages/About";
-import NotFound from "@/pages/not-found";
 import { initAnalytics, trackPageView } from "@/lib/analytics";
 import { CookieConsent } from "@/components/CookieConsent";
 
-import Account from "@/pages/Account";
-import AuthCallback from "@/pages/AuthCallback";
-import BlogIndex from "@/pages/blog/BlogIndex";
-import BlogPost from "@/pages/blog/BlogPost";
-import CompressJpg from "@/pages/seo/CompressJpg";
-import CompressPng from "@/pages/seo/CompressPng";
-import ConvertHeicToJpg from "@/pages/seo/ConvertHeicToJpg";
-import ResizeForInstagram from "@/pages/seo/ResizeForInstagram";
-import ResizeForFacebook from "@/pages/seo/ResizeForFacebook";
-import CropCircle from "@/pages/seo/CropCircle";
-import ConvertWebpToJpg from "@/pages/seo/ConvertWebpToJpg";
-import ResizeForLinkedin from "@/pages/seo/ResizeForLinkedin";
-import CompressForEmail from "@/pages/seo/CompressForEmail";
-import EnhancePhotoQuality from "@/pages/seo/EnhancePhotoQuality";
-import Pricing from "@/pages/Pricing";
-import RemoveBackground from "@/pages/RemoveBackground";
-import AltTextGenerator from "@/pages/AltTextGenerator";
-import RecommendedTools from "@/pages/RecommendedTools";
-import ImageUpscaler from "@/pages/ImageUpscaler";
-import ImageToPdf from "@/pages/ImageToPdf";
+// Route-level code splitting: each page loads its own JS chunk on demand,
+// keeping the initial bundle small (faster first paint = better SEO + UX).
+const Compress = lazy(() => import("@/pages/Compress"));
+const Resize = lazy(() => import("@/pages/Resize"));
+const Convert = lazy(() => import("@/pages/Convert"));
+const CropPage = lazy(() => import("@/pages/Crop"));
+const EnhancePage = lazy(() => import("@/pages/Enhance"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
+const HowItWorks = lazy(() => import("@/pages/HowItWorks"));
+const Languages = lazy(() => import("@/pages/Languages"));
+const Terms = lazy(() => import("@/pages/Terms"));
+const CookiePolicy = lazy(() => import("@/pages/CookiePolicy"));
+const Disclaimer = lazy(() => import("@/pages/Disclaimer"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const About = lazy(() => import("@/pages/About"));
+const NotFound = lazy(() => import("@/pages/not-found"));
+const Account = lazy(() => import("@/pages/Account"));
+const AuthCallback = lazy(() => import("@/pages/AuthCallback"));
+const BlogIndex = lazy(() => import("@/pages/blog/BlogIndex"));
+const BlogPost = lazy(() => import("@/pages/blog/BlogPost"));
+const CompressJpg = lazy(() => import("@/pages/seo/CompressJpg"));
+const CompressPng = lazy(() => import("@/pages/seo/CompressPng"));
+const ConvertHeicToJpg = lazy(() => import("@/pages/seo/ConvertHeicToJpg"));
+const ResizeForInstagram = lazy(() => import("@/pages/seo/ResizeForInstagram"));
+const ResizeForFacebook = lazy(() => import("@/pages/seo/ResizeForFacebook"));
+const CropCircle = lazy(() => import("@/pages/seo/CropCircle"));
+const ConvertWebpToJpg = lazy(() => import("@/pages/seo/ConvertWebpToJpg"));
+const ResizeForLinkedin = lazy(() => import("@/pages/seo/ResizeForLinkedin"));
+const CompressForEmail = lazy(() => import("@/pages/seo/CompressForEmail"));
+const EnhancePhotoQuality = lazy(() => import("@/pages/seo/EnhancePhotoQuality"));
+const Pricing = lazy(() => import("@/pages/Pricing"));
+const RemoveBackground = lazy(() => import("@/pages/RemoveBackground"));
+const AltTextGenerator = lazy(() => import("@/pages/AltTextGenerator"));
+const RecommendedTools = lazy(() => import("@/pages/RecommendedTools"));
+const ImageUpscaler = lazy(() => import("@/pages/ImageUpscaler"));
+const ImageToPdf = lazy(() => import("@/pages/ImageToPdf"));
+
+function PageLoader() {
+  return (
+    <div className="flex-1 flex items-center justify-center py-24" aria-busy="true">
+      <div className="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
+    </div>
+  );
+}
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -75,6 +85,7 @@ const languages = ['', 'es', 'pt', 'fr', 'de', 'hi', 'zh-cn', 'ar', 'id'];
 
 function AppRoutes() {
   return (
+    <Suspense fallback={<PageLoader />}>
     <Routes>
       {languages.map((lang) => {
         const prefix = lang ? `/${lang}` : '';
@@ -118,6 +129,7 @@ function AppRoutes() {
       <Route path="/auth/callback" element={<AuthCallback />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </Suspense>
   );
 }
 

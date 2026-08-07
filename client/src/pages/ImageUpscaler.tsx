@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Upload, Download, ZoomIn, Sparkles, Crown, Check, X, ArrowLeftRight } from 'lucide-react';

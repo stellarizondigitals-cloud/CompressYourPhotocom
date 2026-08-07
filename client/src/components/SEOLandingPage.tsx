@@ -30,6 +30,9 @@ interface SEOLandingPageProps {
 
 const defaultFormats = ['JPG', 'PNG', 'WebP', 'HEIC', 'GIF'];
 
+// i18n slugs are camelCase (compressJpg) but URLs are kebab-case (compress-jpg)
+const toKebab = (s: string) => s.replace(/[A-Z]/g, (c) => `-${c.toLowerCase()}`);
+
 export function SEOLandingPage({ 
   slug, 
   toolComponent, 
@@ -57,8 +60,10 @@ export function SEOLandingPage({
     <>
       <ToolPageSEO
         tool={parentTool}
+        slug={toKebab(slug)}
         title={title}
         description={metaDescription}
+        faqs={Array.isArray(faqs) ? faqs : undefined}
       />
       <div className="flex-1">
         <section className="py-12 md:py-20 px-4 md:px-8">
