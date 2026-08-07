@@ -51,3 +51,7 @@ STRIPE_LIFETIME_PRICE_ID = "price_1THNNnA1YPAyGFWbJs3kmtST"
 
 [agent]
 integrations = ["javascript_stripe:1.0.0"]
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 180000
