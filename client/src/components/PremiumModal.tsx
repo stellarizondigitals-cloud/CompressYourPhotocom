@@ -221,9 +221,6 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
                     <Loader2 className="w-4 h-4 animate-spin ml-auto" />
                   ) : (
                     <>
-                      {prices.tier === 1 && (
-                        <p className="text-xs text-muted-foreground line-through">£47.88/yr</p>
-                      )}
                       <p className="text-xl font-bold text-primary">{prices.lifetime.display}</p>
                       <p className="text-xs text-muted-foreground">one-time</p>
                     </>

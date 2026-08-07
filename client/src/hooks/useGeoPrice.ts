@@ -59,13 +59,13 @@ function buildPrices(tier: PriceTier, countryCode: string, country: string): Geo
   if (tier === 1) {
     const monthly12 = 1.99 * 12;
     const lifetimeAmt = 24.99;
-    const saving = (monthly12 - lifetimeAmt).toFixed(2);
+    const saving = monthly12 - lifetimeAmt;
     return {
       tier, country, countryCode, flag,
       weekPass: { amount: 99, display: '£0.99' },
       monthly: { amount: 199, display: '£1.99', priceId: MONTHLY_PRICE_ID },
       lifetime: { amount: 2499, display: '£24.99' },
-      savingsVs12Months: `Save £${saving} vs monthly`,
+      savingsVs12Months: saving > 0 ? `Save £${saving.toFixed(2)} vs monthly` : null,
       specialLabel: null,
     };
   }
@@ -92,7 +92,7 @@ function buildPrices(tier: PriceTier, countryCode: string, country: string): Geo
   };
 }
 
-const CACHE_KEY = 'cyp_geo_price';
+const CACHE_KEY = 'cyp_geo_price_v2';
 const CACHE_TTL = 24 * 60 * 60 * 1000;
 
 export function useGeoPrice(): { prices: GeoPrices; loading: boolean } {
