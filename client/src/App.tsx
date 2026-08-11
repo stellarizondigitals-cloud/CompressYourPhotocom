@@ -1,5 +1,5 @@
 import { useEffect, lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -56,7 +56,9 @@ const ResizePassportPhoto = lazy(() => import("@/pages/seo/ResizePassportPhoto")
 const Pricing = lazy(() => import("@/pages/Pricing"));
 const RemoveBackground = lazy(() => import("@/pages/RemoveBackground"));
 const AltTextGenerator = lazy(() => import("@/pages/AltTextGenerator"));
-const RecommendedTools = lazy(() => import("@/pages/RecommendedTools"));
+// RecommendedTools page hidden until affiliate links are live — restore the lazy import,
+// the singleComponents entry, and the SINGLE_PAGES entry in shared/routes.mjs to re-enable.
+// const RecommendedTools = lazy(() => import("@/pages/RecommendedTools"));
 const ImageUpscaler = lazy(() => import("@/pages/ImageUpscaler"));
 const ImageToPdf = lazy(() => import("@/pages/ImageToPdf"));
 
@@ -128,7 +130,6 @@ const multilingualComponents: Record<string, React.ComponentType> = {
 
 const singleComponents: Record<string, React.ComponentType> = {
   '/pricing': Pricing,
-  '/recommended-tools': RecommendedTools,
   '/languages': Languages,
   '/how-it-works': HowItWorks,
   '/about': About,
@@ -176,6 +177,8 @@ function AppRoutes() {
       <Route path="/blog" element={<Layout><BlogIndex /></Layout>} />
       <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
       <Route path="/terms-of-service" element={<Layout><Terms /></Layout>} />
+      {/* Hidden until affiliate links are live */}
+      <Route path="/recommended-tools" element={<Navigate to="/" replace />} />
       <Route path="/account" element={<Layout><Account /></Layout>} />
       <Route path="/auth/callback" element={<AuthCallback />} />
       <Route path="*" element={<NotFound />} />

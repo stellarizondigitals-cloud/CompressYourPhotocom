@@ -55,7 +55,7 @@ export const MULTILINGUAL_PAGES = [
 // { path, lastmod, changefreq, priority }
 export const SINGLE_PAGES = [
   { path: '/pricing', lastmod: null, changefreq: 'monthly', priority: '0.8' },
-  { path: '/recommended-tools', lastmod: '2026-04-12', changefreq: 'monthly', priority: '0.6' },
+  // '/recommended-tools' hidden until affiliate links are live — re-add here to restore it in the sitemap
   { path: '/languages', lastmod: '2026-08-07', changefreq: 'monthly', priority: '0.5' },
   { path: '/how-it-works', lastmod: '2026-01-06', changefreq: 'monthly', priority: '0.7' },
   { path: '/about', lastmod: '2026-01-06', changefreq: 'monthly', priority: '0.6' },

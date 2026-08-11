@@ -186,13 +186,7 @@ export function Footer() {
               >
                 Blog
               </Link>
-              <Link 
-                to="/recommended-tools" 
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-recommended-tools"
-              >
-                Recommended Tools
-              </Link>
+              {/* Recommended Tools link hidden until affiliate links are live */}
             </nav>
           </div>
 
