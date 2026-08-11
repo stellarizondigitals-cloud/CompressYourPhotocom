@@ -12,6 +12,7 @@ import { useLocation } from 'react-router-dom';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { PremiumModal } from '@/components/PremiumModal';
 import { AdBanner } from '@/components/AdBanner';
+import { DISPLAY } from '@/lib/pricing';
 
 const tools = [
   { key: 'compress', icon: Minimize2, path: '/compress', color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400' },
@@ -76,7 +77,7 @@ export default function Home() {
             { "@type": "Question", "name": "Are my photos uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your photos never leave your device. All processing — including upscaling, PDF conversion, and background removal — happens locally in your browser." } },
             { "@type": "Question", "name": "What image formats are supported?", "acceptedAnswer": { "@type": "Answer", "text": "We support JPG/JPEG, PNG, WebP, HEIC/HEIF (iPhone photos), GIF, and BMP formats across all tools." } },
             { "@type": "Question", "name": "Does it work on mobile phones?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CompressYourPhoto works on all modern mobile browsers including iPhone Safari and Android Chrome." } },
-            { "@type": "Question", "name": "What is the 7-day Pro trial?", "acceptedAnswer": { "@type": "Answer", "text": "For £0.99 you get full Pro access for 7 days. After the trial, you are automatically billed £1.99/month. You can cancel any time from your account page with no fees or penalties." } }
+            { "@type": "Question", "name": "What is the 7-day Pro trial?", "acceptedAnswer": { "@type": "Answer", "text": `For ${DISPLAY.weekPass} you get full Pro access for 7 days. After the trial, you are automatically billed ${DISPLAY.monthlyPerMonth}. You can cancel any time from your account page with no fees or penalties.` } }
           ]
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
@@ -207,15 +208,15 @@ export default function Home() {
                 <Crown className="w-4 h-4 text-yellow-500" />
                 <p className="font-semibold">Pro</p>
               </div>
-              <p className="text-2xl font-bold mb-1 text-primary">£0.99 <span className="text-sm font-normal text-muted-foreground">/ 7-day trial</span></p>
-              <p className="text-xs text-muted-foreground mb-3">Then £1.99/month · Cancel any time · £24.99 lifetime</p>
+              <p className="text-2xl font-bold mb-1 text-primary">{DISPLAY.weekPass} <span className="text-sm font-normal text-muted-foreground">/ 7-day trial</span></p>
+              <p className="text-xs text-muted-foreground mb-3">Then {DISPLAY.monthlyPerMonth} · Cancel any time · {DISPLAY.lifetime} lifetime</p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 {['Unlimited all 9 tools', '50 images at once', 'Image Upscaler 4× & 8×', 'Unlimited PDF pages', '100% private processing'].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-primary flex-shrink-0" />{f}</li>
                 ))}
               </ul>
               <Button size="sm" className="w-full mt-4" onClick={() => setShowPremiumModal(true)} data-testid="btn-home-get-pro">
-                <Crown className="w-3.5 h-3.5 mr-1.5" />Try Pro for £0.99
+                <Crown className="w-3.5 h-3.5 mr-1.5" />Try Pro for {DISPLAY.weekPass}
               </Button>
             </Card>
           </div>
@@ -258,7 +259,7 @@ export default function Home() {
             </AccordionItem>
             <AccordionItem value="q4">
               <AccordionTrigger data-testid="faq-q4">What is the 7-day Pro trial?</AccordionTrigger>
-              <AccordionContent>For £0.99 you get full Pro access for 7 days. After the trial ends, you're automatically charged £1.99/month. You can cancel any time from your account page — no fees, no questions asked.</AccordionContent>
+              <AccordionContent>For {DISPLAY.weekPass} you get full Pro access for 7 days. After the trial ends, you're automatically charged {DISPLAY.monthlyPerMonth}. You can cancel any time from your account page — no fees, no questions asked.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q5">
               <AccordionTrigger data-testid="faq-q5">{t('faq.q5', 'Can I process multiple images at once?')}</AccordionTrigger>

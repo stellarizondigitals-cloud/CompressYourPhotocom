@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useGeoPrice } from '@/hooks/useGeoPrice';
+import { STRIPE_PRICE_ID_DEFAULTS } from '@/lib/pricing';
 import { LoginModal } from './LoginModal';
 
 interface PremiumModalProps {
@@ -152,7 +153,7 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
               <div className={`flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <div>
                   <p className="font-semibold text-sm">7-Day Trial</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">Then £1.99/month · Cancel any time</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{prices.monthly ? `Then ${prices.monthly.display}/month · Cancel any time` : 'Cancel any time'}</p>
                 </div>
                 <div className={`${isRTL ? 'text-left' : 'text-right'} flex-shrink-0 ml-3`}>
                   {isLoading('week_pass') ? (
@@ -196,7 +197,7 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
             <button
               onClick={() => {
                 if (prices.tier === 1) {
-                  handleCheckoutFixed(import.meta.env.VITE_STRIPE_LIFETIME_PRICE_ID || 'price_1THNNnA1YPAyGFWbJs3kmtST', 'payment');
+                  handleCheckoutFixed(import.meta.env.VITE_STRIPE_LIFETIME_PRICE_ID || STRIPE_PRICE_ID_DEFAULTS.lifetime, 'payment');
                 } else {
                   handleCheckoutGeo('lifetime_geo', prices.lifetime.amount, 'Lifetime Pro Access', 'payment');
                 }
@@ -217,7 +218,7 @@ export function PremiumModal({ open, onOpenChange }: PremiumModalProps) {
                   </p>
                 </div>
                 <div className={`${isRTL ? 'text-left' : 'text-right'} flex-shrink-0 ml-3`}>
-                  {isLoading(import.meta.env.VITE_STRIPE_LIFETIME_PRICE_ID || 'price_1THNNnA1YPAyGFWbJs3kmtST') || isLoading('lifetime_geo') ? (
+                  {isLoading(import.meta.env.VITE_STRIPE_LIFETIME_PRICE_ID || STRIPE_PRICE_ID_DEFAULTS.lifetime) || isLoading('lifetime_geo') ? (
                     <Loader2 className="w-4 h-4 animate-spin ml-auto" />
                   ) : (
                     <>

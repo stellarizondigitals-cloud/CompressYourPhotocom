@@ -1,11 +1,12 @@
 import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import Stripe from "stripe";
+import { STRIPE_PRICE_ID_DEFAULTS, isAllowedGeoAmount, geoProductCopy, type GeoPlanType } from "@shared/pricing";
 import { createClient } from "@supabase/supabase-js";
 import { storage } from "./storage";
 
-const MONTHLY_PRICE_ID = process.env.STRIPE_MONTHLY_PRICE_ID || 'price_1THNBOA1YPAyGFWbw3FewHiI';
-const LIFETIME_PRICE_ID = process.env.STRIPE_LIFETIME_PRICE_ID || 'price_1THNNnA1YPAyGFWbJs3kmtST';
+const MONTHLY_PRICE_ID = process.env.STRIPE_MONTHLY_PRICE_ID || STRIPE_PRICE_ID_DEFAULTS.monthly;
+const LIFETIME_PRICE_ID = process.env.STRIPE_LIFETIME_PRICE_ID || STRIPE_PRICE_ID_DEFAULTS.lifetime;
 const ALLOWED_PRICE_IDS = [MONTHLY_PRICE_ID, LIFETIME_PRICE_ID];
 
 console.log('[Server] Environment check:', {
@@ -77,24 +78,57 @@ export async function registerRoutes(
 
   app.post("/api/create-checkout-geo", async (req: Request, res: Response) => {
     try {
-      const { planType, amount, productName, mode, userId, userEmail, successUrl, cancelUrl } = req.body;
+      const { planType, amount, userId, userEmail, successUrl, cancelUrl } = req.body;
 
-      if (!planType || !amount || !mode || !userId) {
+      if (!planType || !amount || !userId) {
         return res.status(400).json({ error: "Missing required fields" });
       }
 
-      const MIN_AMOUNT = 49;
-      const MAX_AMOUNT = 9999;
-      const numAmount = parseInt(amount, 10);
-      if (isNaN(numAmount) || numAmount < MIN_AMOUNT || numAmount > MAX_AMOUNT) {
-        return res.status(400).json({ error: "Invalid amount" });
-      }
-
-      const ALLOWED_PLAN_TYPES = ['week_pass', 'lifetime_geo'];
+      const ALLOWED_PLAN_TYPES: GeoPlanType[] = ['week_pass', 'lifetime_geo'];
       if (!ALLOWED_PLAN_TYPES.includes(planType)) {
         return res.status(400).json({ error: "Invalid plan type" });
       }
 
+      // Amounts are validated against the shared pricing config — the client
+      // cannot charge anything other than a configured plan price.
+      const numAmount = parseInt(amount, 10);
+      if (isNaN(numAmount) || !isAllowedGeoAmount(planType as GeoPlanType, numAmount)) {
+        return res.status(400).json({ error: "Invalid amount" });
+      }
+
+      const copy = geoProductCopy(planType as GeoPlanType);
+
+      if (planType === 'week_pass') {
+        // 7-day trial: one-time trial fee upfront, then auto-bills via the
+        // configured monthly Stripe price (matches api/create-checkout-geo.ts).
+        // Cast to any: Stripe TS types omit add_invoice_items from
+        // SessionCreateParams but the REST API supports it.
+        const session = await stripe.checkout.sessions.create({
+          mode: 'subscription',
+          line_items: [{ price: MONTHLY_PRICE_ID, quantity: 1 }],
+          subscription_data: {
+            trial_period_days: 7,
+            metadata: { userId, planType: 'week_pass' },
+          },
+          add_invoice_items: [
+            {
+              price_data: {
+                currency: 'gbp',
+                product_data: { name: copy.name, description: copy.description },
+                unit_amount: numAmount,
+              },
+            },
+          ],
+          customer_email: userEmail,
+          metadata: { userId, planType: 'week_pass', amount: numAmount.toString() },
+          success_url: successUrl || `${req.headers.origin}?checkout=success`,
+          cancel_url: cancelUrl || `${req.headers.origin}?checkout=cancelled`,
+        } as any);
+
+        return res.json({ url: session.url });
+      }
+
+      // Lifetime geo plan — one-time payment
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items: [
@@ -102,18 +136,12 @@ export async function registerRoutes(
             price_data: {
               currency: 'gbp',
               unit_amount: numAmount,
-              product_data: {
-                name: productName || 'Pro Access',
-                description: planType === 'week_pass'
-                  ? '7-day full access to all Pro features'
-                  : 'Lifetime access to all Pro features — pay once, use forever',
-              },
-              ...(mode === 'subscription' ? { recurring: { interval: 'month' } } : {}),
+              product_data: { name: copy.name, description: copy.description },
             },
             quantity: 1,
           },
         ],
-        mode: mode as "subscription" | "payment",
+        mode: "payment",
         success_url: successUrl || `${req.headers.origin}?checkout=success`,
         cancel_url: cancelUrl || `${req.headers.origin}?checkout=cancelled`,
         customer_email: userEmail,

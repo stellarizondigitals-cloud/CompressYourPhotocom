@@ -1,0 +1,1 @@
+- [Pricing single source](pricing-single-source.md) — all plan prices/Stripe ID defaults live in shared/pricing.ts; two checkout backends (server/routes.ts + api/) must stay in sync.

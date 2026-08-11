@@ -10,6 +10,7 @@ import { AdBanner } from '@/components/AdBanner';
 import { PremiumModal } from '@/components/PremiumModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGlobalUsage } from '@/hooks/useGlobalUsage';
+import { DISPLAY } from '@/lib/pricing';
 import { PDFDocument } from 'pdf-lib';
 
 const PAGE_SIZES: Record<string, [number, number]> = {
@@ -456,7 +457,7 @@ export default function ImageToPdf() {
               <div className="flex items-center gap-2 mb-3">
                 <Crown className="w-4 h-4 text-yellow-500" />
                 <p className="font-semibold">Pro</p>
-                <Badge variant="secondary" className="text-xs ml-auto">from £0.99 trial</Badge>
+                <Badge variant="secondary" className="text-xs ml-auto">from {DISPLAY.weekPass} trial</Badge>
               </div>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 {['Unlimited images per PDF', 'All PDF pages to images', 'All page sizes', 'All 9 Pro tools included', '100% private processing'].map(f => (
@@ -464,7 +465,7 @@ export default function ImageToPdf() {
                 ))}
               </ul>
               <Button size="sm" className="w-full mt-4" onClick={() => setShowPremiumModal(true)} data-testid="btn-pdf-get-pro">
-                <Crown className="w-3.5 h-3.5 mr-1.5" />Try Pro — £0.99 for 7 days
+                <Crown className="w-3.5 h-3.5 mr-1.5" />Try Pro — {DISPLAY.weekPass} for 7 days
               </Button>
             </Card>
           </div>

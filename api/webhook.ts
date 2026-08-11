@@ -2,9 +2,10 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
+import { DISPLAY, STRIPE_PRICE_ID_DEFAULTS } from '../shared/pricing';
 
-const MONTHLY_PRICE_ID = process.env.STRIPE_MONTHLY_PRICE_ID || 'price_1THNBOA1YPAyGFWbw3FewHiI';
-const LIFETIME_PRICE_ID = process.env.STRIPE_LIFETIME_PRICE_ID || 'price_1THNNnA1YPAyGFWbJs3kmtST';
+const MONTHLY_PRICE_ID = process.env.STRIPE_MONTHLY_PRICE_ID || STRIPE_PRICE_ID_DEFAULTS.monthly;
+const LIFETIME_PRICE_ID = process.env.STRIPE_LIFETIME_PRICE_ID || STRIPE_PRICE_ID_DEFAULTS.lifetime;
 const ALLOWED_PRICE_IDS = [MONTHLY_PRICE_ID, LIFETIME_PRICE_ID];
 
 export const config = {
@@ -130,7 +131,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   </ul>
 </div>
 <div style="background:#fff3cd;border-left:4px solid #ffc107;padding:12px 16px;border-radius:4px;margin-bottom:20px;">
-  <p style="margin:0;font-size:14px;"><strong>Important:</strong> After your 7-day trial ends on <strong>${dateStr}</strong>, you'll be automatically charged <strong>£1.99/month</strong> unless you cancel.</p>
+  <p style="margin:0;font-size:14px;"><strong>Important:</strong> After your 7-day trial ends on <strong>${dateStr}</strong>, you'll be automatically charged <strong>${DISPLAY.monthlyPerMonth}</strong> unless you cancel.</p>
 </div>
 <p style="margin:0 0 16px;">You can cancel any time — before or after the trial ends — from your account page. No hidden fees, no penalties.</p>
 <a href="https://www.compressyourphoto.com/account" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;margin-bottom:24px;">Manage My Subscription</a>
@@ -138,7 +139,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 <p style="font-size:12px;color:#999;">CompressYourPhoto · Operated by Stellarizon Digitals Ltd (Co. No. 16748429)</p>
 </body>
 </html>`,
-              `Your 7-Day Pro Trial Has Started\n\nYou now have full access to every Pro feature.\n\nAfter your 7-day trial ends on ${dateStr}, you'll be charged £1.99/month unless you cancel.\n\nCancel any time at https://www.compressyourphoto.com/account\n\n— CompressYourPhoto`
+              `Your 7-Day Pro Trial Has Started\n\nYou now have full access to every Pro feature.\n\nAfter your 7-day trial ends on ${dateStr}, you'll be charged ${DISPLAY.monthlyPerMonth} unless you cancel.\n\nCancel any time at https://www.compressyourphoto.com/account\n\n— CompressYourPhoto`
             );
           }
 
@@ -203,15 +204,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 <body style="font-family:Arial,sans-serif;max-width:560px;margin:0 auto;padding:24px;color:#1a1a1a;">
 <img src="https://www.compressyourphoto.com/brand/logo-horizontal.svg" alt="CompressYourPhoto" style="height:40px;margin-bottom:24px;" />
 <h2 style="margin:0 0 8px;">Your trial ends in 3 days</h2>
-<p style="color:#555;margin:0 0 20px;">Your 7-day Pro trial will end on <strong>${dateStr}</strong>. After that, you'll be charged <strong>£1.99/month</strong> to keep your Pro access going.</p>
+<p style="color:#555;margin:0 0 20px;">Your 7-day Pro trial will end on <strong>${dateStr}</strong>. After that, you'll be charged <strong>${DISPLAY.monthlyPerMonth}</strong> to keep your Pro access going.</p>
 <p style="color:#555;margin:0 0 20px;">If you'd like to cancel before being charged, you can do so any time from your account page — it takes just one click.</p>
 <a href="https://www.compressyourphoto.com/account" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;margin-bottom:24px;">Manage My Subscription</a>
-<p style="font-size:13px;color:#555;">If you choose to stay on Pro, you'll be charged £1.99/month starting ${dateStr}. Cancel any time — no questions asked.</p>
+<p style="font-size:13px;color:#555;">If you choose to stay on Pro, you'll be charged ${DISPLAY.monthlyPerMonth} starting ${dateStr}. Cancel any time — no questions asked.</p>
 <hr style="border:none;border-top:1px solid #eee;margin:24px 0;">
 <p style="font-size:12px;color:#999;">CompressYourPhoto · Stellarizon Digitals Ltd (Co. No. 16748429)</p>
 </body>
 </html>`,
-          `Your Pro trial ends in 3 days (${dateStr}).\n\nAfter that, you'll be charged £1.99/month. Cancel any time at:\nhttps://www.compressyourphoto.com/account\n\n— CompressYourPhoto`
+          `Your Pro trial ends in 3 days (${dateStr}).\n\nAfter that, you'll be charged ${DISPLAY.monthlyPerMonth}. Cancel any time at:\nhttps://www.compressyourphoto.com/account\n\n— CompressYourPhoto`
         );
 
         console.log(`[Webhook] Trial ending reminder sent to customer ${customerId}`);

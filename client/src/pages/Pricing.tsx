@@ -9,6 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { PremiumModal } from '@/components/PremiumModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { LoginModal } from '@/components/LoginModal';
+import { DISPLAY } from '@/lib/pricing';
 
 const freeFeatures = [
   '3 free uses across all 9 tools — no account needed',
@@ -40,7 +41,7 @@ export default function Pricing() {
     <div className="flex-1">
       <Helmet>
         <title>Pricing — Free & Pro Plans | CompressYourPhoto</title>
-        <meta name="description" content="CompressYourPhoto is free to use. Upgrade to Pro for unlimited batch processing, no ads, and priority speed. Plans from £0.99. Cancel anytime." />
+        <meta name="description" content={`CompressYourPhoto is free to use. Upgrade to Pro for unlimited batch processing, no ads, and priority speed. Plans from ${DISPLAY.weekPass}. Cancel anytime.`} />
         <link rel="canonical" href="https://www.compressyourphoto.com/pricing" />
       </Helmet>
 
@@ -95,10 +96,10 @@ export default function Pricing() {
               <div className="mt-4 space-y-1">
                 <div className="flex items-baseline gap-1">
                   <span className="text-sm text-muted-foreground">From</span>
-                  <span className="text-4xl font-bold text-primary">£0.99</span>
+                  <span className="text-4xl font-bold text-primary">{DISPLAY.weekPass}</span>
                   <span className="text-muted-foreground text-sm">/ 7 days</span>
                 </div>
-                <p className="text-xs text-muted-foreground">or £1.99/month · or £24.99 one-time (lifetime)</p>
+                <p className="text-xs text-muted-foreground">or {DISPLAY.monthlyPerMonth} · or {DISPLAY.lifetime} one-time (lifetime)</p>
                 <p className="text-xs text-green-600 dark:text-green-400 font-medium">
                   Lower prices available in some regions
                 </p>
@@ -195,7 +196,7 @@ export default function Pricing() {
             <AccordionItem value="q1">
               <AccordionTrigger data-testid="pricing-faq-q1">What are the Pro plans?</AccordionTrigger>
               <AccordionContent>
-                Pro is available as a <strong>7-Day Pass (£0.99)</strong>, a <strong>Monthly subscription (£1.99/month)</strong>, or a <strong>Lifetime one-time payment (£24.99)</strong>. Prices shown in GBP — users in some regions (India, Brazil, Turkey, Indonesia) see lower local pricing.
+                Pro is available as a <strong>7-Day Pass ({DISPLAY.weekPass})</strong>, a <strong>Monthly subscription ({DISPLAY.monthlyPerMonth})</strong>, or a <strong>Lifetime one-time payment ({DISPLAY.lifetime})</strong>. Prices shown in GBP — users in some regions (India, Brazil, Turkey, Indonesia) see lower local pricing.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="q2">

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { STRIPE_PRICE_ID_DEFAULTS, PRICING_TIER_1, PRICING_TIER_2, PRICING_TIER_3, tier1SavingsVs12Months } from '@/lib/pricing';
 
 export type PriceTier = 1 | 2 | 3;
 
@@ -45,7 +46,7 @@ const COUNTRY_NAME: Record<string, string> = {
   PH:'Philippines',VN:'Vietnam',BD:'Bangladesh',PK:'Pakistan',NG:'Nigeria',GH:'Ghana',KE:'Kenya',
 };
 
-const MONTHLY_PRICE_ID = import.meta.env.VITE_STRIPE_MONTHLY_PRICE_ID || 'price_1THNBOA1YPAyGFWbw3FewHiI';
+const MONTHLY_PRICE_ID = import.meta.env.VITE_STRIPE_MONTHLY_PRICE_ID || STRIPE_PRICE_ID_DEFAULTS.monthly;
 
 function getTier(countryCode: string): PriceTier {
   if (TIER_1.has(countryCode)) return 1;
@@ -57,26 +58,22 @@ function buildPrices(tier: PriceTier, countryCode: string, country: string): Geo
   const flag = COUNTRY_FLAG[countryCode] || '🌍';
 
   if (tier === 1) {
-    const monthly12 = 1.99 * 12;
-    const lifetimeAmt = 24.99;
-    const saving = monthly12 - lifetimeAmt;
     return {
       tier, country, countryCode, flag,
-      weekPass: { amount: 99, display: '£0.99' },
-      monthly: { amount: 199, display: '£1.99', priceId: MONTHLY_PRICE_ID },
-      lifetime: { amount: 2499, display: '£24.99' },
-      savingsVs12Months: saving > 0 ? `Save £${saving.toFixed(2)} vs monthly` : null,
+      weekPass: { ...PRICING_TIER_1.weekPass },
+      monthly: { ...PRICING_TIER_1.monthly, priceId: MONTHLY_PRICE_ID },
+      lifetime: { ...PRICING_TIER_1.lifetime },
+      savingsVs12Months: tier1SavingsVs12Months(),
       specialLabel: null,
     };
   }
 
   if (tier === 2) {
-    const lifetimeAmt = 9.99;
     return {
       tier, country, countryCode, flag,
-      weekPass: { amount: 49, display: '£0.49' },
-      monthly: null,
-      lifetime: { amount: 999, display: '£9.99' },
+      weekPass: { ...PRICING_TIER_2.weekPass },
+      monthly: PRICING_TIER_2.monthly,
+      lifetime: { ...PRICING_TIER_2.lifetime },
       savingsVs12Months: null,
       specialLabel: `${flag} Local price for ${country || 'your region'}`,
     };
@@ -84,9 +81,9 @@ function buildPrices(tier: PriceTier, countryCode: string, country: string): Geo
 
   return {
     tier, country, countryCode, flag,
-    weekPass: { amount: 49, display: '£0.49' },
-    monthly: null,
-    lifetime: { amount: 499, display: '£4.99' },
+    weekPass: { ...PRICING_TIER_3.weekPass },
+    monthly: PRICING_TIER_3.monthly,
+    lifetime: { ...PRICING_TIER_3.lifetime },
     savingsVs12Months: null,
     specialLabel: `${flag} Special price for ${country || 'your region'}`,
   };

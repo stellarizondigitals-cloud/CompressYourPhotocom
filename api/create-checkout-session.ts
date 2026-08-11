@@ -1,8 +1,9 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Stripe from 'stripe';
+import { STRIPE_PRICE_ID_DEFAULTS } from '../shared/pricing';
 
-const MONTHLY_PRICE_ID = process.env.STRIPE_MONTHLY_PRICE_ID || 'price_1THNBOA1YPAyGFWbw3FewHiI';
-const LIFETIME_PRICE_ID = process.env.STRIPE_LIFETIME_PRICE_ID || 'price_1THNNnA1YPAyGFWbJs3kmtST';
+const MONTHLY_PRICE_ID = process.env.STRIPE_MONTHLY_PRICE_ID || STRIPE_PRICE_ID_DEFAULTS.monthly;
+const LIFETIME_PRICE_ID = process.env.STRIPE_LIFETIME_PRICE_ID || STRIPE_PRICE_ID_DEFAULTS.lifetime;
 const ALLOWED_PRICE_IDS = [MONTHLY_PRICE_ID, LIFETIME_PRICE_ID];
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {

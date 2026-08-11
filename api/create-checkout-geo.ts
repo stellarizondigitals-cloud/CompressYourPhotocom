@@ -1,10 +1,9 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Stripe from 'stripe';
+import { STRIPE_PRICE_ID_DEFAULTS, isAllowedGeoAmount, geoProductCopy, type GeoPlanType } from '../shared/pricing';
 
-const ALLOWED_PLAN_TYPES = ['week_pass', 'lifetime_geo'];
-const MIN_AMOUNT = 49;
-const MAX_AMOUNT = 9999;
-const MONTHLY_PRICE_ID = process.env.STRIPE_MONTHLY_PRICE_ID || 'price_1THNBOA1YPAyGFWbw3FewHiI';
+const ALLOWED_PLAN_TYPES: GeoPlanType[] = ['week_pass', 'lifetime_geo'];
+const MONTHLY_PRICE_ID = process.env.STRIPE_MONTHLY_PRICE_ID || STRIPE_PRICE_ID_DEFAULTS.monthly;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
@@ -12,25 +11,29 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const { planType, amount, productName, userId, userEmail, successUrl, cancelUrl } = req.body || {};
+    const { planType, amount, userId, userEmail, successUrl, cancelUrl } = req.body || {};
 
     if (!planType || !amount || !userId) {
       return res.status(400).json({ error: 'Missing required fields' });
-    }
-
-    const numAmount = parseInt(amount, 10);
-    if (isNaN(numAmount) || numAmount < MIN_AMOUNT || numAmount > MAX_AMOUNT) {
-      return res.status(400).json({ error: 'Invalid amount' });
     }
 
     if (!ALLOWED_PLAN_TYPES.includes(planType)) {
       return res.status(400).json({ error: 'Invalid plan type' });
     }
 
+    // Amounts are validated against the shared pricing config — the client
+    // cannot charge anything other than a configured plan price.
+    const numAmount = parseInt(amount, 10);
+    if (isNaN(numAmount) || !isAllowedGeoAmount(planType as GeoPlanType, numAmount)) {
+      return res.status(400).json({ error: 'Invalid amount' });
+    }
+
+    const copy = geoProductCopy(planType as GeoPlanType);
+
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '');
 
     if (planType === 'week_pass') {
-      // 7-day trial subscription: charge £0.99 upfront, then auto-bills monthly at £1.99
+      // 7-day trial subscription: charge the week-pass fee upfront, then auto-bills monthly
       // Cast to any: Stripe v20 TS types omit add_invoice_items from SessionCreateParams
       // but the REST API fully supports it — this is a type definition gap, not a bug.
       const session = await stripe.checkout.sessions.create({
@@ -45,8 +48,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             price_data: {
               currency: 'gbp',
               product_data: {
-                name: productName || '7-Day Pro Trial',
-                description: 'One-time trial fee — then £1.99/month, cancel any time',
+                name: copy.name,
+                description: copy.description,
               },
               unit_amount: numAmount,
             },
@@ -69,8 +72,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             currency: 'gbp',
             unit_amount: numAmount,
             product_data: {
-              name: productName || 'Lifetime Pro Access',
-              description: 'Lifetime access to all Pro features — pay once, use forever',
+              name: copy.name,
+              description: copy.description,
             },
           },
           quantity: 1,

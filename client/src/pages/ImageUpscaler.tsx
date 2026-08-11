@@ -10,6 +10,7 @@ import { AdBanner } from '@/components/AdBanner';
 import { PremiumModal } from '@/components/PremiumModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGlobalUsage } from '@/hooks/useGlobalUsage';
+import { DISPLAY } from '@/lib/pricing';
 
 const SCALE_OPTIONS = [
   { value: 2, label: '2×', description: 'Double the size', free: true },
@@ -430,7 +431,7 @@ export default function ImageUpscaler() {
               <div className="flex items-center gap-2 mb-3">
                 <Crown className="w-4 h-4 text-yellow-500" />
                 <p className="font-semibold">Pro</p>
-                <Badge variant="secondary" className="text-xs ml-auto">from £0.99 trial</Badge>
+                <Badge variant="secondary" className="text-xs ml-auto">from {DISPLAY.weekPass} trial</Badge>
               </div>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 {['Unlimited upscales', '2×, 4×, and 8× scale', 'PNG output', 'All 9 Pro tools included', '100% private processing'].map(f => (
@@ -438,7 +439,7 @@ export default function ImageUpscaler() {
                 ))}
               </ul>
               <Button size="sm" className="w-full mt-4" onClick={() => setShowPremiumModal(true)} data-testid="btn-upscaler-get-pro">
-                <Crown className="w-3.5 h-3.5 mr-1.5" />Try Pro — £0.99 for 7 days
+                <Crown className="w-3.5 h-3.5 mr-1.5" />Try Pro — {DISPLAY.weekPass} for 7 days
               </Button>
             </Card>
           </div>
