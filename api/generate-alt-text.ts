@@ -40,14 +40,16 @@ Respond ONLY with valid JSON in this exact format (no markdown, no extra text):
       generationConfig: { temperature: 0.3, maxOutputTokens: 8192 }
     };
 
-    const geminiModels = ['gemini-2.5-flash', 'gemini-2.0-flash-lite', 'gemini-2.0-flash'];
+    // Fallback chain — all verified working with vision (inline_data) as of 2026-08:
+    // 1. gemini-2.5-flash      — best quality, free tier (thinkingBudget:0 = no chain-of-thought, faster)
+    // 2. gemini-3.1-flash-lite — highest free quota, fast, good for alt text
+    // 3. gemini-3.5-flash      — next-gen quality fallback
+    const geminiModels = ['gemini-2.5-flash', 'gemini-3.1-flash-lite', 'gemini-3.5-flash'];
     let geminiResponse: globalThis.Response | null = null;
     let lastStatus = 0;
 
     for (const model of geminiModels) {
-      const modelPayload = model === 'gemini-2.5-flash'
-        ? { ...payload, generationConfig: { ...payload.generationConfig, thinkingConfig: { thinkingBudget: 0 } } }
-        : payload;
+      const modelPayload = { ...payload, generationConfig: { ...payload.generationConfig, thinkingConfig: { thinkingBudget: 0 } } };
 
       geminiResponse = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
