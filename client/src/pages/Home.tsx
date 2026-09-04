@@ -151,10 +151,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 md:px-8 py-4">
-        <AdBanner slot="9182736450" format="horizontal" fullWidth />
-      </div>
-
       <section className="py-16 md:py-20 bg-[#f7f7f7] dark:bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -177,9 +173,46 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 md:px-8 py-6">
-        <AdBanner slot="8273645019" format="horizontal" fullWidth />
-      </div>
+      <section className="py-14 md:py-18 px-4 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">Choose the right photo tool</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Start with what you need to change. Each tool works directly in your browser, so you can compare the result before downloading.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="p-6">
+              <h3 className="font-semibold mb-2">Make a file smaller</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                Use Compress when an image is too large for email, a website, or an upload form. Adjust quality while keeping the original dimensions.
+              </p>
+              <Link to={getLocalizedPath('/compress')} className="text-sm text-primary hover:underline">Compress an image</Link>
+            </Card>
+            <Card className="p-6">
+              <h3 className="font-semibold mb-2">Change dimensions or framing</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                Use Resize for exact pixel dimensions and Crop to remove unwanted edges or create a social-media aspect ratio.
+              </p>
+              <Link to={getLocalizedPath('/resize')} className="text-sm text-primary hover:underline">Resize a photo</Link>
+            </Card>
+            <Card className="p-6">
+              <h3 className="font-semibold mb-2">Change the image format</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                Use Convert for JPG, PNG, WebP, HEIC, GIF, or BMP. WebP is often best for websites; PNG is useful when transparency matters.
+              </p>
+              <Link to={getLocalizedPath('/convert')} className="text-sm text-primary hover:underline">Convert an image</Link>
+            </Card>
+          </div>
+          <div className="mt-8 rounded-xl border bg-muted/20 p-6">
+            <h3 className="font-semibold mb-2">What “browser-based” processing means</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Your image is processed locally by your device rather than uploaded to our servers. This improves privacy and removes upload waiting time.
+              Very large files may still depend on your device’s available memory, and closing or refreshing the page clears the current work.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="py-12 md:py-16 px-4 md:px-8 bg-gradient-to-br from-primary/5 via-background to-yellow-500/5">
         <div className="max-w-4xl mx-auto text-center">
@@ -226,10 +259,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
-      <div className="max-w-4xl mx-auto px-4 md:px-8 py-6">
-        <AdBanner slot="7364501928" format="horizontal" fullWidth />
-      </div>
 
       <section className="py-16 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
@@ -281,7 +310,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 md:px-8 py-4">
+      <div className="max-w-4xl mx-auto px-4 md:px-8 py-6">
         <AdBanner slot="6450192837" format="horizontal" fullWidth />
       </div>
 
